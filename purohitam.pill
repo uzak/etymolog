@@ -1,35 +1,38 @@
-sa:pur = door, gate, wall, rampart, stronghol, castle, town, city (that which stands before its citizens, that which protects them)
+#SRC https://www.facebook.com/groups/1520538148174445/permalink/2705905389637709/
+
+sa:pur = door, gate, wall, rampart, stronghol, castle, town, city 
+sa:pur [that which stands before its citizens, that which protects them]
 
 sa:hitam = laid, placed, set up
 
-sa:purohitam (that which stands (Hira) before  (pura)"
+sa:purohitam [that which (stands = sa:Hira) (before = sa:Pura)]
 
 sa:yajna = sacrifice, austerity, worship, devotion
 sa:yajna = sa:Vishnu
 sa:Vishnu = lord of sacrifice, recipient of all sacrifices
 
-sa:pur, sa:puri = town, city (e.g. Hastinarpur, Jaipur, Sitapur)
+sa:pur, sa:puri = [e.g. Hastinarpur, Jaipur, Sitapur] town, city  #XXX
 
 sa:pur = prior, to precede, to go before, to lead
 
-sa:pur -> sa:purva = east (considered auspicios in the Veda)
+sa:pur -> (sa:purva = [considered auspicious in the Veda] east)
 
-[
-    sa:pur = facing
-    sa:va = auspiciousness
-] -> sa:purva = facing auspiciousness, in fornt of auspiciousness
+sa:pur = facing
+sa:va = auspiciousness
+sa:pur + sa:va -> sa:purva = facing auspiciousness, in front of auspiciousness
 
-sa:purva =  what which is prior, that which precedes, what which goes before, first, forefather, ancient
+sa:purva = [what which is prior, that which precedes, what which goes before] (first, forefather, ancient)
 
-ie:per = in front, before -> de:fura -> old_english:fore -> before, first
+(ie:per = (in front, before)) -> (de:fura -> (old_english:fore -> before, first))
 
-# sanskrit P transforms into F
+#TRANSFORMATION sa:P -> F
 sa:pluta -> float
-sa:pirya -> free, friend
+sa:pirya -> (free, friend)
 sa:pyre -> fire
 
-sa:pur -> de:Fuehrer = leader
+sa:pur -> (de:Fuehrer = leader)
 
-sa:purva = first -> sk:prvy -> .ru:pervy -> .rs:prvo, east (direction, where the sun first appears)
+(sa:purva = first) -> sk:prvy -> .ru:pervy -> .rs:prvo 
+sa:purva = east [direction, where the sun first appears]
 
 sa:vrka = tearer 
