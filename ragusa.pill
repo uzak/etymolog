@@ -1,0 +1,16 @@
+SRC https://www.facebook.com/groups/1520538148174445/permalink/2695419714019610/
+
+sa:Raghu (dynasty in which Lord Rama took birth)
+
+sa:Raghu -> Ragusa
+sa:Ravana -> Ravenna
+
+sa:Raghu ~ sa:Ravana
+Dubrovnik ~ Ragusa
+
+[
+    sa:dvi = both sides
+    sa:ap = water
+] ->
+
+sa:Dvipa = hindu:Doab = ir:Dobar = cornish:Dofer = celtic:Dubron = Dubrovnik

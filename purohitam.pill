@@ -1,0 +1,35 @@
+sa:pur = door, gate, wall, rampart, stronghol, castle, town, city (that which stands before its citizens, that which protects them)
+
+sa:hitam = laid, placed, set up
+
+sa:purohitam (that which stands (Hira) before  (pura)"
+
+sa:yajna = sacrifice, austerity, worship, devotion
+sa:yajna = sa:Vishnu
+sa:Vishnu = lord of sacrifice, recipient of all sacrifices
+
+sa:pur, sa:puri = town, city (e.g. Hastinarpur, Jaipur, Sitapur)
+
+sa:pur = prior, to precede, to go before, to lead
+
+sa:pur -> sa:purva = east (considered auspicios in the Veda)
+
+[
+    sa:pur = facing
+    sa:va = auspiciousness
+] -> sa:purva = facing auspiciousness, in fornt of auspiciousness
+
+sa:purva =  what which is prior, that which precedes, what which goes before, first, forefather, ancient
+
+ie:per = in front, before -> de:fura -> old_english:fore -> before, first
+
+# sanskrit P transforms into F
+sa:pluta -> float
+sa:pirya -> free, friend
+sa:pyre -> fire
+
+sa:pur -> de:Fuehrer = leader
+
+sa:purva = first -> sk:prvy -> .ru:pervy -> .rs:prvo, east (direction, where the sun first appears)
+
+sa:vrka = tearer 
