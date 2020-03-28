@@ -1,3 +1,7 @@
-* figure out grouping (in relation to the RELATIONSHIPS)
-* escape sequences
+* test cases
+* use cases:
+    - give me a dictionary with derivations (in * or given languages) for a given language
 * language for comments?
+* escape sequences
+--
+* figure out grouping (in relation to the RELATIONSHIPS)
