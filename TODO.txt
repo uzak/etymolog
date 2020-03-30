@@ -1,7 +1,6 @@
-* test cases
+* introduce tags?
 * use cases:
+    - lookup a `word` (for a `language`)
     - give me a dictionary with derivations (in * or given languages) for a given language
-* language for comments?
-* escape sequences
---
-* figure out grouping (in relation to the RELATIONSHIPS)
+# COMMENT => LBRACE, RBRACE (and parse just like anything)?
+
