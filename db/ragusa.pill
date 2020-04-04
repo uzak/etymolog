@@ -10,4 +10,5 @@ Dubrovnik ~ Ragusa
 
 sa:dvi = both sides
 sa:ap = water
-(sa:dvi + sa:ap) -> (sa:Dvipa = island) -> hindu:Doab, ir:Dobar, cornish:Dofer, celtic:Dubron -> Dubrovnik
+sa:dvi + sa:ap -> sa:Dvipa -> hindi:Doab; ir:Dobar; cornish:Dofer; celtic:Dubron -> Dubrovnik
+sa:Dvipa = island

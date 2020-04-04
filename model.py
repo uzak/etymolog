@@ -7,8 +7,8 @@ Object Model for the etymology project
 
 import config
 
-class Entity:
 
+class Entity:
     def __init__(self):
         self.comments = set()
         self.source = config.default_source
@@ -23,20 +23,49 @@ class Word(Entity):
     def __init__(self, value, lang):
         super().__init__()
         self.value = value
-        self.rels = set()
         self.lang = lang
+        self.derived_from = set()
+        self.derives = set()
+        self.equals = set()
+        self.related = set()
+        self.union = set()
 
-    def rel(self, rel_type, other):
-        "get or create a relationship"
-        rel = rel_type(self, other)
-        self.rels.add(rel)
-        other.rels.add(rel)
-        return rel
+    def __lt__(self, other):
+        assert self.lang == other.lang
+        return self.value < other.value
+
+    def key(self):
+        if self.comments:
+            comments = " ".join([f"[{c}]" for c in self.comments])
+            return f"{self.lang.name}:{self.value} {comments}"
+        return f"{self.lang.name}:{self.value}"
+
+    def __repr__(self):
+        return self.key()
 
     def __str__(self):
         return f"{self.lang.name}:{self.value}"
-    __repr__ = __str__
 
+
+class Union(Word):
+    Symbol = "+"
+    Table = {}
+
+    def __init__(self, left: Word, right: Word):
+        assert left.lang == right.lang, f"{left}{right}"
+        key = f"{left.value}{Union.Symbol}{right.value}"
+        super().__init__(key, left.lang)
+        self.left = left
+        self.right = right
+        self.Table[(left, right)] = self
+
+    def register(self, lang):
+        key = f"{self.left.value}{self.right.value}"
+        word = lang.get_word(key)
+        if not word:
+            lang.add_word(key, word=self)
+        else:
+            word.union.add(self)
 
 class Group:
     "Group of words"
@@ -51,7 +80,7 @@ class Group:
 
     def rel(self, rel_type, other):
         for c in self.content:
-            c.rel(rel_type, other)
+            rel_type.add(c, other)
 
     def __iter__(self):
         return iter(self.content)
@@ -61,23 +90,64 @@ class Group:
     __repr__ = __str__
 
 
-class Relationship(Entity):
+class RelationshipMeta(type):
+    def __new__(mcls, name, bases, attrs, **kw):
+        attrs['Table'] = {}
+        return super().__new__(mcls, name, bases, attrs)
+
+
+class Relationship(Entity, metaclass=RelationshipMeta):
     Bidirectional = True
 
     def __init__(self, left, right):
         super().__init__()
         self.left = left
         self.right = right
-        # XXX skip this?
-        if isinstance(left, Word):
-            left.rels.add(self)
-        if isinstance(right, Word):
-            right.rels.add(self)
+
+    @classmethod
+    def add(cls, left, right, comment=None):
+        if isinstance(right, Group):
+            for r in right:         # right is good; take all
+                cls.add(left, r, comment=comment)
+        elif isinstance(left, Group):
+            cls.add(left.content[-1], right, comment=comment)  # only last from left
+        else:
+            return cls._add(left, right, comment=comment)
+
+    @classmethod
+    def _add(cls, left, right, comment=None):
+        """get Relationship if it exists, otherwise add"""
+        obj = cls.get(left, right)
+        key = (left.key(), right.key())
+        rev_key = (right.key(), left.key())
+        if obj is None:
+            obj = cls(left, right)
+            cls.Table[key] = obj
+            if cls.Bidirectional:
+                cls.Table[rev_key] = obj
+        if comment:
+            obj.comment(comment)
+        return obj
+
+    @classmethod
+    def get(cls, left, right):
+        key = (left.key(), right.key())
+        rev_key = (right.key(), left.key())
+        if key in cls.Table:
+            return cls.Table[key]
+        elif cls.Bidirectional and rev_key in cls.Table:
+            return cls.Table[rev_key]
+
+    @classmethod
+    def cls_str(cls):
+        return f"{cls.__name__} ({len(cls.Table)})"
+
+    def __repr__(self):
+        comments = f"[{', '.join(self.comments)}]" if self.comments else ""
+        return f"({self.left} {self.Symbol}{comments} {self.right})"
 
     def __str__(self):
-        return f"{self.Symbol}({self.left}, {self.right})"
-
-    __repr__ = __str__
+        return f"({self.left} {self.Symbol} {self.right})"
 
     def __hash__(self):
         return hash((self.Symbol, self.left, self.right))
@@ -91,64 +161,39 @@ class Relationship(Entity):
         return False
 
 
-class Derive(Relationship):
+class Derived(Relationship):
     Bidirectional = False
     Symbol = "->"
+
+    def __init__(self, left: Word, right: Word):
+        super().__init__(left, right)
+        #print(f"Setting derives for {left} to {id(self)}")
+        left.derives.add(self)
+        right.derived_from.add(self)
 
 
 class Equals(Relationship):
     Symbol = "="
 
+    def __init__(self, left: Word, right: Word):
+        super().__init__(left, right)
+        left.equals.add(self)
+        right.equals.add(self)
+
 
 class Related(Relationship):
     Symbol = "~"
 
-
-class Union(Relationship):
-    Symbol = "+"
-    Bidirectional = False
+    def __init__(self, left: Word, right: Word):
+        super().__init__(left, right)
+        left.related.add(self)
+        right.related.add(self)
 
 
 class World:
     "Universal Mind"
 
     Languages = {}
-    Relationships = {}
-
-    @staticmethod
-    def rel(rel_type, left: Word, right):
-        if isinstance(rel_type, str):
-            if rel_type == "=":
-                rel_type = Equals
-            elif rel_type == "->":
-                rel_type = Derive
-            elif rel_type == "~":
-                rel_type = Related
-
-        if isinstance(right, Group):
-            for r in right:         # right is good; take all
-                World.rel(rel_type, left, r)
-        elif isinstance(left, Group):
-            World.rel(rel_type, left.content[-1], right)  # only last from left
-        else:
-            key = f"{left}{rel_type.Symbol}{right}"
-            rev_key = f"{right}{rel_type.Symbol}{left}"
-            if key in World.Relationships:
-                obj = World.Relationships[key]
-            elif rel_type.Bidirectional and rev_key in World.Relationships:
-                obj = World.Relationships[rev_key]
-            else:
-                obj = rel_type(left, right)
-                World.Relationships[key] = obj
-            return obj
-
-    @staticmethod
-    def rels(*rel_classes):
-        result = set()
-        for c in rel_classes:
-            r = World.Relationships.get(c.Symbol, {})
-            result.update(r.values())
-        return result
 
     @staticmethod
     def lang(name):
@@ -162,14 +207,44 @@ class Language:
 
     def __init__(self, name):
         self.name = name
-        self.words = {}
+        self._words = {}
 
     def __iter__(self):
-        return iter(self.words)
+        return iter(self._words.values())
 
-    def word(self, value):
-        if value not in self.words:
-            self.words[value] = word = Word(value, self)
+    def add_word(self, value, word=None):
+        if value.lower() not in self._words:
+            word = word or Word(value, self)
+            self._words[value.lower()] = word
             word.lang = self
-        return self.words[value]
+        return self._words[value.lower()]
 
+    def get_word(self, value, case_sensitive=False):
+        word = self._words.get(value.lower())
+        if word and case_sensitive and value != word.value:
+            return
+        return word
+
+    def del_word(self, word):
+        if word.value.lower() in self._words:
+            del self._words[word.value.lower()]
+
+    def concat(self, w1, w2):
+        if w1.lang != w2.lang:
+            if w2.lang.name == config.default_lang:
+                w2.lang.del_word(w2)
+                w2.lang = w1.lang
+            else:
+                raise ValueError(f"Can't concat {w1} and {w2}")
+        w1.lang.del_word(w1)
+        w2.lang.del_word(w2)
+        return self.add_word(f"{w1.value} {w2.value}")
+
+    def __eq__(self, other):
+        return self.name == other.name
+
+    def __len__(self):
+        return len(self._words)
+
+    def __str__(self):
+        return f"Language: {self.name}"

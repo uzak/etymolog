@@ -4,14 +4,22 @@
 Parse .pill files
 """
 
+import os
 import model
 import config
+import ply.yacc
+
+from config import log
 
 from lexer import tokens
 
 #
 # YACC
 #
+
+def p_empty_line(p):
+    'expression : '
+    # do nothing
 
 # Words
 
@@ -22,26 +30,29 @@ def p_expression_word(p):
 
 def p_word_token_colon_token(p):
     'word : TOKEN COLON TOKEN'
-    p[0] = model.World.lang(p[1]).word(p[3])
+    p[0] = model.World.lang(p[1]).add_word(p[3])
 
 
 def p_word_word_word(p):
-    '''word : word word'''
-    if p[1].lang.name != p[2].lang.name:
-        if p[2].lang.name == config.default_lang:
-            p[2].lang = model.World.lang(p[1].lang.name)
-    assert p[1].lang.name == p[2].lang.name
-    p[0] = model.World.lang(p[1].lang.name).word(f"{p[1].value} {p[2].value}")
+    'word : word word'
+    p[0] = p[1].lang.concat(p[1], p[2])
 
 
 def p_word_token(p):
     'word : TOKEN'
-    p[0] = model.World.lang(config.default_lang).word(p[1])
+    p[0] = model.World.lang(config.default_lang).add_word(p[1])
 
+# inline comments
 
-def p_expression_lparen_expr_rparen(p):
-    'expression : LPAREN expression RPAREN'
-    p[0] = p[2]
+def p_word_word_ic(p):
+    'word : word LPAREN word RPAREN'
+    p[0] = p[1]
+    p[3].lang.del_word(p[3])
+
+def p_word_ic_word(p):
+    'word : LPAREN word RPAREN word'
+    p[0] = p[4]
+    p[2].lang.del_word(p[2])
 
 
 # Groups
@@ -52,7 +63,7 @@ def p_expression_group(p):
 
 
 def p_group_expression_comma_expression(p):
-    'group : expression COMMA expression'
+    'group : expression SEP expression'
     c = model.Group(p[1], p[3])
     p[0] = c
 
@@ -71,16 +82,17 @@ def p_relationship_word_rel_word(p):
     '''
     # NOTE relationship reduces to last expression
     if p[2] == "->":
-        model.World.rel(model.Derive, p[1], p[3])
+        model.Derived.add(p[1], p[3])
         p[0] = p[3]
     elif p[2] == "=":
-        model.World.rel(model.Equals, p[1], p[3])
+        model.Equals.add(p[1], p[3])
         p[0] = p[3]
     elif p[2] == "~":
-        model.World.rel(model.Related, p[1], p[3])
+        model.Related.add(p[1], p[3])
         p[0] = p[3]
     elif p[2] == "+":
-        p[0] = model.World.rel(model.Union, p[1], p[3])
+        p[0] = union = model.Union(p[1], p[3])
+        union.register(p[1].lang)
 
 # Comments
 
@@ -95,13 +107,13 @@ def p_expression_expr_rel_comment_expr(p):
                   | expression EQUALS COMMENT expression
                   | expression RELATED COMMENT expression
     '''
+    comment = p[3][1:-1]
     if p[2] == "->":
-        p[0] = model.World.rel(model.Derive, p[1], p[4])
+        p[0] = model.Derived.add(p[1], p[4], comment=comment)
     elif p[2] == "=":
-        p[0] = model.World.rel(model.Equals, p[1], p[4])
+        p[0] = model.Equals.add(p[1], p[4], comment=comment)
     elif p[2] == "~":
-        p[0] = model.World.rel(model.Related, p[1], p[4])
-    p[0].comment(p[3][1:-1])
+        p[0] = model.Related.add(p[1], p[4], comment=comment)
     p[0] = p[4]
 
 
@@ -129,21 +141,47 @@ def p_meta(p):
 def p_error(p):
     raise SyntaxError(f"Syntax error at token {p!r}")
 
+
 def t_eof(t):
     pass
 
+
 precedence = (
     ('left', 'EQUALS', 'RELATED', 'DERIVE'),
-    ('left', 'COMMA'),
+    ('left', 'SEP'),
     ('left', 'PLUS'),
     ('left', 'LPAREN', 'RPAREN'),
     ('left', 'COLON'),
     ('left', 'META'),
 )
 
-
-import ply.yacc
 yacc = ply.yacc.yacc()
+
+
+def parse_file(fn):
+    log.debug(f"Parsing: {fn}")
+    with open(fn) as f:
+        for line in f.readlines():
+            yacc.parse(line)
+        finish_file()
+
+
+def finish_file():
+    log.debug("Setting config.default_source=None")
+    config.default_source = None
+
+
+def get_pills(path):
+    for root, dirs, files in os.walk(path):
+        for f in files:
+            if f.endswith(".pill"):
+                yield os.path.join(root, f)
+
+
+def load_db(db_dir=None):
+    db_dir = db_dir or os.path.join(os.path.dirname(__file__), "db")
+    for fn in get_pills(db_dir):
+        parse_file(fn)
 
 
 if __name__ == '__main__':
@@ -152,8 +190,4 @@ if __name__ == '__main__':
     parser.add_argument("file")
     args = parser.parse_args()
 
-    with open(args.file) as f:
-        for line in f.readlines():
-            line = line.strip()
-            if line:
-                yacc.parse(line)
+    parse_file(args.file)

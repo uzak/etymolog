@@ -4,12 +4,13 @@ Tokenizer for .pill files
 """
 
 import ply.lex as lex
+from config import log
 
 tokens = (
     'TOKEN', 'COLON',
     'LPAREN', 'RPAREN',         # just for adjusting priority of eval
     'PLUS',
-    'COMMA',
+    'SEP',
     'COMMENT', 'META',
     'EQUALS', 'DERIVE',
     'RELATED',
@@ -23,14 +24,14 @@ t_PLUS    = r'\+'
 t_LPAREN  = r'\('
 t_RPAREN  = r'\)'
 t_COLON   = ':'
-t_COMMA   = ','
+t_SEP     = ';'
 t_TOKEN   = r"[\w]+"
 t_META    = r"[#].*"
 t_COMMENT = r"\[.*?\]"
 
 
 def t_error(t):
-    print(f"Illegal character {t.value[0]!r}")
+    log.error(f"Illegal character {t.value[0]!r}")
     t.lexer.skip(1)
 
 

@@ -1,38 +1,44 @@
 #SRC https://www.facebook.com/groups/1520538148174445/permalink/2705905389637709/
 
-sa:pur = door, gate, wall, rampart, stronghol, castle, town, city 
+sa:pur = door; gate; wall; rampart; stronghol; castle; town; city
 sa:pur [that which stands before its citizens, that which protects them]
 
-sa:hitam = laid, placed, set up
+sa:hitam = laid; placed; set up
 
-sa:purohitam [that which (stands = sa:Hira) (before = sa:Pura)]
+sa:purohitam [that which stands (Hira) before (Pura)]
 
-sa:yajna = sacrifice, austerity, worship, devotion
+sa:yajna = sacrifice; austerity; worship; devotion
 sa:yajna = sa:Vishnu
-sa:Vishnu = lord of sacrifice, recipient of all sacrifices
+sa:Vishnu = lord of sacrifice; recipient of all sacrifices
 
-sa:pur, sa:puri = [e.g. Hastinarpur, Jaipur, Sitapur] town, city  #XXX
+sa:pur -> sa:puri =[e.g. Hastinarpur, Jaipur, Sitapur] town; city
 
-sa:pur = prior, to precede, to go before, to lead
+sa:pur = prior; to precede; to go before; to lead
 
-sa:pur -> (sa:purva = [considered auspicious in the Veda] east)
+sa:pur -> sa:purva
+sa:purva =[considered auspicious in the Veda] east
 
 sa:pur = facing
 sa:va = auspiciousness
-sa:pur + sa:va -> sa:purva = facing auspiciousness, in front of auspiciousness
+sa:pur + sa:va -> sa:purva = facing auspiciousness; in front of auspiciousness
 
-sa:purva = [what which is prior, that which precedes, what which goes before] (first, forefather, ancient)
+sa:purva =[what is prior, that which precedes, what which goes before] first; forefather; ancient
 
-(ie:per = (in front, before)) -> (de:fura -> (old_english:fore -> before, first))
+PIE:per = in front; before
+ PIE:per-> de:fura -> old_english:fore -> before; first
 
 #TRANSFORMATION sa:P -> F
 sa:pluta -> float
-sa:pirya -> (free, friend)
-sa:pyre -> fire
+sa:pirya -> free; friend
+en:pyre -> fire
 
-sa:pur -> (de:Fuehrer = leader)
+sa:pur -> de:Fuehrer = leader
 
-(sa:purva = first) -> sk:prvy -> .ru:pervy -> .rs:prvo 
-sa:purva = east [direction, where the sun first appears]
+sa:purva ->[first] sk:prvy; ru:pervy; rs:prvo
+sa:purva =[direction, where the sun first appears] east
 
-sa:vrka = tearer 
+sa:vrka = tearer
+
+# my additions
+en:pyre ~ sk:pýriť sa; de:Feuer
+sa:vrka -> wolf; sk:vlk
