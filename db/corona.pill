@@ -1,9 +1,10 @@
-#SRC https://www.facebook.com/groups/1520538148174445/permalink/2720634178164830/
+//SRC https://www.facebook.com/groups/1520538148174445/permalink/2720634178164830/
 
 sa:v = separate
 sa:i = continuous motion
 
-sa:v+sa:i = to separate; to distinguish; to remove; to break away
+
+sa:vi [sa:v+i] = to separate; to distinguish; to remove; to break away
 
 sa:vi =[symbol for separating, breaking away from land] bird
 
@@ -11,11 +12,12 @@ sa:vi -> lat:avis -> aviator; aviation; aviary
 
 sa:vi -> [augurs in ancient Rome interpreted flight of birds as auspicious or inauspicious] lat:auspicious
 
-sa:vi ->[Vyasa separated the vedas in four ] sa:Vyasa [sage]
+sa:vi ->[Vyasa separated the vedas in four] sa:Vyasa [sage]
 
-sa:vy = apart
+sa:vi = apart
 sa:asa = to place
-sa:vy+sa:asa = to place apart
+
+sa:vyasa [sa:vi + asa] = to place apart
 
 sa:vi -> sa:vis = to spread; to pervade; to enter into; to enter within
 sa:vis -> sa:Vishnu = the one who pervades everything; the one who enters into everything
@@ -28,14 +30,14 @@ lat:vicus -> vicinity; neighbourhood
 
 sa:visa -> poison
 sa:sa = to connect
-sa:vi+sa:sa = to connect to that which separates
+sa:vi+sa = to connect to that which separates
 
 sa:visa -> venom -> virus = poison; venom; slimy liquid
 
 sa:c = circular
 sa:a = motion
 
-sa:c+sa:a -> sa:cakra = circle
+sa:c+a -> sa:cakra = circle
 sa:cakra -> gr:kyklos = circle
 
 sa:cakra -> gr:koronos = curved

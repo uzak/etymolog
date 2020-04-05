@@ -1,9 +1,9 @@
-#SRC https://www.facebook.com/groups/1520538148174445/permalink/2718876171673964/
+//SRC https://www.facebook.com/groups/1520538148174445/permalink/2718876171673964/
 
 sa:an = breathe
 sa:t = to move from one point to another
 
-sa:t+sa:an = moving from one point to another as the movement of breathing
+sa:tan [t+an] = moving from one point to another as the movement of breathing
 
 sa:tan = to expand; to stretch; to spread
 
@@ -26,4 +26,4 @@ PIE:ten = to stretch
 PIE:ten -> tenet = dogma; principle; opinion
 
 sa:tra = instrument
-sa:tan+sa:tra = instrument (tra) to expand your consciousness (tan)
+sa:tantra [tan+tra] = instrument (tra) to expand (tan) your consciousness

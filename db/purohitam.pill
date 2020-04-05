@@ -1,4 +1,4 @@
-#SRC https://www.facebook.com/groups/1520538148174445/permalink/2705905389637709/
+//SRC https://www.facebook.com/groups/1520538148174445/permalink/2705905389637709/
 
 sa:pur = door; gate; wall; rampart; stronghol; castle; town; city
 sa:pur [that which stands before its citizens, that which protects them]
@@ -20,14 +20,14 @@ sa:purva =[considered auspicious in the Veda] east
 
 sa:pur = facing
 sa:va = auspiciousness
-sa:pur + sa:va -> sa:purva = facing auspiciousness; in front of auspiciousness
+sa:purva [pur + va] = facing auspiciousness; in front of auspiciousness
 
 sa:purva =[what is prior, that which precedes, what which goes before] first; forefather; ancient
 
 PIE:per = in front; before
  PIE:per-> de:fura -> old_english:fore -> before; first
 
-#TRANSFORMATION sa:P -> F
+// transformation sa:P -> european:F
 sa:pluta -> float
 sa:pirya -> free; friend
 en:pyre -> fire
@@ -39,6 +39,6 @@ sa:purva =[direction, where the sun first appears] east
 
 sa:vrka = tearer
 
-# my additions
+// my additions
 en:pyre ~ sk:pýriť sa; de:Feuer
 sa:vrka -> wolf; sk:vlk
