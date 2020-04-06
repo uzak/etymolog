@@ -1,19 +1,11 @@
-* unions (__str__) are broken -> better tests
-    * union shortcut: lang:w1+w2 instead lang:w1+lang:w2
-* s/word.derives/word.derives_to/ ???
-* two comments ([]) following each other?
-* ./details sa tan:
-     -> sa:tanyatu = en:thunder
-         -> avesta:tundor
-             -> old_english:tunor
-                 -> en:thunder = sa:tanyatu  <= XXX
+* group by language in details
 
-* handling "quotes"?
-* support for multiline rel?
-* introduce tags?
-    . replace comments by //
+* support for multiple unions for one word
+
+* introduce tags? how shall they work?
 * remove Relationship(s).Table
-* use cases:
-    - lookup a `word` (for a `language`)
-    - give me a dictionary with derivations (in * or given languages) for a given language
-
+* s/word.derives/word.derives_to/ ???
+* support for multiline rel?
+* transitiveness: shall a = b = c also generate a = c? and for ~?
+* make Entity.union a set?
+* add language to comments

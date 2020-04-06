@@ -20,8 +20,10 @@ def translations(word, rel_type=model.Equals):
         yield translation
 
 
-def translations_str(word, rel_type=model.Equals):
-    trs = [str(tr) for tr in translations(word, rel_type=rel_type)]
+def translations_str(word, rel_type=model.Equals, ignore=set()):
+    trs = translations(word, rel_type=rel_type)
+    trs = set(trs).difference(ignore)
+    trs = [str(tr) for tr in trs]
     equals = ", ".join(trs)
     return f" {rel_type.Symbol} {equals}" if equals else ""
 
@@ -29,15 +31,19 @@ def translations_str(word, rel_type=model.Equals):
 def parents(word):
     for p in word.derived_from:
         parents(p.left)
-        if isinstance(p.left , model.Union):
-            print(f"    {p.left.left}{translations_str(p.left)}")
-            print(f"      +")
-            print(f"    {p.left.right}{translations_str(p.left)}")
+        if p.left.union:
+            print(f"    {p.left}{translations_str(p.left)}")
+            print(f"      .{p.left.union.left}{translations_str(p.left.union.left)}")
+            print(f"      .{p.left.union.right}{translations_str(p.left.union.right)}")
         else:
             print(f"    {p.left}{translations_str(p.left)}")
         if word.derived_from:
             comments = comments_str(p)
             print(f"      | {comments}")
+    else:
+        if not word.derived_from:
+            print(f"      * ")          # AUM
+            print(f"      |")
 
 
 def comments_str(word):
@@ -47,25 +53,47 @@ def comments_str(word):
     return ""
 
 
-def derived_details(word, indent):
+def derived_details(word, indent, seen_on_left=set()):
     for c in word.derives:
         comments = comments_str(c.right)
-        print(f"{indent}{model.Derived.Symbol} {c.right}{translations_str(c.right)} {comments}")
+        #XXX also group by languages here
+        trans = translations_str(c.right, ignore=seen_on_left)
+        seen_on_left.add(c.left)
+        print(f"{indent}{model.Derived.Symbol} {c.right}{trans} {comments}")
         if c.right.derives:
-            derived_details(c.right, indent + ' '*indent_size)
+            derived_details(c.right, indent + ' '*indent_size, seen_on_left=seen_on_left)
+
+
+def _group_by_lang(translations):
+    result = {}
+    for t in translations:
+        if t.lang.name not in result:
+            # 1. set = translations with comments
+            # 2. set = without
+            result[t.lang.name] = set(), set()
+        if t.comments:
+            result[t.lang.name][0].add(t)
+        else:
+            result[t.lang.name][1].add(t)
+    return result
 
 
 def details(word):
     indent = ' ' * (indent_size + 1)
     trs = translations(word)
-    for t in trs:
-        comments = comments_str(t)
-        print(f"{indent}{model.Equals.Symbol} {t} {comments}")
+    # XXX DRY, make it more simple
+    for lang, (trs_comm, trs_no_comm) in _group_by_lang(trs).items():
+        for t in trs_comm:
+            comments = comments_str(t)
+            print(f"{indent}{model.Equals.Symbol} {t} {comments}")
+        print(f"{indent}{model.Equals.Symbol} {', '.join(map(str, trs_no_comm))}")
     trs = translations(word, rel_type=model.Related)
-    for t in trs:
-        comments = comments_str(t)
-        print(f"{indent}{model.Equals.Symbol} {t} {comments}")
-    derived_details(word, indent)
+    for lang, (trs_comm, trs_no_comm) in _group_by_lang(trs).items():
+        for t in trs_comm:
+            comments = comments_str(t)
+            print(f"{indent}{model.Related.Symbol} {t} {comments}")
+        print(f"{indent}{model.Related.Symbol} {', '.join(map(str, trs_no_comm))}")
+    derived_details(word, indent, set())
 
 
 #XXX move to word?
@@ -73,9 +101,8 @@ def word_details(word):
     parents(word)
     print(f" => {word}")
     if word.union:
-        for i, union in enumerate(word.union):
-            print(f"    UNION: {i+1}. {union.left}{translations_str(union.left)}")
-            print(f"    UNION: {i+1}. {union.right}{translations_str(union.right)}")
+        print(f"    UNION: {word.union.left}{translations_str(word.union.left)}")
+        print(f"    UNION: {word.union.right}{translations_str(word.union.right)}")
     details(word)
 
 

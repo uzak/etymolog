@@ -36,6 +36,8 @@ if __name__ == '__main__':
     parser.add_argument("lang")
     args = parser.parse_args()
 
+    #XXX add translate_to_languages=*
+
     load_db()
 
     dictionary(args.lang)

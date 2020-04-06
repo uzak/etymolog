@@ -5,6 +5,8 @@ sa:pur [that which stands before its citizens, that which protects them]
 
 sa:hitam = laid; placed; set up
 
+sa:pura = before
+sa:hira = stands
 sa:purohitam [that which stands (Hira) before (Pura)]
 
 sa:yajna = sacrifice; austerity; worship; devotion
@@ -24,7 +26,7 @@ sa:purva [pur + va] = facing auspiciousness; in front of auspiciousness
 
 sa:purva =[what is prior, that which precedes, what which goes before] first; forefather; ancient
 
-PIE:per = in front; before
+sa:pura -> PIE:per = in front; before
  PIE:per-> de:fura -> old_english:fore -> before; first
 
 // transformation sa:P -> european:F
@@ -34,7 +36,7 @@ en:pyre -> fire
 
 sa:pur -> de:Fuehrer = leader
 
-sa:purva ->[first] sk:prvy; ru:pervy; rs:prvo
+sa:purva ->[first] sk:prvý; ru:pervy; rs:prvo
 sa:purva =[direction, where the sun first appears] east
 
 sa:vrka = tearer
@@ -42,3 +44,5 @@ sa:vrka = tearer
 // my additions
 en:pyre ~ sk:pýriť sa; de:Feuer
 sa:vrka -> wolf; sk:vlk
+sa:pura ~ sk:pred
+sa:purva -> sk:prv

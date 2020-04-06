@@ -7,6 +7,14 @@ Supporting functions for tests
 
 import model
 import config
+import pytest
+
+
+class TestCase:
+    @pytest.fixture(autouse=True)
+    def run_around_test(self):
+        reset_model()
+        yield
 
 
 def reset_model():
@@ -17,10 +25,13 @@ def reset_model():
     model.World.Languages = {}
 
 
-lang = model.World.lang
+def lang(language=None):
+    language = language or config.default_lang
+    return model.World.lang(language)
 
 
-def word(value, language):
+def word(value, language=None):
+    language = language or config.default_lang
     return lang(language).get_word(value)
 
 

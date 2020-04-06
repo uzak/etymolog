@@ -13,7 +13,7 @@ A word is the basic unit within a pill. It consists of any number of given alpha
 
     ship
 
-Each word gets assigned to a language. The language is an abbreviation of the language name. The default language for can be set in [config](./config.py) is ``en`` (English). It is used, when no explicit language is set for a word:
+Each word gets assigned to a language. The language is an abbreviation of the language name. The default language is English (``en``) and this can be changed in [config](./config.py). It is used, when no explicit language is set for a word:
 
     en:ship
 
@@ -34,7 +34,7 @@ To have two or more different language definitions for a composed word is invali
 
     en:big de:Schiff     // invalid
 
-The words are stored case-sensitive just as you define them, but they are looked up case-insensitive only. So lookup up `Ship` and `ship` will result in the same.
+The words are stored case-sensitive just as you define them, but they are always looked up case-insensitive. So looking up `Ship` and `ship` will yield the same result.
 
 ### Groups
 You can have several logically different words in the same statements comprising a group separated by ``;``:
@@ -111,33 +111,32 @@ This will result in creating a word ``sa:visa`` and creating a corresponding uni
 
 If a word's transcription is different from the composite word's, use the following syntax:
 
-    sa:vyasa [sa:vi+asa]
+    sa:vyasa [vi+asa]
     
-The word in brackets must have the same language as the word before. You can omit the language completely in the brackets.
+The words in brackets have the same language as the word they define. 
 
     sa:vyasa [sk:vy+asa]             // invalid
-    sa:vyasa [vy+asa]
 
 ### Meta
-#### Tags
-If you want to tag a statement use ```#``` and tagname, e.g.
 
-    sa:danu [Goddess of waters] -> en:Danube  #river
-
-You can use several tags in one line
-
-    sa:nIla -> Nile   #river #Shiva #colors
-    sa:Siva -> sk:sivá  #colors
-   
-All tags are case-insensitive.
-
-#### Inline Comments
+#### EOL Comments
 
 Comments that are for your eyes only and will be ignored by the parser start with ``//`` and end with the the end of the line:
 
     sa:Rudra -> cz:rudý // červený. Rudra je nahnevaný Šiva
     
-#### Processing directives
+    
+#### Inline Comments
+
+Comments within a series of words are enclosed in ``()``:
+
+    sa:tantra = instrument (tra) to expand (tan) your consciousness
+
+Yields the same data as:
+
+    sa:tantra = instrument to expand your consciousness
+
+#### Processing Directives
 
 Finally there is a special category of comments that are directives for the parser. They are of the syntax // DIRECTIVE and there must not be any statement before them, i.e. they occupy the wohle line. E.g.
 
@@ -147,7 +146,6 @@ Will set the parser's SRC directive to ``http://some.link``. Here is a list of s
 
 * SRC set's the `source` attribute for all following Relationships and Words.
 * LANG set's the default language.
-* TAG set's the tag to be applied. You can have several TAG directives.
 
 All directives are valid from the point where they are encountered until the end-of-the file.
 

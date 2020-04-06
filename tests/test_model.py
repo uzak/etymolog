@@ -7,10 +7,7 @@ test the parser, obviously
 
 from . util import *
 
-import pytest
-
-
-class TestModel:
+class TestModel(TestCase):
 
     def test_rel_bidirectionality(self):
         en = lang("en")
@@ -38,7 +35,19 @@ class TestModel:
         lower = en.add_word("w1")
         assert lower is upper
 
-    @pytest.fixture(autouse=True)
-    def run_around_test(self):
-        reset_model()
-        yield
+    def test_union_str(self):
+        l = lang()
+        w1 = l.add_word("w1")
+        w2 = l.add_word("w2")
+        union = model.Union(w1, w2)
+        union.register_composite_word()
+        assert str(union) == f"{config.default_lang}:w1+w2"
+
+    def test_union_str_explicit_word(self):
+        l = lang()
+        w1 = l.add_word("w1")
+        w2 = l.add_word("w2")
+        w3 = l.add_word("abcd")
+        union = model.Union(w1, w2)
+        w3.union = union
+        assert str(w3) == f"{w3.lang.name}:{w3.value} [w1+w2]"

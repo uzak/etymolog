@@ -3,8 +3,7 @@
 sa:v = separate
 sa:i = continuous motion
 
-
-sa:vi [sa:v+i] = to separate; to distinguish; to remove; to break away
+sa:vi [v+i] = to separate; to distinguish; to remove; to break away
 
 sa:vi =[symbol for separating, breaking away from land] bird
 
@@ -17,7 +16,7 @@ sa:vi ->[Vyasa separated the vedas in four] sa:Vyasa [sage]
 sa:vi = apart
 sa:asa = to place
 
-sa:vyasa [sa:vi + asa] = to place apart
+sa:vyasa [vi + asa] = to place apart
 
 sa:vi -> sa:vis = to spread; to pervade; to enter into; to enter within
 sa:vis -> sa:Vishnu = the one who pervades everything; the one who enters into everything

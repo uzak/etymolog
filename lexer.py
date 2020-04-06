@@ -7,7 +7,8 @@ import ply.lex as lex
 from config import log
 
 tokens = (
-    'TOKEN', 'COLON',
+    'LANG',
+    'TOKEN',
     'LPAREN', 'RPAREN',         # just for adjusting priority of eval
     'PLUS',
     'SEP',
@@ -23,11 +24,26 @@ t_RELATED = r'~'
 t_PLUS    = r'\+'
 t_LPAREN  = r'\('
 t_RPAREN  = r'\)'
-t_COLON   = ':'
 t_SEP     = ';'
-t_TOKEN   = r"[\w]+"
-t_META    = r"[#].*"
-t_COMMENT = r"\[.*?\]"
+t_TOKEN   = r"\w+"
+
+
+def t_META(t):
+    "//.*"
+    t.value = t.value[2:]
+    return t
+
+
+def t_LANG(t):
+    r'\w+\s*:'
+    t.value = t.value.rstrip(':')
+    return t
+
+
+def t_COMMENT(t):
+    r"\[.*?\]"
+    t.value = t.value[1:-1]
+    return t
 
 
 def t_error(t):
@@ -37,7 +53,7 @@ def t_error(t):
 
 def t_newline(t):
     r'\n+'
-    t.lexer.lineno += t.value.count("\n")
+    t.lexer.lineno += len(t.value)
 
 t_ignore = ' \t'
 
@@ -45,16 +61,4 @@ lexer = lex.lex()
 
 
 if __name__ == '__main__':
-    import argparse
-    parser = argparse.ArgumentParser()
-    parser.add_argument("file")
-    args = parser.parse_args()
-
-    with open(args.file) as f:
-        lexer.input(f.read())
-
-    while True:
-        tok = lexer.token()
-        if not tok:
-            break
-        print(tok)
+    lex.runmain()
