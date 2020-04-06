@@ -10,7 +10,7 @@ import model
 import config
 import ply.yacc
 
-from config import log
+from log import log
 
 from lexer import tokens
 

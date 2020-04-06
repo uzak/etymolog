@@ -96,7 +96,6 @@ def details(word):
     derived_details(word, indent, set())
 
 
-#XXX move to word?
 def word_details(word):
     parents(word)
     print(f" => {word}")

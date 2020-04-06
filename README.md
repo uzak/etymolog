@@ -22,11 +22,7 @@ You can have several words following each other and they will be fused into one:
 
     big ship 
 
-Creates one word `big ship` in the default language. The following statement does the same:
-
-    en:big en:ship
-
-You can skip the second and all the following language definitions for a word, then the first will be taken:
+creates one word `big ship` in the default language. Only the first word can have a language explicitly set:
 
     en:big ship
     
@@ -64,7 +60,7 @@ You can have any number of relationships on one line. You can also combine any r
 #### Equality
 Equality defines what would be the translation of a word from one language to another:
 
-    en:ship -> de:Schiff
+    en:ship = de:Schiff
 
 Here is where the groups make sense. If a group is used on the right side of relationship, the relationship will be created for all of its members:
 

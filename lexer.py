@@ -4,7 +4,7 @@ Tokenizer for .pill files
 """
 
 import ply.lex as lex
-from config import log
+from log import log
 
 tokens = (
     'LANG',

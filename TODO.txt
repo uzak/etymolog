@@ -1,6 +1,10 @@
 * group by language in details
 
-* support for multiple unions for one word
+test: sk:a sk:b -> what happens?
+test: sk:a de:b -> what happens?
+test: union sa:vi + sa - take default or sa for sa?
+
+* support for multiple unions for one Entity
 
 * introduce tags? how shall they work?
 * remove Relationship(s).Table
