@@ -15,6 +15,7 @@ tokens = (
     'COMMENT', 'META',
     'EQUALS', 'DERIVE',
     'RELATED',
+    'TAG',
 )
 
 # Tokens
@@ -26,6 +27,11 @@ t_LPAREN  = r'\('
 t_RPAREN  = r'\)'
 t_SEP     = ','
 t_TOKEN   = r"\w+"
+
+def t_TAG(t):
+    r'[#]\s*\w+'
+    t.value = t.value.lstrip("#").strip()
+    return t
 
 
 def t_META(t):

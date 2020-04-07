@@ -12,7 +12,7 @@ def dump(verbose=False):
     for lang in sorted(model.World.Languages.values(), key=lambda l: len(l), reverse=True):
         print(f"{lang} {len(lang)}")
 
-    print(f"Union {len(model.Union.Table)}")
+    print(f"Union {len(model.Union.Table)}:")
     if verbose:
         for union in model.Union.Table.values():
             print(f"\t{union}")
@@ -25,6 +25,9 @@ def dump(verbose=False):
                 if v not in seen:
                     print(f"\t{v}")
                     seen.append(v)
+
+    tags = model.World.Tags.keys()
+    print(f"Tags ({len(tags)}): {', '.join(tags)}")
 
 
 if __name__ == "__main__":

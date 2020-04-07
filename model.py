@@ -29,6 +29,14 @@ class Word(Entity):
         self.equals = set()
         self.related = set()
         self.unions = set()
+        self.tags = set()
+
+    def add_tag(self, tag):
+        tag = tag.lower()         # XXX ok?
+        if tag not in World.Tags:
+            World.Tags[tag] = set()
+        World.Tags[tag].add(self)
+        self.tags.add(tag)
 
     def __lt__(self, other):
         assert self.lang == other.lang
@@ -210,6 +218,7 @@ class Related(Relationship):
 class World:
     "Universal Mind"
 
+    Tags = {}           # name: set(words)
     Languages = {}
 
     @staticmethod

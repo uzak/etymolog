@@ -364,6 +364,27 @@ class TestMeta(TestCase):
         assert config.default_lang == "en"
 
 
+class TestTag(TestCase):
+    def test_basic(self):
+        parser.yacc.parse("a #b")
+        assert "b" in lang().get_word("a").tags
+
+    def test_basic_two_tags(self):
+        parser.yacc.parse("a #b # c")
+        assert "b" in lang().get_word("a").tags
+        assert "c" in lang().get_word("a").tags
+        assert len(model.World.Tags) == 2
+
+    def test_rel(self):
+        parser.yacc.parse("a ->b # c")
+        assert "c" in lang().get_word("b").tags
+        assert len(lang().get_word("a").tags) == 0
+
+    def test_group(self):
+        parser.yacc.parse("a,b # c")
+        assert "c" in lang().get_word("b").tags
+
+
 class TestMisc(TestCase):
 
     def test_delete_ignores_existing_words(self):
@@ -373,5 +394,4 @@ class TestMisc(TestCase):
         assert l.get_word("a") is not None
         assert l.get_word("a b") is not None
         assert_total_word(config.default_lang, 2)
-
-
+        assert len(lang().get_word("a").tags) == 0

@@ -145,6 +145,15 @@ Will set the parser's SRC directive to ``http://some.link``. Here is a list of s
 
 All directives are valid from the point where they are encountered until the end-of-the file.
 
+### Tags
+
+Finally you can tag a word. On a line there can be any number of tags, all of which apply to the word preceding it:
+
+    Thames #river #UK
+    sa:danu -> danube #river
+
+All tags are case-insensitive and stored in lower case.
+
 ## Tools
 ### dump.py
 TODO

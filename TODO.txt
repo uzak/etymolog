@@ -1,7 +1,6 @@
-* introduce tags? how shall they work?
-    - # tag (applies only to a word preceding it)
+* tags
+    - // TAG tagname apply tagnem to all words until EOF ???
     - dict.py - add filter by tags??
-    - dump.py - dump all available tags
 * group by language in details
 * add name and contact
 * example to readme

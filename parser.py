@@ -197,6 +197,12 @@ def p_meta(p):
     handle_meta(meta)
 
 
+def p_tag(p):
+    'word : word TAG'
+    p[1].add_tag(p[2])
+    p[0] = p[1]
+
+
 def p_error(p):
     raise SyntaxError(f"Syntax error at token {p!r}")
 
@@ -211,6 +217,7 @@ precedence = (
     ('left', 'SEP'),
     ('left', 'PLUS'),
     ('left', 'LPAREN', 'RPAREN'),
+    ('left', 'TAG'),
     ('left', 'LANG'),
     ('left', 'META'),
 )

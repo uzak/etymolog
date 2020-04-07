@@ -4,5 +4,5 @@ sa:tamas = ignorance, darkness
 
 sa:tamas -> sk:tma, bg:tumen, fi:tumma, lt:tamsus, hr:tama
 
-sa:tamas -> celtic:Tamesis -> Thames (river)
+sa:tamas -> celtic:Tamesis -> Thames # river
 celtic:Tamesis = dark river
