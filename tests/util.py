@@ -34,6 +34,8 @@ def word(value, language=None):
     language = language or config.default_lang
     return lang(language).get_word(value)
 
+def get_union(word):
+    return list(word.unions)[0]
 
 def _assert_rel_lr(rel, left, right, ll=config.default_lang, rl=config.default_lang):
     """"ll -> left lang"

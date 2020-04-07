@@ -32,10 +32,11 @@ def translations_str(word, rel_type=model.Equals, ignore=set()):
 def parents(word):
     for p in word.derived_from:
         parents(p.left)
-        if p.left.union:
-            print(f"    {p.left}{translations_str(p.left)}")
-            print(f"      .{p.left.union.left}{translations_str(p.left.union.left)}")
-            print(f"      .{p.left.union.right}{translations_str(p.left.union.right)}")
+        if p.left.unions:
+            for i, u in enumerate(p.left.unions):
+                print(f"    {p.left}{translations_str(p.left)}")
+                print(f"      .{u.left}{translations_str(u.left)}")
+                print(f"      .{u.right}{translations_str(u.right)}")
         else:
             print(f"    {p.left}{translations_str(p.left)}")
         if word.derived_from:
@@ -101,9 +102,10 @@ def details(word):
 def word_details(word):
     parents(word)
     print(f" => {word}")
-    if word.union:
-        print(f"    UNION: {word.union.left}{translations_str(word.union.left)}")
-        print(f"    UNION: {word.union.right}{translations_str(word.union.right)}")
+    if word.unions:
+        for i, u in enumerate(word.unions):
+            print(f"    {i+1}. union: {u.left}{translations_str(u.left)}")
+            print(f"    {i+1}. union: {u.right}{translations_str(u.right)}")
     details(word)
 
 

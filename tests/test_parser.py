@@ -252,18 +252,20 @@ class TestUnion(TestCase):
         sa = lang("sa")
         visa = sa.get_word("visa")
         assert visa is not None
-        assert visa.union is not None
-        assert visa.union.left == sa.get_word("vi")
-        assert visa.union.right == sa.get_word("sa")
+        assert len(visa.unions) > 0
+        u = get_union(visa)
+        assert u.left == sa.get_word("vi")
+        assert u.right == sa.get_word("sa")
 
     def test_union_comment(self):
         parser.yacc.parse("sa:vyasa [vi + asa]")
         sa = lang("sa")
         vyasa = sa.get_word("vyasa")
         assert vyasa is not None
-        assert vyasa.union is not None
-        assert vyasa.union.left == sa.get_word("vi")
-        assert vyasa.union.right == sa.get_word("asa")
+        assert len(vyasa.unions) > 0
+        u = get_union(vyasa)
+        assert u.left == sa.get_word("vi")
+        assert u.right == sa.get_word("asa")
 
     def test_union_comment_diff_lang(self):
         parser.yacc.parse("a [de:b + sk:c]")
@@ -274,9 +276,10 @@ class TestUnion(TestCase):
         assert b is not None
         assert c is not None
         a = lang().get_word("a")
-        assert a.union is not None
-        assert a.union.left == b
-        assert a.union.right == c
+        assert len(a.unions) >= 0
+        u = get_union(a)
+        assert u.left == b
+        assert u.right == c
 
     def test_union_comment_diff_lang2(self):
         parser.yacc.parse("a [b + test:c]")
@@ -286,9 +289,10 @@ class TestUnion(TestCase):
         assert a is not None
         assert b is not None
         assert c is not None
-        assert a.union is not None
-        assert a.union.left == b
-        assert a.union.right == c
+        assert len(a.unions) > 0
+        u = get_union(a)
+        assert u.left == b
+        assert u.right == c
 
     def test_union_comment_diff_lang3(self):
         parser.yacc.parse("a [test:b + c]")
@@ -298,9 +302,10 @@ class TestUnion(TestCase):
         assert a is not None
         assert b is not None
         assert c is not None
-        assert a.union is not None
-        assert a.union.left == b
-        assert a.union.right == c
+        assert len(a.unions) > 0
+        u = get_union(a)
+        assert u.left == b
+        assert u.right == c
 
 
 class TestMeta(TestCase):

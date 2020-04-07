@@ -122,7 +122,8 @@ def p_expression_word_comment(p):
             lr = model.World.lang(lang_right.rstrip(":"))
         w1 = ll.add_word(left)
         w2 = lr.add_word(right)
-        p[0] = word.union = model.Union(w1, w2)
+        p[0] = union = model.Union(w1, w2)
+        word.unions.add(union)
     else:
         word.comment(comment)
         p[0] = word

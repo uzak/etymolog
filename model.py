@@ -28,7 +28,7 @@ class Word(Entity):
         self.derives = set()
         self.equals = set()
         self.related = set()
-        self.union = None
+        self.unions = set()
 
     def __lt__(self, other):
         assert self.lang == other.lang
@@ -44,10 +44,20 @@ class Word(Entity):
         return self.key()
 
     def __str__(self):
+        def union_to_str(union): #XXX hackish hack
+            if self.lang == union.left.lang:
+                left = union.left.value
+            else:
+                left = str(union.left)
+            if self.lang == union.right.lang:
+                right = union.right.value
+            else:
+                right = str(union.right)
+            return f"{left}{Union.Symbol}{right}"
         self_str = f"{self.lang.name}:{self.value}"
-        if self.union:
-            if str(self.union) != self_str:
-                return f"{self_str} [{self.union.left.value}+{self.union.right.value}]"
+        if self.unions:
+            unions = ", ".join(map(union_to_str, sorted(self.unions)))
+            return f"{self_str} [{unions}]"
         return self_str
 
 
@@ -56,10 +66,10 @@ class Union(Word):
     Table = {}
 
     def __init__(self, left: Word, right: Word):
-        key = f"{left.value}{Union.Symbol}{right.value}"
-        super().__init__(key, left.lang)
         self.left = left
         self.right = right
+        key = str(self)
+        super().__init__(key, left.lang)
         self.Table[(left, right)] = self
 
     def register_composite_word(self):
@@ -68,7 +78,11 @@ class Union(Word):
         word = lang.get_word(key)
         if not word:
             word = lang.add_word(key)
-        word.union = self
+        word.unions.add(self)
+
+    def __str__(self):
+        key = f"{self.left}{Union.Symbol}{self.right}"
+        return key
 
 class Group:
     "Group of words"
