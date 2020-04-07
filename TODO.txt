@@ -1,8 +1,7 @@
-* separating only by `,` (more intuitive; also it it's two sentences it's a comment)?
 * introduce tags? how shall they work?
-    - # tag (applies only to a word)
-    - tags.py - list all tags
+    - # tag (applies only to a word preceding it)
     - dict.py - add filter by tags??
+    - dump.py - dump all available tags
 * group by language in details
 * add name and contact
 * example to readme
@@ -10,8 +9,8 @@
 
 * remove Relationship(s).Table
 * s/word.derives/word.derives_to/ ???
+* describe OM in the docs
 * support for multiline rel?
 * transitiveness: shall a = b = c also generate a = c? and for ~?
-* make Entity.union a set?
 * add language to comments
 * some nice Vue.js frontend?

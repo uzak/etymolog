@@ -3,7 +3,7 @@
 Akapana [Pyramid at the center of Tiwanaku]
 
 sa:pani = water
-sa:pana = drinking; canal
+sa:pana = drinking, canal
 sa:arka = sun
 
 akapana [sa:arka+sa:pana]
@@ -11,9 +11,9 @@ akapana [sa:arka+sa:pani]
 
 Kalasasaya [Courtyard north of Akapana]
 sa:kala = time
-sa:sasaya = ever flowing; abudant; unfaling
+sa:sasaya = ever flowing, abudant, unfaling
 
-kalasasaya [sa:kala+sa:sasaya] = ever flowing time; abundant time
+kalasasaya [sa:kala+sa:sasaya] = ever flowing time, abundant time
 
 kantatalita [Temple next to Akapana Pyramid]
 sa:kanta = fixed
@@ -21,8 +21,8 @@ sa:talita = moon
 kantatalita [sa:kanta+sa:talita]
 
 sa:tapi = heat
-sa:tapa = sun; warmth
-sa:tapi -> cz:topiť; sk:topiť
+sa:tapa = sun, warmth
+sa:tapi -> cz:topiť, sk:topiť
 taypikala [sa:tapa+sa:kala] = time of the Sun
 taypikala [Original name of Tiwanaku]
 taypikala ~ Tiwanaku

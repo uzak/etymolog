@@ -24,7 +24,7 @@ t_RELATED = r'~'
 t_PLUS    = r'\+'
 t_LPAREN  = r'\('
 t_RPAREN  = r'\)'
-t_SEP     = ';'
+t_SEP     = ','
 t_TOKEN   = r"\w+"
 
 

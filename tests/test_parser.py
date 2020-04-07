@@ -61,7 +61,7 @@ class TestWords(TestCase):
 class TestGroups(TestCase):
 
     def test_group(self):
-        parser.yacc.parse("w1; w2; w3")
+        parser.yacc.parse("w1, w2, w3")
         l = lang(config.default_lang)
         assert l.get_word("w1")
         assert l.get_word("w2")
@@ -91,7 +91,7 @@ class TestRelationships(TestCase):
         assert_related_lr("w1", "w2", ll="test")
 
     def test_rel_related_group(self):
-        parser.yacc.parse("w1 ~ w2; w3")
+        parser.yacc.parse("w1 ~ w2, w3")
         assert_related_lr("w1", "w2")
         assert_related_lr("w1", "w3")
 
@@ -101,31 +101,31 @@ class TestRelationships(TestCase):
         assert_equals_lr("w2", "w3")
 
     def test_rel_groups(self):
-        parser.yacc.parse("w1;w2 -> w3")    # on the left only right-most group member is taken
+        parser.yacc.parse("w1,w2 -> w3")    # on the left only right-most group member is taken
         assert_derived_lr("w2", "w3")
         assert_total_rels(1)
 
     def test_rel_rel_groups2(self):
-        parser.yacc.parse("w2 -> w3;w4")
+        parser.yacc.parse("w2 -> w3,w4")
         assert_derived_lr("w2", "w3")
         assert_derived_lr("w2", "w4")
         assert_total_rels(2)
 
     def test_rel_rel_groups3(self):
-        parser.yacc.parse("w1;w2 -> w3;w4")
+        parser.yacc.parse("w1,w2 -> w3,w4")
         assert_derived_lr("w2", "w3")
         assert_derived_lr("w2", "w4")
         assert_total_rels(2)
 
     def test_word_word_word_rule(self):
-        parser.yacc.parse("w1 = w2 w3; w4")
+        parser.yacc.parse("w1 = w2 w3, w4")
         assert_equals_lr("w1", "w2 w3")
         assert_equals_lr("w1", "w4")
         assert_total_rels(4)            # 2x2 because Equals is bidirectional
         assert_total_word(config.default_lang, 3)
 
     def test_rel_rel_complex(self):
-        parser.yacc.parse("w1 -> w2;w3 = w5 -> w6")
+        parser.yacc.parse("w1 -> w2,w3 = w5 -> w6")
         assert_derived_lr("w1", "w2")
         assert_derived_lr("w1", "w3")
         assert_equals_lr("w3", "w5")
@@ -133,7 +133,7 @@ class TestRelationships(TestCase):
         assert_total_rels(5)
 
     def test_rel_rel_complex2(self):
-        parser.yacc.parse("w1 ~ w2 = w3 -> w4; w5")
+        parser.yacc.parse("w1 ~ w2 = w3 -> w4, w5")
         assert_related_lr("w1", "w2")
         assert_equals_lr("w2", "w3")
         assert_derived_lr("w3", "w4")
@@ -141,7 +141,7 @@ class TestRelationships(TestCase):
         assert_total_rels(6)
 
     def test_rel_rel_complex3(self):
-        parser.yacc.parse("w1 ~ w2; w3 = w4 -> w5")
+        parser.yacc.parse("w1 ~ w2, w3 = w4 -> w5")
         assert_related_lr("w1", "w2")
         assert_related_lr("w1", "w3")
         assert_equals_lr("w3", "w4")
@@ -149,7 +149,7 @@ class TestRelationships(TestCase):
         assert_total_rels(7)
 
     def test_rel_rel_complex4(self):
-        parser.yacc.parse("w1 -> w2; w3 = w4 ~ w5")
+        parser.yacc.parse("w1 -> w2, w3 = w4 ~ w5")
         assert_derived_lr("w1", "w2")
         assert_derived_lr("w1", "w3")
         assert_equals_lr("w3", "w4")
@@ -157,7 +157,7 @@ class TestRelationships(TestCase):
         assert_total_rels(6)
 
     def test_rel_rel_complex5(self):
-        parser.yacc.parse("w0; w1 = w2 -> w3 ~ w4; w5")
+        parser.yacc.parse("w0, w1 = w2 -> w3 ~ w4, w5")
         assert_equals_lr("w1", "w2")
         assert_equals_lr("w2", "w1")
         assert_derived_lr("w2", "w3")
@@ -238,7 +238,7 @@ class TestComments(TestCase):
             parser.yacc.parse("a ~[c1] a")
 
     def test_rel_comment_group(self):
-        parser.yacc.parse("a ->[b] c; d; e ")
+        parser.yacc.parse("a ->[b] c, d, e ")
         left = word("a")
         assert left
         for right_value in "cde":
@@ -329,7 +329,7 @@ class TestMeta(TestCase):
         assert_total_word(config.default_lang, 2)
 
     def test_inline_comment_group(self):
-        parser.yacc.parse(f"sa:purva = east (comment); first")
+        parser.yacc.parse(f"sa:purva = east (comment), first")
         assert_total_word(config.default_lang, 2)
         assert lang("en").get_word("east")
         assert lang("en").get_word("first")

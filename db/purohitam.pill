@@ -1,48 +1,48 @@
 //SRC https://www.facebook.com/groups/1520538148174445/permalink/2705905389637709/
 
-sa:pur = door; gate; wall; rampart; stronghold; castle; town; city
+sa:pur = door, gate, wall, rampart, stronghold, castle, town, city
 sa:pur [that which stands before its citizens, that which protects them]
 
-sa:hitam = laid; placed; set up
+sa:hitam = laid, placed, set up
 
 sa:pura = before
 sa:hira = stands
 sa:purohitam [that which stands (Hira) before (Pura)]
 
-sa:yajna = sacrifice; austerity; worship; devotion
+sa:yajna = sacrifice, austerity, worship, devotion
 sa:yajna = sa:Vishnu
-sa:Vishnu = lord of sacrifice; recipient of all sacrifices
+sa:Vishnu = lord of sacrifice, recipient of all sacrifices
 
-sa:pur -> sa:puri =[e.g. Hastinarpur, Jaipur, Sitapur] town; city
+sa:pur -> sa:puri =[e.g. Hastinarpur, Jaipur, Sitapur] town, city
 
-sa:pur = prior; to precede; to go before; to lead
+sa:pur = prior, to precede, to go before, to lead
 
 sa:pur -> sa:purva
 sa:purva =[considered auspicious in the Veda] east
 
 sa:pur = facing
 sa:va = auspiciousness
-sa:purva [pur + va] = facing auspiciousness; in front of auspiciousness
+sa:purva [pur + va] = facing auspiciousness, in front of auspiciousness
 
-sa:purva =[what is prior, that which precedes, what which goes before] first; forefather; ancient
+sa:purva =[what is prior, that which precedes, what which goes before] first, forefather, ancient
 
-sa:pura -> PIE:per = in front; before
- PIE:per-> de:fura -> old_english:fore -> before; first
+sa:pura -> PIE:per = in front, before
+ PIE:per-> de:fura -> old_english:fore -> before, first
 
 // transformation sa:P -> european:F
 sa:pluta -> float
-sa:priya -> free; friend
+sa:priya -> free, friend
 en:pyre -> fire
 
 sa:pur -> de:Führer = leader
 
-sa:purva ->[first] sk:prvý; ru:pervy; rs:prvo
+sa:purva ->[first] sk:prvý, ru:pervy, rs:prvo
 sa:purva =[direction, where the sun first appears] east
 
 sa:vrka = tearer
 
 // my additions
-en:pyre ~ sk:pýriť sa; de:Feuer
-sa:vrka -> wolf; sk:vlk; odvrknúť
+en:pyre ~ sk:pýriť sa, de:Feuer
+sa:vrka -> wolf, sk:vlk, odvrknúť
 sa:pura ~ sk:pred
 sa:purva -> sk:prv

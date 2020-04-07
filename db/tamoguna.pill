@@ -1,8 +1,8 @@
 // SRC https://www.facebook.com/groups/1520538148174445/permalink/2724931534401761/
 
-sa:tamas = ignorance; darkness
+sa:tamas = ignorance, darkness
 
-sa:tamas -> sk:tma; bg:tumen; fi:tumma; lt:tamsus; hr: tama
+sa:tamas -> sk:tma, bg:tumen, fi:tumma, lt:tamsus, hr:tama
 
 sa:tamas -> celtic:Tamesis -> Thames (river)
 celtic:Tamesis = dark river
