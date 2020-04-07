@@ -3,7 +3,7 @@
 sa:Kelasa = crystal; crystal clear consciousness
 sa:Kelasa -> sa:Kailash
 sa:Kailash =[where he lives with Parvatti, Ganesa, Skanda, Ganas, Kuvera] abode of Lord Siva
-sa:Kailash = mount Kailash; Gang Rinpoche (for Buddhists); sumeru (for Jains)
+sa:Kailash = mount Kailash; Gang Rinpoche (for Buddhists); Sumeru (for Jains)
 sa:Kailash =[origin of Hindus, Sutlej, Brahmaputra and Karnali] water towers of the world // Gn 2:10
 Manasarovar -> the crystal clear lake of the mind
 
@@ -17,5 +17,5 @@ sa:Kailash -> lat:Caelum -> lat:Caelestis -> celestial; celebrate; celibacy
 lat:Caelestis = heaven
 
 // from comments
-Kailasa ~[way of life that culminates into the ONE] Kevala Lasya
-Kailasa ~[all music disappearing into silence supreme] Kevala Lasya
+sa:Kailasa ~[way of life that culminates into the ONE] sa:Kevala Lasya
+sa:Kailasa ~[all music disappearing into silence supreme] sa:Kevala Lasya

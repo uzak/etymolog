@@ -47,8 +47,7 @@ def t_COMMENT(t):
 
 
 def t_error(t):
-    log.error(f"Illegal character {t.value[0]!r}")
-    t.lexer.skip(1)
+    raise SyntaxError("Illegal character {t.value[0]!r}")
 
 
 def t_newline(t):

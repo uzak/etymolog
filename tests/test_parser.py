@@ -16,7 +16,7 @@ import config
 
 class TestWords(TestCase):
 
-    def test_word_basic_default_lang(self):
+    def test_basic_default_lang(self):
         l = config.default_lang
         parser.yacc.parse("w")
         w = word("w", l)
@@ -24,21 +24,21 @@ class TestWords(TestCase):
         assert w.lang.name == l
         assert_total_word(config.default_lang, 1)
 
-    def test_word_basic(self):
+    def test_basic(self):
         parser.yacc.parse("test:w")
         w = word("w", "test")
         assert w.value == "w"
         assert w.lang.name == "test"
         assert_total_word("test", 1)
 
-    def test_word_composite_implicit_lang(self):
+    def test_composite_implicit_lang(self):
         parser.yacc.parse("w z")
         w = word("w z")
         assert w.value == "w z"
         assert w.lang.name == config.default_lang
         assert_total_word(config.default_lang, 1)
 
-    def test_word_composite_explicit_lang(self):
+    def test_composite_explicit_lang(self):
         parser.yacc.parse("test:w z")
         w = word("w z", "test")
         assert w.value == "w z"
@@ -46,13 +46,17 @@ class TestWords(TestCase):
         assert_total_word("test", 1)
         assert_total_word(config.default_lang, 0)
 
-    def test_word_composite_different_lang(self):
+    def test_composite_different_lang(self):
         with pytest.raises(SyntaxError):
             parser.yacc.parse("en:big de:Schiff")
 
-    def test_word_composite_explicit_lang_both(self):
+    def test_composite_explicit_lang_both(self):
         with pytest.raises(SyntaxError):
             parser.yacc.parse("en:big en:ship")
+
+    def test_invalid_lang(self):
+        with pytest.raises(SyntaxError):
+            parser.yacc.parse(".lang:word")
 
 class TestGroups(TestCase):
 

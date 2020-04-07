@@ -8,6 +8,23 @@ from dump import load_db
 indent_size = 2
 
 
+def groupby(key_fct, seq):
+    result = {}
+    for item in seq:
+        key = key_fct(item)
+        if key not in result:
+            result[key] = set()
+        result[key].add(item)
+    return result
+
+def groupby_lang_name(seq):
+    return groupby(lambda x: x.lang.name, seq)
+
+def split(fct, seq):
+    return set(filter(fct, seq)), \
+           set(filter(lambda x: not fct(x), seq))
+
+
 #XXX unittest/doctest?
 def translations(word, rel_type=model.Equals):
     if rel_type is model.Equals:
@@ -20,13 +37,23 @@ def translations(word, rel_type=model.Equals):
         translation = w.right if w.left == word else w.left
         yield translation
 
+
 #XXX unittest/doctest?
+
+def _translations_str(trs, rel_type=model.Equals):
+    result = []
+    for lang, words in groupby_lang_name(trs).items():
+        trs = [str(tr.value) for tr in words]
+        equals = ", ".join(trs)
+        if trs:
+            equals = f"{lang}:{equals}"
+            result.append(equals)
+    return f" {rel_type.Symbol} {'; '.join(result)}" if result else ""
+
 def translations_str(word, rel_type=model.Equals, ignore=set()):
     trs = translations(word, rel_type=rel_type)
     trs = set(trs).difference(ignore)
-    trs = [str(tr) for tr in trs]
-    equals = ", ".join(trs)
-    return f" {rel_type.Symbol} {equals}" if equals else ""
+    return _translations_str(trs, rel_type=rel_type)
 
 
 def parents(word):
@@ -56,46 +83,30 @@ def comments_str(word):
 
 
 def derived_details(word, indent, seen_on_left=set()):
-    for c in word.derives:
-        comments = comments_str(c.right)
-        #XXX also group by languages here
-        trans = translations_str(c.right, ignore=seen_on_left)
-        seen_on_left.add(c.left)
-        print(f"{indent}{model.Derived.Symbol} {c.right}{trans} {comments}")
-        if c.right.derives:
-            derived_details(c.right, indent + ' '*indent_size, seen_on_left=seen_on_left)
-
+    for lang, derivates in groupby(lambda d: d.right.lang.name, word.derives).items():
+        for d in derivates:
+            comments = comments_str(d.right)
+            trans = translations_str(d.right, ignore=seen_on_left)
+            seen_on_left.add(d.left)
+            print(f"{indent}{model.Derived.Symbol} {d.right}{trans} {comments}")
+            if d.right.derives:
+                derived_details(d.right, indent + ' '*indent_size, seen_on_left=seen_on_left)
 
 #XXX unittest/doctest?
-def _group_by_lang(translations):
-    result = {}
-    for t in translations:
-        if t.lang.name not in result:
-            # 1. set = translations with comments
-            # 2. set = without
-            result[t.lang.name] = set(), set()
-        if t.comments:
-            result[t.lang.name][0].add(t)
-        else:
-            result[t.lang.name][1].add(t)
-    return result
 
 
 def details(word):
     indent = ' ' * (indent_size + 1)
-    trs = translations(word)
-    # XXX DRY, make it more simple, comment
-    for lang, (trs_comm, trs_no_comm) in _group_by_lang(trs).items():
-        for t in trs_comm:
-            comments = comments_str(t)
-            print(f"{indent}{model.Equals.Symbol} {t} {comments}")
-        print(f"{indent}{model.Equals.Symbol} {', '.join(map(str, trs_no_comm))}")
-    trs = translations(word, rel_type=model.Related)
-    for lang, (trs_comm, trs_no_comm) in _group_by_lang(trs).items():
-        for t in trs_comm:
-            comments = comments_str(t)
-            print(f"{indent}{model.Related.Symbol} {t} {comments}")
-        print(f"{indent}{model.Related.Symbol} {', '.join(map(str, trs_no_comm))}")
+    # XXX cleanup
+    for rel_type in (model.Equals, model.Related):
+        trs = translations(word, rel_type=rel_type)
+        for lang, lang_trs in groupby_lang_name(trs).items():
+            trs_comm, trs_no_comm = split(lambda x: x.comments, lang_trs)
+            for t in trs_comm:
+                comments = comments_str(t)
+                print(f"{indent}{model.Equals.Symbol} {t} {comments}")
+            if trs_no_comm:
+                print(f"{indent}{_translations_str(trs_no_comm, rel_type=model.Equals)}")
     derived_details(word, indent, set())
 
 

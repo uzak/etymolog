@@ -1,12 +1,17 @@
+* separating only by `,` (more intuitive; also it it's two sentences it's a comment)?
+* introduce tags? how shall they work?
+    - # tag (applies only to a word)
+    - tags.py - list all tags
+    - dict.py - add filter by tags??
 * group by language in details
-* go through pills and use comments / translations / relation appropriately
 * add name and contact
 * example to readme
+* go through pills and use comments / translations / relation appropriately
 
-* introduce tags? how shall they work?
 * remove Relationship(s).Table
 * s/word.derives/word.derives_to/ ???
 * support for multiline rel?
 * transitiveness: shall a = b = c also generate a = c? and for ~?
 * make Entity.union a set?
 * add language to comments
+* some nice Vue.js frontend?
