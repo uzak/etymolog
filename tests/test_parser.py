@@ -50,6 +50,9 @@ class TestWords(TestCase):
         with pytest.raises(SyntaxError):
             parser.yacc.parse("en:big de:Schiff")
 
+    def test_word_composite_explicit_lang_both(self):
+        with pytest.raises(SyntaxError):
+            parser.yacc.parse("en:big en:ship")
 
 class TestGroups(TestCase):
 
@@ -263,11 +266,11 @@ class TestUnion(TestCase):
         assert vyasa.union.right == sa.get_word("asa")
 
     def test_union_comment_diff_lang(self):
-        parser.yacc.parse("a [l:b + k:c]")
-        l = lang("l")
-        k = lang("k")
-        b = l.get_word("b")
-        c = k.get_word("c")
+        parser.yacc.parse("a [de:b + sk:c]")
+        de = lang("de")
+        sk = lang("sk")
+        b = de.get_word("b")
+        c = sk.get_word("c")
         assert b is not None
         assert c is not None
         a = lang().get_word("a")
@@ -276,10 +279,22 @@ class TestUnion(TestCase):
         assert a.union.right == c
 
     def test_union_comment_diff_lang2(self):
-        parser.yacc.parse("a [b + k:c]")
+        parser.yacc.parse("a [b + test:c]")
         a = lang().get_word("a")
         b = lang().get_word("b")
-        c = lang("k").get_word("c")
+        c = lang("test").get_word("c")
+        assert a is not None
+        assert b is not None
+        assert c is not None
+        assert a.union is not None
+        assert a.union.left == b
+        assert a.union.right == c
+
+    def test_union_comment_diff_lang3(self):
+        parser.yacc.parse("a [test:b + c]")
+        a = lang().get_word("a")
+        b = lang("test").get_word("b")
+        c = lang().get_word("c")
         assert a is not None
         assert b is not None
         assert c is not None

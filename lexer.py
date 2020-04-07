@@ -9,7 +9,7 @@ from log import log
 tokens = (
     'LANG',
     'TOKEN',
-    'LPAREN', 'RPAREN',         # just for adjusting priority of eval
+    'LPAREN', 'RPAREN',
     'PLUS',
     'SEP',
     'COMMENT', 'META',
@@ -54,6 +54,7 @@ def t_error(t):
 def t_newline(t):
     r'\n+'
     t.lexer.lineno += len(t.value)
+
 
 t_ignore = ' \t'
 

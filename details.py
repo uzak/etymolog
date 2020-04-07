@@ -5,9 +5,10 @@
 import model
 from dump import load_db
 
-indent_size = 4
+indent_size = 2
 
 
+#XXX unittest/doctest?
 def translations(word, rel_type=model.Equals):
     if rel_type is model.Equals:
         data = word.equals
@@ -19,7 +20,7 @@ def translations(word, rel_type=model.Equals):
         translation = w.right if w.left == word else w.left
         yield translation
 
-
+#XXX unittest/doctest?
 def translations_str(word, rel_type=model.Equals, ignore=set()):
     trs = translations(word, rel_type=rel_type)
     trs = set(trs).difference(ignore)
@@ -64,6 +65,7 @@ def derived_details(word, indent, seen_on_left=set()):
             derived_details(c.right, indent + ' '*indent_size, seen_on_left=seen_on_left)
 
 
+#XXX unittest/doctest?
 def _group_by_lang(translations):
     result = {}
     for t in translations:
@@ -81,7 +83,7 @@ def _group_by_lang(translations):
 def details(word):
     indent = ' ' * (indent_size + 1)
     trs = translations(word)
-    # XXX DRY, make it more simple
+    # XXX DRY, make it more simple, comment
     for lang, (trs_comm, trs_no_comm) in _group_by_lang(trs).items():
         for t in trs_comm:
             comments = comments_str(t)

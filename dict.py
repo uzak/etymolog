@@ -23,7 +23,8 @@ def dictionary(lang_name):
     lang = model.World.lang(lang_name)
     print(f"Dictionary for ``{lang.name}`` ({len(lang)} items):")
     for w in sorted(lang):
-        print(f"* {w}{details.translations_str(w)}")
+        # TODO group translations by language
+        print(f"* {w.value}{details.translations_str(w)}")
         indent = "    "
         if w.related:
             print(f"{indent}{details.translations_str(w, rel_type=model.Related)}")
@@ -37,6 +38,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     #XXX add translate_to_languages=*
+    #XXX special language handlers, e.g. english should remove "to" infront of verbs
 
     load_db()
 
