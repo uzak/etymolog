@@ -26,7 +26,7 @@ t_PLUS    = r'\+'
 t_LPAREN  = r'\('
 t_RPAREN  = r'\)'
 t_SEP     = ','
-t_TOKEN   = r"\w+"
+t_TOKEN   = r"[\w]+"
 
 def t_TAG(t):
     r'[#]\s*\w+'
@@ -53,7 +53,7 @@ def t_COMMENT(t):
 
 
 def t_error(t):
-    raise SyntaxError("Illegal character {t.value[0]!r}")
+    raise SyntaxError(f"Illegal character {t.value[0]!r}")
 
 
 def t_newline(t):

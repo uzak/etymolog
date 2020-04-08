@@ -104,7 +104,7 @@ def details(word):
             trs_comm, trs_no_comm = split(lambda x: x.comments, lang_trs)
             for t in trs_comm:
                 comments = comments_str(t)
-                print(f"{indent}{model.Equals.Symbol} {t} {comments}")
+                print(f"{indent} {model.Equals.Symbol} {t} {comments}")
             if trs_no_comm:
                 print(f"{indent}{_translations_str(trs_no_comm, rel_type=model.Equals)}")
     derived_details(word, indent, set())
