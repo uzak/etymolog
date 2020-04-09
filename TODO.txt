@@ -16,13 +16,16 @@
 * lookup.py - try to find a word or similar
 * having '-' as part of word? -> is a problem then
 * testcase WORD,
+* show in details.py when a word is being part of an union (./details v -> va/vi ...)
 * add name and contact
 * example to readme
+* describe OM in the docs
 
+* caching : redis
 * remove Relationship(s).Table
 * s/word.derives/word.derives_to/ ???
-* describe OM in the docs
 * support for multiline rel?
 * transitiveness: shall a = b = c also generate a = c? and for ~?
+    -> no
 * add language to comments
 * some nice Vue.js frontend?
