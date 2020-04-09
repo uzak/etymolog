@@ -30,6 +30,7 @@ class Word(Entity):
         self.related = set()
         self.unions = set()
         self.tags = set()
+        self.in_unions = set()
 
     def add_tag(self, tag):
         tag = tag.lower()         # XXX ok?
@@ -79,6 +80,8 @@ class Union(Word):
         key = str(self)
         super().__init__(key, left.lang)
         self.Table[(left, right)] = self
+        self.right.in_unions.add(self)
+        self.left.in_unions.add(self)
 
     def register_composite_word(self):
         key = f"{self.left.value}{self.right.value}"

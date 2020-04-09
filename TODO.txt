@@ -2,6 +2,8 @@
     - // TAG tagname apply tagnem to all words until EOF ???
     - dict.py - add filter by tags??
 * group by language in details
+* union.__str__: {sa:sa:v+sa:i}
+    * also union should store about it's value (without languages)
 * go through pills and use comments / translations / relation appropriately
 * allow for union [x+y] [comment]?
 * triple union
@@ -16,7 +18,6 @@
 * lookup.py - try to find a word or similar
 * having '-' as part of word? -> is a problem then
 * testcase WORD,
-* show in details.py when a word is being part of an union (./details v -> va/vi ...)
 * add name and contact
 * example to readme
 * describe OM in the docs

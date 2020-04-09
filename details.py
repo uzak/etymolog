@@ -108,6 +108,9 @@ def details(word):
             if trs_no_comm:
                 print(f"{indent}{_translations_str(trs_no_comm, rel_type=model.Equals)}")
     derived_details(word, indent, set())
+    for u in word.in_unions:
+        print(f"+++ {u}")
+        details(u)
 
 
 def word_details(word):
