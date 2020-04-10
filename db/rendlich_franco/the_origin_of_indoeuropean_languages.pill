@@ -1,0 +1,120 @@
+// SRC The origin of Indo-European languages
+
+// Orion started 2000 BC
+sa:Punarvasu [constellation ruled by the goddess Aditi (pre Orion period 8000 - 5000 BC)]
+sa:Aditi ~ sa:Punarvasu
+
+pie:i -> lat:eo = to go
+pie:r -> pie:mr = to die
+pie:mr -> lat:mori
+pie:mr [m+r] = reaching (r) the limit (m)
+
+pie:ak [a+k] = to round, to move by turning
+pie:ka [k+a] = water, light, happiness, moves in the celestial vault
+pie:ag [a+g] = to move in a winding fashion, to zigzag
+pie:gA [g+a] = to move in every direction, to go, to walk
+pie:ac [a+c] = to move in a circle
+pie:ca [c+a] = round, rotund
+pie:aj [a+j] = to move straight forward, to guide
+pie:ji [j+i] = to move straight forward into the lines of enemy, to win, to conquer
+pie:at [a+t] = to move between two points, to wander
+pie:tR [t+R] = to go from one side to another, to cross
+
+pie:n = water
+pie:d = light
+
+sa:ad = food
+sa:sad [s+ad] = placing oneself near (s) food (ad)
+sa:sad = sit
+sa:sad -> latin:sedeo
+
+sa:han [h+an] = to kill, taking away (h) the breath (an)
+sa:sru [s+ru] = being close (s) to noise (ru)
+sa:snA [s+nA] = being in contact (s) with water (na)
+sa:ru ~ sk:rušiť
+
+// Part II. The waters in the first Indo-European languag
+// I.
+
+it:venezia = Venice
+it:venezia [lat:vene + lat:zia]
+
+sa:venI = river current, intertwining, two or more rivers that flow together into one mouth
+sa:venI -> lat:vene
+
+sa:ve [strong form of sa:vi] = to weave, to intertwine, weave of two threads the weft and the warp
+sa:ve -> web, de:weben
+sa:vi [split into two parts]
+sa:dvi -> sa:vi
+
+sa:Ni = to conduct
+sa:venI [ve+nI]
+sa:san = to possess, to acquire
+sa:dhA = to place, to found
+sa:dA = to give, to offer
+
+sa:nAga = snake
+
+sa:sr -> sa:srp -> sa:sarpa = snake
+sa:sr = to flow
+sa:srp = to slither
+sa:sarpa -> lat:serpens -> serpent
+
+sa:nagna = nude
+sa:nagna -> sk:nahý, naked, de:nackt, fr:nu, es:desnudo, sa:nagnA = slut
+
+// II. Nakta "night" and Naksatra "constelation"
+sa:sr -> sa:salila = teardrop, water, primordial waters
+
+sa:salilakarman [funeral ceremony, relatives of the deceased offers libations of water made up of their own tears - Mahabharata]
+sa:salilakarman ~ sa:salila
+
+sa:r -> sa:arna = waves, sea,
+sa:arna = primordial waters [luminous ocean]
+sa:r -> sa:arnava = waves, sea
+sa:arnava = primordial waters [ocean of waters wrapped in darkness]
+
+sa:samudra [sam+udra] = set of waves, primordial waters
+sa:sam = together
+sa:ud = up, above
+sa:ud -> sa:und = bathe
+sa:ud -> sa:udra = water
+
+sa:jyotisa = astronomy [science of celestial lights], astronomer
+sa:jyotirvid = astronomer
+sa:jyotiscakra [joytis+cakra] = zodiac
+
+sa:d -> sa:dI, sa:div
+sa:dI = to shine
+sa:dyut ~ sa:div = sky
+
+sa:dyut -> sa:juyt = to shine
+sa:juyt -> sa:jyotis = light
+sa:joytis -> sa:jyotisa
+
+sa:na = waters
+sa:ksatra = ruling
+sa:naksatravidyA = astronomy [science of constellations], astrology
+
+sa:naksatravidyA (predates) ~ sa:joytisa
+sa:naksatrasUcaka = astrologer [one who interprets the stars]
+
+sa:div = day
+sa:div[v+i+d]
+sa:div [breaks away(v) by flowing (i) from light (d)]
+
+sa:rAtrI [rA+tr] = night
+sa:rAtrI [that which gives (rA) the starts (tr) ]
+sa:rA = to give
+sa:tr = stars
+sa:rAtrI = sa:naktA
+sa:nak [n+ak]
+sa:nak [curvilear motion (ak) of waters (n)]
+sa:nak ->[nak is abstract action, infinitive] nakta
+sa:naktA [n+akta] = rotation (akta) of the waters (n), night
+
+sa:na = ocean of dark waters
+sa:ka = ocean of luminous waters
+
+sa:ksi = to govern, to rule
+sa:ksi -> sa:ksatra
