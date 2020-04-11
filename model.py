@@ -46,16 +46,19 @@ class Word(Entity):
     def key(self):
         return f"{self.lang.name}:{self.value}"
 
-    def __str__(self):
+    def as_str(self, comments=True, unions=True):
         comments = ""
         unions = ""
-        if self.comments:
+        if comments and self.comments:
             comments = " "
             comments += " ".join([f"[{c}]" for c in self.comments])
-        if self.unions:
+        if unions and self.unions:
             unions = " "
             unions += " ".join(map(lambda u: f"{{{u}}}", sorted(self.unions)))
         return f"{self.key()}{unions}{comments}"
+
+    def __str__(self):
+        return self.as_str()
 
 
 class Union:
@@ -67,6 +70,9 @@ class Union:
         for word in self.components:
             word.in_unions.add(self)
         self.Table[str(self)] = self
+
+    def __lt__(self, other):
+        return self.word < other.word
 
     def __contains__(self, item):
         return item in self.components

@@ -6,8 +6,8 @@ sa:Pa -> sa:pat = protector
 sa:Pa = protect
     sa:Pa-> sa:Pas = look, observe, consider, think over
         sa:Pas -> sa:Pasu =[that which is observed, watched, beheld] animal
-            sa:Pasu -> sa:Pasupa = [the protector of the animals] shepherd
-                sa:Pasupa -> sa:Pasupati [lord of the animals, Lord Siva]
+            sa:Pasu -> sa:Pasupa {pasu+pa} [the protector (pa) of the animals (pasu)] = shepherd
+                sa:Pasupa -> sa:Pasupati [lord of the animals] [Lord Siva]
 
 sa:Pas -> sa:Pasa = rope, cord, tie net, chain, trap, noose, snare
 
@@ -15,5 +15,6 @@ sa:Pasa -> lat:Pacify -> lat:Pact = covenant, agreement, contract
 lat:Pact -> Peace = binding contract, treaty, agreement
 
 // my own additions
+// NOSRC
 sa:Pasa -> sk:spasiť, sk:spása
 sa:Pas -> sk:pes

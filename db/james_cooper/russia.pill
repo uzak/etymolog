@@ -8,8 +8,8 @@ sa:madhu -> ru:med, sk:med
 sa:veda -> knowledge
 
 ru:medved {sa:med+sa:ved}
-ru:medved = [one who has knowledge (ved) of honey (med)] bear
-ru:medved = [one who knows (ved) how to find honey (med)] bear
+ru:medved [one who has knowledge (ved) of honey (med)] = bear
+ru:medved [one who knows (ved) how to find honey (med)]
 
 sa:tara -> Tartary [region of children of Tara and Tarkh]
 
@@ -23,17 +23,17 @@ sa:tr -> sa:str = scattered, spread, strewn, star
 sa:str -> astral, star, transit
 sa:str -> sa:tara
 
-sa:tara = Kali [Goddess of the Stars]
-Kali [wife of Brihaspati]
-Kali [lover of Candra]
+sa:tara = sa:Kali [Goddess of the Stars]
+sa:Kali [wife of Brihaspati]
+sa:Kali [lover of Candra]
 
-Danu [mother Goddess]
-Tara [mother Goddess]
+sa:Danu [mother Goddess]
+sa:Tara [mother Goddess]
 
 sa:Sveta = bright, white
 sa:asva = horse
 
-sa:svetasvatara {sveta+asva+tara} = white mule upanishad
+sa:svetasvatara {sveta+asva+tara} [white mule upanishad]
 sa:sveta -> sk:svetlý, sk:svätý
 
 sa:sveta -> sk:svit
@@ -45,15 +45,13 @@ sa:sveta-> icelandic:hvitur = white
 sa:sveta -> old_saxon:hwit -> old_english:hwit -> white
 
 sa:sveta ->[that which is white] wheat
-sa:sveta -> gothic:hvaiteis = wheat
 sa:sveta -> slavic:svetlana = light, shining, blessed
 
 sa:bhalu = sun
 sa:bhalu -> slavic:bel -> sk:biely
 sa:bhaga = God
 sa:bhaga -> slavic:bog
-slavic:belbog [God of the Sun] = slavic:Svetovid [God of war]
-slavic:belbog {bel+bog}
+slavic:belbog {bel+bog} [God of the Sun] = slavic:Svetovid [God of war]
 
 sa:sveta ->[he has white hair, white gown, white horses] slavic:Svetovid
 sa:vid = knowing, observing, perceiving
@@ -74,10 +72,9 @@ slavic:Nedolya [Daughter of Makosh] = doom
 sa:dola = oscilating, swinging
 sa:dola -> slavic:doloya
 slavic:dolya = doubtful, uncertain
-slavic:Nedolya = no fate, no fornute
+slavic:Nedolya = no fate, no fortune
 
-slavic:Dažbog {sa:dadati+bog}
-slavic:Dažbog [solar deity]
+slavic:Dažbog {sa:dadati+bog} [solar deity]
 sa:dadati = to give, gift
 
 Bhagdad {sa:bhaga + sa:dadati}
@@ -87,20 +84,14 @@ slavic:Dažbog ~[Dažbog is Bhagdad's meaning in reverse] Bhagdad
 
 slavic:Ognebog [God of fire]
 slavic:Ognebog {sa:agni+bog}
-sa:agni -> sk:oheň
 
-slavic:Stribog [God of Wind]
-slavic:Stribog {sa:str+bog}
-slavic:Stratim [mystical bird]
-slavic:Stratim [mother of all birds]
-slavic:Stratim [assisant to Stribog]
+slavic:Stribog [God of Wind]  {sa:str+bog}
+slavic:Stratim [mystical bird] [mother of all birds] [assistant to Stribog]
 slavic:Stratim ~ slavic:Stribog
 
-slavic:Yndra [thunder God]
-
+sa:Indra -> slavic:Yndra [thunder God]
 sa:Indra [God of rain]
 sa:Indra [King of heaven]
-sa:Indra -> slavic:Yndra
 
 slavic:Morana [Goddess of death]
 sa:Mara -> slavic:Morana
@@ -119,14 +110,14 @@ sa:svar = sky, heaven, sun, light, lustra
 slavic:Svarog {sa:svar+bog}
 slavic:Svarog [Ending rog is probably corruption from svarbog -> svabog]
 
-slavic:Jiva [God of life and souls]
+slavic:Živa [God of life and souls]
 sa:jiva = life, soul
-sa:jiva->slavic:Jiva
+sa:jiva->slavic:Živa
 
 slavic:Svantovich [God of light]
 sa:svar -> slavic:Svantovich
 
-slavic:Devana [Goddess of the forrest]
+slavic:Devana [Goddess of the forest]
 slavic:Devana {sa:deva+sa:vana}
 sa:vana = forest
 sa:deva = God
@@ -162,13 +153,12 @@ sa:vrt -> divert, revert, convert, subvert, pervert, vortex, vertigo, universe
 slavic:desna = right hand
 slavic:desna -> hr:desni = right
 sa:daksina = right hand
-sa:daksina -> slavic:desna, Daksa, dexterity [one so skilled with his hands]
+sa:daksina -> slavic:desna, Daksa, dexterity
 sa:Daksha [one of sons of Lord Brahma]
-sa:Daksha -> Daksa [island]
-Daksa # geo
+sa:Daksha -> Daksa [island] # geo
 
 sa:apara = not having a shore, boundless
-Danapra {sa:Danu+sa:Apara} -> Dnipro -> Dnieper # river
+slavic:Danapra {sa:Danu+sa:Apara} -> ru:Dnipro -> Dnieper         # river
 
 sa:Kashyapa Muni [Great Vedic Sage]
 sa:Kashyapa Muni -> Kashmir         # geo
@@ -226,6 +216,8 @@ lt:balta = white
 // NOSRC
 sa:vrt -> sk:vrtieť
 sa:datati -> sk:dať, sk:darovať
+sa:svar -> sk:švárny
+sa:agni -> sk:oheň
 
 // wikipedia, spokensanskrit.org, google
 celtic:Belenus
@@ -233,7 +225,8 @@ sa:bhalu -> celtic:Belenus
 celtic:Belenus ~ semitic:Baal
 
 sa:dyu = sky
-sa:pitr = father
+sa:pitR = father
+sa:pitR -> lat:pater
 slavic:Pater diy {sa:duy + sa:pitr}
 slavic:Pater diy [Guardian of Clear Heavenly Space]
 slavic:Pater diy [Keeper of inexhaustible Life ower of Dea-Earth]
@@ -249,9 +242,6 @@ slavic:Rojana [brings wealth, riches of the Soul nad heart to couples and sem'ya
 slavic:Samodiva [woodland nymph]
 slavic:Samodiva [foster mother of the hero]
 slavic:Samodiva [rides a light-grey (sur) deer, reined with snakes and carries bow and arrows]
-// SRC www.prasadam.co.uk/articles/436-the-russian-veda-and-the-children-of-tara.html
-// check also https://en.wikipedia.org/wiki/Samodiva_(folklore)
-// https://en.wikipedia.org/wiki/Vila_(fairy)
 
 // Baba Yoga
 // https://en.wikipedia.org/wiki/Paganism#Nomenclature_and_etymology

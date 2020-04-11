@@ -1,6 +1,6 @@
 // SRC http://prasadam.co.uk/articles/483-dvi-to-separate-vi-from-the-light-d-.html
 
-sa:d = light // one
+sa:d = light
 sa:va = to separate
 
 sa:deva {d+va}
@@ -34,10 +34,10 @@ sa:pada = foot
 
 dichtonomy = contrast between two things
 
-sa:dva -> european:dvi -> latin:dis -> latin:dicha -> dichtonomy
-latin:dicha = in two
+sa:dva -> european:dvi -> lat:dis -> lat:dicha -> dichtonomy
+lat:dicha = in two
 
-latin:dis -> to discard, to separate, to distinguish
+lat:dis -> to discard, to separate, to distinguish
 
 sa:dva -> old_english:twa -> proto_germanic:twa -> anglosaxon:twa -> two
 
@@ -45,4 +45,5 @@ sa:dva -> sa:dvaita = duality
 sa:dva -> sa:advaita = non duality
 
 // my additions
+// NOSRC
 sa:deva -> sk:deva

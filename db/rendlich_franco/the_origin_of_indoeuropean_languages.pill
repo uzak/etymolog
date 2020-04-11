@@ -26,7 +26,7 @@ pie:d = light
 sa:ad = food
 sa:sad {s+ad} [placing oneself near (s) food (ad)]
 sa:sad = sit
-sa:sad -> latin:sedeo
+sa:sad -> lat:sedeo
 
 sa:han {h+an} [taking away (h) the breath (an)] = to kill
 sa:sru {s+ru} [being close (s) to noise (ru)] = to hear
@@ -145,7 +145,7 @@ sa:kAnta ~ sa:kam
 sa:ka -> sa:kAnti = beauty
 sa:Kanti ~ sa:kam
 
-sa:ka -> latin:cando, latin:candor, latin:candidus
+sa:ka -> lat:cando, lat:candor, lat:candidus
 
 
 // Nothingness, na...,represents the waters as viewed in their inscrutable
@@ -169,7 +169,7 @@ sa:kada {ka+da} [gives water] = cloud
 sa:Agni [apAm napAt - son of the waters]
 sa:kAma [desire of the waters RG V,36,1]
 
-sa:kam -> latin:amo [drops `k`]
+sa:kam -> lat:amo [drops `k`]
 sa:kam = to desire, to love
 // It is through the creative pleasure of kāma that eka, the One, invades with its light [ka]
 // the impenetrable darkness of the primordial waters [na], and carriesthem away from the
@@ -186,7 +186,7 @@ sa:kam ~ sa:kan
 // (non-being or nothingness), then an and manas have the faculty of making  it
 // animate [an] as  well  as recognizable  and  measurable [manas].
 sa:man = to think
-sa:man -> latin:mens
+sa:man -> lat:mens
 sa:man {m+an} [the measure (m) of the vitality of the waters(an)]
 sa:man [the dimension (m) of their breath(an)]
 
@@ -255,11 +255,11 @@ sa:jna {j+na} [waters (na) in their forward motion (n)] = to know
 sa:an  = to breathe, to live
 sa:an -> lat:animus {sa:an+imus} = soul
 
-sa:jan -> latin:geno = to generate
+sa:jan -> lat:geno = to generate
 sa:jna -> gr:gno = to know
 
-pie:r -> latin:orior = to rise, to be born
-latin:orior -> origo = origin, source
+pie:r -> lat:orior = to rise, to be born
+lat:orior -> origo = origin, source
 
 // VII NapAt "grandson" and naptu "Neptune"
 
@@ -272,14 +272,14 @@ sa:napAt {na+pat} =[doesn't indicate kinship but a particular function] descenda
 sa:pat = to govern
 sa:pA -> sa:pat ~ sa:pati
 
-sa:pat -> latin:potis [that which has authority]
-sa:napat -> latin:nepos [he who has authority over the waters (offerings to the dead)]
+sa:pat -> lat:potis [that which has authority]
+sa:napat -> lat:nepos [he who has authority over the waters (offerings to the dead)]
 sa:pat -> sa:ptu
 sa:naptu {na+ptu} [superintended of the waters (offerings to the dead)]
-sa:naptu -> latin:neptunus [God of the sea] = Neptune # god
+sa:naptu -> lat:neptunus [God of the sea] = Neptune # god
 
 sa:p -> sa:pU = to purify
 sa:p -> sa:pitr = father
-sa:p -> [authority from celebrations of purifying rites in honor of the gods and dead forefathers] power, sa:pati, latin:potestas = authority
+sa:p -> [authority from celebrations of purifying rites in honor of the gods and dead forefathers] power, sa:pati, lat:potestas = authority
 
-avestan:napta = moist
+avesta:napta = moist

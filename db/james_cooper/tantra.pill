@@ -3,7 +3,7 @@
 sa:an = breathe
 sa:t = to move from one point to another
 
-sa:tan {t+an} = moving from one point to another as the movement of breathing
+sa:tan {t+an} [moving from one point to another (t) as the movement of breathing (an)]
 
 sa:tan = to expand, to stretch, to spread
 
@@ -26,4 +26,4 @@ PIE:ten = to stretch
 PIE:ten -> tenet = dogma, principle, opinion
 
 sa:tra = instrument
-sa:tantra {tan+tra} = instrument (tra) to expand (tan) your consciousness
+sa:tantra {tan+tra} [instrument (tra) to expand (tan) your consciousness]

@@ -113,11 +113,10 @@ def details(word):
 
 def word_details(word): #XXX rename
     parents(word)
-    print(f" => {word}")
+    print(f" => {word.as_str(unions=False)}")
     if word.unions:
         for i, u in enumerate(word.unions):
-            for w in word.unions:
-                print(f"    {i+1}. union: {w}")
+            print(f"    {i+1}. union: {u}")
     details(word)
 
 
