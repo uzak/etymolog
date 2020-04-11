@@ -15,14 +15,14 @@ def _derived(word, result):
 
 def derived(word, indent):
     parents = _derived(word, [])
-    parents_str = " -> ".join(map(str, parents))
+    parents_str = " -> ".join(map(lambda word: word.key(), parents))
     if parents:
         print(f"{indent}-> {parents_str}")
 
 def dictionary(lang_name):
     lang = model.World.lang(lang_name)
     print(f"Dictionary for ``{lang.name}`` ({len(lang)} items):")
-    for w in sorted(lang):
+    for w in sorted(lang, key=lambda word: word.value.lower()):
         # TODO group translations by language
         print(f"* {w.value}{details.translations_str(w)}")
         indent = "    "

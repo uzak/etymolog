@@ -85,10 +85,10 @@ def comments_str(word):
 def derived_details(word, indent, seen_on_left=set()):
     for lang, derivates in groupby(lambda d: d.right.lang.name, word.derives).items():
         for d in derivates:
-            comments = comments_str(d.right)
             trans = translations_str(d.right, ignore=seen_on_left)
             seen_on_left.add(d.left)
-            print(f"{indent}{model.Derived.Symbol} {d.right}{trans} {comments}")
+            comments = comments_str(d)
+            print(f"{indent}{model.Derived.Symbol} {d.right}{trans}{comments}")
             if d.right.derives:
                 derived_details(d.right, indent + ' '*indent_size, seen_on_left=seen_on_left)
 
@@ -103,8 +103,7 @@ def details(word):
         for lang, lang_trs in groupby_lang_name(trs).items():
             trs_comm, trs_no_comm = split(lambda x: x.comments, lang_trs)
             for t in trs_comm:
-                comments = comments_str(t)
-                print(f"{indent} {model.Equals.Symbol} {t} {comments}")
+                print(f"{indent} {model.Equals.Symbol} {t}")
             if trs_no_comm:
                 print(f"{indent}{_translations_str(trs_no_comm, rel_type=model.Equals)}")
     derived_details(word, indent, set())
@@ -112,7 +111,7 @@ def details(word):
         print(f"  + {u}{translations_str(u.word)}")
 
 
-def word_details(word):
+def word_details(word): #XXX rename
     parents(word)
     print(f" => {word}")
     if word.unions:

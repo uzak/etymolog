@@ -323,6 +323,14 @@ class TestUnion(TestCase):
         assert b is not None
         assert c is not None
 
+    def test_union_no_components(self):
+        with pytest.raises(SyntaxError):
+            parser.yacc.parse("a {}")
+
+    def test_union_just_one_component(self):
+        with pytest.raises(SyntaxError):
+            parser.yacc.parse("a {b}")
+
 class TestMeta(TestCase):
 
     def test_meta_eol_cmment(self):

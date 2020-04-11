@@ -44,20 +44,18 @@ class Word(Entity):
         return self.value < other.value
 
     def key(self):
-        if self.comments:
-            comments = " ".join([f"[{c}]" for c in self.comments])
-            return f"{self.lang.name}:{self.value} {comments}"
         return f"{self.lang.name}:{self.value}"
 
-    def __repr__(self):
-        return self.key()
-
     def __str__(self):
-        self_str = f"{self.lang.name}:{self.value}"
+        comments = ""
+        unions = ""
+        if self.comments:
+            comments = " "
+            comments += " ".join([f"[{c}]" for c in self.comments])
         if self.unions:
-            unions = " ".join(map(lambda u: f"{{{u}}}", sorted(self.unions)))
-            return f"{self_str} {unions}"
-        return self_str
+            unions = " "
+            unions += " ".join(map(lambda u: f"{{{u}}}", sorted(self.unions)))
+        return f"{self.key()}{unions}{comments}"
 
 
 class Union:
@@ -79,7 +77,7 @@ class Union:
             if c.lang == self.word.lang:
                 result.append(c.value)
             else:
-                result.append(str(c))
+                result.append(c.key())
         return "+".join(result)
     __repr__ = __str__
 
@@ -215,10 +213,11 @@ class World:
 
     @staticmethod
     def lang(name):
-        if name not in World.Languages:
+        key = name.lower()
+        if key not in World.Languages:
             lang = Language(name)
-            World.Languages[name] = lang
-        return World.Languages[name]
+            World.Languages[key] = lang
+        return World.Languages[key]
 
 
 class Language:

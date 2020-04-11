@@ -2,11 +2,8 @@
     * with comments = and ~ are directional
 * add NOSRC meta
 
-* language case insensitive
 * group by language in details
-    * also union should store about it's value (without languages)
 * go through pills and use comments / translations / relation appropriately
-* ./dict celtic --- dubron
 * add name and contact
 * example to readme
 * describe OM in the docs
