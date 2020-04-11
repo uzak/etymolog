@@ -382,6 +382,12 @@ class TestMeta(TestCase):
         parser.finish_file()
         assert config.default_lang == "en"
 
+    def test_meta_nosrc(self):
+        parser.yacc.parse("// SRC source")
+        parser.yacc.parse("// NOSRC")
+        parser.yacc.parse("a")
+        assert lang().get_word("a").source is None
+
 
 class TestTag(TestCase):
     def test_basic(self):

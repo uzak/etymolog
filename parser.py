@@ -175,7 +175,9 @@ def handle_meta(comment):
     if comment.startswith("SRC"):
         src = comment[4:]
         config.default_source = src
-    if comment.startswith("LANG"):
+    elif comment.startswith("NOSRC"):
+        config.default_source = None
+    elif comment.startswith("LANG"):
         global orig_default_lang        # XXX global ...
         if not orig_default_lang:
             orig_default_lang = config.default_lang

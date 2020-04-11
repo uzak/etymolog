@@ -1,6 +1,5 @@
 * bidirectional rel. saves also direction
     * with comments = and ~ are directional
-* add NOSRC meta
 
 * group by language in details
 * go through pills and use comments / translations / relation appropriately
