@@ -73,6 +73,8 @@ def p_expression_group(p):
 
 def p_group_expression_comma_expression(p):
     'group : expression SEP expression'
+    if p[3] is None:
+        raise ValueError("trailing group item is empty")
     c = model.Group(p[1], p[3])
     p[0] = c
 

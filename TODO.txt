@@ -1,10 +1,5 @@
 * bidirectional rel. saves also direction
     * with comments = and ~ are directional
-test:
-    * test word ends with ,
-    * testcase WORD,
-    * parser: UNION TAG -> fails
-    * parser: COMMENT TAG -> fails
 * add NOSRC meta
 
 * language case insensitive

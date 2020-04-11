@@ -74,6 +74,10 @@ class TestGroups(TestCase):
         word("w3", l.name).lang.name == config.default_lang
         assert_total_word(config.default_lang, 3)
 
+    def test_group_trailing(self):
+        with pytest.raises(ValueError):
+            parser.yacc.parse("a, ")
+
 
 class TestRelationships(TestCase):
 
@@ -390,6 +394,14 @@ class TestTag(TestCase):
     def test_group(self):
         parser.yacc.parse("a,b # c")
         assert "c" in lang().get_word("b").tags
+
+    def test_union(self):
+        parser.yacc.parse("ab {a+b} # a")
+        assert "a" in lang().get_word("ab").tags
+
+    def test_comment(self):
+        parser.yacc.parse("a [alfa] # a")
+        assert "a" in lang().get_word("a").tags
 
 
 class TestMisc(TestCase):
