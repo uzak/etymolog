@@ -109,8 +109,7 @@ def details(word):
                 print(f"{indent}{_translations_str(trs_no_comm, rel_type=model.Equals)}")
     derived_details(word, indent, set())
     for u in word.in_unions:
-        print(f"  + {u}")
-        details(u)
+        print(f"  + {u}{translations_str(u.word)}")
 
 
 def word_details(word):
@@ -118,8 +117,8 @@ def word_details(word):
     print(f" => {word}")
     if word.unions:
         for i, u in enumerate(word.unions):
-            print(f"    {i+1}. union: {u.left}{translations_str(u.left)}")
-            print(f"    {i+1}. union: {u.right}{translations_str(u.right)}")
+            for w in word.unions:
+                print(f"    {i+1}. union: {w}")
     details(word)
 
 

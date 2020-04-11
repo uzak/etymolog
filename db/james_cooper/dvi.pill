@@ -3,22 +3,22 @@
 sa:d = light // one
 sa:va = to separate
 
-sa:deva [d+va]
+sa:deva {d+va}
 sa:deva [that which separates (va) from light (d)]
 
 sa:pa = to purify
-sa:dipa [d+pa]
+sa:dipa {d+pa}
 
 sa:da = to give
 sa:da [action (a) of light (d)]
 sa:dhi =[light within] knowledge
 
 sa:vi [that which separates]
-sa:dvi[d+vi]
+sa:dvi{d+vi}
 sa:dvi[that which separates (vi) from the light (d)]
-sa:dva[d+va]
+sa:dva{d+va}
 
-sa:dvipa[dvi+ab] -> european:duber = double bank
+sa:dvipa{dvi+ab} -> european:duber = double bank
 sa:dvipa -> celtic:dubras = waters
 sa:dvipa -> anglosaxon:dofer = waters
 anglosaxon:dofer -> Dover # city
@@ -27,8 +27,8 @@ sa:dva -> european:duo ->[to be in two minds] doubt
 european:duo -> dubious
 
 sa:dvi -> european:bi
-bicycle[european:bi+cycle]
-biped[european:bi+european:ped]
+bicycle{european:bi+cycle}
+biped{european:bi+european:ped}
 sa:pada -> european:ped
 sa:pada = foot
 

@@ -7,7 +7,7 @@ sa:mada -> sa:madhu = honey
 sa:madhu -> ru:med, sk:med
 sa:veda -> knowledge
 
-ru:medved [sa:med+sa:ved]
+ru:medved {sa:med+sa:ved}
 ru:medved = [one who has knowledge (ved) of honey (med)] bear
 ru:medved = [one who knows (ved) how to find honey (med)] bear
 
@@ -15,7 +15,7 @@ sa:tara -> Tartary [region of children of Tara and Tarkh]
 
 sa:tara = crossing
 sa:ava = downwards
-sa:avatara [ava+tara] = avatar
+sa:avatara {ava+tara} = avatar
 sa:avatara [one who crosses (tara) downwards (ava)]
 
 sa:tr = to cross over
@@ -33,7 +33,7 @@ Tara [mother Goddess]
 sa:Sveta = bright, white
 sa:asva = horse
 
-sa:svetasvatara [sveta+asva+tara] = white mule upanishad
+sa:svetasvatara {sveta+asva+tara} = white mule upanishad
 sa:sveta -> sk:svetlý, sk:svätý
 
 sa:sveta -> sk:svit
@@ -53,7 +53,7 @@ sa:bhalu -> slavic:bel -> sk:biely
 sa:bhaga = God
 sa:bhaga -> slavic:bog
 slavic:belbog [God of the Sun] = slavic:Svetovid [God of war]
-slavic:belbog [slavic:bel+slavic:bog]
+slavic:belbog {bel+bog}
 
 sa:sveta ->[he has white hair, white gown, white horses] slavic:Svetovid
 sa:vid = knowing, observing, perceiving
@@ -64,7 +64,7 @@ slavic:Makosh [mother of destiny]
 
 sa:ma -> sa:matr
 
-slavic:Makosh [sa:ma+sa:kosh]
+slavic:Makosh {sa:ma+sa:kosh}
 sa:kosh = treasury, accumulated wealth, provisions
 sa:kosh ~ sk:košík, sk:kôš
 
@@ -76,21 +76,21 @@ sa:dola -> slavic:doloya
 slavic:dolya = doubtful, uncertain
 slavic:Nedolya = no fate, no fornute
 
-slavic:Dažbog [sa:dadati+slavic:bog]
+slavic:Dažbog {sa:dadati+bog}
 slavic:Dažbog [solar deity]
 sa:dadati = to give, gift
 
-Bhagdad [sa:bhaga + sa:dadati]
+Bhagdad {sa:bhaga + sa:dadati}
 Bhagdad [gift (dadati) of god (bhaga)]
 
 slavic:Dažbog ~[Dažbog is Bhagdad's meaning in reverse] Bhagdad
 
 slavic:Ognebog [God of fire]
-slavic:Ognebog [sa:agni+slavic:bog]
+slavic:Ognebog {sa:agni+bog}
 sa:agni -> sk:oheň
 
 slavic:Stribog [God of Wind]
-slavic:Stribog [sa:str+slavic:bog]
+slavic:Stribog {sa:str+bog}
 slavic:Stratim [mystical bird]
 slavic:Stratim [mother of all birds]
 slavic:Stratim [assisant to Stribog]
@@ -116,7 +116,7 @@ slavic:Svarog [hearth of the home]
 slavic:Svarog [divine blacksmith]
 
 sa:svar = sky, heaven, sun, light, lustra
-slavic:Svarog [sa:svar+slavic:bog]
+slavic:Svarog {sa:svar+bog}
 slavic:Svarog [Ending rog is probably corruption from svarbog -> svabog]
 
 slavic:Jiva [God of life and souls]
@@ -127,7 +127,7 @@ slavic:Svantovich [God of light]
 sa:svar -> slavic:Svantovich
 
 slavic:Devana [Goddess of the forrest]
-slavic:Devana [sa:deva+sa:vana]
+slavic:Devana {sa:deva+sa:vana}
 sa:vana = forest
 sa:deva = God
 
@@ -146,13 +146,13 @@ sa:dama -> kingdom, dominion, domestic, slavic:Domovoy [spirit of the house]
 
 sa:su = good
 sa:asti = is
-swastika [sa:su+sa:asti]
+swastika {sa:su+sa:asti}
 sa:sudarsana [spinning disc Lord Vishnu used as a weapon]
 sa:darsana = vision
-sa:sudarsana [su+darsana]
+sa:sudarsana {su+darsana}
 
 slavic:kolo = wheel
-slavic:kolovrat [kolo+vrat] ~ swastika
+slavic:kolovrat {kolo+vrat} ~ swastika
 slavic:kolovrat [represents (universal) cycles]
 sa:vrt -> slavic:vrat = spinning
 sa:vrt = turning, moving
@@ -168,7 +168,7 @@ sa:Daksha -> Daksa [island]
 Daksa # geo
 
 sa:apara = not having a shore, boundless
-Danapra [sa:Danu+sa:Apara] -> Dnipro -> Dnieper # river
+Danapra {sa:Danu+sa:Apara} -> Dnipro -> Dnieper # river
 
 sa:Kashyapa Muni [Great Vedic Sage]
 sa:Kashyapa Muni -> Kashmir         # geo
@@ -177,11 +177,11 @@ sa:Diti ~[wife] sa:Kashyapa Muni
 sa:Danu ~[wife] sa:Kashyapa Muni
 sa:daityas ~[children] sa:Diti
 sa:sthana = region, place
-sa:Daityastan [sa:daityas+sa:sthana] -> de:Deutschland
+sa:Daityastan {daityas+sthana} -> de:Deutschland
 
 sa:Danu -> Don # river
 sa:Danu -> Danube # river
-sa:Danu -> Dniester [sa:Danu+Ister]
+sa:Danu -> Dniester {sa:Danu+Ister}
 Dniester # river
 
 // russian rivers: Avacha, Dvina, Narada, Surya, Vishera, Varonya, Suna, Syamozero, Sura, Pushma, Vaja, Valgu, Ira, Sesupe,
@@ -234,13 +234,13 @@ celtic:Belenus ~ semitic:Baal
 
 sa:dyu = sky
 sa:pitr = father
-slavic:Pater diy [sa:duy + sa:pitr]
+slavic:Pater diy {sa:duy + sa:pitr}
 slavic:Pater diy [Guardian of Clear Heavenly Space]
 slavic:Pater diy [Keeper of inexhaustible Life ower of Dea-Earth]
 slavic:Pater diy ~ Jupiter
 slavic:Pater diy ~ Zeus
 sa:duy -> gr:Zeus
-lat:Jupiter [sa:duy + sa:pitr]
+lat:Jupiter {sa:duy + sa:pitr}
 
 slavic:Rojana [eternally young Mother-of-Bog]
 slavic:Rojana [brings wealth, riches of the Soul nad heart to couples and sem'ya]

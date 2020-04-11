@@ -3,7 +3,7 @@
 sa:v = separate
 sa:i = continuous motion
 
-sa:vi [v+i] = to separate, to distinguish, to remove, to break away
+sa:vi {v+i} = to separate, to distinguish, to remove, to break away
 
 sa:vi =[symbol for separating, breaking away from land] bird
 
@@ -16,7 +16,7 @@ sa:vi ->[Vyasa separated the Vedas in four] sa:Vyasa [sage]
 sa:vi = apart
 sa:asa = to place
 
-sa:vyasa [vi + asa] = to place apart
+sa:vyasa {vi + asa} = to place apart
 
 sa:vi -> sa:vis = to spread, to pervade, to enter into, to enter within
 sa:vis -> sa:Vishnu = the one who pervades everything, the one who enters into everything
@@ -29,14 +29,14 @@ lat:vicus -> vicinity, neighbourhood
 
 sa:visa -> poison
 sa:sa = to connect
-sa:vi+sa = to connect to that which separates
+sa:visa {vi+sa} [to connect (sa) to that which separates (vi)]
 
 sa:visa -> venom -> virus = poison, venom, slimy liquid
 
 sa:c = circular
 sa:a = motion
 
-sa:c+a -> sa:cakra = circle
+sa:sa {c+a} -> sa:cakra = circle
 sa:cakra -> gr:kyklos = circle
 
 sa:cakra -> gr:koronos = curved

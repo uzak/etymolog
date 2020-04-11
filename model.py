@@ -33,7 +33,7 @@ class Word(Entity):
         self.in_unions = set()
 
     def add_tag(self, tag):
-        tag = tag.lower()         # XXX ok?
+        tag = tag.lower()
         if tag not in World.Tags:
             World.Tags[tag] = set()
         World.Tags[tag].add(self)
@@ -53,47 +53,36 @@ class Word(Entity):
         return self.key()
 
     def __str__(self):
-        def union_to_str(union): #XXX hackish hack
-            if self.lang == union.left.lang:
-                left = union.left.value
-            else:
-                left = str(union.left)
-            if self.lang == union.right.lang:
-                right = union.right.value
-            else:
-                right = str(union.right)
-            return f"{left}{Union.Symbol}{right}"
         self_str = f"{self.lang.name}:{self.value}"
         if self.unions:
-            unions = ", ".join(map(union_to_str, sorted(self.unions)))
-            return f"{self_str} [{unions}]"
+            unions = " ".join(map(lambda u: f"{{{u}}}", sorted(self.unions)))
+            return f"{self_str} {unions}"
         return self_str
 
 
-class Union(Word):
-    Symbol = "+"
+class Union:
     Table = {}
 
-    def __init__(self, left: Word, right: Word):
-        self.left = left
-        self.right = right
-        key = str(self)
-        super().__init__(key, left.lang)
-        self.Table[(left, right)] = self
-        self.right.in_unions.add(self)
-        self.left.in_unions.add(self)
+    def __init__(self, word, *components):
+        self.word = word
+        self.components = components
+        for word in self.components:
+            word.in_unions.add(self)
+        self.Table[str(self)] = self
 
-    def register_composite_word(self):
-        key = f"{self.left.value}{self.right.value}"
-        lang = self.left.lang
-        word = lang.get_word(key)
-        if not word:
-            word = lang.add_word(key)
-        word.unions.add(self)
+    def __contains__(self, item):
+        return item in self.components
 
     def __str__(self):
-        key = f"{self.left}{Union.Symbol}{self.right}"
-        return key
+        result = []
+        for c in self.components:
+            if c.lang == self.word.lang:
+                result.append(c.value)
+            else:
+                result.append(str(c))
+        return "+".join(result)
+    __repr__ = __str__
+
 
 class Group:
     "Group of words"

@@ -222,8 +222,10 @@ class TestComments(TestCase):
             parser.yacc.parse("[c1][c2]")
 
     def test_multiple_word2(self):
-        with pytest.raises(SyntaxError):
-            parser.yacc.parse("a -> b [c1][c2]")
+        parser.yacc.parse("a -> b [c1][c2]")
+        b = lang().get_word("b")
+        assert "c1" in b.comments
+        assert "c2" in b.comments
 
     def test_circular_equals(self):
         with pytest.raises(ValueError):
@@ -251,28 +253,22 @@ class TestComments(TestCase):
 
 
 class TestUnion(TestCase):
+
     def test_union(self):
-        parser.yacc.parse("sa:vi + sa")
-        sa = lang("sa")
-        visa = sa.get_word("visa")
-        assert visa is not None
-        assert len(visa.unions) > 0
-        u = get_union(visa)
-        assert u.left == sa.get_word("vi")
-        assert u.right == sa.get_word("sa")
+        parser.yacc.parse("value {a + b+c+d}")
+        l = lang()
+        value = l.get_word("value")
+        assert value is not None
+        assert len(value.unions) == 1
+        u = get_union(value)
+        assert l.get_word("a") in u
+        assert l.get_word("b") in u
+        assert l.get_word("c") in u
+        assert l.get_word("d") in u
+        assert str(u) == "a+b+c+d"
 
-    def test_union_comment(self):
-        parser.yacc.parse("sa:vyasa [vi + asa]")
-        sa = lang("sa")
-        vyasa = sa.get_word("vyasa")
-        assert vyasa is not None
-        assert len(vyasa.unions) > 0
-        u = get_union(vyasa)
-        assert u.left == sa.get_word("vi")
-        assert u.right == sa.get_word("asa")
-
-    def test_union_comment_diff_lang(self):
-        parser.yacc.parse("a [de:b + sk:c]")
+    def test_union_diff_lang(self):
+        parser.yacc.parse("a {de:b + sk:c}")
         de = lang("de")
         sk = lang("sk")
         b = de.get_word("b")
@@ -280,37 +276,48 @@ class TestUnion(TestCase):
         assert b is not None
         assert c is not None
         a = lang().get_word("a")
-        assert len(a.unions) >= 0
+        assert len(a.unions) == 1
         u = get_union(a)
-        assert u.left == b
-        assert u.right == c
+        assert b in u
+        assert c in u
+        assert str(u) == "de:b+sk:c"
 
-    def test_union_comment_diff_lang2(self):
-        parser.yacc.parse("a [b + test:c]")
+    def test_union_diff_lang2(self):
+        parser.yacc.parse("a {b + test:c}")
         a = lang().get_word("a")
         b = lang().get_word("b")
         c = lang("test").get_word("c")
         assert a is not None
         assert b is not None
         assert c is not None
-        assert len(a.unions) > 0
+        assert len(a.unions) == 1
         u = get_union(a)
-        assert u.left == b
-        assert u.right == c
+        assert b in u
+        assert c in u
+        assert str(u) == "b+test:c"
 
-    def test_union_comment_diff_lang3(self):
-        parser.yacc.parse("a [test:b + c]")
+    def test_union_diff_lang3(self):
+        parser.yacc.parse("a {test:b + c}")
         a = lang().get_word("a")
         b = lang("test").get_word("b")
         c = lang().get_word("c")
         assert a is not None
         assert b is not None
         assert c is not None
-        assert len(a.unions) > 0
+        assert len(a.unions) == 1
         u = get_union(a)
-        assert u.left == b
-        assert u.right == c
+        assert b in u
+        assert c in u
+        assert str(u) == "test:b+c"
 
+    def test_union_default_lang(self):
+        parser.yacc.parse("sa:a {b + c}")
+        a = lang("sa").get_word("a")
+        b = lang("sa").get_word("b")
+        c = lang("sa").get_word("c")
+        assert a is not None
+        assert b is not None
+        assert c is not None
 
 class TestMeta(TestCase):
 

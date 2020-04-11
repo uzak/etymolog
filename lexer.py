@@ -9,10 +9,10 @@ from log import log
 tokens = (
     'LANG',
     'TOKEN',
-    'LPAREN', 'RPAREN',
+    'LPAREN', 'RPAREN', # TODO rename
     'PLUS',
     'SEP',
-    'COMMENT', 'META',
+    'COMMENT', 'META', 'LUNION', 'RUNION', # TODO Rename?
     'EQUALS', 'DERIVE',
     'RELATED',
     'TAG',
@@ -27,6 +27,8 @@ t_LPAREN  = r'\('
 t_RPAREN  = r'\)'
 t_SEP     = ','
 t_TOKEN   = r"[\w]+"
+t_LUNION  = r'{'
+t_RUNION  = r'}'
 
 def t_TAG(t):
     r'[#]\s*\w+'

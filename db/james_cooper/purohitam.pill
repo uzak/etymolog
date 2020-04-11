@@ -22,7 +22,7 @@ sa:purva =[considered auspicious in the Veda] east
 
 sa:pur = facing
 sa:va = auspiciousness
-sa:purva [pur + va] = facing auspiciousness, in front of auspiciousness
+sa:purva {pur + va} = facing auspiciousness, in front of auspiciousness
 
 sa:purva =[what is prior, that which precedes, what which goes before] first, forefather, ancient
 

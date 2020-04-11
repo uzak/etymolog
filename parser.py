@@ -52,7 +52,7 @@ def p_tokens_token(p):
     'tokens : TOKEN'
     p[0] = p[1]
 
-# inline comments
+# inline comments TODO remove
 
 def p_word_word_ic(p):
     'tokens : tokens LPAREN tokens RPAREN'
@@ -102,31 +102,11 @@ def p_relationship_word_rel_word(p):
         p[0] = p[3]
 
 
-# Comments
-union_pat = re.compile(r"(\w+\s*:\s*)?(\w+)\s*\+\s*(\w+\s*:\s*)?(\w+)")
-
-
 def p_expression_word_comment(p):
-    'expression : word COMMENT'
-    comment = p[2]
+    'word : word COMMENT'
     word = p[1]
-
-    # let's see if it is an union
-    match = union_pat.match(comment)
-    if match:
-        lang_left, left, lang_right, right = match.groups()
-        ll = lr = word.lang
-        if lang_left:
-            ll = model.World.lang(lang_left.rstrip(":"))
-        if lang_right:
-            lr = model.World.lang(lang_right.rstrip(":"))
-        w1 = ll.add_word(left)
-        w2 = lr.add_word(right)
-        p[0] = union = model.Union(w1, w2)
-        word.unions.add(union)
-    else:
-        word.comment(comment)
-        p[0] = word
+    word.comment(p[2])
+    p[0] = word
 
 
 def p_expression_expr_rel_comment_expr(p):
@@ -146,26 +126,42 @@ def p_expression_expr_rel_comment_expr(p):
     p[0] = p[4]
 
 
+_pre_union_default_lang = None
+def p_start_union(p):
+    'start_union : '
+    global _pre_union_default_lang
+    _pre_union_default_lang = config.default_lang
+    config.default_lang = p[-1].lang.name    # access grammar symbol to the left
+
+
+def p_end_union(p):
+    'end_union : '
+    config.default_lang = _pre_union_default_lang
+
+
 def p_word_union(p):
-    'word : union'
+    'word : word start_union union end_union'
+    union = model.Union(p[1], *p[3])
+    p[1].unions.add(union)
     p[0] = p[1]
 
-def p_union_token_token(p):
-    'union : TOKEN PLUS TOKEN'
-    lang = model.World.lang(config.default_lang)
-    w1 = lang.add_word(p[1])
-    w2 = lang.add_word(p[3])
-    p[0] = union = model.Union(w1, w2)
-    union.register_composite_word()
+
+def p_union(p):
+    'union : LUNION word plus_words RUNION'
+    p[3].insert(0, p[2])
+    p[0] = p[3]
 
 
-def p_union_lang_token_token(p):
-    'union : LANG TOKEN PLUS TOKEN'
-    lang = model.World.lang(p[1])
-    w1 = lang.add_word(p[2])
-    w2 = lang.add_word(p[4])
-    p[0] = union = model.Union(w1, w2)
-    union.register_composite_word()
+def p_plus_words2(p):
+    'plus_words : plus_words PLUS word'
+    p[1].append(p[3])
+    p[0] = p[1]
+
+
+def p_plus_words1(p):
+    'plus_words : PLUS word'
+    p[0] = [p[2]]
+
 
 # META is either an user defined comment that will be ignored
 # or a pragma directive for the parser
@@ -213,6 +209,7 @@ def t_eof(t):
 
 precedence = (
     ('left', 'EQUALS', 'RELATED', 'DERIVE'),
+    ('left', 'LUNION', 'RUNION'),
     ('left', 'COMMENT'),
     ('left', 'SEP'),
     ('left', 'PLUS'),

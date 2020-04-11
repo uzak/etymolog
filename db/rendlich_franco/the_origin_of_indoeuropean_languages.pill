@@ -7,48 +7,50 @@ sa:Aditi ~ sa:Punarvasu
 pie:i -> lat:eo = to go
 pie:r -> pie:mr = to die
 pie:mr -> lat:mori
-pie:mr [m+r] = reaching (r) the limit (m)
+pie:mr {m+r} [reaching (r) the limit (m)] = to die
 
-pie:ak [a+k] = to round, to move by turning
-pie:ka [k+a] = water, light, happiness, moves in the celestial vault
-pie:ag [a+g] = to move in a winding fashion, to zigzag
-pie:gA [g+a] = to move in every direction, to go, to walk
-pie:ac [a+c] = to move in a circle
-pie:ca [c+a] = round, rotund
-pie:aj [a+j] = to move straight forward, to guide
-pie:ji [j+i] = to move straight forward into the lines of enemy, to win, to conquer
-pie:at [a+t] = to move between two points, to wander
-pie:tR [t+R] = to go from one side to another, to cross
+pie:ak {a+k} = to round, to move by turning
+pie:ka {k+a} = water, light, happiness, moves in the celestial vault
+pie:ag {a+g} [to move in a winding fashion] = to zigzag
+pie:gA {g+a} [to move in every direction] = to go, to walk
+pie:ac {a+c} = to move in a circle
+pie:ca {c+a} = round, rotund
+pie:aj {a+j} [to move straight forward] = to guide
+pie:ji {j+i} [to move straight forward into the lines of enemy] = to win, to conquer
+pie:at {a+t} [to move between two points] = to wander
+pie:tR {t+R} [to go from one side to another] = to cross
 
 pie:n = water
 pie:d = light
 
 sa:ad = food
-sa:sad [s+ad] = placing oneself near (s) food (ad)
+sa:sad {s+ad} [placing oneself near (s) food (ad)]
 sa:sad = sit
 sa:sad -> latin:sedeo
 
-sa:han [h+an] = to kill, taking away (h) the breath (an)
-sa:sru [s+ru] = being close (s) to noise (ru)
-sa:snA [s+nA] = being in contact (s) with water (na)
+sa:han {h+an} [taking away (h) the breath (an)] = to kill
+sa:sru {s+ru} [being close (s) to noise (ru)] = to hear
+sa:snA {s+nA} [being in contact (s) with water (na)] = to bathe
 sa:ru ~ sk:rušiť
 
 // Part II. The waters in the first Indo-European languag
 // I.
 
 it:venezia = Venice
-it:venezia [lat:vene + lat:zia]
+it:venezia {lat:vene + lat:zia}
 
-sa:venI = river current, intertwining, two or more rivers that flow together into one mouth
+sa:venI = river current, intertwining
+sa:venI [two or more rivers that flow together into one mouth]
 sa:venI -> lat:vene
 
-sa:ve [strong form of sa:vi] = to weave, to intertwine, weave of two threads the weft and the warp
+sa:ve [strong form of `sa:vi`] = to weave, to intertwine
+sa:ve [weave of two threads, the weft and the warp]
 sa:ve -> web, de:weben
 sa:vi [split into two parts]
 sa:dvi -> sa:vi
 
 sa:Ni = to conduct
-sa:venI [ve+nI]
+sa:venI {ve+nI}
 sa:san = to possess, to acquire
 sa:dhA = to place, to found
 sa:dA = to give, to offer
@@ -61,7 +63,8 @@ sa:srp = to slither
 sa:sarpa -> lat:serpens -> serpent
 
 sa:nagna = nude
-sa:nagna -> sk:nahý, naked, de:nackt, fr:nu, es:desnudo, sa:nagnA = slut
+sa:nagna -> sk:nahý, naked, de:nackt, fr:nu, es:desnudo
+sa:nagnA = slut
 
 // II. Nakta "night" and Naksatra "constelation"
 sa:sr -> sa:salila = teardrop, water, primordial waters
@@ -69,12 +72,14 @@ sa:sr -> sa:salila = teardrop, water, primordial waters
 sa:salilakarman [funeral ceremony, relatives of the deceased offers libations of water made up of their own tears - Mahabharata]
 sa:salilakarman ~ sa:salila
 
-sa:r -> sa:arna = waves, sea,
-sa:arna = primordial waters [luminous ocean]
+sa:r -> sa:arna = waves, sea
+sa:arna = primordial waters
+sa:arna [luminous ocean]
 sa:r -> sa:arnava = waves, sea
-sa:arnava = primordial waters [ocean of waters wrapped in darkness]
+sa:arnava = primordial waters
+sa:arnava [ocean of waters wrapped in darkness]
 
-sa:samudra [sam+udra] = set of waves, primordial waters
+sa:samudra {sam+udra} = set of waves, primordial waters
 sa:sam = together
 sa:ud = up, above
 sa:ud -> sa:und = bathe
@@ -82,7 +87,7 @@ sa:ud -> sa:udra = water
 
 sa:jyotisa = astronomy [science of celestial lights], astronomer
 sa:jyotirvid = astronomer
-sa:jyotiscakra [joytis+cakra] = zodiac
+sa:jyotiscakra {joytis+cakra} = zodiac
 
 sa:d -> sa:dI, sa:div
 sa:dI = to shine
@@ -96,25 +101,86 @@ sa:na = waters
 sa:ksatra = ruling
 sa:naksatravidyA = astronomy [science of constellations], astrology
 
-sa:naksatravidyA (predates) ~ sa:joytisa
+sa:naksatravidyA ~[naskatravidyA predates jotisa] sa:joytisa
 sa:naksatrasUcaka = astrologer [one who interprets the stars]
 
 sa:div = day
-sa:div[v+i+d]
+sa:div{v+i+d}
 sa:div [breaks away(v) by flowing (i) from light (d)]
 
-sa:rAtrI [rA+tr] = night
-sa:rAtrI [that which gives (rA) the starts (tr) ]
+sa:rAtrI {rA+tr} = night
+sa:rAtrI [that which gives (rA) the starts (tr)]
 sa:rA = to give
 sa:tr = stars
 sa:rAtrI = sa:naktA
-sa:nak [n+ak]
+sa:nak {n+ak}
 sa:nak [curvilear motion (ak) of waters (n)]
 sa:nak ->[nak is abstract action, infinitive] nakta
-sa:naktA [n+akta] = rotation (akta) of the waters (n), night
+sa:naktA {n+akta} = rotation (akta) of the waters (n), night
 
-sa:na = ocean of dark waters
-sa:ka = ocean of luminous waters
+sa:nAka {na+aka} = nocturnal circulation (aka) of the waters (na)
+
+sa:na = ocean of dark waters            // nothingness, impossible to distinguish there
+sa:ka = ocean of luminous waters        // light, enables to distinguish
 
 sa:ksi = to govern, to rule
 sa:ksi -> sa:ksatra
+
+/// III. Eka "one" and na... "nothingness"
+
+sa:ka = sa:hiranyagarbha
+// `e` is strong form of `i`
+sa:eka {e+ka} [motion of ka] [light (ka) that rises(e) from the waters] = the one
+sa:na = nothingness
+
+sa:tapas = heat, ardor, deep spirutality, ascesis
+sa:tap {p+t} [to purify (p) from one end to another (t)]
+
+sa:na = undifferentiated waters [-> "nothingness", as it is impossible to recognize within them any entity]
+sa:ka = light, sun
+sa:kas {ka+as} [to bind onself to light] = to appear, to manifest, to shine
+sa:ka -> sa:kam = to love
+sa:ka -> sa:kAnta = beautiful
+sa:kAnta ~ sa:kam
+sa:ka -> sa:kAnti = beauty
+sa:Kanti ~ sa:kam
+
+sa:ka -> latin:cando, latin:candor, latin:candidus
+
+sa:ka = who, what       // as ka enables to distinguish in darkness
+sa:ka [creator light] // perception, awareness, to possibility to distinguish
+
+sa:da = to give
+sa:ka = water
+sa:kada {ka+da} [gives water] = cloud
+
+// IV KAma "love" and manas "mind"
+
+sa:Agni [apAm napAt - son of the waters]
+sa:kAma [desire of the waters RG V,36,1]
+
+sa:kam -> latin:amo [drops `k`]
+sa:kam = to desire, to love
+// It is through the creative pleasure of kāma that eka, the One, invades with its light [ka]
+// the impenetrable darkness of the primordial waters [na], and carriesthem away from the
+// dominion of nothingness  by making themvisible
+sa:kam {ka+m} [that which defines (m) the shining waters (ka)]
+sa:kam [the measure (m) of the desire (ka) of the shining waters (ka)]
+sa:kan  = to rejoice, to feel pleasure
+sa:kam ~ sa:kan
+
+
+// If Eka and kāmathus  have  the  faculty  to  make  luminous  and perceptible
+// to  our  intellect  and  our  senses  the  universe  of na-sat
+// (non-being or nothingness), then an and manas have the faculty of making  it
+// animate [an]as  well  as recognizable  and  measurable [manas].
+sa:man = to think
+sa:man -> latin:mens
+sa:man {m+an} [the measure (m) of the vitality of the waters(an)]
+sa:man [the dimension (m) of their breath(an)]
+
+sa:brahman = sa:ka, sa:kha, sa:prAna {pra+an+a} [ChAndogya-upanishad Ch 10, 5. paragraph, 4th lesson]
+
+sa:trsnA [daughter of kAma and Rati] = thirst
+
+
