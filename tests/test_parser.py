@@ -125,7 +125,7 @@ class TestRelationships(TestCase):
         parser.yacc.parse("w1 = w2 w3, w4")
         assert_equals_lr("w1", "w2 w3")
         assert_equals_lr("w1", "w4")
-        assert_total_rels(4)            # 2x2 because Equals is bidirectional
+        assert_total_rels(2)
         assert_total_word(config.default_lang, 3)
 
     def test_rel_rel_complex(self):
@@ -134,7 +134,7 @@ class TestRelationships(TestCase):
         assert_derived_lr("w1", "w3")
         assert_equals_lr("w3", "w5")
         assert_derived_lr("w5", "w6")
-        assert_total_rels(5)
+        assert_total_rels(4)
 
     def test_rel_rel_complex2(self):
         parser.yacc.parse("w1 ~ w2 = w3 -> w4, w5")
@@ -142,7 +142,7 @@ class TestRelationships(TestCase):
         assert_equals_lr("w2", "w3")
         assert_derived_lr("w3", "w4")
         assert_derived_lr("w3", "w5")
-        assert_total_rels(6)
+        assert_total_rels(4)
 
     def test_rel_rel_complex3(self):
         parser.yacc.parse("w1 ~ w2, w3 = w4 -> w5")
@@ -150,7 +150,7 @@ class TestRelationships(TestCase):
         assert_related_lr("w1", "w3")
         assert_equals_lr("w3", "w4")
         assert_derived_lr("w4", "w5")
-        assert_total_rels(7)
+        assert_total_rels(4)
 
     def test_rel_rel_complex4(self):
         parser.yacc.parse("w1 -> w2, w3 = w4 ~ w5")
@@ -158,7 +158,7 @@ class TestRelationships(TestCase):
         assert_derived_lr("w1", "w3")
         assert_equals_lr("w3", "w4")
         assert_related_lr("w4", "w5")
-        assert_total_rels(6)
+        assert_total_rels(4)
 
     def test_rel_rel_complex5(self):
         parser.yacc.parse("w0, w1 = w2 -> w3 ~ w4, w5")
@@ -169,14 +169,14 @@ class TestRelationships(TestCase):
         assert_related_lr("w4", "w3")
         assert_related_lr("w3", "w5")
         assert_related_lr("w5", "w3")
-        assert_total_rels(7)
+        assert_total_rels(4)
 
     def test_rel_bidirectional(self):
         parser.yacc.parse("w1 = w2")
         assert_equals_lr("w1", "w2")
         assert_equals_lr("w2", "w1")
         parser.yacc.parse("w2 = w1")
-        assert_total_rels(2)
+        assert_total_rels(1)
 
     def test_circular_equals(self):
         with pytest.raises(ValueError):
@@ -375,7 +375,7 @@ class TestMeta(TestCase):
         assert_total_word("en", 1)
         assert_total_word("sa", 1)
         assert_total_word("sk", 1)
-        assert_total_rels(3)
+        assert_total_rels(2)
         parser.yacc.parse("// LANG de")
         parser.yacc.parse("a -> b")
         assert_total_word("de", 2)

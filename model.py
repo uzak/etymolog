@@ -108,6 +108,7 @@ class Group:
 class RelationshipMeta(type):
     def __new__(mcls, name, bases, attrs, **kw):
         attrs['Table'] = {}
+        attrs['Mirror'] = {}
         return super().__new__(mcls, name, bases, attrs)
 
 
@@ -122,10 +123,10 @@ class Relationship(Entity, metaclass=RelationshipMeta):
     @classmethod
     def add(cls, left, right, comment=None):
         if isinstance(right, Group):
-            for r in right:         # right is good; take all
+            for r in right:                     # right is good; take all words
                 cls.add(left, r, comment=comment)
         elif isinstance(left, Group):
-            cls.add(left.content[-1], right, comment=comment)  # only last from left
+            cls.add(left.content[-1], right, comment=comment)  # only last word from left
         else:
             return cls._add(left, right, comment=comment)
 
@@ -134,12 +135,11 @@ class Relationship(Entity, metaclass=RelationshipMeta):
         """get Relationship if it exists, otherwise add"""
         obj = cls.get(left, right)
         key = (left.key(), right.key())
-        rev_key = (right.key(), left.key())
         if obj is None:
             obj = cls(left, right)
             cls.Table[key] = obj
             if cls.Bidirectional:
-                cls.Table[rev_key] = obj
+                cls.Mirror[key] = obj
         if comment:
             obj.comment(comment)
         return obj
@@ -150,8 +150,8 @@ class Relationship(Entity, metaclass=RelationshipMeta):
         rev_key = (right.key(), left.key())
         if key in cls.Table:
             return cls.Table[key]
-        elif cls.Bidirectional and rev_key in cls.Table:
-            return cls.Table[rev_key]
+        elif cls.Bidirectional and rev_key in cls.Mirror:
+            return cls.Mirror[rev_key]
 
     @classmethod
     def cls_str(cls):

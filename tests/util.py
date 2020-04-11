@@ -43,7 +43,8 @@ def _assert_rel_lr(rel, left, right, ll=config.default_lang, rl=config.default_l
     left = model.World.lang(ll).get_word(left)
     right = model.World.lang(rl).get_word(right)
     key = (left.key(), right.key())
-    assert key in rel.Table
+    rev_key = (right.key(), left.key())
+    assert key in rel.Table or rev_key in rel.Mirror
 
 
 def assert_equals_lr(left, right, ll=config.default_lang, rl=config.default_lang):
