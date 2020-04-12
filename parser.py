@@ -52,7 +52,9 @@ def p_tokens_token(p):
     'tokens : TOKEN'
     p[0] = p[1]
 
-# inline comments TODO remove
+
+# inline comments
+# XXX remove?
 
 def p_word_word_ic(p):
     'tokens : tokens LPAREN tokens RPAREN'
@@ -66,6 +68,7 @@ def p_word_ic_word(p):
 
 # Groups
 
+
 def p_expression_group(p):
     'expression : group'
     p[0] = p[1]
@@ -78,7 +81,9 @@ def p_group_expression_comma_expression(p):
     c = model.Group(p[1], p[3])
     p[0] = c
 
+
 # Relationships
+
 
 def p_expr_rel(p):
     'expression : relationship'
@@ -91,6 +96,7 @@ def p_relationship_word_rel_word(p):
                     | expression EQUALS expression
     '''
     # NOTE relationship reduces to last expression
+    # XXX todo check for circularity here
     if p[1] == p[3]:
         raise ValueError("self-referencing relationship is not allowed")
     if p[2] == "->":
@@ -116,6 +122,7 @@ def p_expression_expr_rel_comment_expr(p):
                   | expression EQUALS COMMENT expression
                   | expression RELATED COMMENT expression
     '''
+    # XXX todo check for circularity here
     if p[1] == p[4]:
         raise ValueError("self-referencing relationship is not allowed")
     comment = p[3]
@@ -126,6 +133,9 @@ def p_expression_expr_rel_comment_expr(p):
     elif p[2] == "~":
         p[0] = model.Related.add(p[1], p[4], comment=comment)
     p[0] = p[4]
+
+
+# Unions
 
 
 _pre_union_default_lang = None

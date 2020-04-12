@@ -1,6 +1,31 @@
 # etymolog
 
-I find the meaning of words and the origin thereof fascinating. `etymolog` is a tool to store, retrieve and work with etymological facts. These facts are contained in files called `pills` (see [db](/db)) and hold words in different languages and relationships among them. They can be loaded using the [parser](./parser.py). After that you can work with them in python code or use one of the enclosed [tools](#Tools).
+* Martin Užák
+* 12 April 2020
+
+I find the meaning of words and the origin thereof fascinating. `etymolog` is a tool to store, retrieve and work with etymological facts. For example this could be looking up the Sanskrit word `tr` and derivation thereof (`./details.py sa tr`):
+
+     => sa:tr = en:stars, to cross over
+        + sa:rAtrI {rA+tr} = en:night, sa:naktA [that which gives (rA) the stars (tr)]
+       -> pt:trazer   
+       -> sa:str = en:star, strewn, scattered, spread  
+         -> sa:tara = en:crossing, sa:Kali  
+           -> en:Tartary   
+         -> en:astral   
+         -> en:star   
+         -> en:transit 
+         
+Or producing a dictionary for a language showing the derivations of the words therefrom (`./dict.py sk`):
+
+    * báť sa 
+        -> sa:bhaya
+    * beda 
+        -> sa:bheda
+    * biely 
+        -> slavic:bel -> sa:bhalu
+    * brat 
+        -> sa:bhrAtr
+    ...
 
 ## Pill File Grammar
 
@@ -9,7 +34,7 @@ Etymological data is stored in `.pill` files. They are processed line by line. O
 Whitespaces on the beginning and end of a line are stripped. Whitespaces between words are normalized to one space.
 
 ### Words
-A word is the basic unit within a pill. It consists of any number of given alphabetical and following characters `-,'"()`. Example:
+A word is the basic unit within a pill. It consists of any number of given alphabetical characters. Example:
 
     ship
 
@@ -49,11 +74,11 @@ Derivation (``->``) indicates that one word has given birth to another one:
 
 You can have several relationships on one line:
 
-    sa:Pas -> sa:Pasa -> lat:Pacify 
+    sa:Pas -> sa:Pasa -> lat:pax -> pacify 
     
-Here we say that the Latin word `pacify` is derived from Sanskrit word `pasa` which in turn stems from `pas`.
+Here we say that the word `pacify` is derived from Latin `pax` from Sanskrit word `pasa` which in turn stems from `pas`.
 
-Relations are processed from the left and when one relationship (``sa:Pas -> sa:Pasa``) is used to create another one, the right-most part (``sa:Pasa``) from the one on left is used to create the new one (``sa:Pasa -> lat:Pacify``).
+Relations are processed from the left and when one relationship (``sa:Pas -> sa:Pasa``) is used to create another one, the right-most part (``sa:Pasa``) from the one on left is used to create the new one (``sa:Pasa -> lat:pax``).
 
 You can have any number of relationships on one line. You can also combine any relationships you like.
    
@@ -93,35 +118,31 @@ If you have an idea on "how" or "why" of the relationship or meaning of word, yo
     boat [means of transport on water]
     en:pyre ~[person turning red in the face] sk:pýriť sa
 
-If you want to have multiple comments, use multiple statements:
+If you want to have multiple comments, use multiple statements or put the comments behind each other:
 
     boat [similar to a ship]
     boat [means of transport on water]
     
-You can use the same characters for comments as for words. Just like words, comments also have language:
-
-    boat [en:similar to a ship]
+    a [b] [c]               // is valid as well
     
 ### Unions
-To express that one word is a composite of two other words, use an union (``+``):
+To express that one word is a composite of two other words, use an union (``{ first_word + ... + last_word }``):
 
-    sa:vi+sa [vi+sa]
+    sa:vi+sa {vi+sa}
 
 This will result in creating a word ``sa:visa`` and creating a corresponding union object for it.
 
-The unions can be different from the concatenation of the components:
-
-    sa:vyasa [vi+asa]
-   
 You can have any number of components, e.g.
 
-    sa:svetAsvatara [sveta+asva+tara]
+    sa:svetAsvatara {sveta+asva+tara}
 
 The components are by default in the language of the union. But you can also explicitly set the language for any of them:
 
+    slavic:Dažbog {sa:dadati+bog}
 
-    slavic:Dažbog [sa:dadati+bog]
-    
+And finally you can combine comments with union statements:
+
+    slavic:Dažbog {sa:dadati+bog} [solar deity]
 
 ### Meta
 
@@ -129,8 +150,17 @@ The components are by default in the language of the union. But you can also exp
 
 Comments that are for your eyes only and will be ignored by the parser start with ``//`` and end with the the end of the line:
 
-    sa:Rudra -> cz:rudý // červený. Rudra je nahnevaný Šiva
+    sa:Rudra -> cs:rudý // červený. Rudra je nahnevaný Šiva
     
+#### Embedded comments
+
+Words in parentheses will be ignored, so they can be used as comments:
+
+    pie:k = curvilinear (motion)    
+    
+Will be the same as:
+
+    pie:k = curvilinear
     
 #### Processing Directives
 
@@ -141,6 +171,7 @@ Finally there is a special category of comments that are directives for the pars
 Will set the parser's SRC directive to ``http://some.link``. Here is a list of supported directives:
 
 * SRC set's the `source` attribute for all following Relationships and Words.
+* NOSRC unsets the `source` attribut for all following entities.
 * LANG set's the default language.
 
 These directives are valid from the point where they are encountered until the end-of-the file.
@@ -155,25 +186,16 @@ Finally you can tag a word. On a line there can be any number of tags, all of wh
 All tags are case-insensitive and stored in lower case.
 
 ## Tools
+Above was the description of the grammar. It is implemented in [lexer.py](lexer.py) and [parser.py](parser.py), both of which can be used with a file as argument for testing.
+
+use `parser.py::load_db()` to load the DB. The parser will instantiate the objects and create relationships in memory according to [model.py](model.py). Once this is done you can work on the object model, either with your tools or using the attached ones:
+
 ### dump.py
-TODO
+To produce some stats about your DB, use `dump.py`.
 
 ### details.py
-TODO
+`details.py` shows the details of a `word` in a `language`.
 
 ### dict.py
-TODO
+`dict.py` as seen above lists all the words for a given `language` along with their derivations.
 
-## Object Model
-
-    en = World.language("en")           # get or create language
-    
-    word = en.add_word("boat")
-    word.comments                       # all comments
-    word.comment("small ship")          # get or create a comment
-    
-    rel = Derived.add(w1, w2)
-    rel == Derived.get(w1)
-    rel in Derived.All
-    rel.comments
-    rel.comment("so they say")

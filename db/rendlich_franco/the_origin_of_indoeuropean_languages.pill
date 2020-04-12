@@ -109,7 +109,7 @@ sa:div{v+i+d}
 sa:div [breaks away(v) by flowing (i) from light (d)]
 
 sa:rAtrI {rA+tr} = night
-sa:rAtrI [that which gives (rA) the starts (tr)]
+sa:rAtrI [that which gives (rA) the stars (tr)]
 sa:rA = to give
 sa:tr = stars
 sa:rAtrI = sa:naktA
@@ -171,14 +171,16 @@ sa:kAma [desire of the waters RG V,36,1]
 
 sa:kam -> lat:amo [drops `k`]
 sa:kam = to desire, to love
-// It is through the creative pleasure of kāma that eka, the One, invades with its light [ka]
-// the impenetrable darkness of the primordial waters [na], and carriesthem away from the
-// dominion of nothingness  by making them visible
+
+// It is through the creative pleasure of kāma that eka, the One, invades with
+// its light [ka] the impenetrable darkness of the primordial waters [na],
+// and carries them away from the dominion of nothingness by making them visible
 // 1. sat -> 2. cit (reflected awareness) -> 3. ananda (creative pleasure)
+
 sa:kam {ka+m} [that which defines (m) the shining waters (ka)]
 sa:kam [the measure (m) of the desire (ka) of the shining waters (ka)]
-sa:kan  = to rejoice, to feel pleasure
-sa:kam ~ sa:kan
+sa:kan = to rejoice, to feel pleasure
+sa:kam ~ sa:kan // ananda
 
 
 // If Eka and kāma thus  have  the  faculty  to  make  luminous  and perceptible
@@ -194,7 +196,7 @@ sa:brahman = sa:ka, sa:kha, sa:prAna {pra+an+a} [ChAndogya-upanishad Ch 10, 5. p
 
 sa:trsnA [daughter of kAma and Rati] = thirst
 
-// V. Hiranyagarbha "Seed borne by the warters" and Ka "the shining waters"
+// V. Hiranyagarbha "Seed borne by the waters" and Ka "the shining waters"
 
 sa:prajApati {praja+pati} = sa:hiranyagarbha
 sa:pati = Lord
@@ -283,3 +285,7 @@ sa:p -> sa:pitr = father
 sa:p -> [authority from celebrations of purifying rites in honor of the gods and dead forefathers] power, sa:pati, lat:potestas = authority
 
 avesta:napta = moist
+
+// NOSRC
+
+sa:hari = sa:Vishnu

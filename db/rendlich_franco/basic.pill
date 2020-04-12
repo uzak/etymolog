@@ -1,26 +1,26 @@
 // SRC Comparative etymological Dictionary of classical Indo-European languages
 
-pie:k = curvilinear (motion)
-pie:g = winding (motion), multi directional (motion), zig zag (motion)
-pie:c = circular (motion)
-pie:j = straightforward (motion), rectilinear (motion)
-pie:t = motion between two points
+pie:k -> sa:k = curvilinear (motion)
+pie:g -> sa:g = winding (motion), multi directional (motion), zig zag (motion)
+pie:c -> sa:c = circular (motion)
+pie:j -> sa:j = straightforward (motion), rectilinear (motion)
+pie:t -> sa:t = motion between two points
 
-pie:d = light
-pie:n = water
-pie:p = purification
-pie:b = energy, vital force
-pie:m = limit
-pie:v = separation
-pie:s = proximity, bond, resemblance, union
+pie:d -> sa:d = light
+pie:n -> sa:n = water
+pie:p -> sa:p = purification
+pie:b -> sa:b = energy, vital force
+pie:m -> sa:m = limit
+pie:v -> sa:v = separation
+pie:s -> sa:s = proximity, bond, resemblance, union
 
-pie:y = to go
-pie:r = to move toward, to arrive, to reach
-pie:l = to hold, to free oneself from
-pie:h = displacement, pressure, push
+pie:y -> sa:y = to go
+pie:r -> sa:r = to move toward, to arrive, to reach
+pie:l -> sa:l = to hold, to free oneself from
+pie:h -> sa:h = displacement, pressure, push
 
 
-pie:a =[at the beginning] start of an action
-pie:a =[at the end] accomplishment or effect of an action
-pie:i = continuous motion, to go, to raise
-pie:u = stasis, permanence, stability, strength
+pie:a -> sa:a =[at the beginning] start of an action
+pie:a -> sa:a =[at the end] accomplishment or effect of an action
+pie:i -> sa:i = continuous motion, to go, to raise
+pie:u -> sa:u = stasis, permanence, stability, strength

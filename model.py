@@ -47,18 +47,18 @@ class Word(Entity):
         return f"{self.lang.name}:{self.value}"
 
     def as_str(self, comments=True, unions=True):
-        comments = ""
-        unions = ""
+        _comments = ""
+        _unions = ""
         if comments and self.comments:
-            comments = " "
-            comments += " ".join([f"[{c}]" for c in self.comments])
+            _comments = " "
+            _comments += " ".join([f"[{c}]" for c in self.comments])
         if unions and self.unions:
-            unions = " "
-            unions += " ".join(map(lambda u: f"{{{u}}}", sorted(self.unions)))
-        return f"{self.key()}{unions}{comments}"
+            _unions = " "
+            _unions += " ".join(map(lambda u: f"{{{u}}}", sorted(self.unions)))
+        return f"{self.key()}{_unions}{_comments}"
 
     def __str__(self):
-        return self.as_str()
+        return self.as_str(comments=False)
 
 
 class Union:
@@ -188,7 +188,6 @@ class Derived(Relationship):
 
     def __init__(self, left: Word, right: Word):
         super().__init__(left, right)
-        #print(f"Setting derives for {left} to {id(self)}")
         left.derives.add(self)
         right.derived_from.add(self)
 
@@ -247,21 +246,6 @@ class Language:
         if word and case_sensitive and value != word.value:
             return
         return word
-
-    def del_word(self, word):
-        if word.value.lower() in self._words:
-            del self._words[word.value.lower()]
-
-    def concat(self, w1, w2):
-        if w1.lang != w2.lang:
-            if w2.lang.name == config.default_lang:
-                w2.lang.del_word(w2)
-                w2.lang = w1.lang
-            else:
-                raise ValueError(f"Can't concat {w1} and {w2}")
-        w1.lang.del_word(w1)
-        w2.lang.del_word(w2)
-        return self.add_word(f"{w1.value} {w2.value}")
 
     def __eq__(self, other):
         return self.name == other.name

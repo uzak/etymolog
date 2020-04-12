@@ -12,10 +12,10 @@ def dump(verbose=False):
     for lang in sorted(model.World.Languages.values(), key=lambda l: len(l), reverse=True):
         print(f"{lang} {len(lang)}")
 
-    print(f"Union {len(model.Union.Table)}:")
+    print(f"Union ({len(model.Union.Table)})")
     if verbose:
         for union in model.Union.Table.values():
-            print(f"\t{union}")
+            print(f"\t{union.word} {{{union}}}")
 
     for cls in (model.Derived, model.Equals, model.Related):
         print(f"Relationship {cls.cls_str()}")

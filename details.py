@@ -17,15 +17,23 @@ def groupby(key_fct, seq):
         result[key].add(item)
     return result
 
+
 def groupby_lang_name(seq):
     return groupby(lambda x: x.lang.name, seq)
+
 
 def split(fct, seq):
     return set(filter(fct, seq)), \
            set(filter(lambda x: not fct(x), seq))
 
 
-#XXX unittest/doctest?
+def comments_str(word):
+    if word.comments:
+        comments = ", ".join(word.comments)
+        return f"[{comments}]"
+    return " "
+
+
 def translations(word, rel_type=model.Equals):
     if rel_type is model.Equals:
         data = word.equals
@@ -38,8 +46,6 @@ def translations(word, rel_type=model.Equals):
         yield translation
 
 
-#XXX unittest/doctest?
-
 def _translations_str(trs, rel_type=model.Equals):
     result = []
     for lang, words in groupby_lang_name(trs).items():
@@ -48,7 +54,8 @@ def _translations_str(trs, rel_type=model.Equals):
         if trs:
             equals = f"{lang}:{equals}"
             result.append(equals)
-    return f" {rel_type.Symbol} {'; '.join(result)}" if result else ""
+    return f" {rel_type.Symbol} {', '.join(result)}" if result else " "
+
 
 def translations_str(word, rel_type=model.Equals, ignore=set()):
     trs = translations(word, rel_type=rel_type)
@@ -75,45 +82,39 @@ def parents(word):
             print(f"      |")
 
 
-def comments_str(word):
-    if word.comments:
-        comments = ", ".join(word.comments)
-        return f"[{comments}]"
-    return ""
-
-
 def derived_details(word, indent, seen_on_left=set()):
     for lang, derivates in groupby(lambda d: d.right.lang.name, word.derives).items():
         for d in derivates:
             trans = translations_str(d.right, ignore=seen_on_left)
             seen_on_left.add(d.left)
             comments = comments_str(d)
+            if comments:
+                comments = ' ' + comments
             print(f"{indent}{model.Derived.Symbol} {d.right}{trans}{comments}")
             if d.right.derives:
                 derived_details(d.right, indent + ' '*indent_size, seen_on_left=seen_on_left)
 
-#XXX unittest/doctest?
-
 
 def details(word):
     indent = ' ' * (indent_size + 1)
-    # XXX cleanup
-    for rel_type in (model.Equals, model.Related):
-        trs = translations(word, rel_type=rel_type)
-        for lang, lang_trs in groupby_lang_name(trs).items():
-            trs_comm, trs_no_comm = split(lambda x: x.comments, lang_trs)
-            for t in trs_comm:
-                print(f"{indent} {model.Equals.Symbol} {t}")
-            if trs_no_comm:
-                print(f"{indent}{_translations_str(trs_no_comm, rel_type=model.Equals)}")
-    derived_details(word, indent, set())
+
     for u in word.in_unions:
-        print(f"  + {u}{translations_str(u.word)}")
+        print(f"{indent} + {u.word}{translations_str(u.word)} {comments_str(u.word)}")
+
+    derived_details(word, indent, set())
+
+    trs = translations(word, rel_type=model.Related)
+    for lang, lang_trs in groupby_lang_name(trs).items():
+        trs_comm, trs_no_comm = split(lambda x: x.comments, lang_trs)
+        for t in trs_comm:
+            print(f"{indent} {model.Related.Symbol} {t}")
+        if trs_no_comm:
+            print(f"{indent}{_translations_str(trs_no_comm, rel_type=model.Related)}")
 
 
-def word_details(word): #XXX rename
+def pretty_print(word):
     parents(word)
-    print(f" => {word.as_str(unions=False)}")
+    print(f" => {word.as_str(unions=False)}{translations_str(word)}")
     if word.unions:
         for i, u in enumerate(word.unions):
             print(f"    {i+1}. union: {u}")
@@ -134,4 +135,6 @@ if __name__ == '__main__':
 
     w = model.World.lang(args.lang).get_word(args.word)
     if w:
-        word_details(w)
+        pretty_print(w)
+    else:
+        print(f"`{args.lang}:{args.word}` not found")
