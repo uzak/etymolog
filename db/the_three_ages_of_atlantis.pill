@@ -1,0 +1,46 @@
+// SRC The Three Ages of Atlantis: The Great Floods That Destroyed Civilization
+
+basque:ur = water
+basque:Urumea [River that runs through San Sebastian]
+basque:ur -> basque:Urumea
+lat:urbs = city
+pie:ur ->[cities were founded along rivers] basque:ur, lat:urbs
+
+sa:nagara -> Angkor
+sa:nagara [it which doesn't (na) move (ga) rises (ra)] = city
+sa:nagara ~ egyptian:nagara
+egyptian:nagara = god Horus lives
+
+fall [Sun goes down] = autumn
+spring [Rebirth of the Sun]
+
+Shardanas [settled in Sardinia]
+Shardanas ~ Sardinia
+it:sardine ~ Shardanas
+it:sardine = salted fish
+
+sumerian:abram [son of the father]
+sumerian:abraham [head of nations]
+
+it:lupa =[related to Romulus and Remus] she-wolf, prostitute
+
+it:popoli = peoples
+
+Sargon = Sarrukin
+sargon = Melkisedek = righteous king
+Sargon ~ Epic of Gilgamesh
+Epic of Gilgamesh [the return (gilg) of the messiah (mesh)]
+
+gr:skorpizo = to disperse, to dismember
+gr:skorpizo -> scorpion
+
+breton:avalon = apple orchard
+
+// NOSRC
+egyptian:nagara {sa:na+sa:ga+sa:ra}
+egyptian:nagara [the one who moves (ga) on water (na) rises (ra)]   // Horus
+
+de:Ursprung {pie:ur + Sprung} // Sprung (rising) in/from the water (ur). Beginning
+
+toltec:Nagual ~ sa:naga // Castaneda
+

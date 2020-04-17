@@ -55,14 +55,14 @@ sa:san = to possess, to acquire
 sa:dhA = to place, to found
 sa:dA = to give, to offer
 
-sa:nAga = snake
+sa:nAga [one moving windingly (aga) in water (na)] = snake
 
 sa:sr -> sa:srp -> sa:sarpa = snake
 sa:sr = to flow
 sa:srp = to slither
 sa:sarpa -> lat:serpens -> serpent
 
-sa:nagna = nude
+sa:nagna {n+agna} [winding, twisting act (agna) carried in water (na)] = nude
 sa:nagna -> sk:nahý, naked, de:nackt, fr:nu, es:desnudo
 sa:nagnA = slut
 
@@ -166,7 +166,6 @@ sa:kada {ka+da} [gives water] = cloud
 
 // IV KAma "love" and manas "mind"
 
-sa:Agni [apAm napAt - son of the waters]
 sa:kAma [desire of the waters RG V,36,1]
 
 sa:kam -> lat:amo [drops `k`]
@@ -215,7 +214,7 @@ sa:bhr -> sa:brhatIr = mighty
 sa:bhr = to grow, to enlarge, to exppand
 sa:bhr -> sa:brahman
 
-sa:agni [ag+ni] [son of the waters (ni) in which one moved windingly (ag)]
+sa:agni {ag+ni} [apAm napAt - son of the waters (ni) in which one moved windingly (ag)]
 
 sa:ka = The Shinning One
 
@@ -277,7 +276,7 @@ sa:pA -> sa:pat ~ sa:pati
 sa:pat -> lat:potis [that which has authority]
 sa:napat -> lat:nepos [he who has authority over the waters (offerings to the dead)]
 sa:pat -> sa:ptu
-sa:naptu {na+ptu} [superintended of the waters (offerings to the dead)]
+sa:naptu {na+ptu} [superintendent of the waters (offerings to the dead)]
 sa:naptu -> lat:neptunus [God of the sea] = Neptune # god
 
 sa:p -> sa:pU = to purify
