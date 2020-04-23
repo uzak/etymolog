@@ -5,7 +5,6 @@ Parse .pill files
 """
 
 import os
-import re
 import model
 import config
 import ply.yacc
@@ -18,6 +17,9 @@ from lexer import tokens
 # YACC
 #
 
+class IgnoreFile(Exception):
+    "Indicator that processing of a file will be skipped"
+    pass
 
 def p_empty_line(p):
     'expression : '
@@ -178,19 +180,22 @@ def p_plus_words1(p):
 
 orig_default_lang = None
 
-def handle_meta(comment):
-    comment = comment.strip()
-    if comment.startswith("SRC"):
-        src = comment[4:]
+def handle_meta(meta, p):
+    meta = meta.strip()
+    if meta.startswith("SRC"):
+        src = meta[4:]
         config.default_source = src
-    elif comment.startswith("NOSRC"):
+    elif meta.startswith("NOSRC"):
         config.default_source = None
-    elif comment.startswith("LANG"):
+    elif meta.startswith("LANG"):
         global orig_default_lang        # XXX global ...
         if not orig_default_lang:
             orig_default_lang = config.default_lang
-        lang = comment[5:]
+        lang = meta[5:]
         config.default_lang = lang
+    elif meta.startswith("IGNORE"):
+        raise IgnoreFile
+
 
 
 def p_meta(p):
@@ -202,7 +207,7 @@ def p_meta(p):
         meta = p[2]
     else:
         meta = p[1]
-    handle_meta(meta)
+    handle_meta(meta, p)
 
 
 def p_tag(p):
@@ -238,7 +243,10 @@ def parse_file(fn):
     log.debug(f"Parsing: {fn}")
     with open(fn) as f:
         for line in f.readlines():
-            yacc.parse(line)
+            try:
+                yacc.parse(line)
+            except IgnoreFile:
+                break
         finish_file()
 
 

@@ -59,7 +59,7 @@ def t_COMMENT(t):
 
 
 def t_error(t):
-    raise SyntaxError(f"Illegal character {t.value[0]!r}")
+    raise SyntaxError(f"Illegal character {t.value[0]!r} at line: {t.lexer.lineno}")
 
 
 def t_newline(t):
