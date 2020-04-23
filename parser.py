@@ -54,16 +54,14 @@ def p_tokens_token(p):
 
 
 # inline comments
-# XXX remove?
-
 def p_word_word_ic(p):
-    'tokens : tokens LPAREN tokens RPAREN'
+    'tokens : tokens PAREN'
     p[0] = p[1]
 
 
 def p_word_ic_word(p):
-    'tokens : LPAREN tokens RPAREN tokens'
-    p[0] = p[4]
+    'tokens : PAREN tokens'
+    p[0] = p[2]
 
 
 # Groups
@@ -227,10 +225,10 @@ precedence = (
     ('left', 'COMMENT'),
     ('left', 'SEP'),
     ('left', 'PLUS'),
-    ('left', 'LPAREN', 'RPAREN'),
     ('left', 'TAG'),
     ('left', 'LANG'),
     ('left', 'META'),
+    ('left', 'PAREN'),
 )
 
 yacc = ply.yacc.yacc()

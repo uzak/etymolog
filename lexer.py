@@ -9,13 +9,13 @@ from log import log
 tokens = (
     'LANG',
     'TOKEN',
-    'LPAREN', 'RPAREN', # TODO rename
     'PLUS',
     'SEP',
     'COMMENT', 'META', 'LUNION', 'RUNION', # TODO Rename?
     'EQUALS', 'DERIVE',
     'RELATED',
     'TAG',
+    'PAREN',
 )
 
 # Tokens
@@ -23,8 +23,6 @@ t_EQUALS  = r'='
 t_DERIVE  = r'->'
 t_RELATED = r'~'
 t_PLUS    = r'\+'
-t_LPAREN  = r'\('
-t_RPAREN  = r'\)'
 t_SEP     = ','
 t_TOKEN   = r"[\w]+"
 t_LUNION  = r'{'
@@ -39,6 +37,12 @@ def t_TAG(t):
 def t_META(t):
     "//.*"
     t.value = t.value[2:]
+    return t
+
+
+def t_PAREN(t):
+    "\(.*?\)"
+    t.value = t.value[1:-1]
     return t
 
 
