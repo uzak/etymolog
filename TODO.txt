@@ -1,8 +1,8 @@
 * group by language in details
 * remove inline comments?
      + sa:rAtrI {rA+tr} = en:night, sa:naktA [that which gives (rA) the stars (tr)]
+        add testcase if inline are kept in []-comment
     * relation comment - new line
-* parser fails - show last few tokens from stacks
 * language differentiates if case sensitive (e.g. sanskrit)
     and auto translation from devanagari to latin ...
     for english: remove "to" for sorting
@@ -20,3 +20,4 @@
 --
 * transitiveness: shall a = b = c also generate a = c? and for ~? -> no
 * support for a = b, c = d, e = f (expression in groups) -> no
+* add `-` to allowed word chars? -> no, conflicts with DERIVE

@@ -1,0 +1,42 @@
+// https://vediccafe.blogspot.com/2020/04/the-rig-vedic-phoenicians.html
+
+sa:pani = bargainer, trader
+sa:paani = shop
+sa:vani = bargainer, trader
+sa:vanik = bargainer, trader
+
+sa:pani -> phoenician:kani -> phoenician:kanana -> Canannites
+
+Bribu -> Bablyon
+Bribu ~[King of Panis] sa:pani
+
+sa:kalil = impenetrable
+sa:kalil -> sa:kila
+sa:kila = fort
+sa:karun = compassionate, plaintive
+sa:karun -> Karun [one of the rivers of Babylon] # river
+
+sa:arvan = fast, svift
+sa:arvan -> persian:Arvand Rud [name for Tigris] # river
+sa:vyagra = tiger
+sa:vyagra ~ persian:Arvand Rud
+Euphrates {sa:su + sa:purna} [Good-Abundance] # river
+Euphrates {sa:su + sa:bharat} [Named after ancient King Bharat]
+
+sa:purandhi = bountiful, abundant
+
+sa:surya = sun
+sa:sura = deity
+
+sa:surya -> Syria
+
+sa:Lavana -> Lebanon
+
+sa:Krishna -> Kishon (river in Isreal) # river
+
+sa:asura -> Assyria
+sa:asura {a+sura} = demon        // Asuras were driven away by the devatas
+
+Cholas [of South India] -> Chaldeans
+
+sa:Rama -> egyptian:Rmnn [reminder of Vedic King Rama]

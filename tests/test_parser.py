@@ -362,6 +362,10 @@ class TestMeta(TestCase):
         assert w
         assert "comment" in w.comments
 
+    def test_inline_comment_before_word(self):
+        parser.yacc.parse(f"(ic) word")
+        assert lang().get_word("word")
+
     def test_meta_src(self):
         # first test default
         parser.yacc.parse("w1")

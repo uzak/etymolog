@@ -105,119 +105,78 @@ sa:purushottama = highest male or spirit
 sa:abhasa = reflection
 sa:brahmanda = world egg
 sa:hamsa = breath
-// IGNORE this needs to be cleaned up
 //SRC https://en.wiktionary.org/wiki/spiritus
 lat:spiritus = breath, breathing, light breeze, spirit, ghost, energy, pride, arrogance
 //SRC Man and his becoming according to the Vedanta
 he:maim = water
 //SRC https://en.wikipedia.org/wiki/Spirit#Etymology
-he:ruach = breath, spiritu, soul, courage, vigor
+he:ruach = breath, spirit, soul, courage, vigor
 //SRC Man and his becoming according to the Vedanta
-he:ruach = air, spirit, complementary to water in Genesis
+he:ruach [complementary to water in Genesis] = air, spirit
 sa:vijnana = distinctive knowledge
 sa:murti = single manifestation
 sa:matra = measure, determination
 sa:shabda = auditive, sonorous
 sa:sparsha = tangible (can be touched)
-sa:rupa = visible (in double sense of form and colour)
+sa:rupa =[in double sense of form and colour] visible
 sa:rasa = sapid (flavour)
 sa:gandha = olfactory (smell)
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=indriya&trans=Translate
-sa:indriya = organ, sense, part of body
 //SRC Man and his becoming according to the Vedanta
-sa:Buddha indriyas = organs of sensation
+// sa:Buddha indriyas = organs of sensation
 sa:karmendryias = organs of action
 sa:prana = vital breath
 sa:indriya = power, faculty
 sa:shrotra = ears (instrument of hearing)
 sa:tvach = skin (instrument of touch)
-sa:chakshus = eyes (instrument of seeing)
+sa:cakshus = eyes (instrument of seeing)
 sa:rasana = tounge (instrument of taste)
 sa:ghrana = nose (instrument of smell)
 sa:vach = voide, speech
 sa:pada = foot
 sa:pani = hands
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=pani+&trans=Translate
-sa:pani = shop, market, misser, bargainer
-//SRC Man and his becoming according to the Vedanta
 sa:payu = organ of excretion, anus
-sa:upashta = generative organs (genitals)
+sa:upashta = genitals (generative organs)
 sa:kosha = envelope
-sa:Sukhsma sharira = subtle body
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=suksma&trans=Translate
-sa:sukhsma = delicate, fine, tiny, suble, minute, small, nice, thin, insignificant, narrow
-//SRC Man and his becoming according to the Vedanta
+sa:sukhsmasharira = subtle body
 sa:Linga sharira = subtle body
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=sharira&trans=Translate
-sa:sharira = body, flood, universe, tide, feces, bodily strength, corporal
-//SRC Man and his becoming according to the Vedanta
 sa:va = to go, to move
 sa:an = breath, wind
 lat:anima = soul, vital breath
 sa:prana = respiration
-sa:apana = Inspiration (air going downward) – elements penetrating into individuality
+sa:apana =[elements penetrating into individuality] Inspiration (air going downward)
 sa:vyana = one of five vital airs
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=vayana&trans=Translate&direction=SE
-sa:vayana = knitting, selection, weaving, weave, act of weaving
-//SRC Man and his becoming according to the Vedanta
 sa:udana = expiration
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=udana&trans=Translate&direction=SE
-sa:udana = eyelash, breathing upwards, joy, hearts joy, navel
-//SRC Man and his becoming according to the Vedanta
 sa:samana = digestion, assimilation (in the widest possible sense, not only at the level of body organs)
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=samana&trans=Translate&direction=SE
-sa:samana = same, equal, common
-//SRC Man and his becoming according to the Vedanta
 sa:Sthula sharira = corporeal, gross form, human state
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=sthula&trans=Translate&direction=SE
-sa:sthula = bulky, fat, large, thick
-//SRC Man and his becoming according to the Vedanta
 sa:Annamaya kosha = alimentary envelope
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=annamaya&trans=Translate&direction=SE
-sa:annamaya = made from / of food
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=anna&trans=Translate&direction=SE
-sa:anna = cooked and ready to eat rice, earth, cereal, food, water
-//SRC Man and his becoming according to the Vedanta
 sa:ad = to eat
 lat:edere = to eat
-sa:jivaja = viviparous (born alive): man and other mammals
-sa:andaja = oviparous (born from egg): birds, reptiles, fish, insects
-sa:udbhijja = germiparous (borm from germs): lower animals and plats, the former mobile, being born in water, while later, being immobile, usually born in earth
+sa:ad ~ lat:edere
+sa:jivaja = viviparous [born alive] (man and other mammals)
+sa:andaja = oviparous [born from egg] (birds, reptiles, fish, insects)
+sa:udbhijja = germiparous [born from germs] (lower animals and plats, the former mobile, being born in water, while later, being immobile, usually born in earth)
 sa:anna = nutriment (proceeds from varsha)
 sa:oshadhi = vegetation
 sa:varsha = rain
-sa:rasa = sap, taste, savor, vegetables are the essence of water
+sa:rasa = sap, taste, savor (vegetables are the essence of water)
 //SRC https://en.wiktionary.org/wiki/sapere
 lat:sapere = to know, to be able, can, to taste, smell, to find out
 //SRC Man and his becoming according to the Vedanta
-lat:sapere = shared to root with rasa, analogy between informative (intellectual and mental) and nutricious (bodily) assimilation
-sa:trikala = threefold time (past, present, future)
-sa:omkara = Universe – Brahma (symbolised by „Om“) that which is, will be and was and is not subject to threefold time. Athma, which is trully unconditioned and never ceases to be
-sa:sandhya = intermediate, twillight
-sa:sandhi = point of contact between two things
+lat:sapere ~ sa:rasa
+sa:trikala = threefold time [past, present, future]
+sa:omkara [Brahman (symbolised by „Om“) that which is, will be and was and is not subject to threefold time. Athma, which is trully unconditioned and never ceases to be]
+sa:sandhya = intermediate, twilight
+sa:sandhi [point of contact between two things]
 sa:akshara = indissoluble, indestructible
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=akshara&trans=Translate&direction=SE
-sa:akshara = letter, letter of alphabet, syllable, charater, fixed, word, wovel, immutable
-//SRC Man and his becoming according to the Vedanta
 sa:matra = letter
 sa:dhatu = seed, verbal root which gives birth to entire language
 sa:pada = condition
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=pada&trans=Translate&direction=SE
-sa:pada = quarter, foot, post, step, word
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=matrika&trans=Translate&direction=SE
-sa:matrika = maternal, mother, nurse, divine mother, grandmother, all, every kind off
-//SRC Man and his becoming according to the Vedanta
-sa:vaishvanara = Universal Man, name of Agni, that which is common to all men, genius of the species, Adam Kadmon in Kabbalah, The King in Taoism
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=vaishvanara&trans=Translate&direction=SE
-sa:vaishvanara = consisting of all men, general, complete, known or worshipped, everywere, sun, sunlight, particular fire, mankind
-//SRC Man and his becoming according to the Vedanta
+sa:vaishvanara {vishva+nara} [name of Agni] [genius of the species (that which is common to all men)]
+sa:vaishvanara [Adam Kadmon in Kabbalah, The King in Taoism] = Universal Man
 sa:nara = man
 sa:vishva = all
 sa:svar = luminous spheres
 sa:svarga = heaven
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=svar&trans=Translate&direction=SE
-sa:svar = light, heaven, sunshine, bright space or sky, water, the sun
-//SRC Man and his becoming according to the Vedanta
 sa:antariksha = atmosphere
 sa:chitta = thought
 sa:taijasa = luminous spheres
@@ -226,124 +185,86 @@ sa:mayamaya = illusory
 sa:pratibhasika = apparent existence
 sa:paramarthika = absolutely real (Self – Atma)
 sa:viraj = sensible world
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=viraj&trans=Translate&direction=SE
-sa:viraj = ruler, majestiy, dignity, warrior, king of birds, excellence, body, first progeny of brahma, sovereign, king or queen
-//SRC Man and his becoming according to the Vedanta
 sa:hiranyagarbha = golden Embryo
 lat:aurum = gold
 he:aor = light
+lat:aurum ~ he:aor
 sa:ghana = cloud, compact and undifferentiated mass
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=ghana&trans=Translate&direction=SE
-sa:ghana = solid, thick, mass, lump
-//SRC Man and his becoming according to the Vedanta
 sa:avyakta = unmanifested and non developed
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=avyakta&trans=Translate&direction=SE
-sa:avyakta = unclear, invisible, stealthy, fool, unevolved, unmanifested, undetermined
-//SRC Man and his becoming according to the Vedanta
 sa:karana = cause
-sa:chitta = total Consciousness of the „Self“
+// sa:chitta = total Consciousness of the „Self“
 sa:sat = pure Being
 sa:turiya = fourth
 sa:amrita = state beyond all change
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=amrita&trans=Translate&direction=SE
-sa:amrita = not dead, immortal, beautiful, goddess, god, gold, nectar, number, property, immortality, killed, struck by death
-//SRC Man and his becoming according to the Vedanta
 sa:avidaya = ignorance
 sa:pinda = subtle prototype
-sa:samsara = Universal manifestation – indefinite series of cycles (degrees of existence) connected by causality and not in a successive order
-sa:pralaya = return into the undifferentiated state, end of cycle – dissolulution
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=pralaya&trans=Translate&direction=SE
-sa:pralaya = end, death, annihilation, dissolution of the world, end of a kalpa, armageddon, sleepiness
-//SRC Man and his becoming according to the Vedanta
+sa:samsara [Universal manifestation] [indefinite series of cycles (degrees of existence) connected by causality and not in a successive order]
+sa:pralaya [return into the undifferentiated state] [end of cycle – dissolution]
 sa:vidvan = sage
 sa:avidvan = ignorant
 sa:sushumna = coronal artery
-sa:devayana = path of the Gods
-sa:pitriyana = path of the ancestors, doesn't lead beyond the sphere of the moon, beyond form
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=pitri&trans=Translate&direction=SE
-sa:pitri = father, parents, ancestors
-//SRC Man and his becoming according to the Vedanta
+sa:devayana [path of the Gods]
+sa:pitriyana [path of the ancestors] [doesn't lead beyond the sphere of the moon, beyond form]
 sa:deva = angelic state
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=deva&trans=Translate&direction=SE
-sa:deva = god, fate, prince, spearman, king, deity, lancer, fool, sword, image of a god, heavenly
-//SRC Man and his becoming according to the Vedanta
-sa:ganesha = „Lord of deities“, represents knowledge
-sa:indra = powerful, regent of Svarga, god of atmosphere and the sky
+sa:ganesha [Lord of deities, represents knowledge]
+sa:indra [regent of Svarga, god of atmosphere and the sky] = powerful
 sa:vidyut = lightning
 sa:loka = place
 lat:locus = place
+sa:loka ~ lat:locus
 sa:pasha = bond
-//SRC 
-sa:pashupati = „lord of beings in bondage“  name of Shiva, because by his transformatory action they are delivered. Sacrifice as delivery, „lord of animals“
-//SRC Man and his becoming according to the Vedanta
+sa:pashupati [lord of beings in bondage] [Lord of Animals] [because by his transformatory action they are delivered (sacrifice as delivery)] = sa:Shiva
+sa:pasha ~ sa:pashupati
 sa:dvara = gate
-sa:ashrama = stages of earthly manifestation
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=ashrama+&trans=Translate&direction=SE
-sa:ashrama = not lame, freshness, retreat, hermitage, asylum
-//SRC Man and his becoming according to the Vedanta
-sa:nirvana = extinction of breath or of disturbance
+// sa:ashrama = stages of earthly manifestation
+sa:nirvana [extinction of breath or of disturbance]
 ar:fana = extinction
+ar:fana ~ sa:nirvana
 sa:parinirvana = unconditioned state
-sa:Nirvitti = extinction of change or of action
-he:Shekinah = real presence of the Divinity (Light of Glory in Christian theology), Pax Profunda, Great Peace, Tranquillity
-sa:muni = solitary one, realizes the state of „perfect Solitude“
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=muni&trans=Translate&direction=SE
-sa:muni = holy man, sage, saint, mont, hermit, thinker, seer
-//SRC Man and his becoming according to the Vedanta
-sa:sannyasin = possessor of knowledge
-sa:sannyasin = ascetic, devotee, one who abandons or resigns wordly, renouncing, abandonding, laying aside
-sa:panditya = learning, (awakening) of thirst for Knowledge, shakti Sarasvati (Brahma) – Strength
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=panditya&trans=Translate
-sa:panditya = scholarship, skill, erudition, cleverness
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=mauna&trans=Translate
-sa:mauna = silence, taciturnity
-//SRC Man and his becoming according to the Vedanta
-sa:mauna = stage of muni, shakti Parvati (Shiva) – Wisdom
+sa:Nirvitti [extinction of change or of action]
+he:Shekinah [real presence of the Divinity (Light of Glory in Christian theology)] = Pax Profunda, Great Peace, Tranquillity
+sa:muni [solitary one, realizes the state of „perfect Solitude“]
+sa:sannyasin [possessor of knowledge]
+sa:panditya [shakti Sarasvati (Brahma) - Strength] = learning, (awakening of) thirst for Knowledge
+sa:mauna [shakti Parvati (Shiva) – Wisdom] = stage of muni
 sa:bala = child
-sa:balaya = stage of non expansion, shakti Lakshmi (Vishnu) – Harmony
+sa:balaya [shakti Lakshmi (Vishnu) – Harmony] = stage of non expansion
 Chinese:Chen jen = transcendental man
 sa:maru = dessert
 sa:mri = to die (no water, indifferentiation)
+sa:maru ~ sa:mri
 //SRC Spiritual Authority and Temporal Power
 sa:para = supreme
-lat:natura = expression of the idea of becoming
-gr:physis = expression of the idea of becoming
+lat:natura [expression of the idea of becoming]
+gr:physis [expression of the idea of becoming]
 he:melek = king, envoy
 sa:dhru = stability
-he:berakhah = spiritual influence – laying on hands
-ar:barakah = spiritual influence – laying on hands
+he:berakhah [spiritual influence – laying on hands]
+ar:barakah [spiritual influence – laying on hands]
+he:berakhah ~ ar:barakah
 lat:robur = strength, oak
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=dhru&trans=Translate
-sa:dhru = tree, gold, motion, wood
-//SRC Spiritual Authority and Temporal Power
-sa:vid = Wisdom, vision, knowledge, misteltoe?
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=vid&trans=Translate
+sa:vid = Wisdom, vision, knowledge (, misteltoe?)
 sa:vid = planet Mercury
 //SRC Man and his becoming according to the Vedanta
-sa:manu = not a person or myth, but a principle. Brahma reflected as primordial and universal legislator (Manu, Egypt – Menes, Creta – Minos). Prototype of the man
+sa:manu (not a person or myth, but a principle.) [Brahma reflected as primordial and universal legislator (Manu, Egypt – Menes, Creta – Minos). Prototype of the man]
 sa:kama = desire
-//SRC https://en.wikipedia.org/wiki/Praj%C3%B1%C4%81_(Hinduism)
-sa:prajna = deep sleep state, in the state of deep sleep, the Atman, limited by Prana, the vital breath
+sa:prajna = deep sleep state
 //SRC Man and his becoming according to the Vedanta
-sa:Krama mukti = gradual liberation
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=krama&trans=Translate
-sa:krama = system, way, custom, series, manner, proceeding, method
+sa:Krama mukti [gradual liberation]
 //SRC Spiritual Authority and Temporal Power
 sa:kshatra = force
-sa:skanda = Lord of war, protecting the meditation of Ganesha (Lord of Knowledge), both sons of Shiva
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=skanda&trans=Translate
-sa:skanda = destruction, prince, attracker, perishing, king
-//SRC https://en.wikipedia.org/wiki/Pontiff
-lat:pontifex = maker of bridges, pontiff
+sa:skanda [Lord of war] (protects the meditation of Ganesha) (son of Shiva)
+sa:Ganesha [Lord of Knowledge] (son of Shiva)
+lat:pontifex [maker of bridges], pontiff
 //SRC The Esoterism of Dante
-he:kadosch = holy, consacrated
-he:tsedek = just, name for the planet Jupiter
+he:kadosch = holy, consecrated
+he:tsedek = just, Jupiter       # planet
 he:tsedakah = justice
 he:emounah = faith
 he:nekam adonai = Vengence O Lord
-sa:brahmapura = city of Brahma, celestial Jerusalem
+sa:brahmapura {brahma+pura} [celestial Jerusalem] = city of Brahma
 //SRC The Symbolism of the Cross
-lat:Ex stare = project, stand out, indicates the bing is dependant on a principle other than itself
+lat:Ex stare [indicates the thing is dependant on a principle other than itself] = project, stand out
 lat:transformation = passing beyond form
 he:memra = speech
 he:thohu = void, out of the void (tohu wa bohu – shapeless and formless)
@@ -353,26 +274,23 @@ sa:Manavaloka = world of man
 Chinese:tao = way
 ar:El fana = reduction of distinct ego
 ar:jihad = holy war
-ar:El jihadul akbar = greater holy war (inner, spiritual)
+ar:El jihadul akbar = greater holy war [inner, spiritual]
 sa:sutra = thread
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=sutra&trans=Translate
-sa:sutra = formula, string, thread, twain, rule, girdle, stroke, fibre, cord, direction, line
-//SRC The Symbolism of the Cross
+sa:sutra ~ lat:sutura
+sa:sutra ~ ar:surat
 lat:sutura = to sew
 ar:surat = chapter of Quran
 sa:tantra = thread of a fabric, warp of a fabric
-lat:copula = something that binds, the element that connects two terms
-he:eheieh = pure Being, Ishvara. Eheieh ahser Eheieh – I am That I am
+lat:copula [something that binds] [the element that connects two terms]
+he:eheieh = pure Being, Ishvara
+he:Eheieh ahser Eheieh = I am That I am
 Chinese:te = uprightness
-he:adam = Way, Universal Man – Self
-//SRC http://biblehub.com/hebrew/121.htm
-he:adam = the first man
-//SRC The Symbolism of the Cross
-he:enosh = Life – intellectual man
+he:adam [Universal Man - Self]= Way
+he:enosh [Life – intellectual man]
 //SRC http://biblehub.com/hebrew/583.htm
-he:enosh = man – a son of seth
+he:enosh =[a son of seth] man
 //SRC The Symbolism of the Cross
-he:aish = Truth – corporeal man
+he:aish [Truth – corporeal man]
 //SRC http://biblehub.com/hebrew/5906.htm
 he:aish = bear
 //SRC The Symbolism of the Cross
@@ -382,134 +300,124 @@ Chinese:Cheng jen = universal Man
 Chinese:jen = man
 Chinese:ti = earth
 //SRC The Lord of the World
-sa:manu = primordial and universal legislator. Mina or Menes for Egyptians, Celtic Menw. Greek Minos (Legislator of the living and Judge of the dead)  Formulates Law (Dharma). Archetipe of man as a thinking being
-sa:Surya vansha = solar dynasty
+sa:manu [primordial and universal legislator] (Mina or Menes for Egyptians, Celtic Menw, Greek Minos. Legislator of the living and Judge of the dead. Formulates Law - Dharma. Archetype of man as a thinking being)
+sa:Suryavamsha {surya+vamsha} = solar dynasty
 sa:yama = judge of the dead
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=yama+&trans=Translate
-sa:yama = twin, twin born, forming a pari ,road, end, carriage, path, course, coordinate
-//SRC The Lord of the World
-sa:Tirthankara = he who makes a ford or crossing, Tirthankaras number 24, like the old men of the Apocalypse, who, besides also constitute a pontificial college
+sa:Tirthankara [he who makes a ford or crossing] (Tirthankaras number 24, like the old men of the Apocalypse, who, besides also constitute a pontificial college)
+sa:Tirthankara ~ lat:pontifex
 sa:ativarna = beyond caste
-sa:Chakravarti = he who turns the wheel, universal monarch
+sa:Chakravarti [he who turns the wheel] [universal monarch]
 lat:regere = govern
 lat:rex = king
 gr:drus = oak
 he:malakim = angelic state
 ar:sakmah = great peace
-gr:y = two paths symbolized by the Pythagoreans. Virtue and Vice in the Hercules myth, two doors (celestial and infernal) of Janus
-chaldean:mitra = Rain as symbol of descent of spiritual influences from heaven to earth
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=mitra&trans=Translate
-sa:mitra = sun, ally
-//SRC The Lord of the World
+gr:y [two paths symbolized by the Pythagoreans. Virtue and Vice in the Hercules myth, two doors (celestial and infernal) of Janus]
+chaldean:mitra [Rain as symbol of descent of spiritual influences from heaven to earth]
 he:kohen ha gadol = Great Priest
 he:Sar ha gadol = Great Prince
-he:maleak = angel, messanger
-he:malakim = my messanger, messanger of God, „angel in whom God dwells“, anagram of Mikael
-he:samael = Priceps hujus mundi. Spirit of the world. Dark face of Metatron
-he:Mikael = Luminous face of Metatron, Angel of Judgement
-gr:Amphisbaena = Two headed serpent, one of which represents Christ, the other Satan
-lat:triregnum = Three crowned tiara, king of three worlds
-sa:Brahmatma = Sustainer of souls in the Spirit of God, spirit, is able to speak to God face to face, Ishvara, Dalai Lama
-sa:Mahatma = Representative of the universal soul, soul, knowing the events of the future, Hiranyagarhha, Tashi Lama
-sa:Mahanga = symbol of the entire material organization of the Cosmos, body, controling causes for the events of the future, Viraj, Bogdo Khan
+he:maleak = angel, messenger
+he:malakim [angel in whom God dwells] [anagram of Mikael]= my messanger, messanger of God
+he:samael [Priceps hujus mundi] [Spirit of the world] [Dark face of Metatron]
+he:Mikael [Luminous face of Metatron] [Angel of Judgement]
+gr:Amphisbaena [Two headed serpent, one of which represents Christ, the other Satan]
+lat:triregnum [Three crowned tiara, king of three worlds]
+sa:Brahmatma [Sustainer of souls in the Spirit of God, spirit, is able to speak to God face to face, Ishvara, Dalai Lama]
+sa:Mahatma [Representative of the universal soul, soul, knowing the events of the future, Hiranyagarhha, Tashi Lama]
+sa:Mahanga [symbol of the entire material organization of the Cosmos, body, controlling causes for the events of the future] [Bogdo Khan] = Viraj
 ar:El qutb = pole
 ar:rasul = legislator
-sa:Adi manu = first Manu of the present Kalpa (Vaivaswata being the seventh), is called Swayambhuva  or issue of Swayambhu „that which subsists in itself“ eternal logos
+sa:Adi manu [first Manu of the present Kalpa (Vaivaswata being the seventh), is called Swayambhuva  or issue of Swayambhu „that which subsists in itself“ eternal logos]
 sa:bhu = earth
 sa:bhuvas = atmosphere
 sa:swar = sky
-sa:soma = drink or food of immortality
-sa:amrita = drink or food of immortality
-sa:Vaivaswata = „Son of the Sun“ (Manu)
+sa:soma [drink or food of immortality]
+sa:amrita [drink or food of immortality]
+sa:Vaivaswata [„Son of the Sun“ (Manu)]
 sa:aditi = indivisible
-sa:adityas = issue of Aditi, were first seven before being twelve and their chief was then Varuna. The twelve Adityas are: Dhatri, Mitra, Aryaman, Rudra, Varuna, Surya, Bhaga, Vivasvat, Pushan, Savitri, Tvashtri, Vishnu
+sa:adityas [issue of Aditi, were first seven before being twelve and their chief was then Varuna. The twelve Adityas are: Dhatri, Mitra, Aryaman, Rudra, Varuna, Surya, Bhaga, Vivasvat, Pushan, Savitri, Tvashtri, Vishnu]
 lat:lancea = spear
-gr:logche = spear (pronounced lonke). Longinus was the name of the centurion who pearced Christ's side
+gr:logche = spear (pronounced lonke) (Longinus was the name of the centurion who pearced Christ's side)
 sa:urna = Hindu frontal jewel
-he:Hakathriel = Lucifer, who before his fall, was the „Angel of the Crown“ (Kether). Has number 666
+he:Hakathriel [Has number 666] = Lucifer [before his fall, was the „Angel of the Crown“ (Kether).]
 lat:grasale = vase, bowl, grail
 lat:graduale = book, grail
-lat:montsalvat = Mount of Salvation, similarity with Mount Meru
+lat:montsalvat = Mount of Salvation
+lat:montsalvat ~ sa:meru
 gr:meros = thigh
 he:iain = wine
-he:sod = mystery (shares the same number as iain – wine)
-he:salem = symbol of residence of Melchizedek
-he:jebus = historical name for Jerusalem
-he:Shlomoh = Peacable (name of Solomon, derived from salem)
-he:elion = God „Most High“
-he:emmanuel = synonymous with El Elion
-//SRC 
-he:Melki Tsedeq = Manu, he who lieves perpetually, which means for the duration of his cycle (manvantara), origin is nonhuman since he is the veritable prototype of man, he is truly made like the Son of god
+he:sod = mystery
+he:sod ~[share the same number] he:iaian
+he:salem [symbol of residence of Melchizedek]
+he:jebus [historical name for Jerusalem]        # city
+Jerusalem {he:jebus + he:salem}
+he:salem -> he:Shlomoh
+he:Shlomoh [name of Solomon]= Peacable
+he:elion = God Most High, he:emmanuel
+he:Melki Tsedeq = sa:Manu (he who lieves perpetually, which means for the duration of his cycle - manvantara. Origin is nonhuman since he is the veritable prototype of man, he is truly made like the Son of god)
 //SRC The Lord of the World
 he:Melki Tsedeq = King of Justice
 he:Kohan Tsedeq = Priest of Justice
 he:Adoni Tsedeq = Lord of Justice
-he:Haq = Justice, Truth, (also in Arabic), has numerical value of 108 – in India the shaivite rosary is composed of 108 beads
-he:kan = power, enablement, knowledge, essentially the same as spiritual or intellectual power of Wisdom (hence the hebrew Kohen – priest)
-he:qan = material power, origin of many words denoting „possession“, notably the word Cain
+he:Haq = Justice, Truth (has numerical value of 108 – in India the shaivite rosary is composed of 108 beads)
+ar:haq = Justice, Truth
+he:kan = power, knowledge (essentially the same as spiritual or intellectual power of Wisdom. Hence the hebrew Kohen – priest)
+he:qan [origin of many words denoting „possession“, notably the word Cain] = material power
+he:qan -> Cain
 he:malkuth = kingdom
-sa:brihaspati = celestial Pontiff – planet Jupiter
-he:sabbath = repose, refers to the idea of Peace (the external aspect of the Shekinah herself)
-sa:kalpa = epoch, comprises fourteen Manvantaras
-lat:numa = Name of the second king of Rome, legislator of the city, syllabic reversal of Manu
+sa:brihaspati [celestial Pontiff – planet Jupiter]
+he:sabbath = repose (refers to the idea of Peace - the external aspect of the Shekinah herself)
+sa:kalpa [comprises fourteen Manvantaras] = epoch
+lat:numa [Name of the second king of Rome, legislator of the city] [syllabic reversal of sa:manu]
+lat:numa ~ sa:manu
 gr:nomos = law
-sa:rishi = Seven Manus for a given civilization, in whom the wisdom of the cycle immediately preceding ours is synthetized
+gr:nomos ~ lat:numa
+sa:rishi [Seven Manus for a given civilization, in whom the wisdom of the cycle immediately preceding ours is synthetized]
 he:Beith el = house of God
 he:luz = almond tree
 gr:koilon = hollow
 lat:caelare = to hide
-sa:var = to cover. VARuna
+sa:var = to cover
+sa:var -> sa:varuna
 gr:kaluptein = to hide
-gr:ouranos = uranus, greek god of sky, father of titans, husband of gaia. Nothing but another form of Varuna, var changing easily to ur
-//SRC https://en.wiktionary.org/wiki/caelum
-lat:caelum = heaven, sky, atmosphere, climate, weather
-//SRC https://sk.wikipedia.org/wiki/Ouranos
+gr:ouranos [greek god of sky, father of titans, husband of gaia] = Uranus (Nothing but another form of Varuna, var changing easily to ur)
+sa:var -> pie:ur
 lat:caelus = Uranus
-//SRC https://en.wiktionary.org/wiki/coelum
-lat:coelum = alternative spelling of caelum, sky, heaven
-//SRC https://en.wikipedia.org/wiki/Varuna
-sa:varuna = God of water and celestial ocean, as well as god of law and the underwater world
-//SRC https://en.wikipedia.org/wiki/Cronus
+lat:coelum =[alternative spelling] lat:caelum
+sa:varuna [God of water and celestial ocean, as well as god of law and the underwater world]
 gr:cronus = Saturn
-//SRC The Lord of the World
-lat:caed = to cut, divide. To separate, hide
+lat:caed = to cut, to divide, to separate, to hide
 sa:dwipa = island, continent
 sa:uttara = north
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=uttara&trans=Translate
-sa:uttara = superior, dominant, left, future, northern
-//SRC The Lord of the World
 sa:dakshina = south
-he:luz = almond tree – symbol of the virgin (inviolable), kernel of immortality
-sa:kundalini = a form of shakti
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=kunda&trans=Translate
-sa:kunda = number nine, jasmine flower, bowl, pot, pit, spring or basin of water, round hole in the ground, adulterine
-//SRC The Lord of the World
+he:luz = almond tree [symbol of the virgin (inviolable)] (kernel of immortality)
+sa:kundalini [a form of shakti]
 sa:chakra = wheel
 sa:kamala = lotus
 gr:omphalos = umbilical, central, hub of a wheel
-sa:nabhi = umbilical, central, hub of a wheel, found in Germanic and Galic languages, root nab or nav
-Gaelic:nav = chief, even applied to God
+sa:nabhi = umbilical, central, hub (of a wheel)
+sa:nabhi ~ gaelic:nav, german:nav
+Gaelic:nav = chief (even applied to God)
 he:Beith lehem = house of bread, phonetically similar to Beith Elohim
 he:lehem = flesh
 ar:lahm = flesh
 he:berakoth = spiritual influence
-he:mishkan = divine habitation, the seat of the Shekinah (in connection with Beith El, that signifies the stone itself)
+he:mishkan [the seat of the Shekinah (in connection with Beith El, that signifies the stone itself)]= divine habitation
 Celtic:medion = middle
 lat:medius = middle
-//SRC https://en.wikipedia.org/wiki/Mediolanum
-Celtic:mediolanon = settlement in the middle of the plain, ancient Milan
+Celtic:mediolanon {medion+lanon} [settlement in the middle of the plain] = (ancient) Milan # city
 Celtic:lanon = plain
 lat:planum = plain
-//SRC The Lord of the World
-Celtic:nemeton = sacred space (medionemeton – consecrated place for annual reunion of the Druids)
-sa:tara = star, designation for North Star
-Celtic:cathraige = servant of the four – original name of Saint Patric
+Celtic:nemeton = sacred space
+celtic:medionemeton {medion+nemeton} [consecrated place for annual reunion of the Druids]
+sa:tara [designation for North Star] = star
+Celtic:cathraige [servant of the four] [original name of Saint Patric]
 sa:maharaja = great king
-Toltec:aztlan = land in the middle of water (evidently Atlantis), ideographic sign of Aztlan or of Tula was white heron
-sa:tula = balance, scales, zodiacal sign of Libra
-sa:Shweta dwipa = white island
-sa:Sapta riksha = Great Bear (constelation) – symbolic dwelling of the seven Rihis
-gr:meros = Ancient Egyptians called the Great Bear the constellation of the Thigh
+Toltec:aztlan [land in the middle of water (evidently Atlantis)] (ideographic sign of Aztlan or of Tula was white heron)
+sa:tula [zodiacal sign of Libra]= balance, scales
+sa:Shwetadwipa = white island
+sa:Saptariksha [symbolic dwelling of the seven Rishis] = Great Bear [constellation]
+gr:meros [Ancient Egyptians called the Great Bear the constellation of the thigh"]
 gr:hesper = evening
 lat:vesper = evening
 lat:albus = white
@@ -517,31 +425,28 @@ he:laban = white
 he:lebanah = moon
 lat:luna = white, luminous, moon
 gr:argos = white
-lat:argentum = silver (white metal which corresponds astrologically to the moon)
+lat:argentum = silver [white metal which corresponds astrologically to the moon]
 gr:arguros = silver
-sa:narayana = „he who walks on the waters“ name for vishnu
-:Bab ilu = „gateway of Heaven“ which is one of the qualities applied by Jaob to LuzM can also have the meaning „House of God“, like Beith El
+sa:narayana [he (nara) who walks (ya) on the waters (na)] = sa:vishnu
+Babylon [Bab ilu = „gateway of Heaven“ which is one of the qualities applied by Jaob to LuzM can also have the meaning „House of God“, like Beith El]
 he:babel = confusion, name for Babylon
 //SRC http://biblehub.com/hebrew/1101.htm
 he:balal = anoint, confuse
 //SRC The Lord of the World
-he:thebah = Noah's Ark, name of Greek city (Thebes)
-sa:satyavrata = name for the current Manu, known as Vaivaswata, who played the role of Noah in the Bible
+he:thebah = Noah's Ark, Thebes (greek city) # city
+sa:satyavrata [current Manu, also known as Vaivaswata, who played the role of Noah in the Bible]
 gr:sophos = sage
 ar:safa = purity (possible derivation Sufi)
 //SRC https://en.wiktionary.org/wiki/Cathar
 gr:katharos = pure
+ar:safa ~ gr:katharos
 //SRC The Multiple States of the Being
 Chinese:khien = active perfection (Brahmaa)
 Chinese:khouen = passive perfection (Shakti)
 lat:mutus = dumb
 ar:wahdat al wujud = unity of Existence
-//SRC http://biblehub.com/greek/3466.htm
-gr:musterion = mystery, secret of which initiation is necessary. In the Bible a mystery is not something unknowable. Rather it is what can only be known through revelation, i.e. because God reveals it.
-//SRC http://biblehub.com/greek/4602.htm
 gr:sige = silence
-//SRC The Multiple States of the Being
-gr:muthos = fantastic story, signified that which, since it could not be expressed directly, could therefore only be suggested by a symbolic representation, whether verbal or figurative moreover.
+gr:muthos = myth (fantastic story, signified that which, since it could not be expressed directly, could therefore only be suggested by a symbolic representation, whether verbal or figurative moreover)
 sa:Mayavi rupa = illusory forms
 sa:asura = demon (infernal, evil spirit)
 sa:ananta = infinity
@@ -552,16 +457,17 @@ Chinese:Wu wei = Non action
 lat:metiri = to measure
 sa:rita = order
 lat:ordo = order
-he:middoth = divine attributes, middah is the equivalent of Sanskrit matra
-ar:hindesah = measure, denotes both geometry and architecture
+sa:rita ~ lat:ordo
+he:middoth = divine attributes, sa:matra
+ar:hindesah =[denotes both geometry and architecture] measure
 lat:ministerium = function
 sa:avarna = beneath caste (system)
 sa:ativarna = above caste (system)
-sa:rupa = substantial aspect (quantity predominates quality in the individual), „a body without a soul“
+sa:rupa = substantial aspect (quantity predominates quality in the individual, „a body without a soul“)
 lat:ratio = calculation
-ar:Ar ruh = spirit, primordial light, spherical form is attributed to it
-he:lesod = foundation, cubic form corresponds to it
-sa:arya = laborer, title of honor characteristic of the tradition of agricultural people, root „ar“
+ar:Ar ruh =[spherical form is attributed to it] spirit, primordial light
+he:lesod =[cubic form corresponds to it] foundation
+sa:arya [title of honor characteristic of the tradition of agricultural people, root „ar“] = laborer
 lat:arare = plough, till, farm
 lat:arator = ploughman, plowman, farmer, husbandman
 lat:arvum = field
@@ -570,6 +476,7 @@ sa:mantra = sonorous symbol
 sa:mrtyu = death
 sa:paradesha = supereme region, distant region
 he:pardes = center of the world
+he:pardes ~ sa:paradesha
 sa:loka = cosmos
 sa:aloka = outer darkness
 he:shaytan = adversary
@@ -578,64 +485,63 @@ lat:religare = to bind
 //SRC The Reign of Quantity and the Signs of Times
 ar:nafs = soul
 ar:ruh = spirit
-ar:saher = sorcerer, magician working in the domain of suble possibilites of an inferior order
+ar:saher [magician working in the domain of subtle possibilities of an inferior order]= sorcerer
 ar:Al masih = messiah
 ar:Al masikh = antichrist
-//SRC http://biblehub.com/hebrew/6508.htm
-he:pardes = forest, preserve, park, orchard
 //SRC Traditional Forms and Cosmic Cycles
-sa:kalpa = total development of a world, state or degree of universal Existence
-//SRC https://en.wikipedia.org/wiki/Aeon
-lat:aeon = life, vital force, being, generation, period of time, age, ages, forever, timelss, eternity
-//SRC Traditional Forms and Cosmic Cycles
-he:adamah = drawn from earth. Earth – red clay
+sa:kalpa [total development of a world, state or degree of universal Existence]
+he:adamah [drawn from earth. Earth – red clay]
 he:dam = blood
 he:adam = to be red
+he:dam -> he:Adam -> he:adamah
 //SRC http://biblehub.com/hebrew/776.htm
 he:erets = earth, land
 //SRC Traditional Forms and Cosmic Cycles
-he:yabbashah = element earth (indication – dryness)
+he:yabbashah =[indication – dryness] earth element
 //SRC http://biblehub.com/hebrew/3004.htm
 he:yabbashah = dry land, dry ground
 //SRC Traditional Forms and Cosmic Cycles
-lat:humus = earth, close to homo, humanus
+lat:humus = earth
+lat:humus -> humanus
 ar:nur = light
-ar:nar = Fire – heat
-he:kabbalah = tradition, root QBL
-he:qabal = in front of (spatial), before (temporal), root QBL
+ar:nar =[heat] Fire
+he:kabbalah [root QBL]= tradition
+he:qabal =[root QBL] in front of (spatial), before (temporal)
 ar:qabl = in front of (spatial), before (temporal)
 ar:mustaqbal = future (that, towards which one goes)
-he:qadam = to precede, root QDM
+he:qadam [root QDM]= to precede
 he:qadam = foot (precedence, walking ,advancing, progression)
+he:qadam ~ sa:padam
 he:quadmon = ancient, primoridal, east
 he:qedem = east, root QDM
 //SRC http://biblehub.com/hebrew/6924a.htm
 he:qedem = front, east, formerly, ancient, ancient times, long ago
 //SRC Traditional Forms and Cosmic Cycles
 ar:qiblah = south
-ar:qibli = soutern (mediional)
+ar:qibli = soutern (medional)
 he:elohi qedem = ancient of the days
-sa:Brahma pura = divine residence
-he:meleak = messanger, angel
+sa:Brahmapura = divine residence
+he:meleak = messenger, angel
 he:sod = secret
 ar:sirr = secret
 ar:kemi = black earth
 ar:haram = pyramid (name similar to Hermes)
+ar:haram ~ gr:Hermes
 lat:iannus = action of going, passage (janus)
 //SRC https://en.wikipedia.org/wiki/Haram
 ar:haram = forbidden
 //SRC Perspectives on Initiation
-lat:paganus = lout, peasant
+lat:paganus = peasant
 ar:firqah = sect, division
 lat:disciplina = teaching
-//SRC https://en.wiktionary.org/wiki/paganus
 lat:pagus = area outside of a city, countryside
+lat:pagus -> lat:paganus
 //SRC Perspectives on Initiation
 lat:fabula = fable
 lat:fari = to speak (verb „for“)
 lat:mutus = mute
-gr:mueo = root: mu, signifies to initiate into mysteries and hence both „to instruct“ and „to consecrate“
-gr:muthos = from root „mu“, represents a closed mouth and hence silence
+gr:mu -> gr:mueo [signifies to initiate into mysteries] = to instruct, to consecrate
+gr:mu -> gr:muthos [represents a closed mouth] = silence
 lat:sacratum = sacred
 lat:secretum = secret
 sa:laukika = wordly, profane
@@ -646,20 +552,21 @@ lat:templum = temple, sacred place
 lat:allo agoreuein = something else
 gr:temno = to cut, to cut off from, to separate
 sa:samskara = sacrament
-sa:abhisambhava = transmutattion of subtle elements
+sa:abhisambhava = transmutation of subtle elements
 sa:diksha = initiation, consecration
 lat:carmen = sacred poetry
 sa:karma = ritual action
+sa:karma ~ lat:carmen
 lat:persona = mask
 lat:ministerium = office, function
 ar:tamthil = theater
 ar:mathl = resemblance, comparison, image, figure
 lat:speculum = mirror
 ar:Al haqq = truth, one of principal divine names
-ar:Al mustafa = the elect, choosen one, one of the names of the Prophet. Refers to „Universal Man“
+ar:Al mustafa [one of the names of the Prophet. Refers to „Universal Man“]= the elect, chosen one
 sa:para = Non manifested
 he:amar = to say, to command, to order
-he:amr = the divine Word is the order (amr), by which creation – production of universal manifestation, either in its entirety or in some of its modalities, is effected.
+he:amr [the divine Word is the order (amr), by which creation – production of universal manifestation, either in its entirety or in some of its modalities, is effected]
 //SRC Initation and Spiritual Realization
 ar:sabr = patience
 sa:kaivalya = solitude
@@ -675,110 +582,103 @@ lat:joculator = joker, juggler
 ar:malamatiyah = the perfect ones
 ar:barzakh = barrier
 ar:wali = saint
-ar:nabi = prophet
-ar:rasul = also a nabi, whose function, bears a character of universality
-ar:rasul = trully and totally „Universal Man“
-lat:sacrificium = Sacrifice, from „sacrum facere“  „to make sacred“
+ar:nabi = prophet       // ~ sa:nabha?
+ar:rasul [also a nabi, whose function, bears a character of universality]
+ar:rasul [trully and totally „Universal Man“]
+lat:sacrum facere = to make sacred
+lat:sacrum facere -> lat:sacrificium = sacrifice
 //SRC Miscellanea
 he:nahash = egoism, serpent
 sa:shakti = productive energy
 //SRC The Great Triad
-Chinese:t'ai chi = common origin of Heaven and Earth, the „Great Extreme“, unity, Iswara or Apara Brahma, pure Being
-Chinese:t'ai I = „Great Unity“ 
-Chinese:wu chi = Non being, the metaphysical Nought, principle of t'ai chi, Para Brahma
+Chinese:t'ai chi [common origin of Heaven and Earth, the „Great Extreme“, unity, Iswara or Apara Brahma, pure Being]
+Chinese:t'ai I = Great Unity
+Chinese:wu chi [the metaphysical Nought, principle of t'ai chi, Para Brahma]= Non being
 sa:Apara brahma = Non supreme Brahma
 sa:Para brahma = supreme Brahma
 lat:mandorla = almond
 lat:vesica piscis = bladder of a fish
 //SRC https://en.wikipedia.org/wiki/Aureola#Mandorla
-lat:aureola = diminutive of aurea, radiance of luminous which, in paintings of sacred personages, surrounds the whole figure
+lat:aureola [diminutive of aurea] [radiance of luminous which, in paintings of sacred personages, surrounds the whole figure]
 lat:aurea = golden
+lat:aurea -> lat:aureola
 //SRC The Great Triad
-Chinese:t'ien chi = pinacle of Heaven
-gr:amphisbaena = literally „moving in both directions“   Greek name for mythical two headed serpent or dragon
-Egyptian:kneph = serpent producing the egg out of its mouth, which is an image of manifestation being produced by the Word, or of the druidic symbol of the „serpent's egg“
-gr:castor = castor and pollux represent symbolically two hemispheres, star in the constellation of Gemini
-gr:pollux = castor and pollux represent symbolically two hemispheres, star in the constellation of Gemini
-//SRC https://en.wikipedia.org/wiki/Castor_and_Pollux
-gr:dioscuri = twin brothers, Castor and Pollux
+Chinese:t'ien chi = pinnacle of Heaven
+gr:amphisbaena [„moving in both directions“]  [Greek name for mythical two headed serpent or dragon]
+egyptian:kneph [serpent producing the egg out of its mouth, which is an image of manifestation being produced by the Word, or of the druidic symbol of the „serpent's egg“]
+gr:castor [castor and pollux represent symbolically two hemispheres, star in the constellation of Gemini]
+gr:pollux [castor and pollux represent symbolically two hemispheres, star in the constellation of Gemini]
+gr:dioscuri =[Castor and Pollux] twin brothers
 //SRC https://en.wikipedia.org/wiki/Leda_(mythology)
-gr:leda = Leda was admired by Zeus, who seduced her in the guise of a swan. As a swan, Zeus fell into her arms for protection from a pursuing eagle. Mother of Helen of Troy, Clytemnestra and Castor and Pollux
-//SRC https://en.wikipedia.org/wiki/Castor_and_Pollux
-lat:castores = twins known as Gemini
+gr:leda [Mother of Helen of Troy, Clytemnestra and Castor and Pollux] (Leda was admired by Zeus, who seduced her in the guise of a swan. As a swan, Zeus fell into her arms for protection from a pursuing eagle.)
+lat:castores [twins known as Gemini]
 //SRC The Great Triad
 gr:phthora = death, corruption
 gr:genesis = generation, birth
-lat:solve = indicated by a sign depicting heaven, action of yang (ascending)
-lat:coagule = indicated by a sign depicting earth, action of yin (descending)
-//SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=chatur&trans=Translate
-sa:chatur = four
+lat:solve [indicated by a sign depicting heaven, action of yang (ascending)]
+lat:coagule [indicated by a sign depicting earth, action of yin (descending)]
 //SRC The Great Triad
-sa:brahmaa chaturmukha = Brahma of four faces, similar to Janus Quadrifrons
-//SRC https://en.wiktionary.org/wiki/frons#Latin
-lat:frons = forehead, brow, front, foremost part of anything, cover, circumference
-//SRC The Great Triad
-sa:vajra = symbol for a thunderbolt, diamond, thunderbolt
+sa:brahmaa chaturmukha ~ lat:Janus Quadrifrons
+sa:vajra = (symbol for a) thunderbolt, diamond
 //SRC http://spokensanskrit.de/index.php?beginning=0+&tinput=vajra&trans=Translate&direction=SE
-sa:vajra = hard, impenetrable, shapied like a kind of cross, forked, zigzag, weapon of Indra, diamond, child, pupil
+sa:vajra = hard, impenetrable, shaped like a kind of cross, forked, zigzag, weapon of Indra
 //SRC The Great Triad
 sa:Dakshina marga = path of the right hand
 sa:Yama marga = path of the left had
 sa:shankha = conch
-//SRC http://spokensanskrit.de/index.php?tinput=zaGkha&direction=SE&script=HK&link=yes&beginning=0
-sa:shankha = temple, conch, shell, particular high number
-//SRC The Great Triad
 he:Ha baraq = thunderbolt, flash of lightning
-ar:El barq =
+ar:El barq = lightning
 sa:dakshina = south, right hand side
 sa:uttara = north, highest point
 Chinese:ch'eng = perfection 
-Chinese:jen = man, humanity – human nature as opposed to the mere collectivity of humankind
+Chinese:jen =[human nature as opposed to the mere collectivity of humankind] man, humanity
 Chinese:chung yung = Unchanging Centre
-sa:tribhuvana = three worlds. Earth, Air, Heaven
-lat:summa = Summation – central position of the man makes him kind of image, or summation, in the sense of the Latin word summa, of the totality of manifestation
+sa:tribhuvana [three worlds: Earth, Air, Heaven]
+lat:summa =[central position of the man makes him kind of image, or summation, in the sense of the Latin word summa, of the totality of manifestation] Summation
 gr:hyle = matter
-sa:Buddhi = pure Intellect, corresponds to Spiritus
+sa:Buddhi = pure Intellect (corresponds to Spiritus)
 gr:theion = sulphur, divine
-:perfect ashlar = Masonic symbolism   „cubical stone“
+// :perfect ashlar = Masonic symbolism   „cubical stone“
 sa:jati = birth, species, specific nature
 Chinese:kua = trigram
-he:mishkan = divine abode, Tarbenacle, Holy of Holies
-sa:vaishvanara = Sun and Moon are the two eyes of Viashvanara, associated with the two currents of subtle force
-Chinese:wang = king, pontifex, king pontiff, Universal Man, „channel“ through which the influences descend from Heaven to Earth
+he:mishkan = divine abode, Tabernacle, Holy of Hollies
+sa:vaishvanara [Sun and Moon are the two eyes of Viashvanara, associated with the two currents of subtle force]
+Chinese:wang [Universal Man, „channel“ through which the influences descend from Heaven to Earth]= king, pontifex, king pontiff
 Chinese:chung tao = central way, middle way
-gr:trismegistos = Three times Greatest – explanation of Hermes' title. Hermes is also described as both king and pontiff
+gr:trismegistos [Three times Greatest - Hermes' title] = Hermes [described as both king and pontiff]
 Chinese:t'ien ming = mandate of Heaven
-sa:sushumna = At microcosmic level, the „Middle Way“ corresponds to the „subtle“ artery called sushumna. This terminates in the Brahmarandhra
-sa:brahmarandhra = symbolized by the point where the chariot poles emerges from the canopy, or where the centra lpillar of the stupa emerges from the dome
+sa:sushumna (At microcosmic level, the „Middle Way“ corresponds to the „subtle“ artery called sushumna. This terminates in the Brahmarandhra)
+sa:brahmarandhra (symbolized by the point where the chariot poles emerges from the canopy, or where the central pillar of the stupa emerges from the dome)
 Chinese:chün jen = divine man, spiritual man
-Chinese:tao jen = man of the Way, man who has entered the Way
+Chinese:tao jen = man of the Way (man who has entered the Way)
 Chinese:ch'u jen = man of talent
 Chinese:cheng jen = wise man
 Chinese:chu = man of letters
 Chinese:hsien = learned man
-Chinese:cheng = wise man, connecting point between Taoism and Confucianism
-lat:vestigum pedis = trace of Prohpets or saints that make up a relic
+Chinese:cheng =[connecting point between Taoism and Confucianism] wise man
+lat:vestigum pedis [trace of Prophets or saints that make up a relic]
 ar:al' fitrah = primordial Nature
 ar:AT Tabi3a = manifested nature
 ar:Al ghayb = hidden things
 lat:rota = wheel
-lat:rota mundi = wheel of the world (Rosicrucian term)
-sa:triatna = triple jewel: Buddha, Dharma, Sangha
-sa:sangha = assemly
-sa:arhat = one who has attained the rank of „true man“ and consequently stands at the very centre of the human state
+lat:rota mundi = wheel of the world [Rosicrucian term]
+sa:triatna =[Buddha, Dharma, Sangha] triple jewel
+sa:sangha = assembly
+sa:arhat [one who has attained the rank of „true man“ and consequently stands at the very centre of the human state]
 //SRC http://spokensanskrit.de/index.php?script=HK&beginning=0+&tinput=arhat+&trans=Translate&direction=SE
-sa:arhat = respectab,e able, praised, allowed to, venerable, worthy
+sa:arhat = respectable, praised, venerable, worthy
 //SRC The Great Triad
-sa:buddha = representation of the transcendent element through which the influence of Heaven is manifested, the manifestation of Buddha is therefore „redescent form Heaven to Earth“
-sa:dharma = principle of conservation and hence of „stability“
+sa:buddha (representation of the transcendent element through which the influence of Heaven is manifested, the manifestation of Buddha is therefore „redescent form Heaven to Earth“)
+sa:dharma [principle of conservation and hence of „stability“]
 sa:dhri = carry, support, sustain, maintain
-sa:dharmachakra = „wheel of the Law“, has eight spokes
+sa:dhri -> sa:dharma
+sa:dharmachakra [„wheel of the Law“, has eight spokes]
 Chinese:t'ien ti ch'üan = circle of Heaven and Earth
-Chinese:mu yang ch'eng = city of willows – Abode of Immortals, willow in china is a symbol for immortality, like acacia in Freemasonry or „golden brough“ in ancient mysteries
-Chinese:tai p'ing chuang = House of Great peace, synonym for City of Willows
-Chinese:tou = dipper, name given to the consellation of the Great Bear
-sa:saptariksha = constellation of Great Bear, since the seven Rishis of which it is an abode represent the „supra human“ wisdom of the cycles prior to our own, the great Bear is kind of „ark“ in which the store of traditional knowledge is contained with a view to preserving and transmitting it from age to age
-// START CHECK
+Chinese:mu yang ch'eng [Abode of Immortals] = city of willows (willow in china is a symbol for immortality, like acacia in Freemasonry or „golden brough“ in ancient mysteries)
+Chinese:tai p'ing chuang [synonym for City of Willows]= House of Great peace
+Chinese:tou [constellation of the Great Bear] = dipper
+Chinese:tou = sa:saptariksha
+sa:saptariksha (constellation of Great Bear, since the seven Rishis of which it is an abode represent the „supra human“ wisdom of the cycles prior to our own, the great Bear is kind of „ark“ in which the store of traditional knowledge is contained with a view to preserving and transmitting it from age to age)
 //SRC Studies in Freemasonry & the Compagnonnage
 sa:deva -> lat:deus = God
 gr:adam protoplates =[not first formed!] first former
@@ -817,8 +717,8 @@ lat:potestas ligandi et solvendi [power of the keys, bestowed on St. Peter accor
 lat:sic transit gloria mundi = so passes away the glory of the world
 lat:vive dieu saint amor [war cry of Templars]
 he:amon = craftsman and architect
-he:amon ~ Egyptian:amon
-Egyptian:amon = Egyptian God of air [with the meaning of „hidden“ or „mysterious“]
+he:amon ~ egyptian:amon
+egyptian:amon = Egyptian God of air [with the meaning of „hidden“ or „mysterious“]
 he:amen [expresses the idea of stability] = steadfastness, faith, loyalty, sincerity, truth
 he:amen ~ he:amon       // architect builds stable (steadfastness) things
 sa:shiva [three faces (past, present, future)]
@@ -875,7 +775,7 @@ Chinese:te = rectitude (rather than „Virtue“)
 ar:turuq = spiritual paths
 ar:mukashafah =[perception of subtle order, inferior to contemplation] Intuition
 ar:mushahadah = contemplation
-ar:mushahadah ~ Arabic:mukashafah
+ar:mushahadah ~ ar:mukashafah
 ar:baqa = permanence
 ar:iman = faith
 ar:silsilah = link, chain
@@ -884,9 +784,6 @@ fr:chiffre = numeral
 ar:sifr = zero
 he:saphar = to count, to number, to write
 he:sephar = numeration, calculation
-//SRC https://ayurvedayogi.wordpress.com/2013/12/22/the-gunas-attributes/
-sa:stuhla = gross
-//SRC Metaphysical Principles and the Infinitive Small Calculus
 fr:unité = unity, unit
 gr:uúpioi = 10 000
 gr:uupíoi = indefinitude

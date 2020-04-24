@@ -37,7 +37,7 @@ sa:ru ~ sk:rušiť
 // I.
 
 it:venezia = Venice
-it:venezia {lat:vene + lat:zia}
+it:venezia {lat:vene + zia}
 
 sa:venI = river current, intertwining
 sa:venI [two or more rivers that flow together into one mouth]
@@ -130,15 +130,15 @@ sa:ksi -> sa:ksatra
 
 sa:ka = sa:hiranyagarbha
 // `e` is strong form of `i`
-sa:eka {e+ka} [motion of ka] [light (ka) that rises(e) from the waters] = the one
+sa:eka {e+ka} [motion of ka] [light (ka) that rises (e) from the waters] = The One
 sa:na = nothingness
 
-sa:tapas = heat, ardor, deep spirutality, ascesis
+sa:tapas = heat, ardor, deep spirituality, ascesis
 sa:tap {p+t} [to purify (p) from one end to another (t)]
 
 sa:na = undifferentiated waters [-> "nothingness", as it is impossible to recognize within them any entity]
 sa:ka = light, sun
-sa:kas {ka+as} [to bind onself to light] = to appear, to manifest, to shine
+sa:kas {ka+s} [to bind (s) oneself to light (ka)] = to appear, to manifest, to shine
 sa:ka -> sa:kam = to love
 sa:ka -> sa:kAnta = beautiful
 sa:kAnta ~ sa:kam
@@ -156,8 +156,8 @@ sa:ka -> lat:cando, lat:candor, lat:candidus
 // consonant d,is, instead, “created” light and would appear much later with
 // the birth of the gods: devaḥ.
 
-sa:ka = who, what       // as ka enables to distinguish in darkness
-sa:ka [creator light] // reflected awareness
+sa:ka = who, what                   // as ka enables to distinguish in darkness
+sa:ka -> sa:eka [creator light]     // reflected awareness
 
 
 sa:da = to give
@@ -211,7 +211,7 @@ sa:hr = to take, to bear
 pie:nya [the water (n) which it moves in (ya)] {n+ya}
 
 sa:bhr -> sa:brhatIr = mighty
-sa:bhr = to grow, to enlarge, to exppand
+sa:bhr = to grow, to enlarge, to expand
 sa:bhr -> sa:brahman
 
 sa:agni {ag+ni} [apAm napAt - son of the waters (ni) in which one moved windingly (ag)]
@@ -251,7 +251,7 @@ sa:mr -> sa:amrta = immortality
 sa:mr -> gr:ambrotos {a+mbro+tos} = immortal
 
 sa:jan {j+an} [it comes (j) from the vital breath of the waters (an)] = to generate
-sa:jna {j+na} [waters (na) in their forward motion (n)] = to know
+sa:jna {j+na} [waters (na) in their forward motion (j)] = to know
 
 sa:an  = to breathe, to live
 sa:an -> lat:animus {sa:an+imus} = soul
@@ -288,3 +288,4 @@ avesta:napta = moist
 // NOSRC
 
 sa:hari = sa:Vishnu
+pie:i -> sk:ísť

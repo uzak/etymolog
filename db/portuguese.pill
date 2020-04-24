@@ -1,3 +1,7 @@
-sa:tr -> pt:trazer
-sa:vrt -> pt:divertir se
-lat:amo -> pt:amar
+// LANG pt
+sa:tr -> trazer
+sa:vrt -> divertir se
+lat:amo -> amar
+
+mente -> mentir -> mentira
+sentir -> sentido
