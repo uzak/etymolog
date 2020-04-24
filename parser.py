@@ -56,15 +56,14 @@ def p_tokens_token(p):
 
 
 # inline comments
-def p_word_word_ic(p):
-    'tokens : tokens PAREN'
+
+def p_inline_comment_word(p):
+    'word : word PAREN'
     p[0] = p[1]
 
-
-def p_word_ic_word(p):
-    'tokens : PAREN tokens'
-    p[0] = p[2]
-
+def p_inline_comment_tokens(p):
+    'tokens : tokens PAREN'
+    p[0] = p[1]
 
 # Groups
 

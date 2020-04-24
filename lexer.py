@@ -7,12 +7,12 @@ import ply.lex as lex
 from log import log
 
 tokens = (
+    'EQUALS', 'DERIVE',
     'LANG',
     'TOKEN',
     'PLUS',
     'SEP',
     'COMMENT', 'META', 'LUNION', 'RUNION', # TODO Rename?
-    'EQUALS', 'DERIVE',
     'RELATED',
     'TAG',
     'PAREN',
@@ -41,7 +41,7 @@ def t_META(t):
 
 
 def t_PAREN(t):
-    "\(.*?\)"
+    r"\(.*?\)"
     t.value = t.value[1:-1]
     return t
 
