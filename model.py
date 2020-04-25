@@ -139,6 +139,7 @@ class Relationship(Entity, metaclass=RelationshipMeta):
     @classmethod
     def _add(cls, left, right, comment=None):
         """get Relationship if it exists, otherwise add"""
+        assert right is not None, "Two relationships without a word in between?"
         obj = cls.get(left, right)
         key = (left.key(), right.key())
         if obj is None:

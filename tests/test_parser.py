@@ -398,6 +398,12 @@ class TestMeta(TestCase):
         parser.yacc.parse("a")
         assert lang().get_word("a").source is None
 
+    def test_meta_src_is_nosrc(self):
+        parser.yacc.parse("// SRC source")
+        parser.yacc.parse("// SRC")
+        parser.yacc.parse("a")
+        assert lang().get_word("a").source is None
+
 
 class TestTag(TestCase):
     def test_basic(self):
@@ -438,3 +444,8 @@ class TestMisc(TestCase):
         assert l.get_word("a b") is not None
         assert_total_word(config.default_lang, 2)
         assert len(lang().get_word("a").tags) == 0
+
+    def test_rel_follows_other_rel(self):
+        with pytest.raises(ValueError):
+            parser.yacc.parse("a = -> b")
+

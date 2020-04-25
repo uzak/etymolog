@@ -171,7 +171,7 @@ Finally there is a special category of comments that are directives for the pars
 Will set the parser's SRC directive to ``http://some.link``. Here is a list of supported directives:
 
 * SRC sets the `source` attribute for all following Relationships and Words.
-* NOSRC unsets the `source` attribut for all following entities.
+* NOSRC unsets the `source` attribute for all following entities. This can be also achieved by empty SRC directive.
 * LANG sets the default language.
 * IGNORE: if a line starts with this processing of the file will be skipped from this line on.
 

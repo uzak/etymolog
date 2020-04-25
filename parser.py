@@ -100,6 +100,8 @@ def p_relationship_word_rel_word(p):
     '''
     # NOTE relationship reduces to last expression
     # XXX todo check for circularity here
+    if p[3] is None:
+        raise ValueError("right side of relationship yields ``None``")
     if p[1] == p[3]:
         raise ValueError("self-referencing relationship is not allowed")
     if p[2] == "->":
@@ -186,7 +188,7 @@ orig_default_lang = None
 def handle_meta(meta, p):
     meta = meta.strip()
     if meta.startswith("SRC"):
-        src = meta[4:]
+        src = meta[4:].strip() or None
         config.default_source = src
     elif meta.startswith("NOSRC"):
         config.default_source = None

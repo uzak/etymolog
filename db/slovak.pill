@@ -21,7 +21,7 @@ sa:iSu -> šíp
 sa:jagat -> jagať
 sa:jiva -> živá, život
 sa:kAla -> kal, kálať
-sa:kAla = čierny, čas
+sa:kAla = en:black, en:time
 sa:kaThora -> krutý
 sa:kosha -> košík, košeľa
 sa:krama -> krám  //?
@@ -69,9 +69,9 @@ sa:laghu = en:light
 sa:hima -> sneh
 sa:kUta -> kutáč, kuť
 sa:kUta = en:anvil
-sa:tapa -> teplo, topiť
+sa:tapa -> teplo, topiť, tápať
 sa:tathA -> tak
-sa:tathA = in that manner
+sa:tathA = en:in that manner
 sa:bhava -> byťie
 sa:bhaya -> báť sa
 sa:bhaya = strach, en:fear
@@ -120,8 +120,6 @@ sa:ubhaya -> obaja
 sa:rINa -> Rín # river, rinúť sa
 sa:rinA = en:sever from, en:detach from, en:to flow
 sa:tamas -> Temža # river
-
-// SRC
 sa:bhrAtr -> brat
 sa:mAtr -> mater
 sa:kadA -> kedy
@@ -147,14 +145,14 @@ sa:codya -> čudo
 sa:dama -> dom
 sa:dadh -> dať
 sa:dru -> drevo
-dArva -> drevený
+sa:dArva -> drevený
 sa:dRR -> rotrhať
 sa:gilati -> hltať
 sa:goSThI -> hosť
 sa:jna -> znať
 sa:kaH -> kto
 sa:kAsa -> kašeľ
-sa:kArya = end
+sa:kArya = en:end
 sa:kArya -> kraj
 sa:krUrata -> krutosť
 sa:kraNa -> rana
@@ -182,7 +180,7 @@ sa:pard -> prdnúť
 sa:pac -> piecť
 sa:pIti -> pitie
 sa:pA -> piť
-prasArita -> rozšíriť
+sa:prasArita -> rozšíriť
 sa:purna -> plný
 sa:rabh -> rabovať
 sa:shat -> sto
@@ -201,6 +199,226 @@ sa:ucchiSTa -> nečistý
 sa:vrt -> vrtieť
 sa:vAta -> vietor
 sa:yabh -> jebať
-
+sa:bandh (root) -> zabandážovať
+sa:bandhu -> banda
+sa:parNa -> peruť
+sa:napAt -> Neptún
+sa:kunda = en:basin, en:well, en:water pot, en:bowl, en:twisted, en:crooked
+sa:kunda -> cs:kunda
+sa:mad -> medovina
+sa:mad [to enjoy heavenly bliss]
+sa:mi -> míľa, milénium, milíon, milícia, terminál, terminovať
+sa:man -> myseľ, myslieť
+sa:man -> lat:manus -> manikúra, manifest, manipulovať, mandát, manufaktúra, manuálny, manéver, emancipovať, manuál
+sa:raja ~ raj
+sa:manula -> mlčať
+sa:ma -> lat:mensis -> menzes, menštruácia, semester
+sa:mAsa -> mesiac (čas, nie planéta)
+sa:mana -> mánia, maniak
+sa:mana ~ lat:lunetic
+sa:apas -> lat:opus -> opera, opulentný
+lat:opus = en:work, en:labour, en:composition
+sa:mad [to enjoy to the limit]
+sa:mira {mi+ra} [that which reaches (ra) a fixed point (mi) - fixes, measures the earth] = en:sea, en:ocean, en:limit, en:boundary
+sa:mi = en:measure
+sa:ra = en:reach
+sa:mIra -> more
 sa:bhuja -> bujný
 sa:bhuja = vetva
+sa:kashmir {kashyapa + mir} [kashyapa muni (kash) mir (lake)] -> kašmír
+sa:mIra -> en:Pomerania [“po” - by, “mira” - sea]
+sa:udra -> Odra # river (in Pomerania)
+sa:udra = water
+sa:viS -> sa:viseSTI -> Vistula # river (in Pomerania)
+sa:jJana -> Poznaň # city
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2247609108800675/
+sa:mR -> mrcina
+sa:mR -> mor, moriť
+sa:mR -> mordovat sa
+sa:mR [reaching (r) the limit (m) as in the “end of life”]
+sa:mR -> lat:memento mori
+sa:mr = en:to look for, en:to seek
+sa:mr -> sa:marga = en:route, en:way, en:journey, en:hunting
+sa:marga -> en:margin, en:edge, en:boundary, en:limit, en:benchmark, en:trademark, en:mark, en:marker
+sa:marka -> en:denmark {sa:danu+sa:marga}
+
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2251128511782068/
+sa:maya [the course (ya) of measurable (ma) reality] = en:illusion, en:witchcraft, en:sorcery, en:measuring
+sa:maga [priest of the sun] -> en:magician, mág, gr:magoi, zoroastrian:magi [priestly class]
+// SRC viveka chudamani SP, p. 486
+sa:malina = en:dirty, en:impure, en:of dark colour, en:woman during menstruation
+sa:malina -> sk:malina
+
+// SRC https://vediccafe.blogspot.com/2018/10/an-indian-monk-in-ancient-greece_5.html
+sa:sthavir = en:elder, starý
+// SRC spoken sanskrit 22
+sa:zATaH = en:dress, šaty
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2214386555456264/
+sa:bhUrja = en:birch, breza
+sa:bhUrja -> en:black, de:blank
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2213286152232971/
+sa:sneha = neha, láska
+// SRC https://www.facebook.com/photo.php?fbid=1770540853029367&set=gm.2212183429009910&type=3&theater&ifg=1
+sa:bhaga -> boh
+sa:bhagavan -> bohatier
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2209160955978824/
+sa:kSAma = en:endurance, en:tolerance, en:of earth
+sa:kSAma -> lat:homo -> en:human, fr:homme, es:hombre, pt:homem
+sa:kSAma -> en:humus, en:humility
+sa:kSAm -> zem
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2228387560722830/
+sa:lubh -> lat:lubido -> libido
+sa:lubh -> lat:lubido -> en:luxury -> luxus
+sa:lubh -> en:love, de:Liebe, láska
+Ľubľana {sa:lubh+sa:jana} [born from (jana) love (lubh)]
+sa:jana = en:born, en:produced
+sa:jana -> january (beginning of the year)
+
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2223900814504838/
+sa:sarasvati -> chorváti, chorvátsko
+sa:jan = en:birth, en:beginning
+sa:naranga -> es:naranja, tr:naranja, en:orange, sk:pomaranč
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2220732328155020/
+sa:kRmi = en:worm
+sa:kRmi -> červený (Po hlboko cervenej farbe produkovanej cervami - krmija - zvanymi “kermes”)
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2236312919930294/
+sa:udra = gr:hydro = sk:hydro
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2235125393382380/
+sa:lokate = en:to see, en:to behold
+sa:loakte -> lokalizovať, lokál, lokácia
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2231780847050168/
+sa:lag -> lego, legenda
+sa:lag -> lat:lex -> legislatúra, legálny, legitímny, dialekt, elegantný
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2286479611580291/
+sa:sama -> samo, samé, samý
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2296184813943104/
+sa:sus = en:to dry, en:to decay
+sa:sus -> suchý
+sa:zarkara -> cukor
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2244300085798244/
+sa:mus [mus – to remain (u) in the vicinity (s) of a limit (m)] -> myš
+sa:mus -> mušla (podobá sa na myš)
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2237570686471184/
+sa:lu = en:to cut, en:to divide, en:to pluck, en:to reap, en:to sever
+sa:lu -> sa:lup = en:to break, en:to destroy, en:to steal, en:to rob
+sa:lu -> rezolútny, analýza, dialýza, paralýza, revolúcia, solventný
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2208159096079010/
+sa:ksan = kántriť
+sa:ksatra -> satrapa, šach
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2207195302842056/
+sa:rtam -> rytmus
+sa:rta -> rád, poriadok, správny, pravý
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2198749047020015/
+sa:kRSna -> old_prussian:kirsna (old prussian), pie:krsnos, ua:chorna, ru:chernaya, rs:crna, en:black, sk:čierny
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2197765650451688/
+sa:krp [Beautiful form in the sense of pure (p) creation (kr)] = en:beauty, en:splendour, en:to grieve, en:to pity
+sa:krp -> sa:kRpA = en:favour, en:grace
+sa:kRpA -> krpec, krpatý
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2195851717309748/
+sa:vid -> pie:weid -> celtic:vindo = en:white, en:shining, en:visible
+celtic:vindo -> en:vienna, sk:viedeň
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2193563040871949/
+rozmarín {sa:rasa + sa:mira}
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2192522654309321/
+sa:varuna -> persian:uruwna, gr:ouranos, lat:uranus [god of the celestial ocean (var – cover, na – waters)], parom
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2191511781077075/
+sa:kr [carry out (r) a movement in space (k)] = en:to make, en:to do, en:to perform, en:to sacrifice
+sa:kr -> en:cereal -> cereálny
+sa:kr -> kreatívny, croissant, rekreácia, konkrétny, rekrút
+// SRC http://prasadam.co.uk/articles/469-arka-and-the-ancient-konark-temple.html
+sa:arka = sun
+sa:arka -> gr:archon = en:chief, en:leader, en:ruler, en:commander, en:captain
+gr:archon -> architekt, archeológ, monarch, patriarcha, archetyp, hierarchia, oligarch, arcibispkup, archaický
+sa:kalamata [mother of time, mother of death] -> en:calamity, kalamita
+
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2189045861323667/
+sa:dvi [that which is separated (vi) from light (d)] -> dualita, dva, dichtonómia [kontrast medzi dvoma vecami]
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2187972381431015/
+sa:kal [arrival (al) of cosmic motion (k)] = en:time
+sa:kal -> sa:kala = en:division of time -> en:calendar, sa:kalendár
+sa:kala -> kálať, kalkulovať, kolo, koleso, koleda, Kali [bohyňa času]
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2133734050188182/
+sa:vrt [to reach (v) by separating (v) two points (t)] = en:to spin, en:to turn, en:to roll
+sa:vrt -> vŕtať, vrtieť sa, inverzia, introvert, extrovert, perverzia
+sa:vrt -> lat:vertex = en:that which turns, en:whirlpool, en:whirlwind, vertical
+sa:vrt -> vertikálny, verzus, reverzia, diverzifikovať
+sa:vart [to turn from one line of reading to another as in reading or memorising verses]
+sa:vart -> lat:verse -> verš
+sa:vart -> lat:universe {uni+verse} [one song – reflecting how everything is energy vibrating in a variety of ways according to universal laws] = univerzum
+Kolovrat {kolo + sa:vrt} [spinning wheel of the lord Vishnu. Meaning related to cycles] [swastika]
+// SRC https://www.facebook.com/permalink.php?story_fbid=1083775901638562&id=100000184887846&hc_location=ufi
+sa:avis -> ovca
+sa:zvazura = švagor
+sa:ram -> sa:ramate = en:to rest, en:to refrain
+sa:ramate -> driemať
+sa:kravya -> krv
+sa:nakta -> noc
+sa:samyoga -> souyz
+sa:mansa = mäso
+sa:vah -> sa:vahati = váhať, voziť, váha
+sa:kas -> sa:kAsate = kašlať
+sa:zvit -> sa:zvetate = svietiť, svitať
+sa:bhyas -> sa:bhyasate = bať sa
+sa:mizrayati -> miesať
+// SRC spoken sanskrit 23
+sa:padam -> podstavec, päta
+// SRC https://www.facebook.com/permalink.php?story_fbid=1083775901638562&id=100000184887846&hc_location=ufi
+sa:jivati -> žiť
+sa:vilumpati -> vylúpnuť
+sa:trasyati -> triasť sa
+sa:budhyati -> zubodiť
+sa:lip -> sa:limpati = lipnúť
+sa:katara -> ktorý
+sa:tat -> to
+sa:svapna -> sen
+sa:sthala [flat surface] -> stôl
+sa:ikh -> sa:ikhati -> ísť
+// NOSRC
+sa:div -> sa:divyati -> divadlo, diviť sa
+// SRC Ss 23 (class)
+sa:data -> daný
+// SRC swami class viveka chudamani 137-139
+sa:mocana -> močiť (v zmysle vypustiť, zbaviť sa, oslobodiť sa)
+// NOSRC
+sa:kali -> koleda [Time (kali) of giving (da)] {kali+da}
+sa:han -> haniť
+sa:zloka -> sloh, šlóka
+// SRC SS 25
+sa:brU -> sa:braviti -> vravieť
+sa:cur = en:to steal
+sa:cur -> čurák
+// SRC https://www.facebook.com/photo.php?fbid=963760647347118&set=pcb.963760940680422&type=3&theater
+sa:anAsam = ananás
+// SRC SS 25
+sa:ghn -> sa:ghnanti -> gniaviť (ghn… -3rd person plural – to kill)
+sa:ghn = to kill
+// SRC SS 22
+sa:ha -> sa:hIna = en:abandoned
+sa:hIna -> hynuť
+// SRC indoevropane v pravlasti
+sa:haMsI = hus
+// SRC
+// IGNORE
+sa:hitam = profit, favour (hit)
+sa:Ishwara -> de:ich (isch), en:I
+// SRC https://www.youtube.com/watch?v=emSUHImw1BQ
+sa:yesha = en:boil up, en:exert one’s self
+sa:yesha –> ješitnosť
+// SRC
+sa:ugra -> ukrutný
+sa:bharani = baran (aries consellation)
+sa:smi -> usmiať sa, smilovať sa, milovať
+sa:nandati = radovať sa
+sa:nandati -> nandať (v zmysle však počkaj, ja ti spôsobím radosť)
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2494136620814588/
+sa:vAhana -> vagón, de:Wagen, en:vehicle
+sa:maha -> lat:magna -> magnificentný
+sa:hu -> lat:fu -> en:fusion -> fúzia
+// SRC
+sa:maru marichika = en:Fatamorgana
+sa:maru marichika ~ mariť sa
+sa:rAdha = en:gift, en:favour, en:splendour, en:beauty
+sa:rAdha -> rado, radosť, radovať sa
+sa:sumana = en:very beautiful
+sa:sumana -> šumný, šumava
+sa:pUrva = prvý, plný

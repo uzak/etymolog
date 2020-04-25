@@ -335,11 +335,12 @@ sa:soma [drink or food of immortality]
 sa:amrita [drink or food of immortality]
 sa:Vaivaswata [„Son of the Sun“ (Manu)]
 sa:aditi = indivisible
-sa:adityas [issue of Aditi, were first seven before being twelve and their chief was then Varuna. The twelve Adityas are: Dhatri, Mitra, Aryaman, Rudra, Varuna, Surya, Bhaga, Vivasvat, Pushan, Savitri, Tvashtri, Vishnu]
+sa:adityas [issue of Aditi, were first seven before being twelve and their chief was then Varuna. The twelve Adityas are: Dhatri, Mitra, Aryaman, Rudra, Varuna, Surya, Bhaga, Vivasvat, Pushan, Savitri, Tvashtri, Vishnu] ~ sa:Aditi
 lat:lancea = spear
 gr:logche = spear (pronounced lonke) (Longinus was the name of the centurion who pearced Christ's side)
 sa:urna = Hindu frontal jewel
-he:Hakathriel [Has number 666] = Lucifer [before his fall, was the „Angel of the Crown“ (Kether).]
+he:Hakathriel [Has number 666] = lat:Lucifer [before his fall, was the „Angel of the Crown“ (Kether).]
+he:Hakathriel ~ gr:phosphoros
 lat:grasale = vase, bowl, grail
 lat:graduale = book, grail
 lat:montsalvat = Mount of Salvation
@@ -380,7 +381,7 @@ lat:caelare = to hide
 sa:var = to cover
 sa:var -> sa:varuna
 gr:kaluptein = to hide
-gr:ouranos [greek god of sky, father of titans, husband of gaia] = Uranus (Nothing but another form of Varuna, var changing easily to ur)
+gr:ouranos [greek god of sky, father of titans, husband of gaia] = Uranus (Nothing but another form of Varuna, var changing easily to ur), sa:Varuna
 sa:var -> pie:ur
 lat:caelus = Uranus
 lat:coelum =[alternative spelling] lat:caelum
@@ -510,9 +511,9 @@ he:qabal =[root QBL] in front of (spatial), before (temporal)
 ar:qabl = in front of (spatial), before (temporal)
 ar:mustaqbal = future (that, towards which one goes)
 he:qadam [root QDM]= to precede
-he:qadam = foot (precedence, walking ,advancing, progression)
+he:qadam = foot, precedence, walking ,advancing, progression
 he:qadam ~ sa:padam
-he:quadmon = ancient, primoridal, east
+he:quadmon = ancient, primordial, east
 he:qedem = east, root QDM
 //SRC http://biblehub.com/hebrew/6924a.htm
 he:qedem = front, east, formerly, ancient, ancient times, long ago
@@ -544,6 +545,7 @@ gr:mu -> gr:mueo [signifies to initiate into mysteries] = to instruct, to consec
 gr:mu -> gr:muthos [represents a closed mouth] = silence
 lat:sacratum = sacred
 lat:secretum = secret
+lat:sacratum ~ lat:secretum
 sa:laukika = wordly, profane
 lat:secernere = to place apart
 //SRC https://en.wiktionary.org/wiki/templum
@@ -605,6 +607,7 @@ lat:aurea -> lat:aureola
 //SRC The Great Triad
 Chinese:t'ien chi = pinnacle of Heaven
 gr:amphisbaena [„moving in both directions“]  [Greek name for mythical two headed serpent or dragon]
+// de:Bein ~ gr:baena? gr:knimi ~ de:Knie ??
 egyptian:kneph [serpent producing the egg out of its mouth, which is an image of manifestation being produced by the Word, or of the druidic symbol of the „serpent's egg“]
 gr:castor [castor and pollux represent symbolically two hemispheres, star in the constellation of Gemini]
 gr:pollux [castor and pollux represent symbolically two hemispheres, star in the constellation of Gemini]
@@ -624,7 +627,7 @@ sa:vajra = (symbol for a) thunderbolt, diamond
 sa:vajra = hard, impenetrable, shaped like a kind of cross, forked, zigzag, weapon of Indra
 //SRC The Great Triad
 sa:Dakshina marga = path of the right hand
-sa:Yama marga = path of the left had
+sa:Yama marga = path of the left hand
 sa:shankha = conch
 he:Ha baraq = thunderbolt, flash of lightning
 ar:El barq = lightning
