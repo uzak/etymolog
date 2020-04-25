@@ -316,7 +316,7 @@ sa:krp -> sa:kRpA = en:favour, en:grace
 sa:kRpA -> krpec, krpatý
 // SRC https://www.facebook.com/groups/1520538148174445/permalink/2195851717309748/
 sa:vid -> pie:weid -> celtic:vindo = en:white, en:shining, en:visible
-celtic:vindo -> en:vienna, sk:viedeň
+celtic:vindo -> en:vienna #city, sk:Viedeň
 // SRC https://www.facebook.com/groups/1520538148174445/permalink/2193563040871949/
 rozmarín {sa:rasa + sa:mira}
 // SRC https://www.facebook.com/groups/1520538148174445/permalink/2192522654309321/

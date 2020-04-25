@@ -13,19 +13,25 @@ locale.setlocale(locale.LC_ALL, '')
 
 def _derived(word, result):
     for w in word.derived_from:
-        result.append(w.left)
+        result.append(w)
         _derived(w.left, result=result)
     return result
 
 
-def derived(word, indent):
+def derived(word, indent, incl_comments=True):
     parents = _derived(word, [])
-    parents_str = " -> ".join(map(lambda word: word.key(), parents))
-    if parents:
-        print(f"{indent}-> {parents_str}")
+    result = []
+    for rel in parents:
+        if rel.comments and incl_comments:
+            comments_str = " ".join([f"[{c}]" for c in rel.comments])
+            result.append(f"-> {comments_str} {rel.left}")
+        else:
+            result.append(f"-> {rel.left}")
+    if result:
+        print(f'{indent}{" ".join(result)}')
 
 
-def dictionary(lang_name):
+def dictionary(lang_name, incl_comments=True):
     lang = model.World.lang(lang_name)
     print(f"Dictionary for ``{lang.name}`` ({len(lang)} items):")
     for w in sorted(lang, key=lambda word: locale.strxfrm(word.value.lower())):
@@ -33,13 +39,18 @@ def dictionary(lang_name):
         indent = "    "
         if w.related:
             print(f"{indent}{details.translations_str(w, rel_type=model.Related)}")
-        derived(w, indent)
+        if incl_comments:
+            for comment in w.comments:
+                print(f"{indent}[{comment}]")
+
+        derived(w, indent, incl_comments=incl_comments)
 
 
 if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("lang")
+    parser.add_argument('--sc', help="suppress comments", default=False, action="store_true")
     args = parser.parse_args()
 
     #XXX add translate_to_languages=*
@@ -47,4 +58,4 @@ if __name__ == '__main__':
 
     load_db()
 
-    dictionary(args.lang)
+    dictionary(args.lang, incl_comments=not args.sc)

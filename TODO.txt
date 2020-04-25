@@ -1,4 +1,5 @@
 * group by language in details
+* add incl_comments to details.*translations*  as well?
 * remove inline comments?
      + sa:rAtrI {rA+tr} = en:night, sa:naktA [that which gives (rA) the stars (tr)]
         add testcase if inline are kept in []-comment
