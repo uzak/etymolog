@@ -422,3 +422,7 @@ sa:rAdha -> rado, radosť, radovať sa
 sa:sumana = en:very beautiful
 sa:sumana -> šumný, šumava
 sa:pUrva = prvý, plný
+
+// SRC https://en.wikipedia.org/wiki/Fallow_deer
+aramaic:chamra ~ sk:chamraď 
+aramaic:chamra = brown, red

@@ -1,15 +1,13 @@
-* group by language in details
-* add incl_comments to details.*translations*  as well?
-* remove inline comments?
-     + sa:rAtrI {rA+tr} = en:night, sa:naktA [that which gives (rA) the stars (tr)]
-        add testcase if inline are kept in []-comment
-    * relation comment - new line
+* BUG: sa:dvipa - twice the same union produces two unions
+    ./dict.py celtic
 * language differentiates if case sensitive (e.g. sanskrit)
     and auto translation from devanagari to latin ...
     for english: remove "to" for sorting
 * tags
     - dict.py - add filter by tags??
     - dump.py add stats
+* in a group: apply the previous words' lang to all following
+  words without explicit lang declaration?
 
 * lookup.py - try to find a word or similar
 * caching : redis

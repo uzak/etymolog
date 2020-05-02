@@ -213,7 +213,7 @@ sa:loka = place
 lat:locus = place
 sa:loka ~ lat:locus
 sa:pasha = bond
-sa:pashupati [lord of beings in bondage] [Lord of Animals] [because by his transformatory action they are delivered (sacrifice as delivery)] = sa:Shiva
+sa:pashupati [lord of beings in bondage] [Lord of Animals] [delivery by transformatory action (sacrifice)] = sa:Shiva
 sa:pasha ~ sa:pashupati
 sa:dvara = gate
 // sa:ashrama = stages of earthly manifestation
@@ -339,7 +339,7 @@ sa:adityas [issue of Aditi, were first seven before being twelve and their chief
 lat:lancea = spear
 gr:logche = spear (pronounced lonke) (Longinus was the name of the centurion who pearced Christ's side)
 sa:urna = Hindu frontal jewel
-he:Hakathriel [Has number 666] = lat:Lucifer [before his fall, was the „Angel of the Crown“ (Kether).]
+he:Hakathriel [Has number 666] = lat:Lucifer [before his fall, was the „Angel of the Crown“ (Kether)]
 he:Hakathriel ~ gr:phosphoros
 lat:grasale = vase, bowl, grail
 lat:graduale = book, grail

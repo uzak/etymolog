@@ -11,15 +11,15 @@ from dump import load_db
 locale.setlocale(locale.LC_ALL, '')
 
 
-def _derived(word, result):
+def derived_chain(word, result):
     for w in word.derived_from:
         result.append(w)
-        _derived(w.left, result=result)
+        derived_chain(w.left, result=result)
     return result
 
 
 def derived(word, indent, incl_comments=True):
-    parents = _derived(word, [])
+    parents = derived_chain(word, [])
     result = []
     for rel in parents:
         if rel.comments and incl_comments:
@@ -35,14 +35,15 @@ def dictionary(lang_name, incl_comments=True):
     lang = model.World.lang(lang_name)
     print(f"Dictionary for ``{lang.name}`` ({len(lang)} items):")
     for w in sorted(lang, key=lambda word: locale.strxfrm(word.value.lower())):
-        print(f"* {w.value}{details.translations_str(w)}")
         indent = "    "
+        print(f"* {w.value}")
+        if w.equals:
+            print(details.translations_str(w, rel_type=model.Equals, indent=indent, incl_comments=incl_comments))
         if w.related:
-            print(f"{indent}{details.translations_str(w, rel_type=model.Related)}")
+            print(details.translations_str(w, rel_type=model.Related, indent=indent, incl_comments=incl_comments))
         if incl_comments:
             for comment in w.comments:
                 print(f"{indent}[{comment}]")
-
         derived(w, indent, incl_comments=incl_comments)
 
 
@@ -53,8 +54,7 @@ if __name__ == '__main__':
     parser.add_argument('--sc', help="suppress comments", default=False, action="store_true")
     args = parser.parse_args()
 
-    #XXX add translate_to_languages=*
-    #XXX special language handlers, e.g. english should remove "to" infront of verbs
+    #XXX add translate_to_languages=* ?
 
     load_db()
 

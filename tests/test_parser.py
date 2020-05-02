@@ -194,7 +194,7 @@ class TestRelationships(TestCase):
 class TestComments(TestCase):
 
     def test_comment(self):
-        comment = "dynasty in which Lord Rama took birth"
+        comment = "dynasty in which (Lord) Rama took birth"
         parser.yacc.parse(f"sa:Raghu [{comment}]")
         w = word("Raghu", "sa")
         assert comment in w.comments

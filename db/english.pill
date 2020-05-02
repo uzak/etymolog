@@ -10,3 +10,7 @@ lat:domina -> old_french:dame = lady, mistress, wife
 old_french -> en:dame = mother, woman of rank or high social position, superior of a convent
 
 old_french -> sk:dáma, de:Dame
+
+gr:skala = ladder, staircase
+gr:skala -> lat:scala -> en:scale
+lat:scala = to climb by or as by ladder

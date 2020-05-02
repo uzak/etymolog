@@ -36,7 +36,7 @@ sa:visa -> venom -> virus = poison, venom, slimy liquid
 sa:c = circular
 sa:a = motion
 
-sa:sa {c+a} -> sa:cakra = circle
+sa:ca {c+a} -> sa:cakra = circle
 sa:cakra -> gr:kyklos = circle
 
 sa:cakra -> gr:koronos = curved
