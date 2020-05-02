@@ -1,5 +1,3 @@
-* BUG: sa:dvipa - twice the same union produces two unions
-    ./dict.py celtic
 * language differentiates if case sensitive (e.g. sanskrit)
     and auto translation from devanagari to latin ...
     for english: remove "to" for sorting

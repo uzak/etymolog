@@ -77,6 +77,12 @@ class Union:
     def __contains__(self, item):
         return item in self.components
 
+    def __hash__(self):
+        return hash(str(self))
+
+    def __eq__(self, other):
+        return str(self) == str(other)
+
     def __str__(self):
         result = []
         for c in self.components:

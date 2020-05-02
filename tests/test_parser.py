@@ -331,6 +331,15 @@ class TestUnion(TestCase):
         with pytest.raises(SyntaxError):
             parser.yacc.parse("a {b}")
 
+    def test_union_twice_the_same(self):
+        parser.yacc.parse("ab {a + b}")
+        parser.yacc.parse("ab {a + b}")
+        ab = lang().get_word("ab")
+        assert len(ab.unions) == 1
+        a = lang().get_word("a")
+        assert len(a.in_unions) == 1
+
+
 class TestMeta(TestCase):
 
     def test_meta_eol_cmment(self):
