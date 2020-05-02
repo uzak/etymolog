@@ -11,7 +11,9 @@ import config
 class Entity:
     def __init__(self):
         self.comments = set()
-        self.source = config.default_source
+        self.sources = set()
+        if config.source:
+            self.sources.add(config.source)
 
     def comment(self, text):
         if not text in self.comments:
@@ -241,11 +243,16 @@ class Language:
     def __iter__(self):
         return iter(self._words.values())
 
-    def add_word(self, value, word=None):
+    def add_word(self, value):
         if value.lower() not in self._words:
-            word = word or Word(value, self)
+            word = Word(value, self)
             self._words[value.lower()] = word
             word.lang = self
+        else:
+            # XXX hackish? add source if changed since last addition
+            word = self._words[value.lower()]
+            if config.source not in word.sources:
+                word.sources.add(config.source)
         return self._words[value.lower()]
 
     def get_word(self, value, case_sensitive=False):

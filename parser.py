@@ -189,9 +189,9 @@ def handle_meta(meta, p):
     meta = meta.strip()
     if meta.startswith("SRC"):
         src = meta[4:].strip() or None
-        config.default_source = src
+        config.source = src
     elif meta.startswith("NOSRC"):
-        config.default_source = None
+        config.source = None
     elif meta.startswith("LANG"):
         global orig_default_lang        # XXX global ...
         if not orig_default_lang:
@@ -256,8 +256,8 @@ def parse_file(fn):
 
 
 def finish_file():
-    log.debug("Setting config.default_source=None")
-    config.default_source = None
+    log.debug("Setting config.source=None")
+    config.source = None
     if orig_default_lang:
         log.debug(f"Setting config.default_lang={orig_default_lang}")
         config.default_lang = orig_default_lang

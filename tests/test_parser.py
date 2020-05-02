@@ -379,13 +379,13 @@ class TestMeta(TestCase):
         # first test default
         parser.yacc.parse("w1")
         w = word("w1", config.default_lang)
-        assert w.source is None
+        assert not w.sources
         # now test setting a source
         source = "http://www.somewhere.com"
         parser.yacc.parse(f"// SRC {source}")
         parser.yacc.parse("w2")
         w = word("w2", config.default_lang)
-        assert w.source == source
+        assert source in w.sources
         assert_total_rels(0)
 
     def test_meta_lang(self):
@@ -405,13 +405,13 @@ class TestMeta(TestCase):
         parser.yacc.parse("// SRC source")
         parser.yacc.parse("// NOSRC")
         parser.yacc.parse("a")
-        assert lang().get_word("a").source is None
+        assert not lang().get_word("a").sources
 
     def test_meta_src_is_nosrc(self):
         parser.yacc.parse("// SRC source")
         parser.yacc.parse("// SRC")
         parser.yacc.parse("a")
-        assert lang().get_word("a").source is None
+        assert not lang().get_word("a").sources
 
 
 class TestTag(TestCase):
@@ -458,3 +458,12 @@ class TestMisc(TestCase):
         with pytest.raises(ValueError):
             parser.yacc.parse("a = -> b")
 
+    def test_two_sources(self):
+        src1 = "src1"
+        src2 = "src2"
+        parser.yacc.parse(f"// SRC {src1}")
+        parser.yacc.parse("a")
+        parser.yacc.parse(f"// SRC {src2}")
+        parser.yacc.parse("a")
+        a = lang().get_word("a")
+        assert len(a.sources) == 2
