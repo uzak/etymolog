@@ -59,6 +59,14 @@ class Word(Entity):
             _unions += " ".join(map(lambda u: f"{{{u}}}", sorted(self.unions)))
         return f"{self.key()}{_unions}{_comments}"
 
+    def to_json(self):
+        return {
+            "lang": self.lang.name,
+            "value": self.value,
+            "comments": list(self.comments),
+            "sources": list(self.sources),
+        }
+
     def __str__(self):
         return self.as_str(comments=False)
 
@@ -94,6 +102,12 @@ class Union:
                 result.append(c.key())
         return "+".join(result)
     __repr__ = __str__
+
+    def to_json(self):
+        return {
+            "word": self.word.as_str(comments=False, unions=False),
+            "components": [str(c) for c in self.components],
+        }
 
 
 class Group:
@@ -190,7 +204,15 @@ class Relationship(Entity, metaclass=RelationshipMeta):
                 return True
         return False
 
+    def to_json(self):
+        return {
+            "left": self.left.as_str(comments=False, unions=False),
+            "right": self.right.as_str(comments=False, unions=False),
+            "comments": list(self.comments),
+            "sources": list(self.sources),
+        }
 
+#XXX rename to Derivation, Equality, Relation?
 class Derived(Relationship):
     Bidirectional = False
     Symbol = "->"
@@ -238,25 +260,25 @@ class Language:
 
     def __init__(self, name):
         self.name = name
-        self._words = {}
+        self.words = {}
 
     def __iter__(self):
-        return iter(self._words.values())
+        return iter(self.words.values())
 
     def add_word(self, value):
-        if value.lower() not in self._words:
+        if value.lower() not in self.words:
             word = Word(value, self)
-            self._words[value.lower()] = word
+            self.words[value.lower()] = word
             word.lang = self
         else:
             # XXX hackish? add source if changed since last addition
-            word = self._words[value.lower()]
-            if config.source not in word.sources:
+            word = self.words[value.lower()]
+            if config.source and config.source not in word.sources:
                 word.sources.add(config.source)
-        return self._words[value.lower()]
+        return self.words[value.lower()]
 
     def get_word(self, value, case_sensitive=False):
-        word = self._words.get(value.lower())
+        word = self.words.get(value.lower())
         if word and case_sensitive and value != word.value:
             return
         return word
@@ -265,7 +287,7 @@ class Language:
         return self.name == other.name
 
     def __len__(self):
-        return len(self._words)
+        return len(self.words)
 
     def __str__(self):
         return f"Language: {self.name}"

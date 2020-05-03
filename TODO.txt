@@ -1,3 +1,4 @@
+* introduce version (also for the exported DB)
 * language differentiates if case sensitive (e.g. sanskrit)
     and auto translation from devanagari to latin ...
     for english: remove "to" for sorting
@@ -13,8 +14,8 @@
 * s/word.derives/word.derives_to/ ???
 * support for multiline rel?
 * add language to comments?
-* some nice Vue.js frontend?
 --
+* some nice Vue.js frontend?
 * transitiveness: shall a = b = c also generate a = c? and for ~? -> no
 * support for a = b, c = d, e = f (expression in groups) -> no
 * add `-` to allowed word chars? -> no, conflicts with DERIVE

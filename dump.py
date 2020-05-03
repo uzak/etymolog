@@ -4,6 +4,7 @@
 
 import model
 import argparse
+import json
 
 from parser import load_db
 
@@ -30,10 +31,32 @@ def dump(verbose=False):
     print(f"Tags ({len(tags)}): {', '.join(tags)}")
 
 
+def export_json():
+    result = {}
+    result["words"] = []
+    for lang in model.World.Languages.values():
+        result["words"].extend([w.to_json() for w in lang.words.values()])
+    result["relationships"] = {}
+    for cls in (model.Derived, model.Related, model.Equals):
+        key = cls.__name__.lower()
+        result["relationships"][key] = []
+        for rel in cls.Table.values():
+            result["relationships"][key].append(rel.to_json())
+    result["unions"] = []
+    for union in model.Union.Table.values():
+        result["unions"].append(union.to_json())
+    # TODO export Tags
+    print(json.dumps(result))
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-v", "--verbose", action="store_true", default=False)
+    parser.add_argument("-j", "--json", action="store_true", default=False)
     args = parser.parse_args()
 
     load_db()
-    dump(args.verbose)
+    if args.json:
+        export_json()
+    else:
+        dump(args.verbose)

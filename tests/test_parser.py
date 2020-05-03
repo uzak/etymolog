@@ -467,3 +467,16 @@ class TestMisc(TestCase):
         parser.yacc.parse("a")
         a = lang().get_word("a")
         assert len(a.sources) == 2
+
+    def test_two_sources_null(self):
+        """test if None will be added to sources if the second is None.
+        This was a bug in the code"""
+        src1 = "src1"
+        parser.yacc.parse(f"// SRC {src1}")
+        parser.yacc.parse("a")
+        parser.yacc.parse(f"// SRC")
+        parser.yacc.parse("a")
+        a = lang().get_word("a")
+        assert len(a.sources) == 1
+        assert None not in a.sources
+
