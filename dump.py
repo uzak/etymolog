@@ -4,6 +4,7 @@
 
 import model
 import argparse
+import version
 import json
 
 from parser import load_db
@@ -45,6 +46,7 @@ def export_json():
     result["unions"] = []
     for union in model.Union.Table.values():
         result["unions"].append(union.to_json())
+    result["version"] = version.rev_no
     # TODO export Tags
     print(json.dumps(result))
 

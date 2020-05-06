@@ -59,17 +59,6 @@ def translations(word, rel_type=model.Equals):
         yield translation
 
 
-def _translations_str(trs, rel_type=model.Equals):
-    result = []
-    for lang, words in groupby_lang_name(trs).items():
-        trs = [str(tr.value) for tr in words]
-        equals = ", ".join(trs)
-        if trs:
-            equals = f"{lang}:{equals}"
-            result.append(equals)
-    return f" {rel_type.Symbol} {', '.join(result)}" if result else " "
-
-
 def groupbylang_tx(seq):
     return groupby(lambda x: x.word.lang.name, seq)
 
@@ -150,13 +139,7 @@ def details(word, incl_comments=True):
 
     derived_details(word, indent, set(), incl_comments=incl_comments)
 
-    trs = translations(word, rel_type=model.Related)
-    for lang, lang_trs in groupby_lang_name(trs).items():
-        trs_comm, trs_no_comm = split(lambda x: x.comments, lang_trs)
-        for t in trs_comm:
-            print(f"{indent} {model.Related.Symbol} {t}")
-        if trs_no_comm:
-            print(f"{indent}{_translations_str(trs_no_comm, rel_type=model.Related)}")
+    print(f"{indent}{translations_str(word, rel_type=model.Related)}")
 
 
 def print_unions(word, indent, in_header=False):
