@@ -3,3 +3,4 @@ parsetab.py
 db.json
 venv
 tags
+.coverage

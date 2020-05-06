@@ -48,7 +48,7 @@ def export_json():
         result["unions"].append(union.to_json())
     result["version"] = version.rev_no
     # TODO export Tags
-    print(json.dumps(result))
+    print(json.dumps(result, indent=2))
 
 
 if __name__ == "__main__":

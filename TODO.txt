@@ -1,3 +1,4 @@
+* BUG: in ./dict.py if multiple derivations for a word
 * language differentiates if case sensitive (e.g. sanskrit)
     and auto translation from devanagari to latin ...
     for english: remove "to" for sorting
