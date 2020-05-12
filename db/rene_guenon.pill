@@ -551,7 +551,9 @@ lat:secernere = to place apart
 //SRC https://en.wiktionary.org/wiki/templum
 lat:templum = temple, sacred place
 //SRC Perspectives on Initiation
-lat:allo agoreuein = something else
+gr:allegoreuein {allo+agoreuein} = something else
+gr:allo = other
+gr:agoreuein = to speak in the assembly
 gr:temno = to cut, to cut off from, to separate
 sa:samskara = sacrament
 sa:abhisambhava = transmutation of subtle elements

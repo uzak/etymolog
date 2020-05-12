@@ -5,6 +5,7 @@
 
 DB := db
 PILLS := $(shell find $(DB) -name "*.pill") 
+UI_DIR ?= ../etymolog-ui
 
 .PHONY: test coverage clean
 
@@ -17,6 +18,7 @@ coverage:
 
 db.json: $(PILLS)
 	./dump.py -j > db.json
+	cp db.json ${UI_DIR}/public/
 
 clean:
 	rm -v db.json

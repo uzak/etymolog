@@ -272,7 +272,7 @@ sa:lubh -> lat:lubido -> en:luxury -> luxus
 sa:lubh -> en:love, de:Liebe, láska
 Ľubľana {sa:lubh+sa:jana} [born from (jana) love (lubh)]
 sa:jana = en:born, en:produced
-sa:jana -> january (beginning of the year)
+sa:jana -> en:january (beginning of the year)
 
 // SRC https://www.facebook.com/groups/1520538148174445/permalink/2223900814504838/
 sa:sarasvati -> chorváti, chorvátsko

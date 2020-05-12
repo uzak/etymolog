@@ -1,0 +1,17 @@
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2756853964542851/
+
+gr:Sophocles [tragic playwright born 2500 ago in "Attica"]
+gr:Sophocles {cles + sophos}
+gr:cles = glory
+gr:sophos = wisdom
+
+sa:subhas {su+bhas} -> gr:sophos
+sa:bhas = illumination
+
+gr:sophos -> phosphorus, phase
+
+sa:sru = to hear
+sa:sru -> pie:kleu -> gr:kleos = rumour, fame, glory
+gr:kleos -> gr:cles
+
+gr:phosphoros ~ phosphorus
