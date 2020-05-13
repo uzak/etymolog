@@ -426,3 +426,6 @@ sa:pUrva = prvý, plný
 // SRC https://en.wikipedia.org/wiki/Fallow_deer
 aramaic:chamra ~ sk:chamraď 
 aramaic:chamra = brown, red
+
+// https://www.youtube.com/watch?v=Ggrvtg4dBHk
+sa:vishnu -> sk:všetko, cs:vše
