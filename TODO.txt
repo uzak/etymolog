@@ -1,4 +1,3 @@
-* details.py - use same format for arguments as UI: sa bhas -> sa:bhas
 * if word part of a union (sa:bhas) - show derivations of unions too
 * BUG: in ./dict.py if multiple derivations for a word
 * language differentiates if case sensitive (e.g. sanskrit)
@@ -19,7 +18,6 @@
 * support for multiline rel?
 * add language to comments?
 --
-* some nice Vue.js frontend?
 * transitiveness: shall a = b = c also generate a = c? and for ~? -> no
 * support for a = b, c = d, e = f (expression in groups) -> no
 * add `-` to allowed word chars? -> no, conflicts with DERIVE

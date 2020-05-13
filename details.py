@@ -4,6 +4,7 @@
 
 from dataclasses import dataclass
 
+import config
 import model
 from dump import load_db
 
@@ -167,9 +168,9 @@ def pretty_print(word, incl_comments=True):
 if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("lang")
     parser.add_argument("--sc", action="store_true", default=False)
-    parser.add_argument("word")
+    parser.add_argument("word",
+                        help="word prefixed by language, e.g.: en:waters")
     args = parser.parse_args()
 
     # XXX arg: translation_only_in?
@@ -177,7 +178,12 @@ if __name__ == '__main__':
 
     load_db()
 
-    w = model.World.lang(args.lang).get_word(args.word)
+    if ":" in args.word:
+        lang, word = args.word.split(":")
+    else:
+        lang = config.default_lang
+        word = args.word
+    w = model.World.lang(lang).get_word(word)
     if w:
         pretty_print(w, incl_comments=not args.sc)
     else:
