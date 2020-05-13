@@ -47,7 +47,6 @@ def export_json():
     for union in model.Union.Table.values():
         result["unions"].append(union.to_json())
     result["version"] = version.rev_no
-    # TODO export Tags
     print(json.dumps(result, indent=2))
 
 

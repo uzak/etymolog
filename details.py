@@ -157,7 +157,7 @@ def print_unions(word, indent, in_header=False):
 def pretty_print(word, incl_comments=True):
     indent = "    "
     parents(word, incl_comments=incl_comments)
-    print(f" => {word.as_str(unions=False, comments=incl_comments)}")
+    print(f" => {word.as_str(unions=False, comments=incl_comments, tags=True)}")
     tx_str = translations_str(word, indent=indent, incl_comments=incl_comments)
     if tx_str:
         print(tx_str)

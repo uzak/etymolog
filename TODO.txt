@@ -3,9 +3,6 @@
 * language differentiates if case sensitive (e.g. sanskrit)
     and auto translation from devanagari to latin ...
     for english: remove "to" for sorting
-* tags
-    - dict.py - add filter by tags??
-    - dump.py add stats
 * in a group: apply the previous words' lang to all following
   words without explicit lang declaration?
 * details (sa pur): have multiple comments in rels below each other

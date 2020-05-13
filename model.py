@@ -48,16 +48,20 @@ class Word(Entity):
     def key(self):
         return f"{self.lang.name}:{self.value}"
 
-    def as_str(self, comments=True, unions=True):
+    def as_str(self, comments=True, unions=True, tags=False):
         _comments = ""
         _unions = ""
+        _tags = ""
         if comments and self.comments:
             _comments = " "
             _comments += " ".join([f"[{c}]" for c in self.comments])
         if unions and self.unions:
             _unions = " "
             _unions += " ".join(map(lambda u: f"{{{u}}}", sorted(self.unions)))
-        return f"{self.key()}{_unions}{_comments}"
+        if tags and self.tags:
+            _tags = " "
+            _tags += " ".join([f"#{t}" for t in self.tags])
+        return f"{self.key()}{_unions}{_comments}{_tags}"
 
     def to_json(self):
         return {
@@ -65,6 +69,7 @@ class Word(Entity):
             "value": self.value,
             "comments": list(self.comments),
             "sources": list(self.sources),
+            "tags": list(self.tags)
         }
 
     def __str__(self):
