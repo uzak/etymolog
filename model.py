@@ -111,7 +111,7 @@ class Union:
     def to_json(self):
         return {
             "word": self.word.as_str(comments=False, unions=False),
-            "components": [str(c) for c in self.components],
+            "components": [c.as_str(unions=False, comments=False) for c in self.components],
         }
 
 
