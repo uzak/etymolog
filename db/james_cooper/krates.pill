@@ -1,0 +1,88 @@
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2772035623024685/
+
+gr:krates = power
+sa:kratu = power
+sa:kratu -> gr:krates
+
+sa:stha = to stand
+sa:stha -> sa:sthana [that which stands] = city, region
+sa:sthana -> Hindustan, Pakistan, Kurdistan
+
+gr:tio = to hounour, to respect
+gr:timao = to honour
+gr:timao -> Timothy [to honour (timao) god (theo)] {gr:timao+gr:theo}
+sa:cayu -> gr:tiao
+
+gr:Timokrates {timao+krates} [the one who honours (timao) power (krates)]
+
+sa:dvis = hostility
+sa:dvesta = hatred
+sa:dvesta -> gr:deinos 
+gr:Deinokrates {deinos+krates}
+gr:deinos = terrible, fearful
+
+gr:Menekrates [one who remains (mene) in power (krates)] {meno+krates}
+sa:mana = to think, to imagine, to believe
+sa:mana -> gr:meno = to stay
+sa:mana -> gr:monos = alone
+gr:monos -> monastery [where people live solitary lives enabling them to think and reflect]
+
+sa:api -> gr:epi = upon
+sa:api = pon, near, over, besides
+Epikrates [he who rules (krates) upon (epi)] {epi+krates}
+
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2770214289873485/
+
+sa:nara = man
+sa:nara -> european:ner -> gr:aner, gr:andr, gr:andros
+gr:andros = man
+
+gr:Polykarpos {poly+karpos}
+gr:poly = many
+gr:karpos = fruits
+
+european:kerp = harvest
+european:kerp -> gr:karpos
+sa:krpana = sword
+sa:krpani = shears [the impements which performs the "harvest" and reaps the "fruits"]
+sa:krpana -> sa:krpani
+sa:krpani -> european:kerp
+
+gr:Polydorus {poly+dorus}
+gr:Polykrates {poly+krates}
+
+sa:kr = to do, to make
+sa:kr -> sa:kratu = planning, designing, intelligence
+
+gr:Polygnotus {poly+gnotus}
+sa:jna -> gr:gnotus = known
+
+gr:Polystratos {poly+stratos}
+gr:stratos = army
+sa:str = to spread, to strew, to scatter
+sa:str -> sa:strta = bestrewn
+sa:strta -> gr:stratos
+
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2771067926454788/
+
+gr:Sokrates {sos+krates}
+gr:sos = whole
+
+sa:puru -> gr:poly
+sa:puru = abundant, much, many
+
+gr:Amphikrates {amphi+krates}
+sa:abhi = towards, front, before, upon
+sa:abhi -> european:ambhi = around, both sides
+european:ambhi -> gr:amphi = surrounding
+
+gr:Alexikrates  {alexein+krates} [protected (alexein) by power (krates)]
+gr:alexein = to protect, to defend
+sa:araksa = to defend, to protect, to perserve, to police
+sa:araksa -> Alex, gr:alexein
+
+gr:Eukrates {eu+krates} [the power (krates) of the good (eu)]
+
+gr:Pherekrates {phere+krates}
+sa:bhara = to bear, to carry, to bring
+sa:bhara -> gr:phere = to bring

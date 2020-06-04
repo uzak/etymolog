@@ -1,11 +1,9 @@
-* if word part of a union (sa:bhas) - show derivations of unions too
+* if word part of a union (sa:bhas) - show derivations of unions too?
+* details (sa pur): have multiple comments in rels below each other
 * BUG: in ./dict.py if multiple derivations for a word
 * language differentiates if case sensitive (e.g. sanskrit)
     and auto translation from devanagari to latin ...
     for english: remove "to" for sorting
-* in a group: apply the previous words' lang to all following
-  words without explicit lang declaration?
-* details (sa pur): have multiple comments in rels below each other
 * add tests for cli scripts: {details|dict}.py ?
 
 * lookup.py - try to find a word or similar
@@ -18,3 +16,5 @@
 * transitiveness: shall a = b = c also generate a = c? and for ~? -> no
 * support for a = b, c = d, e = f (expression in groups) -> no
 * add `-` to allowed word chars? -> no, conflicts with DERIVE
+* in a group: apply the previous words' lang to all following
+  words without explicit lang declaration? -> no
