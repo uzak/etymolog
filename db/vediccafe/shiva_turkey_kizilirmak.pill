@@ -1,0 +1,47 @@
+// SRC https://vediccafe.blogspot.com/2020/07/traces-of-lord-shiva-on-river.html
+
+gr:sebastos = venerable, lat:augustus
+gr:sebastos ->[truncated] tr:Sivas [town in Turkey]
+
+lat:augustus = venerable
+lat:augustus -> gr:sebastos
+
+lat:augustus ~ sa:agastya [name of Canopus, the second brightest star in the night sky] [Vedic Sage] [one of the stars in Great Bear Constellation - Sapta Rishis] 
+
+sa:aagastiya = assiduity, diligence
+sa:aagastiya -> sa:agastya
+
+sa:siva = benign, gracious
+
+de:Kaiser ~ sa:kesarI = lion, mane
+sa:kesha -> sa:kesarI
+sa:kesha = hair
+
+sa:kula = river, well
+sa:kula-> tr:Salarkolu
+
+sa:sarma = flowing
+sa:sarma -> tr:Sarmasikkaya
+
+sa:ava = water
+tr:Avsar [sa:ava+sa:sara]
+
+tr:Kapulukaya [sa:kapil + sa:kaya]
+sa:kapil = fire
+sa:kaya = form
+
+sa:amar -> tr:Amarat
+sa:amar = immortal
+
+tr:Ahmetisar [sa:ahmati + sa:sara]
+sa:ahmati = abounding in snakes
+
+sa:maras = rain water, stream
+hittite:Maraasantiya [sa:maras+sa:shanti]
+
+sa:sara -> tr:Zara  #town
+
+sa:parvat = mountain
+sa:parvat -> hittite:parhar = high
+
+hittite:parhar -> tr:Parhar # mountain

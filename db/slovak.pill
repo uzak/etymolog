@@ -429,3 +429,9 @@ aramaic:chamra = brown, red
 
 // https://www.youtube.com/watch?v=Ggrvtg4dBHk
 sa:vishnu -> sk:všetko, cs:vše
+
+// NOSRC
+sa:vak -> sk:vec    # NAMA rupa
+sa:nara {na+ra} [arrives (ra) from water (na)] = en:man
+sa:nara -> sk:narodiť
+sa:nara ~ sa:narayana
