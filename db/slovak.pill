@@ -353,7 +353,7 @@ sa:ram -> sa:ramate = en:to rest, en:to refrain
 sa:ramate -> driemať
 sa:kravya -> krv
 sa:nakta -> noc
-sa:samyoga -> souyz
+sa:samyoga -> soyuz (sajuz)
 sa:mansa = mäso
 sa:vah -> sa:vahati = váhať, voziť, váha
 sa:kas -> sa:kAsate = kašlať
@@ -431,7 +431,9 @@ aramaic:chamra = brown, red
 sa:vishnu -> sk:všetko, cs:vše
 
 // NOSRC
-sa:vak -> sk:vec    # NAMA rupa
+sa:vac -> sk:vec    # NAMA rupa
+sa:vac -> sk:zvuk {sa:s + sa:vac}, ru:zvuk
 sa:nara {na+ra} [arrives (ra) from water (na)] = en:man
 sa:nara -> sk:narodiť
 sa:nara ~ sa:narayana
+sk:svar -> nešvárny
