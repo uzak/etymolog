@@ -23,6 +23,9 @@ sa:Ni = to govern
 european:nik = to conquer
 gR:nike = victory
 
-gr:Pherenike -> macedonian:Berenice [Queen of Egypt; wife of Ptolemy]
+gr:Pherenike -> macedonian:Berenice [Queen of Egypt] [wife of Ptolemy]
 
-macedonian:Berenice -> Baranis [ancient seaport of Egypt] [named after Berenice]
+macedonian:Berenice -> Baranis [ancient seaport of Egypt] [named after Berenice] # geo
+
+// NOSRC
+Christopher {christ + lat:ferre} 
