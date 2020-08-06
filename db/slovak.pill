@@ -437,3 +437,6 @@ sa:nara {na+ra} [arrives (ra) from water (na)] = en:man
 sa:nara -> sk:narodiť
 sa:nara ~ sa:narayana
 sk:svar -> nešvárny
+he:chochma -> sk:chochmes
+
+sa:pad -> sa:padyate -> sa:padnúť
