@@ -1,0 +1,30 @@
+// SRC https://www.facebook.com/groups/1520538148174445/permalink/2833584650203115/
+
+sa:p = purity
+sa:c = circular motion
+
+sa:pac {p+ac} [purity (p) which is produced from stirring (ac)]
+sa:pac = to bake, to roast, to boil, ripen
+sa:paca = art of cooking
+sa:pacatra = cooking vessel
+sa:paceluka = cook
+
+sa:pac -> sa:paca -> sa:pacatra
+sa:paca -> sa:paceluka
+
+sa:pac -> sa:Pacata = sun, fire, Indra
+
+sa:pac -> sk:pec, sk:piecť, cz:péci
+// P and B phonetically similar labials
+sa:pac -> bake -> baxter, batch, bakery
+
+sa:panca -> lat:quinque
+sa:pac -> lat:coquere -> cook, kitchen, cuisine, culinary
+
+gr:pepsin = gastric juice
+gr:peptis = digestion
+gr:peptos = cooked
+sa:pac-> gr:peptos -> gr:peptis -> gr:pepsin -> pepsi
+
+sa:pac -> hu:pék = baker
+hu:pék -> hu:pékseg = bakery
