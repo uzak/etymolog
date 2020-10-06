@@ -78,3 +78,13 @@ sa:seva -> en:service
 gr:zelos -> fr:jaloux, en:jealous
 sk:žiar -> sk:žiarlivý
 sk:žiar ~ gr:zelos
+
+// incan:pachamama {sa:pancha+sa:mama} ~ sa:prakrti
+
+sk:striga {sa:stri + sa:ga}
+sa:ga = go
+sa:stri = woman
+
+sa:yukti ~ to judge
+
+cz:svoboda {sa:sva+sa:boddha}

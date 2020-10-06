@@ -5,6 +5,8 @@
     and auto translation from devanagari to latin ...
     for english: remove "to" for sorting
 * add tests for cli scripts: {details|dict}.py ?
+* this should have two roots but does not:
+    https://uzak.github.io/etymolog/#/word/en:Vesuvius
 
 * lookup.py - try to find a word or similar
 * caching : redis
