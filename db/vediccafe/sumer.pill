@@ -1,0 +1,86 @@
+// SRC https://vediccafe.blogspot.com/2014/09/ancient-sumerian-temples-cities-indra.html
+
+sa:iradh = worship
+sa:iradh ~ Eridu # city
+
+sa:sagara = sea
+
+sa:sagartia = of the sea
+sa:sagartia -> Sagartians -> Zagros Mountains
+
+
+sumerian:giparku {gipar+ku} -> sa:gopura 
+sa:gopura = temple gate
+
+sumerian:sanga ~ sa:sanga
+sumerian:sanga = temple head (function)
+
+sumerian:Dilumn = paradise
+sa:Dalmi [another name of lord Indra]
+sa:Dalmi ~ sumerian:Dilmun
+
+sa:Enki ~[Sumerian avatar of] Indra [god of rain]
+
+sumerian:sumer {sa:su+sa:meru}
+sa:su = excellent
+sa:meru = mountain
+
+// SRC https://vediccafe.blogspot.com/2014/12/from-sanskrit-bhagvan-to-ancient-city.html
+
+
+sa:huta -> proto_germanic:guthan -> old_frisian:du -> en:god
+sa:huta = that which is invoked
+
+
+germanic:walha -> Gaul
+germanic:walha = foreigner
+proto_germanic:walhiska -> germanic:walha
+proto_germanic:walhiska = foreigner
+sa:videshi = foreigner
+sa:videshi -> proto_germanic:walhiska
+
+sa:bhagavan -> pagan
+sa:bhagavan -> fr:pagoda
+sa:bhagavan -> Baghdad [originally "Bhagvad Nagar"][used at least 4000 years ago as Baghdadu]
+
+// Grimm's Law
+// bh > b > p > ɸ
+
+fr:pagoda = temple
+
+sumerian:Eshunna {sa:esha + sa:annuna} [having full power] # city
+sa:esha = powerful
+sa:annuna = while
+
+// SRC https://vediccafe.blogspot.com/2014/06/the-earliest-civilizations-of-middle.html
+
+sa:meru = spine, middle point
+
+sumerian:Kish [sumerian dynasty]
+sa:Kush [son of Sri Rama]
+sa:Kush -> sumerian:Kish
+
+sumerian:Sirpurla [another name for Lagash] # city
+sumerian:Lagash ~ sumerian:Sirpurla 
+sa:surpura = city of gods, heaven
+sa:surpura -> sumerian:Sirpurla
+sa:uma -> sumerian:Umma # city
+sa:uma [consort of Lord Shiva]
+
+sumerian:Sippar {sa:ksipa + sa:pura} [city that receives] # city
+sumerian:Sippar {sa:Shiva + sa:pura} [city of Shiva] # city
+sumerian:Nippur {sa:nlpa + sa:pura} [low lying city] # city
+sumerian:Nippur {sa:nabha + sa:pura} [city of Nabhas] # city
+
+sa:kshipa = to pour
+sa:nlpa [that which soaks or absorbs]
+sa:pura = city
+
+
+sa:agad = magic jewel
+sa:ur = canal
+sa:uru = excellent, large, spaceous
+sa:uru [name for one of the sons of Manu]
+
+Akkadian ~ sa:agad 
+sa:uru -> summerian:ur # city
