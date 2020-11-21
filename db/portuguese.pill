@@ -10,8 +10,8 @@ sa:vid -> ver
 
 // SRC https://www.letras.mus.br/sam-the-kid/950822/
 
-penso ~ perco
-danço ~ venço
+// penso ~ perco
+// danço ~ venço
 sa:deva -> en:diva, pt:diva, de:Diva, sk:Deva
 
 eximir = de:befreien, de:entbinden
@@ -19,3 +19,5 @@ eximio = de:ausgezeichnet, de:hervorragend
 eximir -> eximio
 
 libro ~ livro
+
+casa -> casar -> casado, casal
