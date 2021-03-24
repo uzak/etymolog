@@ -1,0 +1,15 @@
+// SRC Strucny etymologicky slovnik slovenciny
+// LANG sk
+
+sa:shrava = slovo, znejúc, počutie, slava, reputácia, prestíž
+
+// NOSRC
+
+sa:sru = prúdiť, en:issue form
+sa:sru -> sravanam
+sa:srava = en:waterfall, en:urine
+sa:srAva = prúd
+
+sa:sru -> sa:srava, sa:srAva, sa:shrava
+
+sa:srava -> slušieť
