@@ -17,7 +17,7 @@ sa:dina -> deň
 sa:dvAra -> dvere
 sa:gauna -> gauner
 sa:hRdaya -> hrudník
-sa:iSu -> šíp
+sa:iSu ~ šíp
 sa:jagat -> jagať
 sa:jiva -> živá, život
 sa:kAla -> kal, kálať
@@ -398,16 +398,14 @@ sa:hIna -> hynuť
 // SRC indoevropane v pravlasti
 sa:haMsI = hus
 // SRC
-// IGNORE
-sa:hitam = profit, favour (hit)
-sa:Ishwara -> de:ich (isch), en:I
+
 // SRC https://www.youtube.com/watch?v=emSUHImw1BQ
-sa:yesha = en:boil up, en:exert one’s self
-sa:yesha –> ješitnosť
+sa:yesha = en:boil up, en:exert one's self
+sa:yesha -> ješitnosť
 // SRC
 sa:ugra -> ukrutný
 sa:bharani = baran (aries consellation)
-sa:smi -> usmiať sa, smilovať sa, milovať
+sa:smi -> usmiať sa, zmilovať sa, milovať
 sa:nandati = radovať sa
 sa:nandati -> nandať (v zmysle však počkaj, ja ti spôsobím radosť)
 // SRC https://www.facebook.com/groups/1520538148174445/permalink/2494136620814588/
@@ -431,7 +429,7 @@ aramaic:chamra = brown, red
 sa:vishnu -> sk:všetko, cs:vše
 
 // NOSRC
-sa:vac -> sk:vec    # NAMA rupa
+sa:vac -> sk:vec    // NAMA rupa
 sa:vac -> sk:zvuk {sa:s + sa:vac}, ru:zvuk
 sa:nara {na+ra} [arrives (ra) from water (na)] = en:man
 sa:nara -> sk:narodiť
@@ -448,4 +446,30 @@ sa:dravya ->  dravý
 // sa:yasha -> jašiť sa
 // sa:yasha = honor, glory
 
-sa:tahu ~ telo
+sa:tanu ~ telo
+
+// SRC https://uzak.github.io/2021/04/Shivananda_Lahari#snl-03---2-6--and--9
+sa:hrada -> priehrada
+sa:hrada = jazero
+sa:bhuvi = posteľ
+sa:bhuvi -> buvať
+
+// NOSRC
+sa:patha = way, road
+sa:patha -> path
+sa:patha -> sk:púť 
+
+sa:lepa ~ veľkolepý, lepší, hr:lepa
+
+sk:bezvýchodiskový = hopeless
+
+sa:mukha = enmouth, en:head
+sa:mukha ->["ani muk"] muk
+
+sa:caru = en:beautiful 
+sa:caru -> čaro, čarovať
+sa:carvaka {caru+vac} = beautiful speech
+
+sa:gopati {go + pati} -> hospodin
+sa:mangala -> mangalica
+sa:mangala = auspicious

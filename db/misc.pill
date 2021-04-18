@@ -31,6 +31,16 @@ presence [that which is before we can use our senses] {pre+sense} ~ sa:purusha
 
 // NOSRC
 
+sa:prakati -> sk:prekotiť
+sa:prakati = to reveal
+
+sa:shipi -> sk:šípy
+sa:shipi = ray of light
+
+gr:logos -> en:logic
+sa:lag -> gr:logos
+gr:logos = idea, reason, word, speech, statement, discourse, computation, account
+
 de:sein {pie:s + de:ein}
 
 // SRC https://vediccafe.blogspot.com/search?q=kuhan
@@ -132,3 +142,17 @@ sa:vac ~ en:vacuum
 // SRC https://en.wikipedia.org/wiki/Sanskrit
 sa:bhar -> sk:baran
 sa:bhar = to carry
+
+
+// NOSRC
+
+sa:hitam = profit, favour (hit)
+sa:Ishwara -> de:ich (isch), en:I
+
+sa:lepa ~ sa:malina
+
+sa:itara = other, the rest
+sa:itara -> other
+
+sa:spandanau = flowing out
+sa:spandanau -> Spandau

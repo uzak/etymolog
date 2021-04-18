@@ -187,4 +187,4 @@ if __name__ == '__main__':
     if w:
         pretty_print(w, incl_comments=not args.sc)
     else:
-        print(f"`{args.lang}:{args.word}` not found")
+        print(f"`{lang}:{word}` not found")
