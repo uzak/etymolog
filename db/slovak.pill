@@ -470,6 +470,17 @@ sa:caru = en:beautiful
 sa:caru -> čaro, čarovať
 sa:carvaka {caru+vac} = beautiful speech
 
-sa:gopati {go + pati} -> hospodin
+sa:gopati {go + pati}[Master of cowherds - eulogy for Shiva] -> hospodin
+sa:goSThapati = en:chief herdsman
+sa:goSThipati {goSThi + pati} = en:president, en:master of a family
+sa:gopati -> sa:goSThapati
+sa:gopati -> sa:goSThipati
+sa:go = en:cow
+
 sa:mangala -> mangalica
 sa:mangala = auspicious
+
+sa:sukha ->[ultimative experiential happiness] sk:suka
+
+sa:bilma = en:helmet
+sa:bilma -> helma

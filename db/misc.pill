@@ -147,7 +147,7 @@ sa:bhar = to carry
 // NOSRC
 
 sa:hitam = profit, favour (hit)
-sa:Ishwara -> de:ich (isch), en:I
+sa:Ishwara -> de:ich (isch)
 
 sa:lepa ~ sa:malina
 
@@ -155,4 +155,18 @@ sa:itara = other, the rest
 sa:itara -> other
 
 sa:spandanau = flowing out
-sa:spandanau -> Spandau
+sa:spandanau -> Spandau #geo #city
+
+sa:atma -> pt:alma
+
+sa:goSThi -> en:host, de:Gast, lat:hostis
+sa:goSThapati -> en:hospitality
+lat:hostis = foreign
+
+sa:sarkara -> pali:sakkara -> gr:sakkharon -> lat:saccharum -> en:sugar
+
+sa:sukh -> sa:sukha -> ar:sukkar -> it:zucchero, es:azucar -> fr:sucre, en:sugar
+
+sa:sukha {su + kha} = en:happiness
+sa:sukh -> sa:sukha
+sa:sukh = en:to please, en:to appreciate
