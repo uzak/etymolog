@@ -1,0 +1,9 @@
+// SRC Gurupaduka Stotram
+sa:nauka = boat
+sa:nauka -> sk:náuka
+
+sa:vipad = misfortune, adversity, calamity, failure, accident
+sa:vipad ~ sk:výpad
+
+sa:vaibhava = glory
+sa:vaibhava ~ de:Weib

@@ -189,7 +189,7 @@ sa:smi -> smiať sa
 sa:sUnu -> syn
 sa:sveta -> svetlý
 sa:sthAna -> stan
-sa:sushka -> suchá
+sa:zuSka -> suchá
 sa:sva -> svoj
 sa:tAta -> tato
 sa:tada -> vtedy
@@ -307,7 +307,8 @@ sa:ksan = kántriť
 sa:ksatra -> satrapa, šach
 // SRC https://www.facebook.com/groups/1520538148174445/permalink/2207195302842056/
 sa:rtam -> rytmus
-sa:rta -> rád, poriadok, správny, pravý
+sa:rta -> rád, poriadok
+sa:rta ~ správny, pravý
 // SRC https://www.facebook.com/groups/1520538148174445/permalink/2198749047020015/
 sa:kRSna -> old_prussian:kirsna (old prussian), pie:krsnos, ua:chorna, ru:chernaya, rs:crna, en:black, sk:čierny
 // SRC https://www.facebook.com/groups/1520538148174445/permalink/2197765650451688/
@@ -471,10 +472,8 @@ sa:caru -> čaro, čarovať
 sa:carvaka {caru+vac} = beautiful speech
 
 sa:gopati {go + pati}[Master of cowherds - eulogy for Shiva] -> hospodin
-sa:goSThapati = en:chief herdsman
+sa:goSThapati {goSTHa + pati} = en:chief herdsman
 sa:goSThipati {goSThi + pati} = en:president, en:master of a family
-sa:gopati -> sa:goSThapati
-sa:gopati -> sa:goSThipati
 sa:go = en:cow
 
 sa:mangala -> mangalica
@@ -484,3 +483,25 @@ sa:sukha ->[ultimative experiential happiness] sk:suka
 
 sa:bilma = en:helmet
 sa:bilma -> helma
+
+sa:kUpah = en:well
+sa:kUpah ~ kúpať sa
+
+sa:drSNuh ~ drzý
+sa:drSNuh = en:fearless
+
+sa:pravediati = en:know or undertand right, en:communicate, en:make known
+sa:pravedyati -> pravda, správny, pravý
+
+sa:goSTha = en:cow shed
+sa:hrada = deep lake
+sa:zuSka = dry piece of wood
+sa:zuSka -> šiška
+
+sk:Mahulienka {sa:maha + sk:lena}
+sk:lena = svetlo, lúč svetla
+gr:helena = en:torch
+sk:lena ~ gr:helena
+
+sa:yAcati = en:plead, en:beg
+sa:yAcaka = en:beggar
