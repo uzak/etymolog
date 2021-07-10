@@ -442,10 +442,11 @@ sa:pad -> sa:padyate -> sa:padnúť
 sa:bhuma -> buvať
 sa:bhuma =[Infinite Reality] sa:Brahman // Chandogya Upanishad Chapter 7.
 
-sa:dravya ->  dravý
+sa:dravya -> dravý
+sa:dravya = en:stuff, en:thing, en:object
 
-// sa:yasha -> jašiť sa
-// sa:yasha = honor, glory
+sa:yasha -> jašiť sa
+sa:yasha = en:honor, en:glory
 
 sa:tanu ~ telo
 
@@ -456,20 +457,20 @@ sa:bhuvi = posteľ
 sa:bhuvi -> buvať
 
 // NOSRC
-sa:patha = way, road
+sa:patha = en:way, en:road
 sa:patha -> path
 sa:patha -> sk:púť 
 
 sa:lepa ~ veľkolepý, lepší, hr:lepa
 
-sk:bezvýchodiskový = hopeless
+sk:bezvýchodiskový = en:hopeless
 
-sa:mukha = enmouth, en:head
+sa:mukha = en:mouth, en:head
 sa:mukha ->["ani muk"] muk
 
 sa:caru = en:beautiful 
 sa:caru -> čaro, čarovať
-sa:carvaka {caru+vac} = beautiful speech
+sa:carvaka {caru+vac} = en:beautiful speech
 
 sa:gopati {go + pati}[Master of cowherds - eulogy for Shiva] -> hospodin
 sa:goSThapati {goSTHa + pati} = en:chief herdsman
@@ -477,7 +478,7 @@ sa:goSThipati {goSThi + pati} = en:president, en:master of a family
 sa:go = en:cow
 
 sa:mangala -> mangalica
-sa:mangala = auspicious
+sa:mangala = en:auspicious
 
 sa:sukha ->[ultimative experiential happiness] sk:suka
 
@@ -487,15 +488,15 @@ sa:bilma -> helma
 sa:kUpah = en:well
 sa:kUpah ~ kúpať sa
 
-sa:drSNuh ~ drzý
+sa:drSNuh ~ drzý, drsný
 sa:drSNuh = en:fearless
 
 sa:pravediati = en:know or undertand right, en:communicate, en:make known
 sa:pravedyati -> pravda, správny, pravý
 
 sa:goSTha = en:cow shed
-sa:hrada = deep lake
-sa:zuSka = dry piece of wood
+sa:hrada = en:deep lake
+sa:zuSka = en:dry piece of wood
 sa:zuSka -> šiška
 
 sk:Mahulienka {sa:maha + sk:lena}
@@ -505,3 +506,16 @@ sk:lena ~ gr:helena
 
 sa:yAcati = en:plead, en:beg
 sa:yAcaka = en:beggar
+sa:yAcati -> jačať
+
+sa:panakam = en:juice, en:digestive from ginger
+sa:panakam -> panák
+
+// SRC Isavasya Idam Sarvam by Swami TV 
+sa:nama {na+me}[na me iti nama] = en:not mine, en:not for me, sk:meno, en:name, de:Name
+sa:me = en:mine, en:for me
+sa:me = sa:mama, sa:mahyam
+sa:nama ~ sa:tyaga
+sa:tyAga = en:relinquishing, en:sacrifice, en:resignation, en:renunciation, en:divorce
+sa:nama -> sk:námaha
+sa:vac ~ sa:nama
