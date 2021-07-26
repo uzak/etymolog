@@ -181,3 +181,7 @@ sa:yavhA ~ he:YHVH
 
 sa:vara = choice
 sa:vara -> variant, sk:varianta
+
+sa:prakrti -> lat:procreare -> en:procreation
+sa:prakrti -> gr:praktike -> practic
+gr:praktike [of or pertaining to actions] [concerned with action or business]

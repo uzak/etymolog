@@ -1,8 +1,9 @@
 //SRC https://www.facebook.com/groups/1520538148174445/posts/3129628827265361
 
-sa:pariksit {pari + iksate} [one who is constantly (iksate) looking around (pari)] = Great ancient king
+sa:pariksit {pari + iksate} [one who is constantly looking (iksate) around (pari)] [Great ancient king]
 sa:pari = around
-sa:iskate = constantly
+sa:iksate = looking
+sa:iksate -> ískať
 
 sa:parikrama {pari+krama} = walking around
 sa:krama = walking
@@ -11,7 +12,7 @@ sa:parivartate {pari + vartate} = turning (vartate) around (pari)
 
 sa:pari -> gr:peri
 
-periscope {sa:pari + sa:scope}
+periscope {gr:peri + gr:scope}
 perimeter {gr:peri + meter} [measure (meter) around (peri)] = circumfeerence
 sa:matra -> meter
 sa:matra = measurement
