@@ -1,0 +1,40 @@
+// SRC https://www.facebook.com/groups/1520538148174445/posts/3138354673059443/
+
+gr:Mesopotamia [land in the middle (meso) of the two rivers (potamia)]
+
+gr:Mesopotamia ~ gr:Tigris
+gr:Mesopotamia ~ gr:Euphrates
+
+gr:meso ~ sa:madhya
+gr:potamia = river
+sa:patara =[as in a swift flowing river] flying
+sa:patara -> gr:potamia
+
+sa:tij = sharp, sharp weapon
+sa:tij -> iranian:tighri = arrow
+iranian:tighri -> gr:Tigris [swift as an arrow] #river
+
+iranian:tighri -> tiger [pounces upon its victim swiftly as an arrow]
+
+sa:tij -> sa:tigma = severe, austere, pointed, sharp
+sa:tigma -> sa:stigma [mark produced by a pointed instrument]
+sa:stigma -> stigmata
+
+tij -> lat:stilus [pointed iron pen used by the Romans] = narrative, mode of expression
+lat:stilus -> style [in particular fashion]
+
+tij -> stick [for prodding of animals]
+tij -> stimulus [to "goad", to "incite", as in "urging" the animals forward]
+tij -> instigate, distinguish
+
+sa:su -> iranian:hu -> greek:eu
+iranian:hu = good
+
+sa:prata [that which expands][that which is accomplished][that which is learned] -> iranian:frahata [that which is gained]
+
+sa:prata ->[one who has gained/earned] Parthian
+
+sa:suprata {su+prata}[beautiful (su) dawn (prata)] 
+sa:prata =[that which possesses qualities of spreading and expanding] dawn
+gr:Euphrates [gr:eu + sa:prata]
+sa:suprata -> Euphrates # river
