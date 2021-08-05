@@ -187,3 +187,6 @@ sa:prakrti -> gr:praktike -> practic
 gr:praktike [of or pertaining to actions] [concerned with action or business]
 
 de:wahrnehmen {wahr+nehmen} [Etwas nicht wahres für wahr halten]
+
+sa:edhi = sa:bhava, being
+sa:edhi ~ Jedi
