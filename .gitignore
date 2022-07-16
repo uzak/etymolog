@@ -4,3 +4,7 @@ db.json
 venv
 tags
 .coverage
+__pycache__
+.idea/
+.DS_Store
+db.json.gz
