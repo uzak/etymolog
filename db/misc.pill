@@ -199,5 +199,17 @@ sa:svar -> sk:nešvár
 
 de:Heim ~ sa:aham
 
+sa:napAt ~ pot
+
+pt:barraca [Brasil] = tent
+pt:barraca ~ en:barracks
+
+sk:chuť ~ hindi:chatni -> en:chutney
+hindi:chatni = en:to lick
+
+sk:večer ~ en:vesper
+
+sk:trepať sa ~ es:trepar
+
 sa:drsh -> sk:držať 
 sa:srnGa -> sk:srnka

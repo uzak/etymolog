@@ -430,7 +430,7 @@ aramaic:chamra = brown, red
 sa:vishnu -> sk:všetko, cs:vše
 
 // NOSRC
-sa:vac -> sk:vec    // NAMA rupa
+sa:vac ->[~ sa:vastu] sk:vec    // NAMA rupa
 sa:vac -> sk:zvuk {sa:s + sa:vac}, ru:zvuk
 sa:nara {na+ra} [arrives (ra) from water (na)] = en:man
 sa:nara -> sk:narodiť
