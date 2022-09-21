@@ -213,3 +213,10 @@ sk:trepať sa ~ es:trepar
 
 sa:drsh -> sk:držať 
 sa:srnGa -> sk:srnka
+
+sa:vicir -> sa:vivieka
+sa:vicir ~ sk:číry
+
+sa:car -> en:chariot
+es:coche ~ en:chariot
+es:coche ~ sk:koč
