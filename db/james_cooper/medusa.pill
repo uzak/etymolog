@@ -1,0 +1,18 @@
+// SRC https://www.facebook.com/groups/1520538148174445/posts/2988133658081546/
+
+gr:medo = rule, measure, take measures, protect
+gr:medo -> gr:medusa [one who protects, guards]
+gr:medusa -> Medusa
+
+sa:gr = to swallow, to devour, to eat
+sa:gr -> sa:garjana = roaring, growling
+
+sa:garjana -> Gorgon [hideous monster, one of the three was Medusa]
+Gorgon ~ Medusa
+
+gr:Andromeda {sa:andro + sa:mada} [she who rules (meda) over man (andros) ]
+sa:nara -> european:ner -> gr:aner, gr:andros
+sa:nara = man
+gr:andros = man
+sa:ma -> sa:mada = measure
+sa:mada -> gr:medo
