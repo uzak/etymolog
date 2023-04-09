@@ -1,0 +1,63 @@
+// SRC Comparative etymological Dictionary of classical Indo-European languages
+
+// a-      indicates the start of an action
+// a-      privative prefix
+// -a      nominal suffix 
+// -a      indicates the accomplishment or effectd of an action
+// i       continous motion, to go, to raise
+// u       statis, pernamence, stability, strength
+// r [ri]  to move toward, to reach, to go upward
+// 
+// k [ka]  cosmic, curvilienar, enveloping motion
+// g [ga]  winding, multi-directional, zig-zag motion
+// c [ca]  circular motion
+// j [ja]  straightforward motion
+// t [ta]  motion between two points
+// d [da]  light
+// n [na]  pater
+// p [pa]  purification
+// b [ba]  energy, vital force
+// m [ma]  limit
+// y [ya]  to go
+// r [ra]  to move toward, to arrive, to reach
+// l [la]  to combine in order "to hold" or "to free oneself from"
+// v [va]  separation
+// z [za], s [sa]  proximity, bond, resemblance, untion
+// h [ha]  displacement, pressure, push
+
+ie:a [indicates the start of an action]
+ie:k [curvilinear, enveloping motion]
+ie:ak {a+k} [start (a) of a curvilinear, enveloping motion (k)] = to round a point, to be pointed, to be sharp, to be on top, to sharpen
+
+ie:ak ->{a=a, k=k} sa:ak = to move tortuously, to move around a corner
+sa:ak -> sa:akati
+sa:ak -> sa:akta = driven
+
+
+
+
+
+// pie:k -> sa:k = curvilinear (motion)
+// pie:g -> sa:g = winding (motion), multi directional (motion), zig zag (motion)
+// pie:c -> sa:c = circular (motion)
+// pie:j -> sa:j = straightforward (motion), rectilinear (motion)
+// pie:t -> sa:t = motion between two points
+// 
+// pie:d -> sa:d = light
+// pie:n -> sa:n = water
+// pie:p -> sa:p = purification
+// pie:b -> sa:b = energy, vital force
+// pie:m -> sa:m = limit
+// pie:v -> sa:v = separation
+// pie:s -> sa:s = proximity, bond, resemblance, union
+// 
+// pie:y -> sa:y = to go
+// pie:r -> sa:r = to move toward, to arrive, to reach
+// pie:l -> sa:l = to hold, to free oneself from
+// pie:h -> sa:h = displacement, pressure, push
+// 
+// 
+// pie:a -> sa:a =[at the beginning] start of an action
+// pie:a -> sa:a =[at the end] accomplishment or effect of an action
+// pie:i -> sa:i = continuous motion, to go, to raise
+// pie:u -> sa:u = stasis, permanence, stability, strength

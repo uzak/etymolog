@@ -12,6 +12,7 @@ tokens = (
     'TOKEN',
     'PLUS',
     'SEP',
+    'PHONETICS',
     'COMMENT', 'META', 'LUNION', 'RUNION', # TODO Rename?
     'RELATED',
     'TAG',
@@ -54,6 +55,11 @@ def t_LANG(t):
 
 def t_COMMENT(t):
     r"\[.*?\]"
+    t.value = t.value[1:-1]
+    return t
+
+def t_PHONETICS(t):
+    r"\{(\w+=\w+\s*,?\s*)*(?<!,)\}"
     t.value = t.value[1:-1]
     return t
 

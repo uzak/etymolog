@@ -15,7 +15,7 @@ class Entity:
         if config.source:
             self.sources.add(config.source)
 
-    def comment(self, text):
+    def add_comment(self, text):
         if not text in self.comments:
             self.comments.add(text)
         return text
@@ -148,34 +148,39 @@ class RelationshipMeta(type):
 class Relationship(Entity, metaclass=RelationshipMeta):
     Bidirectional = True
 
-    def __init__(self, left, right):
+    def __init__(self, left, right, **kw):
         super().__init__()
         self.left = left
         self.right = right
+        self._process_kw(**kw)
+    
+    def _process_kw(self, **kw): 
+        pass
 
     @classmethod
-    def add(cls, left, right, comment=None):
+    def add(cls, left, right, **kw):
         if isinstance(right, Group):
             for r in right:                     # right is good; take all words
-                cls.add(left, r, comment=comment)
+                cls.add(left, r, **kw)
         elif isinstance(left, Group):
-            cls.add(left.content[-1], right, comment=comment)  # only last word from left
+            cls.add(left.content[-1], right, **kw)  # only last word from left
         else:
-            return cls._add(left, right, comment=comment)
+            return cls._add(left, right, **kw)
 
     @classmethod
-    def _add(cls, left, right, comment=None):
+    def _add(cls, left, right, **kw):
         """get Relationship if it exists, otherwise add"""
         assert right is not None, "Two relationships without a word in between?"
         obj = cls.get(left, right)
         key = (left.key(), right.key())
         if obj is None:
-            obj = cls(left, right)
+            obj = cls(left, right, **kw)
             cls.Table[key] = obj
             if cls.Bidirectional:
                 cls.Mirror[key] = obj
+        comment = kw.get('comment')
         if comment:
-            obj.comment(comment)
+            obj.add_comment(comment)
         return obj
 
     @classmethod
@@ -222,17 +227,32 @@ class Derived(Relationship):
     Bidirectional = False
     Symbol = "->"
 
-    def __init__(self, left: Word, right: Word):
-        super().__init__(left, right)
+    def __init__(self, left: Word, right: Word, **kw):
+        super().__init__(left, right, **kw)
         left.derives.add(self)
         right.derived_from.add(self)
+
+    def _process_kw(self, **kw):
+        phonetics = kw.get("phonetics")
+        result = {}
+        if phonetics:
+            tokens = phonetics.split(",")
+            for token in tokens:
+                k, v = [t.strip() for t in token.split("=")]
+                result[k] = v
+        self.phonetics = result
+    
+    def to_json(self):
+        json = super().to_json()
+        json['phonetics'] = self.phonetics
+        return json
 
 
 class Equals(Relationship):
     Symbol = "="
 
-    def __init__(self, left: Word, right: Word):
-        super().__init__(left, right)
+    def __init__(self, left: Word, right: Word, **kw):
+        super().__init__(left, right, **kw)
         left.equals.add(self)
         right.equals.add(self)
 
@@ -240,8 +260,8 @@ class Equals(Relationship):
 class Related(Relationship):
     Symbol = "~"
 
-    def __init__(self, left: Word, right: Word):
-        super().__init__(left, right)
+    def __init__(self, left: Word, right: Word, **kw):
+        super().__init__(left, right, **kw)
         left.related.add(self)
         right.related.add(self)
 

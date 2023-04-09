@@ -118,7 +118,7 @@ def p_relationship_word_rel_word(p):
 def p_expression_word_comment(p):
     'word : word COMMENT'
     word = p[1]
-    word.comment(p[2])
+    word.add_comment(p[2])
     p[0] = word
 
 
@@ -139,6 +139,11 @@ def p_expression_expr_rel_comment_expr(p):
         p[0] = model.Related.add(p[1], p[4], comment=comment)
     p[0] = p[4]
 
+def p_expression_expr_rel_phonetics_expr(p):
+    '''expression : expression DERIVE PHONETICS expression
+    '''
+    model.Derived.add(p[1], p[4], phonetics=p[3])
+    p[0] = p[4]
 
 # Unions
 
@@ -231,6 +236,7 @@ def t_eof(t):
 
 precedence = (
     ('left', 'EQUALS', 'RELATED', 'DERIVE'),
+    ('left', 'PHONETICS'),
     ('left', 'LUNION', 'RUNION'),
     ('left', 'COMMENT'),
     ('left', 'SEP'),

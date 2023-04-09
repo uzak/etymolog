@@ -191,6 +191,12 @@ class TestRelationships(TestCase):
             parser.yacc.parse("a ~ a")
 
 
+class TestPhonetics(TestCase):
+    def test_phonetics(self):
+        parser.yacc.parse("ie:ak ->{a=a, k=k} sa:ak = to move tortuously, to move around a corner")
+        rel = model.Derived.Table[("ie:ak", "sa:ak")]
+        assert rel.phonetics == {'a': 'a', 'k': 'k'}
+
 class TestComments(TestCase):
 
     def test_comment(self):
