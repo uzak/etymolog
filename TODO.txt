@@ -1,3 +1,6 @@
+* no default language  (e.g. for some old names)
+* `-` in names
+
 * grouping: group languages
 * if word part of a union (sa:bhas) - show derivations of unions too?
 * details (sa pur): have multiple comments in rels below each other
