@@ -241,3 +241,8 @@ sk:vietor ~ es:viento
 sa:chid -> en:shit [that which separates from the body]
 
 en:essence ~ de:Essen
+
+lat:virtus ~ sa:silam
+lat:vir -> lat:virtus
+lat:vir = man
+lat:virtus = valor, masculinity, character, worth
