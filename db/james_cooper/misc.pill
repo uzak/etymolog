@@ -3,3 +3,42 @@
 sa:priyakhanga {priya+khanga} -> Preah Khan [temple]
 sa:priya = pleasant
 sa:khanga = sword
+
+// SRC https://www.facebook.com/groups/1520538148174445/posts/3207245482837028
+
+sa:sva = ego, self, ones own
+se:sverige {sa:sva + sa:raja}
+
+sa:ku = bad, twisted, consorted
+sa:ku -> sa:kup = agitated
+sa:kup -> lat:cupid
+sa:kup -> sk:kypieť
+
+sa:plu = float
+sa:plu -> sa:pluta = overflowing
+sa:pluta -> en:Pluto [that which overflows in abudance]
+
+sa:plu -> sa:plava = boat, floating, small ship
+
+sa:ru {sa:r + sa:u} [reaching (r) with intensity (u)] = roar, cry
+sa:ru -> sa:rudh = red
+sa:ru -> sa:ruj = destroy
+sa:ru -> sa:rud = week
+sa:ru -> sa:rup [cause violent pain]
+sa:ru -> sa:rus = anger
+
+
+sa:yu = soup, broth
+sa:yusa = soup
+sa:yusa ->[Y and J are interchangeable] juice
+
+sa:su = press out
+sa:su -> sa:sus = dry
+sa:sus -> suck, soup, succulent
+
+sa:rasa = essence, love, nectar, elixir, aroma, sap, fluid, water
+sa:rasa -> sk:rosa, es:rosio
+
+sa:sthura = thick, solid, dense, bull
+sa:sthura -> lat:Taurus
+sa:sthura [strong like sthavira and sthira]

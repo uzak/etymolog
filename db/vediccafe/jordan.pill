@@ -1,0 +1,41 @@
+// SRC https://vediccafe.blogspot.com/2017/09/jordan-gets-its-name-from-river-jordan.html
+
+semitic:Arda -> Jordan  # River
+he:yorad -> semitic:Arda
+aramaic:yarden -> he:yorad
+aramaic:yarden = downflowing, that which descends
+akkadian:dannum = powerful
+
+sa:jharat = flowing down
+sa:jhara -> sa:jharat
+sa:jhara = sprinking, waterfall
+
+sa:dhunI -> akkadian:dannum
+sa:dhunI = river
+sa:dhuni = roaring, shaking
+sa:dhuni -> sk:dunieť
+
+gr:phalos = sa:linga
+gr:pietra -> Petra
+gr:pietra = stone
+sa:prastara = rock
+sa:prastara -> gr:pietra
+
+sa:rta = universal law, cosmic order
+sa:rta -> sa:riti = rites
+sa:rta -> aramaic:rekem = holy
+sa:rta -> syriac:rekem = holy
+
+sa:rich = praise, sacred verse
+
+sa:paksha = fortnight
+
+sa:sic = soak, irrigate
+sa:sic ~ sk:siaknúť
+
+sa:kudesh {sa:ku+sa:desh} = bad land, inhospitable land
+sa:kudesh -> aramaic:kadesh
+aramaic:kadesh -> he:kadesh
+he:kadesh = holy
+
+sa:bhurni = desert, distant

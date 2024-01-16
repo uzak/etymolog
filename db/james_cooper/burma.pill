@@ -1,0 +1,16 @@
+// SRC https://www.facebook.com/groups/1520538148174445/posts/3819005381661032
+
+sa:mandala -> Mandalay  # city
+sa:mandala = circle, globe, region
+
+// SRC https://www.facebook.com/groups/1520538148174445/posts/3819617161599854/
+
+sa:iravat {sa:ira + sa:vat} [that which resembles ( vat ) water ( ira ) as in a 'cloud'] -> Irawaddy # river
+
+// SRC https://www.facebook.com/groups/1520538148174445/posts/3820298308198406/
+
+sa:maganga {sa:ma+sa:ganga} -> Mekong   # river
+
+// SRC https://www.facebook.com/groups/1520538148174445/posts/3820951604799743/
+
+sa:brahmadesha {sa:brahma+sa:desha} -> Burma
