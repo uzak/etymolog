@@ -490,8 +490,10 @@ sa:kUpah ~ kúpať sa
 sa:drSNuh ~ drzý, drsný
 sa:drSNuh = en:fearless
 
-sa:pravediati = en:know or undertand right, en:communicate, en:make known
+sa:pravedyati {sa:pra+sa:vedyati} = en:know or undertand right, en:communicate, en:make known
 sa:pravedyati -> pravda, správny, pravý
+sa:pra -> sk:pre
+sa:praveda {pra+veda} = pravda
 
 sa:goSTha = en:cow shed
 sa:hrada = en:deep lake
