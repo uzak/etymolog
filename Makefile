@@ -21,4 +21,4 @@ db.json: $(PILLS)
 	cp db.json ${UI_DIR}/public/
 
 clean:
-	rm -v db.json
+	rm -fv db.json
