@@ -279,3 +279,25 @@ sa:naga ~ ru:noga, sk:noha
 en:money ~ en:many
 
 sa:ru -> sk:ručať
+
+sk:strom ~ en:star
+
+sa:str -> sk:strom
+sa:str -> en:star
+
+gr:Poseidon [earth-shaker]
+
+sk:klam ~ gr:Calypso
+sk:hlúpy {sa:ga+sa:lup} ~ sk:hluchý
+
+sa:pac -> sk:páčiť, sk:piecť, sk:peklo
+sa:pac = en:cook, en:bake
+
+sa:krshna ~ sk:krásny
+sa:kr -> sa:krti -> sa:kirti = creation
+sa:krti = action
+sa:kirti -> sk:krásny
+
+sk:priestor {pre+stvorenie}
+
+sk:čas {sa:ca + sa:s} [that which connects (s) all around (ca) ]
