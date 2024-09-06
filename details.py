@@ -183,8 +183,11 @@ if __name__ == '__main__':
     else:
         lang = config.default_lang
         word = args.word
-    w = model.World.lang(lang).get_word(word)
-    if w:
-        pretty_print(w, incl_comments=not args.sc)
-    else:
+
+    print("XXX", word)
+
+    words = model.World.lang(lang).get_words(word)
+    if not words:
         print(f"`{lang}:{word}` not found")
+    for w in words:
+        pretty_print(w, incl_comments=not args.sc)

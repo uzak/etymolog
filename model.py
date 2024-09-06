@@ -5,6 +5,7 @@
 Object Model for the etymology project
 """
 
+import re
 import config
 
 
@@ -47,6 +48,10 @@ class Word(Entity):
 
     def key(self):
         return f"{self.lang.name}:{self.value}"
+
+    def label(self):
+        value = re.sub(r'\d+$', '', self.value)
+        return f"{self.lang.name}:{value}"
 
     def as_str(self, comments=True, unions=True, tags=False):
         _comments = ""
@@ -263,6 +268,20 @@ class World:
 
 class Language:
 
+    TranslationTable = {
+        'gr': {
+            'A': 'á',
+            'O': 'ó',
+            'Y': 'ý',
+        },
+        'sa': {
+        },
+        'sk': {
+            'T': 'ť',
+            'A': 'á',
+        }
+    }
+
     def __init__(self, name):
         self.name = name
         self.words = {}
@@ -270,7 +289,13 @@ class Language:
     def __iter__(self):
         return iter(self.words.values())
 
+    def translate(self, word):
+        translation_dict = Language.TranslationTable.get(self.name, {})
+        return ''.join([translation_dict.get(char, char) for char in word])
+
+
     def add_word(self, value):
+        value = self.translate(value)
         if value.lower() not in self.words:
             word = Word(value, self)
             self.words[value.lower()] = word
@@ -287,6 +312,15 @@ class Language:
         if word and case_sensitive and value != word.value:
             return
         return word
+
+    def get_words(self, value, case_sensitive=False):
+        # only match words that start with value and optionally continue
+        # with a number
+        words = [word for (key, word) in self.words.items() if \
+            key.startswith(value) and key[len(value):].isdigit()]
+        if case_sensitive:
+            words = filter(lambda w: value != w.value, words)
+        return list(words)
 
     def __eq__(self, other):
         return self.name == other.name
