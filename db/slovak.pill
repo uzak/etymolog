@@ -520,3 +520,7 @@ sa:nama ~ sa:tyaga
 sa:tyAga = en:relinquishing, en:sacrifice, en:resignation, en:renunciation, en:divorce
 sa:nama -> sk:námaha
 sa:vac ~ sa:nama
+
+sa:spat {sk:s+sa:pa}
+
+sa:han -> sk:hynuť
