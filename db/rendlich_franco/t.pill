@@ -1,80 +1,260 @@
 // SRC Comparative etymological Dictionary of classical Indo-European languages
 // LANG en
 
-pie:t [motion between two points]
+ie:t [motion between two points]
 
 de:Gott [moving (gA) light (d/t)]
 god [moving (gA) light (d/t)]
 
-pie:at [to move from one point to another] = to go, to roam, to move freely
-pie:athar {at+har} [that is happy (har) to move freely (at)] = fire
+ie:at [to move from one point to another] = to go, to roam, to move freely
+ie:athar {at+har} [that is happy (har) to move freely (at)] = fire
 
-pie:at -> sa:ati = to overstep, at the top of
-pie:at -> sa:atithi = guest
-pie:at -> sa:athari [moves while trembling (at)] = flame
+ie:at -> sa:ati = to overstep, at the top of
+ie:at -> sa:atithi = guest
+ie:at -> sa:athari [moves while trembling (at)] = flame
 
-pie:at -> lat:atrium = entrance area, atrium
+ie:at -> lat:atrium = entrance area, atrium
 
-pie:Atman {at+man} [measure (m) of the vital breath of cosmic waters (an) that permeate (at) the universe] [the free movement (at) of human thought (man) bound for union with brahman] [spiritual essence of life] [principle of life] = individual conscience, person
+ie:Atman {at+man} [measure (m) of the vital breath of cosmic waters (an) that permeate (at) the universe] [the free movement (at) of human thought (man) bound for union with brahman] [spiritual essence of life] [principle of life] = individual conscience, person
 
-pie:Atman -> sa:Atman = the inner self, the individual soul, spiritual reality of the ego, conscience of the divine, the infinitesimal part of the ternal and the divine that is within every man
-pie:Atman -> gr:atmIs = steam, vapor
-pie:Atman -> gr:atmos = smoke
-pie:Atman -> gr:autmE = breath
+ie:Atman -> sa:Atman = the inner self, the individual soul, spiritual reality of the ego, conscience of the divine, the infinitesimal part of the ternal and the divine that is within every man
+ie:Atman -> gr:atmIs = steam, vapor
+ie:Atman -> gr:atmos = smoke
+ie:Atman -> gr:autmE = breath
 gr:autmE ~ de:atmen
 
-pie:tak {t+ak} [to turn (ak) between two points (t)] [to go quickly] = to hurry, to run
-pie:tak -> gr:takhYnO = to make quick, to hasten, to urge on
-pie:tak -> gr:tAkhos = swiftness, speed, quicknes
+ie:tak {t+ak} [to turn (ak) between two points (t)] [to go quickly] = to hurry, to run
+ie:tak -> gr:takhYnO = to make quick, to hasten, to urge on
+ie:tak -> gr:tAkhos = swiftness, speed, quicknes
 
 
-pie:tac {t+ac} [to move in a circle (ac) between two points (t)] to contract
-pie:tac -> sa:tanakti = to contract
+ie:tac {t+ac} [to move in a circle (ac) between two points (t)] = to contract
+ie:tac -> sa:tanakti = to contract
 
-pie:takS {t+akS} [to move in several directions (akS) between two points] = to carve, to chisel, to mold, to create, to form
-pie:takS -> gr:tEktOn = woodworker, carpenter
-pie:takS -> gr:tEkhnE = art, skill, craft
+ie:takS {t+akS} [to move in several directions (akS) between two points] = to carve, to chisel, to mold, to create, to form
+ie:takS -> gr:tEktOn = woodworker, carpenter
+ie:takS -> gr:tEkhnE = art, skill, craft
 gr:tEkhnE -> gr:tekhnikOs = artistic, skillful
-pie:takS -> gr:syntaksis = a putting together in order
-pie:takS -> lat:texo = to weave
-pie:takS -> lat:tela [that which is woven] = web
-pie:takS -> lat:textilis = woven, textile
-pie:takS -> lat:textus[intertwining of words, ideas, feelings] = web, texture, text
-pie:takS -> lat:trama = weft, warp
+ie:takS -> gr:syntaksis = a putting together in order
+ie:takS -> lat:texo = to weave
+ie:takS -> lat:tela [that which is woven] = web
+ie:takS -> lat:textilis = woven, textile
+ie:takS -> lat:textus[intertwining of words, ideas, feelings] = web, texture, text
+ie:takS -> lat:trama = weft, warp
 
 
-pie:tan {t+an} [to move from one point to another (t) with a movement of extension and expansion typical of breathing (am) and blowing (an)] = to stretch, to extend, to spread out, to resound
-pie:tan -> sa:tantra = loom, warp, doctrine
-pie:tan -> sa:tantra [fosters (tra) the expansion (tan) of cosncience] = theory
-pie:tan -> gr:tEnOn = sinew, tendon
-pie:tan -> gr:tEtanos = stretching, tension
-pie:tan -> gr:tOnos [that which strains] = tone
-pie:tan -> lat:attentus {attentus} = attentive
-pie:tan -> lat:intentus {in+tentus} = tense, intent
-pie:tan -> lat:tenebrae = darkness, obscurity
+ie:tan {t+an} [to move from one point to another (t) with a movement of extension and expansion typical of breathing (am) and blowing (an)] = to stretch, to extend, to spread out, to resound
+ie:tan -> sa:tantra = loom, warp, doctrine
+ie:tan -> sa:tantra [fosters (tra) the expansion (tan) of cosncience] = theory
+ie:tan -> gr:tEnOn = sinew, tendon
+ie:tan -> gr:tEtanos = stretching, tension
+ie:tan -> gr:tOnos [that which strains] = tone
+ie:tan -> lat:attentus {at+tentus} = attentive
+ie:tan -> lat:intentus {in+tentus} = tense, intent
+ie:tan -> lat:tenebrae = darkness, obscurity
 lat:tenebrae ~ sa:tantra
 lat:tenebrae ~ gr:tOnos
 
-pie:tap [to purify (p) from one extreme to another (t)] [to be hot] = to heat, to burn
-pie:tap -> sa:tapati = to give out heat, to be hot, to make warm
+ie:tap [to purify (p) from one extreme to another (t)] [to be hot] = to heat, to burn
+ie:tap -> sa:tapati = to give out heat, to be hot, to make warm
 sa:tapati -> cz:topiT, sk:tApaT
-pie:tap -> lat:tepeo = to be lukewarm, to be tepid
+ie:tap -> lat:tepeo = to be lukewarm, to be tepid
 
-pie:tam [measure (m) of the motion between two points (t)] [marked-off (carved-out) space] [measure (m) of the motion of light (d/t) i.e. time] = to divide, to cut
-pie:tam -> sa:tamas = darkness, gloom
-pie:tam -> sk:temno, sk:temnota
-pie:tam -> gr:tEmnO = to cut, to cut in pieces, to wound
-pie:tam -> gr:tEmenos [a piece of land sacred to a god]
-pie:tam -> gr:Atomos = uncut, indivisible
+ie:tam [measure (m) of the motion between two points (t)] [marked-off (carved-out) space] [measure (m) of the motion of light (d/t) i.e. time] = to divide, to cut
+ie:tam -> sa:tamas = darkness, gloom
+ie:tam -> sk:temno, sk:temnota
+ie:tam -> gr:tEmnO = to cut, to cut in pieces, to wound
+ie:tam -> gr:tEmenos [a piece of land sacred to a god]
+ie:tam -> gr:Atomos = uncut, indivisible
 gr:Atomos -> sk:atOm
-pie:tam -> gr:sYntomos = cut off, concise, brief
-pie:tam -> gr:tOmos = cut up
-pie:tam -> lat:aestimo [to set the price or value of] = to estimate
-pie:tam -> lat:existimo = appreciate, to esteem
-pie:tam -> lat:tempero = to mix, to blend
-pie:tam -> lat:templum [a consecrated piece of ground] = sanctuary
+ie:tam -> gr:sYntomos = cut off, concise, brief
+ie:tam -> gr:tOmos = cut up
+ie:tam -> lat:aestimo [to set the price or value of] = to estimate
+ie:tam -> lat:existimo = appreciate, to esteem
+ie:tam -> lat:tempero = to mix, to blend
+ie:tam -> lat:templum [a consecrated piece of ground] = sanctuary
 lat:templum ~ gr:tEmenos
-pie:tam -> lat:contemplor [to consider attentively]
-pie:tam -> lat:tempus = division, section
-pie:tam -> lat:insectum [from lat:seco - "to cut", "to divide" which came from ie:chid] = insect
+ie:tam -> lat:contemplor [to consider attentively]
+ie:tam -> lat:tempus = division, section
+ie:tam -> lat:insectum [from lat:seco - "to cut", "to divide" which came from ie:chid] = insect
 
+ie:tij [straightforward motion (j) with continuity (i) from one point to another (t)] [to make sharp] = to sharpen, to sting
+ie:tij -> sa:tigma = pointed, sharp, pungent
+ie:tij -> sa:teja = sharpness
+ie:tij -> sa:tejas = top of the flame, sharp edge
+ie:tij -> gr:stIzO = to prick, to puncture
+ie:tij -> gr:stIgma [prick or puncture of a pointed instrument] = mark, spot
+ie:tij -> gr:stigmatIas [one who has been branded]
+gr:stigmatIas -> sk:stigmatizovanY
+ie:tij -> gr:katastIzo = to cover
+ie:tij -> gr:pikrOs = sharp, pungent, bitter
+ie:tij -> lat:stingo = to sting, to brand
+ie:tij -> lat:stilus [Roman pointed iron to write with] = pen
+ie:tij -> lat:stimulus [a goad used for driving cattle]
+lat:stimulus -> sk:stimul
+ie:tij -> lat:instigo = to goad, to incite, to stimulate
+ie:tij -> lat:distinguo = to separate, to divide up, to distinguish
+
+ie:tim [limit (m) of continous movement between two points (ti)] = to stay calm, to stop
+ie:tim -> sa:timita = quiet, steady, fixed
+ie:tim -> sa:timiea = dark, gloomy
+ie:tim -> lat:timidus = timit, fearful
+
+ie:tu [intense movement (u) between two points (t)] = to move with strength, to be strong
+ie:tu -> sa:tu -> sa:tavIti = to be strong, to have authority
+sa:tavIti ~ sk:taviT
+sa:tavas = strong, energetic
+ie:tu -> lat:tueor = to look at, to behold, to protect
+ie:tu -> lat:tutor = to watch over, to support, to sprotect
+ie:tu -> lat:totus = whole, complete entire
+ie:tu -> lat:tumor = swelling
+
+ie:tuj [to move straight forward (j) with strength (u) between two points (t)] = to push, to incite, to super, to strike
+ie:tuJj [to move from one point to another (t) straightforwardly (j), with strength (u)] = to push, to strike
+ie:tuj -> sa:tuj -> sa:tujati = to push, to strike, to hit, to promote
+ie:tuJj -> sa:tuJj -> sa:tuJjayati = to hurt
+ie:tuj -> sa:tuj = blow, impulse
+ie:tuj -> sa:tuja = stroke of lightning, thunderbolt
+ie:tuj -> gr:tYkhE = good fortune, luck, chance, by chance
+
+ie:tud [to efect a strong movement between two points (tu)] = to strike, to push
+ie:tup [to efect a strong movement between two points (tu)] = to strike, to push
+
+ie:tud -> sa:tud -> sa:tudati = to push, to strike
+ie:tud -> sa:tund -> sa:tundati = to be actdive
+ie:tud -> gr:typE = blow, wound
+ie:tud -> gr:tYmma = blow, wound
+ie:tud -> gr:typAs = hammer
+gr:typAs ~ sk:tYpek
+ie:tud -> gr:tYpos = blow, the impress of a seal
+ie:tud -> lat:stupeo = to be struck, to suffer a blow, to be astonished
+ie:tud -> lat:stupidus [suffered a blow to his mental capacity] = stupid
+ie:tup -> sk:tupY
+lat:stupidus ~ sk:tupY
+
+ie:tuR [to move (R/r/l) with strengh (u) from one point to another (t)] = to raise, to be turgid, to harden
+
+ie:tuR -> sa:tul -> sa:tolyati = to lift up, to rise, to weight
+ie:tuR -> sa:tulA = balance, weight
+ie:tuR -> gr:tAlanton [that supports] = scalepan, weight, monetary value, talent
+ie:tuR -> gr:tEllO = to arise, to get up
+ie:tuR -> gr:Atlas [that supports]
+ie:tuR -> gr:Atolmos = cowardly
+ie:tuR -> gr:polYtlas [epithet attributed to Ulysses] = from many trials
+ie:tuR -> gr:tyrOs [hardened milk: moved with force, hardened, concentrated] = cheese
+ie:tuR -> gr:sAtyros = Satyr
+ie:tuR -> lat:talentum [that which has weight] [from a monetary value the meaning evolved into one with intellectual and spiritual value - see the evangelical parable] = talent
+lat:taletum -> sk:talent
+ie:tuR -> lat:tolerans [that bears] = resistant, tolerant
+
+ie:tR, ie:tRR [to move from one point to get (r) to another (t)] = to pierce, to go beyond, to go to the hereafter, to cross, to slice through, to prick
+ie:tRR -> ie:tar, ie:tra, ie:trA
+ie:tR -> sa:tR -> sa:tarati = to pass across, to cross over
+sa:tarati ~ sk:tAraT
+ie:tR -> sa:tara = crossing, passing
+ie:tR -> sa:tIra = shore, bank
+ie:tR -> gr:tErma = endpoint, ending
+ie:tR -> gr:torOs = penetrating
+ie:tR -> gr:tEras [extraordinary sign] = prodigy, portent, flame, light
+ie:tR -> lat:traho = to draw, to tail, to pull along
+ie:tR -> lat:trans = over across
+ie:tR -> lat:trado = to give up, to pass over
+lat:trado ->[originally "to betray" meant "to hand over to the enemy"] traitor
+ie:tR -> lat:traduco = to carry over, to lead over, to bring accros
+ie:tR -> lat:traditio = a going over
+ie:tR -> lat:termen = limit, boundary
+ie:tR -> lat:terminus = limit, boundary
+
+ie:tRda ~ ie:tara 
+ie:tRda [to go (R) from one part to another (t)] = to slice through ,to prick, to rub, to consume
+ie:tRda -> sa:tard -> sa:tardati = to injure, to kill
+ie:tRda -> gr:trEtOs = pierced
+ie:tRda -> gr:trEma = bored
+gr:trEma ~ sk:trEma
+ie:tRda -> gr:trypAO = to bore, to pierce through
+ie:tRda -> gr:traUma = wound
+gr:traUma -> sk:trauma
+ie:tRda -> lat:tritus = worn, trite
+
+ie:tRp {tR + p} [to get across (tR) purification (p)] = to be satisfied, to feel pleasure
+ie:tRp -> sa:tRp -> sa:trPyati = to be pleased with, to be satisfied
+sa:trPyati ~ sk:tRpnuT
+
+ie:tRS [to move from one point to get connected (S) to another point to be reached (tR)] = to desire, to be thirsty for, to be without
+ie:tRS -> sa:tRSA = thirst, desire
+ie:tRS -> sa:tRSu = greedy
+ie:tRS -> lat:torreo = to burn
+ie:tRS -> lat:terra [that which is dry] = earth, land
+ie:tRS -> lat:torridus = parched, burnt, dry
+
+ie:tRh [to move from one point to another (tR) by deviating (h)] = to turn ,to deviate, to overturn
+ie:tRh -> sa:tRh -> sa:tRhnati = to crush, to bruise
+ie:tRh -> sa:stRh -> sa:stRhnati = to injure, to harm
+ie:tRh -> sk:trhaT
+ie:tRh -> gr:strEphO = to wist, to turn, to bend, tu turn about, to turn over, to revolve
+ie:tRh -> gr:strophE = turning, turning round, twist
+ie:tRh -> gr:katastrophE = overturning, sudden turn, plot turn, catastrophe
+
+ie:tyaj {ti+aj} [straightfowrad motion(aj) from one point to another (ti)] = to abandon, to renounce
+ie:tyaj -> sa:tyaj -> sa:tyajati = to have, to abandon, to quit
+
+ie:trak ->[the 'p' is an enlargemnt that may conciel ancient 'k'] ie:trap
+ie:trap {tr+ap} [to move (r) between two points (t) with curvilinear motion (ap/ak)]
+ie:trap -> sa:trap -> sa:trapate = to become perplexed, to be ashamed
+ie:trap -> sa:trapA = perplexity, shame, bashfulness
+ie:trap -> sk:trApny
+ie:trap -> gr:trEpO = to turn, to turn away, to divert, to put to flight
+gr:trEpO ~ sk:trepotaT
+ie:trap -> gr:tropE = turn, turning about, flight
+ie:trap -> gr:trOpos = turn
+ie:trap -> gr:entrEpO = tu tornabout, to make ashamed, to feel shame
+ie:trap -> gr:trEkhO = to run, to run a race
+gr:trEkhO = trekking
+ie:trap -> gr:trokhOs = wheel
+ie:trap -> gr:Atraktos = spindle
+gr:Atraktos ~ attractive
+ie:trap -> lat:torqueo = to twist, to wind, to wrench
+ie:trap -> lat:torquis [that which is twisted or curved] = necklace, ring
+ie:trap -> lat:turpis = ugly, foul, deformed, shameful
+
+ie:tar = ie:ter = ie:tras [to move (r) from one point to another (t)] = to tremble, to be terrorized, to be troubled
+ie:tras -> sa:tras -> sa:trasati = to quiver, to trembe, to frighten, to scare
+ie:tras -> sk:triasT
+ie:tras -> sa:trasa [the movement of the human body taken as a whole] = quivering
+ie:ter -> gr:trEmO = to tremble, to quake, to queer
+ie:tar -> gr:tarAssO = to stir, to disturb, to tremble
+ie:ter -> gr:brEmO = to roar, to clash, to clamor
+
+ie:ter -> lat:tremo = to tremble, to quake
+ie:ter -> lat:terreo = to tremble, to frithen, to terrify
+ie:ter -> lat:turbo = to disturb, to upset, to trouble
+ie:ter -> lat:fremo = to roar, to murmur, to growl
+lat:tremo -> lat:tremor = trembling, quaking, tremor
+lat:terreo -> lat:terror = fright, terror
+lat:terror -> sk:terror
+ie:ter -> lat:trepidus = anxious, agitated
+ie:ter -> lat:tristis = sad, sorrowful
+lat:fremo -> lat:fremor = roaring, murmuring
+ie:tar -> gr:brOmos = quiver, boom
+ie:tar -> gr:brontE [any loud noise or roaring]
+
+ie:trA [to reach (R/RR/rA) a point by leaving from another (t)] = to bring to safety, to save
+
+ie:trA -> sa:trA -> sa:trAyate = to save, to protect
+sa:trA -> sk:trajekt ~ sa:trAyate
+ie:trA -> sa:trA = protector, defender
+sa:Mitra [who protects (tra) borders (mi)] [god] ~[becomes later] lat:Terminus
+ie:tra [nominal suffix that means to protect]
+sa:Mitra ~ ie:tra
+
+ie:tvar [to go beyond (tR/tar) detaching oneself from (v)] = to go quickly, to hurry
+ie:tvar -> sa:tvar -> sa:tvarate = to hurry, to make haste, to move with speed
+
+ie:tviS [to move between two points (t) in the sense of moving away (v) and getting near (S)] = to agitate, to shake, to be perplexed
+ie:tviS -> sa:tviS -> sa:tveSati = to be excited, to be agitated
+ie:tviS -> sa:tviS = violent, agitation, fury, perplexity
+ie:tviS -> sa:tviSi = vehemence, impetuosity
+ie:tviS -> sa:tveSas = energy, impulse
+
+ie:tsR {t + sR} [to flow (sR) from one point to another (t)] = to drag
+ie:tsR -> sa:tsaru = crawling animal

@@ -4,24 +4,24 @@
 sa:Punarvasu [constellation ruled by the goddess Aditi (pre Orion period 8000 - 5000 BC)]
 sa:Aditi ~ sa:Punarvasu
 
-pie:i -> lat:eo = to go
-pie:r -> pie:mr = to die
-pie:mr -> lat:mori
-pie:mr {m+r} [reaching (r) the limit (m)] = to die
+ie:i -> lat:eo = to go
+ie:r -> ie:mr = to die
+ie:mr -> lat:mori
+ie:mr {m+r} [reaching (r) the limit (m)] = to die
 
-pie:ak {a+k} = to round, to move by turning
-pie:ka {k+a} = water, light, happiness, moves in the celestial vault
-pie:ag {a+g} [to move in a winding fashion] = to zigzag
-pie:gA {g+a} [to move in every direction] = to go, to walk
-pie:ac {a+c} = to move in a circle
-pie:ca {c+a} = round, rotund
-pie:aj {a+j} [to move straight forward] = to guide
-pie:ji {j+i} [to move straight forward into the lines of enemy] = to win, to conquer
-pie:at {a+t} [to move between two points] = to wander
-pie:tR {t+R} [to go from one side to another] = to cross
+ie:ak {a+k} = to round, to move by turning
+ie:ka {k+a} = water, light, happiness, moves in the celestial vault
+ie:ag {a+g} [to move in a winding fashion] = to zigzag
+ie:gA {g+a} [to move in every direction] = to go, to walk
+ie:ac {a+c} = to move in a circle
+ie:ca {c+a} = round, rotund
+ie:aj {a+j} [to move straight forward] = to guide
+ie:ji {j+i} [to move straight forward into the lines of enemy] = to win, to conquer
+ie:at {a+t} [to move between two points] = to wander
+ie:tR {t+R} [to go from one side to another] = to cross
 
-pie:n = water
-pie:d = light
+ie:n = water
+ie:d = light
 
 sa:ad = food
 sa:sad {s+ad} [placing oneself near (s) food (ad)]
@@ -208,7 +208,7 @@ sa:hiranyagarbha {hira+n+ya+garbha}
 sa:hr -> sa:hira ~ sa:hiri, sa:hari
 sa:hr = to take, to bear
 
-pie:nya [the water (n) which it moves in (ya)] {n+ya}
+ie:nya [the water (n) which it moves in (ya)] {n+ya}
 
 sa:bhr -> sa:brhatIr = mighty
 sa:bhr = to grow, to enlarge, to expand
@@ -259,7 +259,7 @@ sa:an -> lat:animus {sa:an+imus} = soul
 sa:jan -> lat:geno = to generate
 sa:jna -> gr:gno = to know
 
-pie:r -> lat:orior = to rise, to be born
+ie:r -> lat:orior = to rise, to be born
 lat:orior -> origo = origin, source
 
 // VII NapAt "grandson" and naptu "Neptune"
@@ -288,4 +288,4 @@ avesta:napta = moist
 // NOSRC
 
 sa:hari = sa:Vishnu
-pie:i -> sk:ísť
+ie:i -> sk:ísť
