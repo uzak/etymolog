@@ -103,7 +103,7 @@ def p_relationship_word_rel_word(p):
     if p[3] is None:
         raise ValueError("right side of relationship yields ``None``")
     if p[1] == p[3]:
-        raise ValueError("self-referencing relationship is not allowed")
+        raise ValueError(f"self-referencing relationship is not allowed: {p[3]}")
     if p[2] == "->":
         model.Derived.add(p[1], p[3])
         p[0] = p[3]

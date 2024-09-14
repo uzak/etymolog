@@ -20,5 +20,9 @@ db.json: $(PILLS)
 	./dump.py -j > db.json
 	cp db.json ${UI_DIR}/public/
 
+count_slovak_words:
+	grep -c 'sk:' db/rendlich_franco/* | cut -d':' -f2 | paste -sd+ - | bc
+
+
 clean:
 	rm -fv db.json

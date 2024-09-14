@@ -171,7 +171,8 @@ class Relationship(Entity, metaclass=RelationshipMeta):
     @classmethod
     def _add(cls, left, right, comment=None):
         """get Relationship if it exists, otherwise add"""
-        assert right is not None, "Two relationships without a word in between?"
+        msg = f"Two relationships without a word in between? {left} - {right}"
+        assert right is not None, msg
         obj = cls.get(left, right)
         key = (left.key(), right.key())
         if obj is None:
@@ -278,6 +279,13 @@ class Language:
         },
         'sk': {
             'T': 'ť',
+            'L': 'ľ',
+            'S': 'š',
+            'C': 'č',
+            'Z': 'ž',
+            'Y': 'ý',
+            'I': 'í',
+            'E': 'é',
             'A': 'á',
         }
     }
@@ -316,11 +324,15 @@ class Language:
     def get_words(self, value, case_sensitive=False):
         # only match words that start with value and optionally continue
         # with a number
-        words = [word for (key, word) in self.words.items() if \
-            key.startswith(value) and key[len(value):].isdigit()]
+        matches = []
+        for key, word in self.words.items():
+            if key.startswith(value):
+                postfix = key[len(value):]
+                if not postfix or postfix.isdigit():
+                    matches.append(word)
         if case_sensitive:
-            words = filter(lambda w: value != w.value, words)
-        return list(words)
+            matches = filter(lambda w: value != w.value, matches)
+        return list(matches)
 
     def __eq__(self, other):
         return self.name == other.name

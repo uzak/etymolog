@@ -1,5 +1,6 @@
 * no default language  (e.g. for some old names)
-* `-` in names
+* `-` in names should be OK
+* each languages decides upon lowercase/uppercase
 
 * grouping: group languages
 * if word part of a union (sa:bhas) - show derivations of unions too?
