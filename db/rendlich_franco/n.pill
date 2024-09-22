@@ -139,7 +139,7 @@ ie:naz-> lat:neco = to kill, to slay
 ie:naz-> lat:nex = death, violent death, murder
 ie:naz-> lat:noceo = to hurt, to injure, to harm
 ie:naz-> lat:nocivus = hurtful
-ie:naz-> lat:innocens = harmless, innoect
+ie:naz-> lat:innocens = harmless, innocent
 ie:naz-> lat:nostalgia [an aching desire to return] = home sickness
 
 ie:nah [to not (na) be moved (h)] = to connect, to tie, to fasten, to knot, to tighten
@@ -213,6 +213,8 @@ ie:nI -> sa:netra = leader, eye
 ie:nI -> sa:nIla = dark vblue, dark green, black
 ie:nI -> lat:niger = dark colored, black
 ie:nI -> lat:nitor = brilliance, splendor
+
+ie:nI ~[follow (I) the flow of water (n)] sk:vodiC
 
 ie:nI -> ie:nIk {nI+k} [to lead (nI) forward all around (k)] = to win
 ie:nIk -> gr:nikAO = to conquer, to win
