@@ -36,6 +36,7 @@ ie:tac -> sa:tanakti = to contract
 ie:takS {t+akS} [to move in several directions (akS) between two points] = to carve, to chisel, to mold, to create, to form
 ie:takS -> gr:tEktOn = woodworker, carpenter
 ie:takS -> gr:tEkhnE = art, skill, craft
+gr:tEkhnE -> sk:technika
 gr:tEkhnE -> gr:tekhnikOs = artistic, skillful
 ie:takS -> gr:syntaksis = a putting together in order
 ie:takS -> lat:texo = to weave
