@@ -1,4 +1,512 @@
 // SRC Comparative etymological Dictionary of classical Indo-European languages
 // LANG en
 
-ie:r [to move toward] [to arrive] [to reach]
+ie:r [to move toward] [to arrive] [to reach] [describes three main paths by which, with impetuous force (u) the stimuli of the outer world are reached (r): aural, visual, kniesthetic]
+ie:RS = to flow
+ie:RS -> gr:ArsEn [flowing of the seed that impregnates the female] = male
+ie:RS -> gr:RSabha {RSa+bha} [appears (bha) s whoever causes to flow (RSa) - referring to "flowing" of the seed that impregnates the female]
+
+ie:R ~ ie:ar ~ ie:ra [to move forward] [to go upward] = to reach, to arive, to obtain, to prepare
+
+ie:R -> ie:ar -> sa:ar
+sa:ar -> sa:arth -> sa:arthyate = to strive, to obtain, to desire, to ask for
+sa:arth -> sa:artha = aim, purpose, cause, reason, utility, price
+arthzAstra {artha+zastra} [a book dealing with ptracital and life and political government]
+sa:ar -> sa:arya [that moves (ar) in order to advance and obtain supremacy (ya)] = master, lord
+
+ie:ar -> gr:arEskO = to make good, to gratify, to please
+gr:arEskO -> gr:Areskos = compaisant
+ie:ar -> gr:aretE = excellence, prowess, valour
+ie:ar -> gr:areIon = better, stronger
+ie:ar -> gr:Aristos [superlative of agathOs] = the best, the noblest, the strongest, most excellently
+
+ie:ar -> lat:ars = skill, talent, art
+lat:ars -> lat:artifex = skilled, clever, craftsman, sk:majster
+
+ie:R ->[motion in harmony with that is right and ordered in nature] sa:R
+sa:R -> sa:Rta = proper, right, sacred action, divine law
+sa:R -> sa:Rtu [time appointed for any action] = right time, season
+sa:R -> sa:Rtvij {Rtu+yaj} [he who presents oblations to the gods (yaj) at the right time (Rtu)] = Vedic priest
+
+ie:R ->[motion in harmony with that is right and ordered in nature] gr:ar
+gr:ar -> gr:athmOs = bond, friendship
+gr:ar -> gr:Arthmios = united, concord
+gr:ar -> gr:arthmEO [to be joined trogether]
+gr:ar -> gr:armEnia [any tools or implements]
+gr:ar -> gr:Armenos [fitting well]
+
+ie:R ->[motion in harmony with that is right and ordered in nature] lat:R -> lat:ritus [a religious custom] = ceremony, rite
+
+ie:R ->[to move in order to operate, produce or work] ie:ar 
+ie:ar -> sa:arpaNa = procuring, fixing
+ie:ar -> sa:arpita = fixed, inserted
+ier:ar -> gr:arOO = to plow, to till, to sow
+gr:arOO ~ sk:oraT
+gr:arOO -> gr:ArOma = plowed land
+ie:ar -> lat:aro = to plow
+
+// to move in order to connect, to bend or to perform a duty
+ie:R -> sa:R -> sa:RNoti = to meet with, to insert, to fix into
+ie:R -> sa:Ir -> sa:Irma = arm
+ie:R -> sa:ar -> sa:ara = swift, speedy, the radius of a wheel
+sa:ar -> sa:arNa = wave, flood, stream
+sa:ar -> sa:arNava [the foaming sea] = ocean
+sa:ar -> sa:arNas = stream
+sa:ar -> sa:ratha = chariot
+sa:ar -> sa:RNa = fugitive
+sa:ar -> sa:anRNa = innocent
+
+ie:R -> gr:Arma = chariot
+ie:R -> gr:Arthron = joint, limb
+gr:Arthron -> gr:arthrItis = arthritis
+ie:R -> gr:armonIa [fitting together] = concord, harmony, agreement
+ie:R -> lat:artus = joints, limbs
+ie:R -> lat:armus = shoulder
+ie:R -> lat:arma = armor, military bower, war
+ie:R -> lat:articulus = articulation
+
+// to move toward the top, to rise, to get up, to lift
+ie:R -> sa:Ir -> sa:Irte = to move, to rise, to arise from
+ie:R -> sa:Urdhva = rising, erected, upward
+sa:Urdhva ~ sa:vRdh
+ie:R -> sa:RSva = elevated, high
+ie:R -> sa:uras = chest, breast
+ie:R -> gr:aIrO = to raise, to raise up, to lift up
+ie:R -> gr:aeIrO = to lift, to raise up
+ie:R -> gr:orthOs [standing erect] = straight
+ie:R -> gr:orInO = to raise, to excite
+ie:R -> gr:Ornis [that which rises in flight] = bird, cock
+ie:R -> gr:Oros [that which is elevated] = mountain
+
+ie:R -> lat:erigo = to set up, to lift up, to erect
+ie:R -> lat:erectus = erected, set up
+ie:R -> lat:alo = to nourish, to cause to grow
+ie:al -> lat:albeo [in which luminosity grows] = to be white, to whiten
+lat:albeo -> lat:alba = white attire
+lat:albeo -> lat:album = white table
+ie:bhA -> gr:alphOs [phOs dedires from bhA] = white stain
+ie:R -> lat:altus = grown, tall
+ie:R -> lat:ortus [rising of the heavenly bodies] = origin, source
+ie:R -> lat:orior = to arise
+ie:R -> lat:alimentum [that nourishes] = food
+ie:R -> lat:alumnus [that is brought up] = student
+ie:R -> lat:adolesco = to grow
+ie:R -> lat:adulescens [that is growing] = adolescent
+ie:R -> lat:adultus = grown
+ie:R -> sa:ir -> sa:iras = ill will, hostility
+ie:R -> sa:Ir -> sa:IrSu = envious, jeleaus
+ie:R -> gr:erizO = to strive, to quarell
+ie:R -> lat:irascor [to grow angry] [to grow wrathful]
+ie:R -> lat:irrito [stimulate or incite to aanger]
+ie:R -> lat:iratus = angry, full of wrath
+ie:R -> lat:ira = wrath, anger, ire, rage
+
+// to move in order to reach, take or choose
+ie:R -> sa:ar = sa:Aritra = oar
+sa:ar = sa:rathakAra [carriage builder] = carpenter
+sa:ar = sa:rathyA [carriage road] = highway, street
+ie:R -> lat:re -> lat:remigo = to row
+lat:re -> lat:remus = oar
+ie:R -> lat:ri -> lat:ripa [the bank of a river]
+lat:ri -> lat:rivus = stream, course
+
+ie:arya {ar+ya} [moves (R) in order to advance (ya)]
+ie:Arya {ar+ya} [that moves (R) forward in command (ya)] = leader, noble, lord
+ie:arya -> sa:arvat [the driver of a hourse]
+ie:arya -> sa:arvan = running, courser
+
+ie:Rc [to cause to arrive (R/ar) all around (c)] [chant in praise of the gods that governed the heavens] = to praise, to shine
+ie:Rc -> ie:arc [light (and chanted praise) that meet (ar), moving all around (c)]
+ie:Rc -> sa:Rc -> sa:Rcati = to praise
+sa:Rc [sacred verse recited in praise of deity] [verse which was sung] = praise, verse
+sa:Rc [Rg-Veda - sacred knowledge in verses of praise (Rcas) to be heard by the gods. Rc is recited verse, in contrast to sAman, which is chanted and yajus, which is murmured]
+ie:arc -> sa:arka [one prays (arc) before me, and happiness will come out of it (ka)] = ray, the sun
+ie:arc -> sa:arc = shinning, briliant
+ie:arc -> sa:arcita = honorted, worshipped
+
+ie:Rj [to move forwrad (R) straightforwardly (j)] [to go forward with rectilinear motion] [to go forwrad first] [to take a linear direction] [to reach a fixed point] = to direct, to delimit
+ie:Rj -> sa:Rj -> sa:arjati = to go, to obtain
+ie:Rj -> sa:Rju = honest, sincere, right
+ie:Rj -> sa:raji = direction
+ie:RJj -> sa:RJj -> sa:RJjate = to fry
+
+ie:Rj -> gr:orEgO = to stretch out, to extend, to reach out
+gr:orEgO -> gr:orEgomai = to stretch oneself out
+ie:Rj -> gr:Oros = boundary, limit, frontier
+ie:Rj -> gr:orizOn [that delimits] = horizon
+gr:orizOn -> sk:horizont
+ie:Rj -> gr:Ordinos [in a straight line] = straight, address, line
+ie:Rj -> gr:ordinArios [elected regularly]
+ie:Rj -> gr:orismOs = boundary
+gr:orismOs -> gr:aphorismOs [marked by boundaries] = defined
+
+ie:Rj -> lat:rego = to guide, to direct, to rule
+ie:Rj -> lat:rectus = upright, honest
+ie:Rj -> lat:regulo [to trace straight lines] = regulra
+ie:Rj -> lat:ordo = line, row, order
+ie:Rj -> lat:ordino [to set in order] = to settle, to arrange
+lat:ordino -> lat:ordinatus [set in order] = settled
+lat:ordino -> lat:ordinarius [according to order]
+ie:Rj -> lat:regimen = direction, government
+ie:Rj -> lat:regio = direction
+ie:Rj -> lat:regula [wooden stick for tracing straight lines] = ruler
+
+ie:Rd -> ie:ard [arrival (R) of light (d)] [effect of fire] = to dissolve, to burn
+
+ie:ard -> sa:ard -> sa:Rdati [has to do with destructive effects of fire] =to move, to be moved, to be scattered, to make agitated
+ie:ard -> sa:ard -> sa:ardati = to hort, to destroy, to dissolve
+sa:ard -> sa:ardani = fire
+ie:ard -> lat:ardeo = to burn, to glow, to be on fire, to gleam
+ie:ard -> lat:ardens = hot, glowing, burning
+ie:ard -> lat:ardor = flame, burning, heat
+
+ie:Rdh [to reach (R/ar) as borne (h) by light (d)] = to grow, to prosper, to increase
+ie:Rdh [in Indo-Europena, the idea of "growth" and "increase"comes from the interaction between luminous frequencies - light - and living matter - animal and vegetable organisms]
+// all notable main verb roots in Sanskrit that express the idea of "growth" and "increase" are formed with the consonant "d"
+
+ie:Rdh -> sa:Rdh -> sa:Rdhyati = to grow, to increase, to prosper, to succeed
+ie:Rdh ~ sk:radosT
+sa:Rdh -> sa:Rddha = increased, prosperous, wealthy
+sa:Rdh -> sa:ardha = half, halved, one part
+ie:Rdh -> lat:arbor [originally "arbos"] = tree
+
+ie:RS [to meet (R) by connecting to (S)] = to stream, to flow
+ie:RS -> sa:RS -> sa:ArSati = to flow, to flow quickly
+sa:RS -> sa:RSi [a singer of sacred hymns] [an inspired poet] = a sage
+sa:RS -> sa:RSTi = spear, lance
+sa:RS -> sa:RSabha [any male animal] = bull
+ie:RS -> lat:ros = raindrops
+lat:ros ~ sk:rosa
+ie:RS -> sk:prsaT
+sa:ArSati -> sk:prsaT
+
+ie:arj [to meet (ar) straightforwardly (j)] = fast, bright
+ie:arj -> sa:arj -> sa:arjati = to procure, to acquire
+sa:arj -> sa:arjuna [made of silver] = white, clear, silver
+ie:arj -> gr:argOs = shinning, bright, glistening
+gr:argOs -> gr:Argros [white metal] = silver
+ie:arj -> gr:ElEktrOn [gold and silver metal] = amber
+ie:arj -> lat:argentum [white metal] = silver
+ie:arj -> lat:arguo [to put in clear light] = to demonstrate
+lat:arguo -> lat:argumentum [subject to proof] = argument
+ie:arj -> lat:argutus [that has brilliant ideas] = witty, penetrating
+
+ie:arh [pushed (to) to set a record (ar)] [to acquire value] [to fulfill oneself] = value, to deserve, to excep
+ie:argh [pushed (h) to win an awared (ar)]
+
+ie:arh -> sa:arh -> sa:arhati = to deserve, to merit, to be worty, to be worth
+sa:arh -> sa:arhat [in Buddhism, he who based on his own merits, is a candidate for nirvANa and who works to help other men to achieve this goal] = worthy, venerable, respectable, perfect
+ie:argh -> sa:argh -> sa:arghati = to be worth, to be of value
+sa:argh -> sa:argha = worth, value, price
+
+ie:argh -> gr:ArkhO [to begin as first] = to rule
+ie:argh -> gr:arkhE = beginning, power, dominion, first cause
+ie:argh -> gr:ArkhOn = ruler, chief
+ie:argh -> gr:arkhaIos [from the beginning] = ancient
+ie:argh -> gr:alphE = gain, profit, value
+
+ie:Urj [to move (r) with force (U) straightforwardly (j)] [to celebrate a rite dedicated to a god] = to gain stregth, to use force, to urge, to excite
+ie:Urj ~ ie:vRj
+
+ie:Urj -> sa:Urj -> sa:Urjayati [to be strong and powerful] = to strengthen, to invigorate
+sa:Urj -> strength, vigor
+ie:Urj ~ sk:urvaT
+
+ie:Urj -> gr:orgAO = to swell, to be exited, to be passionate
+gr:orgAO -> gr:orgiAzO [to celebrate orgies]
+gr:orgAO -> gr:orgIzO = to anger, to irritate
+gr:orgAO -> gr:orgE = anger, wrath, passion
+gr:orgAO -> gr:orgasmOs [erotic excitement]
+gr:orgasmOs ~ sa:tapas [flame that burns - ardor, which Eka, "the One" came from] 
+// human orgasm is correlated to a strong heat and from such a strong heat first arose the female - who will then reproduce - has been scientifically proven. During the sexual act a strong female orgasm aids in the movement toward the uterus of spermatozoa with X (female) chromosomes, which are by nature heavier, and therefore, disadvantaged comparison to the Y (male) chromosomes. Once they have united with the ovum, it will chosse from them an X chromosome with the future birth of a female.
+// Among the eggs deposited in the sand bya turtle, those depenst in the sand, further from the heat of the sun, will produce males, while those closer to the heat will produce females
+gr:orgAO -> gr:Orgia [secret worship] [the rites of Bacchus] = secret rites
+gr:orgAO -> gr:orgeOn [priest who carries out secret rites]
+ie:Urj -> lat:urgeo = to push, to press, tu urge
+ie:Urj -> lat:orgia [secret festivals in honour of Bacchus] [mystery rites] = orgies
+
+ie:ra [effect of the action (a/A) of reaching (r)] [to enter in possession] = to acquire, to grant
+
+ie:ra -> sa:rA -> sa:rAti = to grant, to give, to bestow, to impart
+ie:ra -> sa:rAdh -> sa:rAdhyati = to succeed, to ahieve, to accomplish, to attain to
+sa:rAdh ~ sk:radiT, sk:rAdost ~ sa:rAdhA
+sa:ra -> sa:ratna = gift, jewel, wealth
+sa:ra -> sa:rAta = given, bestowed
+sa:ra -> sa:rAdhA = prosperity, success
+sa:ra -> sa:rAkA [the day of a full moon] [the goddess presiding over the day of a full moon] = full moon
+sa:rAkA -> sk:rak
+sa:ra -> sa:rAtrI [bestower of the rest] = night
+
+ie:ra -> lat:res = thing, object, matter
+
+ie:ranh [that acquires (ra) the faculty of shifting (h)] [n is nasal, allowing differentiation from ie:rah] = to be swift, to be light, to hasten
+
+ie:ranh -> sa:ranh -> sa:ranhati = to be quick, to flow, to hasten
+sa:ranh -> sa:ranhas = speed
+sa:ranh -> sa:raghu = fasta, light
+sa:raghu ->[sanskrit, being much older than Greek and Latin, also recalls initial r, l was born in Rgveda in the word lakSa] sa:laghu = light, speed
+
+ie:ranh -> gr:elaphrOs = light
+ie:ranh -> gr:Elaphos [that is fast] = deer
+
+ie:ranh -> lat:alces = quick, elk
+ie:ranh -> lat:levis = light
+ie:ranh -> lat:levitas = lightness
+lat:levitas -> sk:levitovaT
+ie:ranh -> lat:levo = to relieve, to raise, to upbeat, to remove
+
+// Page 448
+// Vedic Sanskrit: 5000 BC
+// Epic Sanksrit: 1500 BC
+// Greek and Latin were born as IE dialects 3000 or 4000 years after the formation of Proto-Sanskrit, their mother tounge
+
+ie:rakS {R+a+kS} [what one controls 360 degrees] [to link up (R) in six directions (kS)] = to control, to protext, to defend, to preserve, to last
+ie:kS [link (S) of points in space (k)] [used to indicate six directions in space: four cardinal points plus zenith and nadir]
+ie:sakSa -> ie:SaS -> six
+
+ie:rakS -> sa:rakS -> sa:rakSati = to guar, to watch, to take care of, to protect, to save, to preserve
+sa:rakS -> sa:rakSana = protector
+sa:rakS -> sa:rakSas [what is neccessary to beware of] = demon, evil being
+sa:rakS -> sa:rakSA [floss or silk bracelet placed on the wrist as an amulat to protect the wearer from misfortune, or symbol of reciprocal amorous dependence] = protection, preservation
+
+ie:rakS -> gr:alEksO = to keep off, to defend
+ie:rakS -> gr:erYkO = to be kept away, to be guarded, to be kept safe
+ie:rakS -> gr:alEksEma = defense, guard
+ie:rakS -> gr:Aleksis = defense
+ie:rakS -> gr:Arkos = remedy, protection
+gr:Aleksis ~ sk:Alexander
+
+ie:rakS -> lat:arceo [to keep at a distance] = to shut in, to hinder
+lat:arceo -> lat:arcanum = shut in, protected, secret
+lat:arceo -> lat:arcanus = secret
+ie:rakS -> lat:arx [fortress located on the hightest point of a city in order to overlook the entire horizon] = stronghold
+
+ie:rac {R+ac} [to set in motion (R) to accomplish a full turn (ac)] [metaphorically: to go around things or topics because observation of them and reasoning about them is the necessary precondition in order to create anad produce] = to ocmpose, to form, to produce
+
+ie:rac -> sa:rac -> sa:racyati = to produce, to fashion, to form, to make, to construct
+ie:rac -> sa:racana [the act of making] = forming, composing
+
+ie:raj {R+aj} [to get to arrive (R) straightforwardly (aj/aJj)] [indicated the color of dye in various shades of red] [in moral sense it indicated "ardor" and "passion"] = to color, to dye, to redden
+ie:raj ~ ie:raJj
+
+ie:raj -> sa:raj -> sa:rajyati [to be colored or dyed]
+ie:raJj -> sa:raJj -> sa:raJjjati = to redden, to grow red
+sa:raj -> sa:rakta = colored, dyed, painted
+sa:raj -> sa:raGga = color, paint, dye
+sa:raj -> sa:nAraGga = orange tree
+sa:nagaraGga {na+ga+raGga} [it does not (na) move (ga) - tree + raGga] = orange tree
+sa:nAraGga -> es:naranja
+sa:raj -> sa:rAga = color, passion, love, affection
+sa:raj -> sa:rajana = ray
+sa:raj -> sa:rajas [colored space] [area of the atmosphere contaminated by the dust and steam that rise from the earth, thus distinguishing them from div and svar, the zone of light] = atmosphere, passion
+
+ie:ran {r+an} [to meet (R) the vital energy of the cosmic waters (an)] = to enjoy, to struggle, to sound, to resound
+
+ie:ran -> sa:raN -> sa:raNati = to rejoice, to be pleased, to gladden, to delight
+sa:raN -> sa:raNa = delight, pleasure, gladness, joy, battle, war
+sa:raN ~ sk:rana, sk:raniT
+sa:raN -> sa:raNva = joyous, gay
+
+ie:ram [to reach (R/ra) a place of retreat (m)] [to get peace and quiet] [to withdraw to a quiet place] [to steal away to make love]
+ie:ram -> sa:ram -> sa:ramate = to rest, to stand still, to couple, to make love with
+ie:ram -> sa:rata = enjoyment, sexual union, beloved
+ie:ram -> sa:rama = dear, belowed, god of love
+ie:ram -> sa:rAma = charming, beautiful, lovely
+
+ie:ram -> gr:Eremai = to love, to desire, to long for
+ie:ram -> gr:Eros = love, desire
+gr:Eros ~ sa:rAma [mytical personage]
+ie:ram -> gr:eRemos = lonely place
+ie:ram -> gr:erEmitEs = solitary devotee
+gr:erEmitEs -> sk:hermita
+
+ie:ram ->[desire to be in an out-ofthe-way place along with their love object - human or God. Sharing happiness with the person or God is stronger value for them than their need for autonomy and freedom] gr:Eros, gr:erEmitEs
+
+ie:ram -> lat:amo = to love
+ie:ram -> lat:eremus = lonely place
+gr:erEmitEs -> lat:eremita = solitary devotee
+
+ie:rabh {ra+bh} [to reach to acquire possession (ra) with vital effort (bh)] = to take possession, to act with violence, to toil
+ie:rabh ~ ie:labh
+ie:rabh -> sa:rabh -> sa:rabhate = to take hold of, to grasp
+sa:rabh -> sa:rabhas = violence, zeal
+ie:rabh -> lat:rabio = to be mad
+ie:rabh -> lat:rapio = to seize, to snatch, to tear away
+ie:rabh -> lat:rabies = madness, rage
+ie:rabh -> lat:raptum = robbery
+ie:rabh -> sk:rabovaT, sk:robota
+
+ie:rah [motion (R/ra) that pushes away (h)] = to go far away, to hide oneself, to stay hidden, to forget, to leave
+ie:rah -> sa:rah -> sa:rahati = to leave, to quit, to abandon
+sa:rah -> sa:rahasya [any secret doctrine] [esoteric teaching] = secret
+ie:rah -> gr:lanthAnO = to be unseen, to be unaware, to forget
+ie:rah -> gr:lEthE [river of oblivion] = forgetfulness, oblivion
+gr:lEthE -> gr:lEthargos = forgetting
+gr:lEthargos -> sk:letargickY
+
+ie:rah -> lat:lateo = to lie hidden, to be concealed
+lat:lateo -> lat:latens = concealed, hidden
+
+ie:rAj {ra+aj} [to move toward (R) to lead forward (aj)] [to lay down rules] [to go straightforwardly to delimit and consecrate borders, to lay down rules of behaviour, to command and conquer] = to reign, to defend, to govern
+ie:rAj ~ ie:Rj ~ ie:RJj ~ ie:arj
+ie:rAj [rex's function was that of pointing "rules", showing the "straight" path or rather, what is "fair" and "straight" to do]
+ie:rAj [with an instrument called regula, the rex would trace national borders with a straight line]
+ie:rJj -> ie:rAj
+ie:rJj = to make striaght, to make fair, to direct
+
+ie:rAj -> sa:rAj -> sa:rAjati = to reign, to be king
+sa:rAj -> sa:rAjan = king, sovereign
+sa:rAj -> sa:rAjJi = queen, princess
+sa:rAj -> sa:rAji [drawing straight lines to establish and regulate borders was one of the main duties performed by a king] = streak, line, range
+
+ie:rAj -> lat:regno = to be a king, to reign
+lat:regno -> lat:rex [he who draws straight lines to establish borders] [he who directs]
+lat:regno -> lat:regnum [royal power] = kingdom
+lat:regno -> lat:regula = streak, line, range
+
+ie:rAj -> sk:raj
+
+ie:rAdh {rA+dh} [granted (rA) by the motion of light (dh)] = to manage to, to give a bonus, to offer
+ie:rAdh -> sa:rAdha = gift, favour
+sa:rAdha ~ sk:radosT
+
+ie:ri [to move torward (R) with continous motion (i/I)] = to flow, to stream, to lierate
+ie:rI -> sa:rI -> sa:riNAti = to release, to set free, to flow
+sa:rI -> sa:rIti = stream
+sa:rI -> sa:retas [seminal fluid] = flow, sperm
+sa:rI -> sa:reNu [flows (re) in the waters (nu)] = sand, grain of dust
+ie:rI -> lat:libero = to set free, to liberate
+lat:libero -> lat:liber = free
+
+ie:rikh {ri+kh} [to cause to flow (ri) into a cavity (kh)] = to scratch, to scrape off, to rip open
+ie:rikh -> sa:rikh -> sa:rikhati = to scratch, to scrape
+ie:rikh -> sa:rekha = scratch, line
+
+ie:rih {ri+h} [to move away (h) from what flows (ri)] = to lick
+ie:rih -> sa:rih -> sa:rihati [Vedic form of lih] = to lick
+ie:rih -> lat:lingo = to lick
+
+ie:ric {r+i+c} [to move or get to move (r) with continous motion (i) all around (c)] [to cause to move freely] = to let go, to abandon
+ie:ric -> sa:ric -> sa:riNakti = to empty, to evacuate, to leave, to give up, to resign
+sa:ric -> sa:rikta = empty, void, hollow
+sa:ric -> sa:riktha [property left at death] = inheritance
+sa:ric -> sa:rikthin = heir
+sa:ric -> sa:reku = empty, void, deserted
+sa:ric -> sa:recana = emission, exhalation
+
+ie:ric -> gr:leIpo = to leave, to be left, to come short of, to disappear
+gr:leIpo -> gr:Ekleipsis = forsaking, quitting, eclipse
+
+ie:ric -> lat:linguo [n is nasal] = to leave, to miss, to abandon
+ie:ric -> lat:licet [it is allowed] = one can
+lat:licet -> lat:licitus = allowed
+lat:linguo -> lat:relinguo = to desert, to leave, to leave behind
+lat:relinguo -> lat:reliquiae = remains, relict
+lat:linguo -> lat:delinguo = to fail in duty, to commit a crime
+lat:delinguo -> lat:delictum = fault, crime
+
+ie:ru [the root is enlarged with a final j/t/d/p/b/m] [to reach (r) with intensity (u)] = noise, sound, color red, fast motion, force
+
+ie:ru ->sa:ru -> sa:rauti [to make any sound or noise] = to cry loud, to roar
+ie:ru -> sk:ruCaT
+sa:ru = sound, noise
+sa:ru -> sa:ruta = sounded, any cry or noise
+
+sa:ru -> sa:ravate [to dash to pieces] = to break
+sa:ru -> sa:ruta = broken to pieces
+
+ie:ru -> gr:rhOnnymi = to strengthen, to make strong
+gr:rhOnnymi -> gr:rhOmE = strength, force
+
+ie:ru -> lat:rugio = to roar
+ie:ru -> lat:eructo = to belch, to vomit
+ie:ru -> lat:rumor = rumor
+ie:ru -> lat:ruino = to fall, to collapse, to ruin
+lat:ruino -> sk:ruina
+lat:ruino -> lat:ruina = falling down, collapse, ruin
+ie:ru -> lat:ruo = to rush, to hasten, to rush down
+ie:ru -> lat:robur = strentgh
+ie:ru -> lat:robustus = strong, solid
+lat:robustus = sk:robustnY
+
+ie:ruc {ru+c} [to meet (r) with intensity (u) all around (c)] = to shine, to bright, to glitter
+
+ie:ruc -> sa:ruc -> sa:rocate = to shine, to be bright
+sa:ruc = light, splendour
+sa:roca = shinning, radiant
+ie:ruc -> lat:luceo = to be bright, to shine, to glitter
+ie:ruc -> lat:lustro = to make bright, to illumine, to purify
+lat:luceo -> lat:lux = light
+lat:lustro -> lat:illustris [that gives light] = celebrated, illustrious
+lat:luceo -> lat:lucidos [full of bright] = clear, bright
+lat:luceo -> lat:lucerna = lamp
+lat:lustro -> sk:luster
+
+ie:ruj {ru + j} [to move with force (ru) straightforwardly (j)] [figuratively: to afflict, to cry, to feel pain] = to break, to break into pieces, to cut, to destroy
+
+ie:ruj -> sa:ruj -> sa:rujati = to break, to dash to pieces, to destroy, to cause pain, to afflict
+sa:rujati -> sk:ruCaT
+sa:ru -> sa:rugNa = broken
+sa:ru -> sa:rujA = fracture, sicknes, disease
+sa:ru -> sa:roga = disease
+
+ie:ruj -> gr:orYssO = to dig, to dig up
+gr:orYssO -> gr:Oryks = pickax
+
+ie:ruj -> lat:runco = to weed, to thin out
+ie:ruj -> lat:lugeo = to mourn, to lament
+ie:ruj -> lat:ruga = wrinkle in the face
+ie:ruj -> lat:luctus = mourning, lamentation, sorrow
+
+ie:rud {ru+d} [to make a loud noise (ru + d)] = to cry, to complain
+ie:rud -> sa:rud -> sa:roditi = to week, to cause to week, to lament
+sa:roditi ~ sk:rodiT
+sa:rud -> sa:rudra {ru+dra} [it runs (dra) roaring (ru)] = terrific, terrible
+sa:rudra [in Vedic mythology father of Maruts, the gods of storm] [god of the tempests]
+sa:rud -> sa:roda = weeping, lamentation
+ie:rud -> lat:rudo = to bellow, to roar, to bray
+ie:rud -> lat:rudis = rough, raw
+
+ie:rudh {ru + d + h} [reaches (r) with force (u) as pushed (h) by light (d)] = to grow, to be red
+ie:rudh -> sa:rudh -> sa:rodhati = to sprout
+sa:rudh = to grow, to be red
+sa:rudh -> sa:rudhira [the red planet] = red, blood red, bloody, mars
+sa:rudh -> sa:rohita = reddish
+ie:rudh -> sk:ruda
+ie:rudh -> gr:ereUthO = to make red, to stain red
+gr:ereUthO -> gr:erythrOs = red
+ie:rudh -> lat:rubeo = to be red, to be red with shame
+ie:rudh -> lat:rutilo [to shine with a reddish gleam] = to make red
+lat:rubeo -> lat:ruber = red
+ie:rudh -> lat:robus = red
+ie:rudh -> lat:robur = red oak, drumast, strength
+ie:rudh -> lat:robustos = strong
+lat:rubeo -> lat:rubens = red
+lat:rubeo -> lat:rubor = redness
+lat:rubeo -> lat:rubrica = red earth, red ochre, rubric
+lat:rubrica ~ sk:rubrika
+ie:rudh -> lat:rufus = red, ruddy
+ie:rudh -> lat:rutilus = red, golden
+ie:rudh -> lat:rubinus = red, red stone
+lat:rubinus -> sk:rubIn
+
+ie:rup {ru+p} [the p is an enlargement] [to accomplish an act with force (ru)] = to break, to commit violence, to destroy, to suffer a pain 
+ie:rup -> sk:rupnUT
+ie:rub -> sa:rup -> sa:rupyati [to suffer violent or racking pain] = to cause violent pain
+ie:rub -> lat:rumpo [m is a nasal infix]
+
+ie:ruS {r+u+S} [connected (S) to what reaches (r) with force (u)] = fury, rage
+ie:ruS -> sa:ruS -> sa:roSati = to hurt, to be furious
+sa:ruS = anger, rage, fury, passion
+sa:ruS -> sa:roSa = anger, rage, fury, passion
+sa:roSa -> sa:roSin = angry, furious, passionate
+ie:ruS -> lat:rusticus [belonging to tghe country] = rural, rustic
+
+ie:ruh {ru + h} [to move (r) with strength (u) by shifting (h)] = to go up, to ascend, to grow, to prosper
+ie:ruh -> sa:ruh -> sa:rohati = to ascend, to mount, to climb, to increase, to prosper
+sa:ruh = rising, growth
+sa:ruh -> sa:roha = ascneding, mounting, rising
+sa:ruh -> sa:rohiNI = red cow
+sa:ruh -> sa:rohin = gorwn, tall
+sa:ruh -> sa:rohita = the growing color, red
+sa:rohita -> sa:lohita [of red color] = copper

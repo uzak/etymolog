@@ -68,6 +68,7 @@ sa:yas -> sa:ayAs = fire
 sa:yas -> sa:ayAsya [name of an Angiras] = priest of fire
 sa:yas -> lat:aestas = summer
 sa:yas -> lat:aes [that gets heated up] = copper, bronze
+sa:yas ~ sk:jas
 
 ie:ya [effect of the action (A) of moving (i)] = to go
 ie:ya -> sa:yA -> sa:yAti = to go
@@ -135,7 +136,9 @@ sa:yudh -> sa:yudhma = hero
 sa:yudh -> sa:yudhvan [that loves (van) war (yudh)] = bellicose
 sa:yudh -> sa:Ayudha = weapon
 sa:yudh -> sa:suyuddha [beatiful combat]
+as:dharmayuddha {dharma+yuddha} = just war
 
+sa:yudh ~ sa:raNa
 sa:raNa = struggle, joy
 
 ie:yudh ~ sk:feudal

@@ -24,7 +24,7 @@ t_DERIVE  = r'->'
 t_RELATED = r'~'
 t_PLUS    = r'\+'
 t_SEP     = ','
-t_TOKEN   = r"[\w']+"
+t_TOKEN   = r"[\w'/\.]+"        # rules: s/,/\// and s/-/./
 t_LUNION  = r'{'
 t_RUNION  = r'}'
 
