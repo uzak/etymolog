@@ -361,6 +361,7 @@ ie:muc -> lat:emungo [to clean a nose] [to wipe one's nose]
 ie:muS [to remain (u) in the vicinity (S) of a limit (m)] [animal that steals] = to prowl, to steal, mouse
 
 ie:muS -> sk:myS
+ie:muS ~ sk:muSLa
 
 ie:muS -> sa:mUS = thief, mouse
 ie:muS -> gr:mYs = mouse, muscle
