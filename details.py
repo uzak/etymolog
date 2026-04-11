@@ -64,9 +64,10 @@ def groupbylang_tx(seq):
     return groupby(lambda x: x.word.lang.name, seq)
 
 
-def translations_str(word, rel_type=model.Equals, ignore=set(), indent="",
+def translations_str(word, rel_type=model.Equals, ignore=None, indent="",
                      oneline=False, incl_comments=True):
     # sort data
+    ignore = ignore or set()
     translations_comments = []
     translations_no_comments = []
     if rel_type is model.Equals:
