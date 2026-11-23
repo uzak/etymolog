@@ -18,10 +18,7 @@ class TestCase:
 
 
 def reset_model():
-    model.Derived.Table = {}
     model.Union.Table = {}
-    model.Related.Table = {}
-    model.Equals.Table = {}
     model.World.Languages = {}
     model.World.Tags = {}
     config.default_lang = "en"
@@ -45,9 +42,7 @@ def _assert_rel_lr(rel, left, right, ll=config.default_lang, rl=config.default_l
     rl -> right lang """
     left = model.World.lang(ll).get_word(left)
     right = model.World.lang(rl).get_word(right)
-    key = (left.key(), right.key())
-    rev_key = (right.key(), left.key())
-    assert key in rel.Table or rev_key in rel.Table
+    assert rel.get(left, right)
 
 
 def assert_equals_lr(left, right, ll=config.default_lang, rl=config.default_lang):
@@ -63,7 +58,7 @@ def assert_related_lr(left, right, ll=config.default_lang, rl=config.default_lan
 
 
 def assert_total_rels(count):
-    assert count == (len(model.Equals.Table) + len(model.Related.Table) + len(model.Derived.Table))
+    assert count == sum(len(c.all()) for c in (model.Equals, model.Related, model.Derived))
 
 
 def assert_total_word(lang, count):

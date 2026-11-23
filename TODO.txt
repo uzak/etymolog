@@ -10,7 +10,6 @@
 * add tests for cli scripts: {details|dict}.py ?
 
 * lookup.py - try to find a word or similar
-* remove Relationship(s).Table
 * support for multiline rel?
 --
 * transitiveness: shall a = b = c also generate a = c? and for ~? -> no

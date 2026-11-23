@@ -265,7 +265,7 @@ class TestComments(TestCase):
         for right_value in "cde":
             right = word(right_value)
             assert right
-            rel = model.Derived.Table[(str(left), str(right))]
+            rel = model.Derived.get(left, right)
             assert rel
             assert "b" in rel.comments
         assert_total_word(config.default_lang, 4)

@@ -216,12 +216,13 @@ Entity                 # base: comments:dict[str, lang|None] (text -> language f
     tags: set[str]
     key() -> "lang:value"           label() -> key without trailing digits
     as_str(comments, unions, tags)  to_json()
-  Relationship(left, right)         # metaclass gives each subclass its own Table and Mirror dicts
+  Relationship(left, right)         # no registry: relationships live only in the words' sets (`Attr`: derives_to / equals / related)
     Derived  (Symbol "->", directed)
     Equals   (Symbol "=",  symmetric)
     Related  (Symbol "~",  symmetric)
     add(left, right, comment=None)  # classmethod; expands Groups; get-or-create; returns the Relationship (or None for Group inputs)
-    Table: {(left.key(), right.key()): rel}
+    get(left, right)                # scans left's set; symmetric types also match (right, left)
+    all()                           # every relationship of the type, sorted by (left.key(), right.key())
 
 Union(word, *components)   # not an Entity; Union.Table[str(self)] = self; str = "c1+c2" (component shown as lang:value if language differs from the word's)
 Group(*items)              # flat list of words, used only during parsing
@@ -230,7 +231,7 @@ Group(*items)              # flat list of words, used only during parsing
 Notes:
 
 - Word identity is Python object identity; the same `Word` object is shared by all statements mentioning it.
-- `Relationship.Mirror` holds the same keys as `Table` for symmetric types (used by `get` to find `(b,a)` when `(a,b)` exists); for `Derived` it is unused.
+- There is no global relationship table (removed in #23). `Equals`/`Related` are stored in both words' sets, so `all()` emits each one only from its `left` word.
 - JSON/`as_str` refer to words by the string `lang:value`.
 
 ## 6. Parsing pipeline
@@ -344,10 +345,10 @@ Verified by experiment unless marked *(code reading)*. Ordered by impact.
 
 ## 10. Working on the code: practical notes
 
-- **Tests** subclass `tests.util.TestCase`, whose autouse fixture calls `reset_model()` (reassigns each class-level `Table`/`Mirror`, `World.Languages`, `World.Tags`). If you add new global state to `model.py`, add it to `reset_model()` too. Tests drive the parser with `parser.yacc.parse("line")` and assert on `model.World`.
+- **Tests** subclass `tests.util.TestCase`, whose autouse fixture calls `reset_model()` (reassigns `Union.Table`, `World.Languages`, `World.Tags`; relationships go away with the words). If you add new global state to `model.py`, add it to `reset_model()` too. Tests drive the parser with `parser.yacc.parse("line")` and assert on `model.World`.
 - There are **no CLI tests**; if you change `details.py`/`dict.py`/`dump.py`, verify manually against the real DB (`./details.py sa:tr`, `./dict.py sk`, `./dump.py -j | python -m json.tool >/dev/null`).
 - Adding a language-specific character mapping = edit `Language.TranslationTable` in `model.py` (keyed by the exact language name).
 - Adding syntax = edit `lexer.py` (tokens) and `parser.py` (rules + `precedence`); delete stale `parser.out`/`parsetab.py` if PLY seems to use an old table.
 - Design decisions already taken (from `TODO.txt`): relationships are **not** transitive; no `a = b, c = d` expression groups; no implicit language propagation inside groups; `-` is not allowed in words.
-- Open backlog (from `TODO.txt`): verb forms, language-specific case rules, language groups, showing union derivations, lookup/fuzzy search, Redis caching, removing `Relationship.Table`, multiline relationships.
+- Open backlog (from `TODO.txt`): verb forms, language-specific case rules, language groups, showing union derivations, lookup/fuzzy search,, multiline relationships.
 - Suggested fix priority from the audit: (1) visited-set + cycle/self-loop rejection, (2) sorted file order and sorted JSON lists, (3) `Union.Table` keyed by `(word.key(), str(union))`, (4) make `version.py` robust (git `-C <script dir>`, fallback), (5) per-language case sensitivity, (6) stricter directive parsing, (7) CLI tests.

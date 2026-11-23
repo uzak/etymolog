@@ -22,7 +22,7 @@ def dump(verbose=False):
     for cls in (model.Derived, model.Equals, model.Related):
         print(f"Relationship {cls.cls_str()}")
         if verbose:
-            for v in cls.Table.values():
+            for v in cls.all():
                 print(f"\t{v}")
 
     tags = model.World.Tags.keys()
@@ -38,7 +38,7 @@ def export_json():
     for cls in (model.Derived, model.Related, model.Equals):
         key = cls.__name__.lower()
         result["relationships"][key] = []
-        for rel in cls.Table.values():
+        for rel in cls.all():
             result["relationships"][key].append(rel.to_json())
     result["unions"] = []
     for union in model.Union.Table.values():

@@ -27,7 +27,7 @@ ETYMOLOG_LOG_LEVEL=DEBUG ./details.py ...   # logging verbosity (default WARNING
 ## Architecture
 
 - `lexer.py` / `parser.py`: PLY lexer and yacc grammar. `parser.load_db()` parses every `.pill` under `db/` and builds objects directly during parsing (no separate AST). Parser directives (`// SRC`, `// LANG`, `// NOSRC`, `// IGNORE`) mutate state in `config.py` (`default_lang`, `source`).
-- `model.py`: `Word`, `Language`, `World` (registry of languages/tags), relationships `Derived` / `Equals` / `Related` (each with class-level `Table`/`Mirror` dicts) and `Union`.
+- `model.py`: `Word`, `Language`, `World` (registry of languages/tags), relationships `Derived` / `Equals` / `Related` (stored only in the words' sets; `Rel.all()` lists them sorted) and `Union` (class-level `Table`).
 - `details.py`, `dict.py`, `dump.py`: read-only consumers of the model. `dict.py` imports `load_db` via `dump`, and uses helpers from `details`.
 - `parsetab.py` and `parser.out` are PLY-generated and gitignored. Delete them if the grammar changes oddly.
 
