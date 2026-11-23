@@ -73,3 +73,50 @@ class TestFormLookup:
         r = run_script("details.py", "en:go")
         assert "=> en:to go" in r.stdout
         assert "=> en:go" not in r.stdout       # one word, offered once
+
+
+class TestStackedComments(TestCase):
+    """every comment is printed on its own line below the thing it belongs to"""
+
+    def out(self, word_value, capsys, incl_comments=True, language="t"):
+        details.pretty_print(lang(language).get_word(word_value), incl_comments=incl_comments)
+        return capsys.readouterr().out
+
+    def test_word_header(self, capsys):
+        parser.yacc.parse("t:a [x] [y]")
+        assert " => t:a\n    [x]\n    [y]\n" in self.out("a", capsys)
+
+    def test_single_comment_is_stacked_too(self, capsys):
+        parser.yacc.parse("t:a = [r] t:b")
+        assert "    = t:b\n        [r]\n" in self.out("a", capsys)
+
+    def test_relationship_then_word_comments(self, capsys):
+        parser.yacc.parse("t:a = [r1] t:b")
+        parser.yacc.parse("t:a = [r2] t:b")
+        parser.yacc.parse("t:b [w]")
+        assert "    = t:b\n        [r1]\n        [r2]\n        [w]\n" in self.out("a", capsys)
+
+    def test_derivation_comments(self, capsys):
+        parser.yacc.parse("t:a -> [why] t:b")
+        assert "    -> t:b\n        [why]\n" in self.out("a", capsys)
+
+    def test_ancestor_connector_comments(self, capsys):
+        parser.yacc.parse("t:p -> [first] t:a")
+        parser.yacc.parse("t:p -> [second] t:a")
+        assert "      | [first]\n      | [second]\n" in self.out("a", capsys)
+
+    def test_related_lines_are_indented(self, capsys):
+        parser.yacc.parse("t:a ~ t:b")
+        parser.yacc.parse("t:a ~ [c] t:c")
+        lines = [l for l in self.out("a", capsys).splitlines() if "~" in l]
+        assert lines and all(l.startswith("    ~ ") for l in lines)
+
+    def test_no_comments_option_hides_all(self, capsys):
+        parser.yacc.parse("t:p -> [c1] t:a [c2]")
+        parser.yacc.parse("t:a = [c3] t:b [c4]")
+        parser.yacc.parse("t:a ~ [c5] t:c")
+        parser.yacc.parse("t:a -> [c6] t:d")
+        parser.yacc.parse("t:ab {a+b}")
+        parser.yacc.parse("t:a = [c7] t:e")
+        for w in ("a", "ab"):
+            assert "[" not in self.out(w, capsys, incl_comments=False)
