@@ -4,6 +4,10 @@ from pathlib import Path
 
 import pytest
 
+import details
+import parser
+from . util import TestCase, lang
+
 ROOT = Path(__file__).resolve().parent.parent
 
 
@@ -29,3 +33,13 @@ def test_unknown_language(script, arg):
     r = run_script(script, arg)
     assert r.returncode == 2
     assert "unknown language: zz" in r.stderr
+
+
+class TestUnionDerivations(TestCase):
+    def test_shows_derivations_of_union_word(self, capsys):
+        parser.yacc.parse("t:ab {a+b}")
+        parser.yacc.parse("t:ab -> t:c")
+        details.details(lang("t").get_word("a"))
+        out = capsys.readouterr().out
+        assert "+ t:ab" in out
+        assert "-> t:c" in out

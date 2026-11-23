@@ -4,16 +4,13 @@
 * `-` in names should be OK
 
 * grouping: group languages
-* if word part of a union (sa:bhas) - show derivations of unions too?
 * details (sa pur): have multiple comments in rels below each other
 * auto translation from devanagari to latin ...
     for english: remove "to" for sorting
 * add tests for cli scripts: {details|dict}.py ?
 
 * lookup.py - try to find a word or similar
-* caching : redis
 * remove Relationship(s).Table
-* s/word.derives/word.derives_to/ ???
 * support for multiline rel?
 * add language to comments?
 --
