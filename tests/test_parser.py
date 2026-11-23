@@ -484,6 +484,20 @@ class TestMisc(TestCase):
         assert len(a.sources) == 1
         assert None not in a.sources
 
+    def test_lang_directive_strips_whitespace(self):
+        parser.yacc.parse("// LANG   sa")
+        assert config.default_lang == "sa"
+
+    def test_lang_directive_requires_language(self):
+        with pytest.raises(ValueError):
+            parser.yacc.parse("// LANG")
+
+    def test_directive_needs_exact_name(self):
+        parser.yacc.parse("// SRCfoo")
+        parser.yacc.parse("// LANGUAGES to check")
+        assert config.source is None
+        assert config.default_lang == "en"
+
     def test_rel_two_sources(self):
         parser.yacc.parse("// SRC src1")
         parser.yacc.parse("a -> b")
