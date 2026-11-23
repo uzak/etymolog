@@ -34,8 +34,9 @@ ETYMOLOG_LOG_LEVEL=DEBUG ./details.py ...   # logging verbosity (default WARNING
 ## Gotchas
 
 - All state is global and mutable (`config`, class-level tables on model classes, `World.Languages`). Loading the DB twice in one process merges or duplicates state. Tests extend `tests/util.py::TestCase`, whose autouse fixture calls `reset_model()`. **If you add a new class-level table to the model, reset it in `reset_model()` too.**
-- Words are matched case-insensitively (first-seen spelling wins), which wrongly merges distinct Sanskrit words like `varNa`/`varna`.
+- Words are case sensitive except in languages listed in `Language.CaseInsensitive` (`en`, `gr`), where the first-seen spelling wins.
 - Module names `parser.py`, `dict.py`, `log.py`, `version.py`, `config.py` shadow or resemble stdlib names. Don't "fix" imports without checking.
 - `version.py` shells out to `git rev-list`, so it needs a git checkout.
 - Known defects (cycles in data crash `details.py`/`dict.py`, unions silently lost, non-deterministic export) are listed in `docs/reference.md` §9. `TODO.txt` has design decisions (e.g. no transitive equality, no `-` in word chars because it conflicts with `->`).
 - `db.json` (~7 MB) is generated and gitignored. Don't edit it by hand.
+- When fixing an issue, always remove it from `TODO.txt`.
