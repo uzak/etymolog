@@ -65,16 +65,16 @@ class Word(Entity):
             _unions += " ".join(map(lambda u: f"{{{u}}}", sorted(self.unions)))
         if tags and self.tags:
             _tags = " "
-            _tags += " ".join([f"#{t}" for t in self.tags])
+            _tags += " ".join([f"#{t}" for t in sorted(self.tags)])
         return f"{self.key()}{_unions}{_comments}{_tags}"
 
     def to_json(self):
         return {
             "lang": self.lang.name,
             "value": self.value,
-            "comments": list(self.comments),
-            "sources": list(self.sources),
-            "tags": list(self.tags)
+            "comments": sorted(self.comments),
+            "sources": sorted(self.sources),
+            "tags": sorted(self.tags)
         }
 
     def __str__(self):
@@ -219,8 +219,8 @@ class Relationship(Entity, metaclass=RelationshipMeta):
         return {
             "left": self.left.as_str(comments=False, unions=False),
             "right": self.right.as_str(comments=False, unions=False),
-            "comments": list(self.comments),
-            "sources": list(self.sources),
+            "comments": sorted(self.comments),
+            "sources": sorted(self.sources),
         }
 
 #XXX rename to Derivation, Equality, Relation?
