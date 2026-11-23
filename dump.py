@@ -22,11 +22,8 @@ def dump(verbose=False):
     for cls in (model.Derived, model.Equals, model.Related):
         print(f"Relationship {cls.cls_str()}")
         if verbose:
-            seen = []
-            for k, v in cls.Table.items():
-                if v not in seen:
-                    print(f"\t{v}")
-                    seen.append(v)
+            for v in cls.Table.values():
+                print(f"\t{v}")
 
     tags = model.World.Tags.keys()
     print(f"Tags ({len(tags)}): {', '.join(tags)}")
