@@ -271,7 +271,8 @@ def parse_file(fn):
 
 def get_pills(path):
     for root, dirs, files in os.walk(path):
-        for f in files:
+        dirs.sort()
+        for f in sorted(files):
             if f.endswith(".pill"):
                 yield os.path.join(root, f)
 
