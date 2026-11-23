@@ -208,7 +208,7 @@ Language(name)
   get_words(value)     # prefix + optional digits (homonyms)
   translate(value)
 
-Entity                 # base: comments:set[str], sources:set[str]; sources seeded from config.source at construction
+Entity                 # base: comments:dict[str, lang|None] (text -> language from a leading `@xx `), sources:set[str]; sources seeded from config.source at construction
   Word(value, lang)
     derived_from: set[Derived]      derives_to: set[Derived]
     equals: set[Equals]             related: set[Related]

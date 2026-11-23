@@ -44,7 +44,7 @@ def split(fct, seq):
 
 def comments_str(entity):
     if entity.comments:
-        return " ".join([f"[{c}]" for c in entity.comments])
+        return " ".join(entity.comment_strs())
     return ""
 
 

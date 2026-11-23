@@ -11,15 +11,20 @@ import config
 
 class Entity:
     def __init__(self):
-        self.comments = set()
+        self.comments = {}      # text -> language code or None
         self.sources = set()
         if config.source:
             self.sources.add(config.source)
 
     def comment(self, text):
-        if not text in self.comments:
-            self.comments.add(text)
+        """Add a comment; a leading `@xx ` marks the language it is written in."""
+        m = re.match(r"@(\w+)\s+(.+)", text, re.S)
+        lang, text = m.groups() if m else (None, text)
+        self.comments[text] = lang
         return text
+
+    def comment_strs(self):
+        return [f"[@{lang} {c}]" if lang else f"[{c}]" for c, lang in self.comments.items()]
 
 
 class Word(Entity):
@@ -59,7 +64,7 @@ class Word(Entity):
         _tags = ""
         if comments and self.comments:
             _comments = " "
-            _comments += " ".join([f"[{c}]" for c in self.comments])
+            _comments += " ".join(self.comment_strs())
         if unions and self.unions:
             _unions = " "
             _unions += " ".join(map(lambda u: f"{{{u}}}", sorted(self.unions)))

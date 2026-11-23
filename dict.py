@@ -28,7 +28,7 @@ def derived(word, indent, incl_comments=True):
         result = []
         for rel in chain:
             if rel.comments and incl_comments:
-                comments_str = " ".join([f"[{c}]" for c in sorted(rel.comments)])
+                comments_str = " ".join(rel.comment_strs())
                 result.append(f"-> {comments_str} {rel.left}")
             else:
                 result.append(f"-> {rel.left}")
@@ -46,8 +46,8 @@ def dictionary(lang_name, incl_comments=True):
         if w.related:
             print(details.translations_str(w, rel_type=model.Related, indent=indent, incl_comments=incl_comments))
         if incl_comments:
-            for comment in w.comments:
-                print(f"{indent}[{comment}]")
+            for comment in w.comment_strs():
+                print(f"{indent}{comment}")
         derived(w, indent, incl_comments=incl_comments)
 
 

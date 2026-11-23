@@ -124,6 +124,10 @@ If you want to have multiple comments, use multiple statements or put the commen
     boat [means of transport on water]
     
     a [b] [c]               // is valid as well
+
+A comment is assumed to be English. Start it with `@xx ` to mark another language:
+
+    sk:bohyna [@de Göttin]
     
 ### Unions
 To express that one word is a composite of two other words, use an union (``{ first_word + ... + last_word }``):
