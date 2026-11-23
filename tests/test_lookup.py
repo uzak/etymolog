@@ -64,3 +64,15 @@ class TestSimilar(TestCase):
         parser.yacc.parse("ur:Ugarit")
         hits = lookup.similar("Ugarat", langs("ur"))
         assert [h[1].key() for h in hits] == ["ur:Ugarit"]
+
+    def test_best_form_counts(self):
+        parser.yacc.parse("sa:han/hanti")
+        hits = lookup.similar("hanti", langs("sa"))
+        assert [h[1].key() for h in hits] == ["sa:han/hanti"]
+        assert hits[0][0] == 1.0
+
+    def test_english_to_is_ignored(self):
+        parser.yacc.parse("en:to go")
+        hits = lookup.similar("go", langs("en"))
+        assert [h[1].key() for h in hits] == ["en:to go"]
+        assert hits[0][0] == 1.0

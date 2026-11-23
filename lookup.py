@@ -36,18 +36,23 @@ def _ratio(a, b):
 
 
 def similar(query, langs, phonetic=False, cutoff=0.7, limit=10, exclude=()):
-    """[(score, Word)], best first, from `langs`; `phonetic` also compares sound skeletons"""
-    q = strip(query)
-    q_classes = sound_classes(query)
+    """[(score, Word)], best first, from `langs`; `phonetic` also compares sound skeletons.
+    Each word is scored by its best form, after the language's search rules."""
     hits = []
     for lang in langs:
+        q_text = lang.search_key(query)
+        q, q_classes = strip(q_text), sound_classes(q_text)
         for word in lang:
             if word in exclude:
                 continue
-            score = _ratio(q, strip(word.value))
-            if phonetic:
-                score = (score + _ratio(q_classes, sound_classes(word.value))) / 2
-            if score >= cutoff:
-                hits.append((score, word))
+            best = 0
+            for form in word.forms or [word.value]:
+                text = lang.search_key(form)
+                score = _ratio(q, strip(text))
+                if phonetic:
+                    score = (score + _ratio(q_classes, sound_classes(text))) / 2
+                best = max(best, score)
+            if best >= cutoff:
+                hits.append((best, word))
     hits.sort(key=lambda h: (-h[0], h[1].lang.name, h[1].value))
     return hits[:limit]

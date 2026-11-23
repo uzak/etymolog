@@ -38,7 +38,7 @@ def derived(word, indent, incl_comments=True):
 def dictionary(lang_name, incl_comments=True):
     lang = model.World.lang(lang_name)
     print(f"Dictionary for ``{lang.name}`` ({len(lang)} items):")
-    for w in sorted(lang, key=lambda word: locale.strxfrm(word.value.lower())):
+    for w in sorted(lang, key=lambda word: (locale.strxfrm(lang.sort_key(word)), word.value)):
         indent = "    "
         print(f"* {w.value}")
         if w.equals:
