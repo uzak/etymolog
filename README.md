@@ -42,6 +42,8 @@ Each word gets assigned to a language. The language is an abbreviation of the la
 
     en:ship
 
+For names of uncertain or ancient origin that should not count as English (rivers, cities like Ugarit or Eridu), use the reserved language `ur` ("ancient"): `ur:Ugarit`, or `// LANG ur` for the rest of a file. Like any language it is case sensitive, and `UR` and `ur` are the same language.
+
 #### Composite words
 You can have several words following each other and they will be fused into one:
 

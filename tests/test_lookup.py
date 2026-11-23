@@ -59,3 +59,8 @@ class TestSimilar(TestCase):
         for w in ("ab", "ac", "ad"):
             parser.yacc.parse(w)
         assert len(lookup.similar("a", langs("en"), cutoff=0.1, limit=2)) == 2
+
+    def test_finds_ur_names(self):
+        parser.yacc.parse("ur:Ugarit")
+        hits = lookup.similar("Ugarat", langs("ur"))
+        assert [h[1].key() for h in hits] == ["ur:Ugarit"]
