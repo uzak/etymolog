@@ -27,6 +27,8 @@ def reset_model():
     model.Equals.Mirror = {}
     model.World.Languages = {}
     model.World.Tags = {}
+    config.default_lang = "en"
+    config.source = None
 
 
 def lang(language=None):

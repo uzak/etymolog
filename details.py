@@ -78,7 +78,7 @@ def translations_str(word, rel_type=model.Equals, ignore=None, indent="",
         w = rel.right if rel.left == word else rel.left
         tx = Translation(rel = rel, word=w)
         if tx.word not in ignore:
-            if not oneline and tx.rel.comments or tx.word.comments:
+            if (not oneline and tx.rel.comments) or tx.word.comments:
                 translations_comments.append(tx)
             else:
                 translations_no_comments.append(tx)
@@ -186,11 +186,15 @@ if __name__ == '__main__':
     load_db()
 
     if ":" in args.word:
-        lang, word = args.word.split(":")
+        lang, _, word = args.word.partition(":")
+        if not lang or not word or ":" in word:
+            parser.error("expected [lang:]word, e.g. en:waters")
     else:
         lang = config.default_lang
         word = args.word
 
+    if lang.lower() not in model.World.Languages:
+        parser.error(f"unknown language: {lang}")
     lang = model.World.lang(lang)
     word = lang.translate(word)
 

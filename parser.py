@@ -188,18 +188,21 @@ _initial_lang = config.default_lang
 
 
 def handle_meta(meta, p):
-    meta = meta.strip()
-    if meta.startswith("SRC"):
-        src = meta[4:].strip() or None
-        config.source = src
-    elif meta.startswith("NOSRC"):
+    parts = meta.strip().split(None, 1)
+    if not parts:
+        return
+    name = parts[0]
+    arg = parts[1].strip() if len(parts) > 1 else ""
+    if name == "SRC":
+        config.source = arg or None
+    elif name == "NOSRC":
         config.source = None
-    elif meta.startswith("LANG"):
-        lang = meta[5:]
-        config.default_lang = lang
-    elif meta.startswith("IGNORE"):
+    elif name == "LANG":
+        if not arg:
+            raise ValueError("// LANG needs a language")
+        config.default_lang = arg
+    elif name == "IGNORE":
         raise IgnoreFile
-
 
 
 def p_meta(p):
@@ -259,7 +262,7 @@ def finish_file():
 def parse_file(fn):
     log.debug(f"Parsing: {fn}")
     with _parse_context():
-        with open(fn) as f:
+        with open(fn, encoding="utf-8") as f:
             for lineno, line in enumerate(f.readlines(), 1):
                 try:
                     yacc.parse(line)

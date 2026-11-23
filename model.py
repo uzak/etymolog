@@ -174,7 +174,8 @@ class Relationship(Entity, metaclass=RelationshipMeta):
     def _add(cls, left, right, comment=None):
         """get Relationship if it exists, otherwise add"""
         msg = f"Two relationships without a word in between? {left} - {right}"
-        assert right is not None, msg
+        if right is None:
+            raise ValueError(msg)
         obj = cls.get(left, right)
         key = (left.key(), right.key())
         if obj is None:
@@ -207,17 +208,6 @@ class Relationship(Entity, metaclass=RelationshipMeta):
 
     def __str__(self):
         return f"({self.left} {self.Symbol} {self.right})"
-
-    def __hash__(self):
-        return hash((self.Symbol, self.left, self.right))
-
-    def __eq__(self, other):
-        if (self.Symbol, self.left, self.right) == (other.Symbol, other.left, other.right):
-            return True
-        elif self.Bidirectional:
-            if (self.Symbol, self.right, self.left) == (other.Symbol, other.left, other.right):
-                return True
-        return False
 
     def to_json(self):
         return {
@@ -333,7 +323,7 @@ class Language:
             return
         return word
 
-    def get_words(self, value, case_sensitive=False):
+    def get_words(self, value):
         # only match words that start with value and optionally continue
         # with a number
         value = self.fold(value)
@@ -343,9 +333,7 @@ class Language:
                 postfix = key[len(value):]
                 if not postfix or postfix.isdigit():
                     matches.append(word)
-        if case_sensitive:
-            matches = filter(lambda w: value != w.value, matches)
-        return list(matches)
+        return matches
 
     def __eq__(self, other):
         return self.name == other.name

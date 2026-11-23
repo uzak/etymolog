@@ -33,5 +33,5 @@ Run everything **from the repo root**; modules are imported by bare name (`impor
 
 - All state is **global and mutable** (`config`, class-level `Table` dicts on the model classes, `World.Languages`). Loading the DB twice in one process duplicates/merges state; tests reset it via `tests/util.py::reset_model`.
 - Words are matched **case-insensitively** (first-seen spelling wins). This wrongly merges distinct Sanskrit words (`varNa`/`varna`).
-- Known defects exist (cycle in the data crashes `details.py`/`dict.py`; unions silently lost; non-deterministic export; `version.py` needs git). See *Known issues* in [reference.md](reference.md#9-known-issues-snapshot-from-an-audit).
+- Known defects exist (cycle in the data crashes `details.py`/`dict.py`; unions silently lost; non-deterministic export). See *Known issues* in [reference.md](reference.md#9-known-issues-snapshot-from-an-audit).
 - Source modules are named `parser.py`, `dict.py`, `log.py`, `version.py`, `config.py` — they shadow/resemble stdlib names; don't "fix" imports without checking.

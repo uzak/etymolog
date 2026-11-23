@@ -42,7 +42,7 @@ Out of scope: editing tools (data is edited by hand in `.pill` files), search/fu
 | `dict.py` | CLI: dictionary listing for one language. |
 | `dump.py` | CLI: statistics, or JSON export (`-j`). |
 | `log.py` | Logging setup. Level from env `ETYMOLOG_LOG_LEVEL` (default `WARNING`; the env-var support is an uncommitted change — previously hard-coded `DEBUG`). |
-| `version.py` | `rev_no` = number of git commits (`git rev-list --count HEAD` via `os.popen`), embedded in the JSON export. **Requires git and a git cwd.** |
+| `version.py` | `rev_no` = number of git commits (`git rev-list --count HEAD`, run in the module's directory), embedded in the JSON export. `None` if git is unavailable. |
 | `Makefile` | Targets `test`, `coverage`, `db.json`, `count_slovak_words`, `clean`. |
 | `README.md` | Author's description of the grammar and tools (accurate on grammar; see §9 for places where behaviour differs). |
 | `TODO.txt` | Author's backlog and resolved design decisions. |
@@ -323,11 +323,11 @@ Verified by experiment unless marked *(code reading)*. Ordered by impact.
 
 **Crashes / robustness**
 6. `details.py he:adam` and `dict.py he` → `RecursionError` (no visited set in `details.parents`, `details.derived_details`, `dict.derived_chain`). Ancestors are also printed once per path (exponential in dense DAGs) *(code reading)*.
-7. `version.py` runs `git rev-list` in the **current directory** at import. Outside a git repo it raises `ValueError: invalid literal for int()`. `dump.py` and `dict.py` (via `from dump import load_db`) import it; `details.py` no longer does (uncommitted change).
-8. `a -> [c]` raises a bare `AssertionError` with no file/line; under `python -O` it becomes `AttributeError` (the `None` guard is an `assert`, and the rule at `parser.py:126-141` lacks the explicit check the other relationship rule has).
-9. `details.py a:b:c` → `ValueError` (unpack).
-10. Directive parsing is prefix-based: `// LANG   sa` sets language `"  sa"`; `// LANG` sets `""`; `// SRCfoo` sets source `"oo"`.
-11. `open(fn)` without `encoding=` *(code reading)*; the DB is valid UTF-8 without BOMs/CRLF today.
+7. ~~`version.py` needs a git cwd.~~ Fixed (#6): runs git in its own directory; `rev_no` is `None` on failure.
+8. ~~`a -> [c]` raised a bare `AssertionError`.~~ Fixed (#6): `_add` raises `ValueError` (reported with file:line).
+9. ~~`details.py a:b:c` raised `ValueError`.~~ Fixed (#6): malformed argument gives a usage error.
+10. ~~Directive parsing is prefix-based.~~ Fixed (#6): directive names match exactly; bare `// LANG` is an error.
+11. ~~`open(fn)` without `encoding=`.~~ Fixed (#6): files are read as UTF-8.
 
 **Reproducibility**
 12. `get_pills` is unsorted `os.walk`; reversing file order changed 412 word keys and a language name (`Toltec` vs `toltec`).
@@ -335,12 +335,12 @@ Verified by experiment unless marked *(code reading)*. Ordered by impact.
 14. Lexer line numbers in errors are cumulative across files (`at line: 9` for line 1); the `file:line` prefix added by `parse_file` is the reliable one.
 
 **Smaller defects**
-15. `Language.get_words(case_sensitive=True)` filter is inverted (`model.py:333-335`); currently unused.
-16. `Relationship.__hash__` ignores symmetry (`Equals(a,b) == Equals(b,a)` but hashes differ) and `__eq__` raises `AttributeError` for foreign types.
-17. `details.py:81`: `not oneline and tx.rel.comments or tx.word.comments` — probably missing parentheses.
-18. `dump -v` is ~40× slower than non-verbose (list membership test in `dump.py:26-29`).
-19. Unknown language on the CLI exits 0 and creates the language as a side effect.
-20. `Makefile`'s `db.json` rule has no `.DELETE_ON_ERROR`; a failed dump may leave an empty `db.json` that `make` considers up to date *(code reading)*.
+15. ~~`Language.get_words(case_sensitive=True)` filter inverted.~~ Fixed (#6): unused parameter removed.
+16. ~~`Relationship.__hash__`/`__eq__` inconsistent.~~ Fixed (#6): removed; identity semantics suffice as `_add` keeps one object per relationship.
+17. ~~`details.py:81` precedence unclear.~~ Fixed (#6): parentheses added, behaviour unchanged (word comments always shown).
+18. ~~`dump -v` slow.~~ Fixed (#6): the O(n²) dedupe list was redundant (`Table` values are unique) and is removed.
+19. ~~Unknown language on the CLI exited 0 and created the language.~~ Fixed (#6): `details.py` and `dict.py` exit 2 with a usage error.
+20. ~~`Makefile` `db.json` left an empty file on a failed dump.~~ Fixed (#6): `.DELETE_ON_ERROR`.
 
 ## 10. Working on the code: practical notes
 

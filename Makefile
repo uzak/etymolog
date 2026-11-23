@@ -8,6 +8,7 @@ PILLS := $(shell find $(DB) -name "*.pill")
 UI_DIR ?= ~/repos/etymolog-ui
 
 .PHONY: test coverage clean
+.DELETE_ON_ERROR:
 
 test:
 	pytest -v
