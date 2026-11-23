@@ -5,7 +5,7 @@
 
 DB := db
 PILLS := $(shell find $(DB) -name "*.pill") 
-UI_DIR ?= ../etymolog-ui
+UI_DIR ?= ~/repos/etymolog-ui
 
 .PHONY: test coverage clean
 

@@ -6,7 +6,7 @@ from dataclasses import dataclass
 
 import config
 import model
-from dump import load_db
+from parser import load_db
 
 
 def sp(obj):
@@ -64,9 +64,10 @@ def groupbylang_tx(seq):
     return groupby(lambda x: x.word.lang.name, seq)
 
 
-def translations_str(word, rel_type=model.Equals, ignore=set(), indent="",
+def translations_str(word, rel_type=model.Equals, ignore=None, indent="",
                      oneline=False, incl_comments=True):
     # sort data
+    ignore = ignore or set()
     translations_comments = []
     translations_no_comments = []
     if rel_type is model.Equals:
@@ -101,9 +102,12 @@ def translations_str(word, rel_type=model.Equals, ignore=set(), indent="",
     return "\n".join(result)
 
 
-def parents(word, incl_comments=True):
+def parents(word, incl_comments=True, path=()):
+    path = path + (word,)
     for p in word.derived_from:
-        parents(p.left, incl_comments=incl_comments)
+        if p.left in path:  # cycle in data
+            continue
+        parents(p.left, incl_comments=incl_comments, path=path)
         if p.left.unions:
             print_unions(p.left, "   ", in_header=True)
         else:
@@ -117,9 +121,12 @@ def parents(word, incl_comments=True):
             print(f"      |")
 
 
-def derived_details(word, indent, seen_on_left=set(), incl_comments=True):
+def derived_details(word, indent, seen_on_left=set(), incl_comments=True, path=()):
+    path = path + (word,)
     for lang, derivates in groupby(lambda d: d.right.lang.name, word.derives).items():
         for d in derivates:
+            if d.right in path:  # cycle in data
+                continue
             indent_incl_word = indent + " "*(4+len(str(d.right)))
             trans = translations_str(d.right, ignore=seen_on_left, incl_comments=incl_comments, indent=indent_incl_word).lstrip()
             seen_on_left.add(d.left)
@@ -129,7 +136,7 @@ def derived_details(word, indent, seen_on_left=set(), incl_comments=True):
                 comments = comments_str(d)
             print(f"{indent}{model.Derived.Symbol} {d.right}{sp(trans)}{sp(comments)}")
             if d.right.derives:
-                derived_details(d.right, indent + '  ', seen_on_left=seen_on_left, incl_comments=incl_comments)
+                derived_details(d.right, indent + '  ', seen_on_left=seen_on_left, incl_comments=incl_comments, path=path)
 
 
 def details(word, incl_comments=True):

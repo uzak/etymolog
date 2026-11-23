@@ -19,10 +19,14 @@ class TestCase:
 
 def reset_model():
     model.Derived.Table = {}
+    model.Derived.Mirror = {}
     model.Union.Table = {}
     model.Related.Table = {}
+    model.Related.Mirror = {}
     model.Equals.Table = {}
+    model.Equals.Mirror = {}
     model.World.Languages = {}
+    model.World.Tags = {}
 
 
 def lang(language=None):

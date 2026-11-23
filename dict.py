@@ -11,10 +11,13 @@ from dump import load_db
 locale.setlocale(locale.LC_ALL, '')
 
 
-def derived_chain(word, result):
+def derived_chain(word, result, path=()):
+    path = path + (word,)
     for w in word.derived_from:
+        if w.left in path:  # cycle in data
+            continue
         result.append(w)
-        derived_chain(w.left, result=result)
+        derived_chain(w.left, result=result, path=path)
     return result
 
 
