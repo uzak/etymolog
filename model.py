@@ -334,7 +334,7 @@ class Language:
             return
         return word
 
-    def get_words(self, value, case_sensitive=False):
+    def get_words(self, value):
         # only match words that start with value and optionally continue
         # with a number
         value = self.fold(value)
@@ -344,9 +344,7 @@ class Language:
                 postfix = key[len(value):]
                 if not postfix or postfix.isdigit():
                     matches.append(word)
-        if case_sensitive:
-            matches = filter(lambda w: value != w.value, matches)
-        return list(matches)
+        return matches
 
     def __eq__(self, other):
         return self.name == other.name

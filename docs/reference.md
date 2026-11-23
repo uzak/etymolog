@@ -335,7 +335,7 @@ Verified by experiment unless marked *(code reading)*. Ordered by impact.
 14. Lexer line numbers in errors are cumulative across files (`at line: 9` for line 1); the `file:line` prefix added by `parse_file` is the reliable one.
 
 **Smaller defects**
-15. `Language.get_words(case_sensitive=True)` filter is inverted (`model.py:333-335`); currently unused.
+15. ~~`Language.get_words(case_sensitive=True)` filter inverted.~~ Fixed (#6): unused parameter removed.
 16. `Relationship.__hash__` ignores symmetry (`Equals(a,b) == Equals(b,a)` but hashes differ) and `__eq__` raises `AttributeError` for foreign types.
 17. `details.py:81`: `not oneline and tx.rel.comments or tx.word.comments` — probably missing parentheses.
 18. `dump -v` is ~40× slower than non-verbose (list membership test in `dump.py:26-29`).
