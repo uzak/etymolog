@@ -8,7 +8,7 @@
 
 It has three parts:
 
-1. **A plain-text data format**, `.pill` files, one statement per line, e.g. `sa:Pas -> sa:Pasa -> lat:pax -> pacify`.
+1. **A plain-text data format**, `.pill` files, one statement per line (a trailing operator continues it), e.g. `sa:Pas -> sa:Pasa -> lat:pax -> pacify`.
 2. **A parser** (PLY lexer + yacc grammar) that loads all `.pill` files in `db/` into an in-memory object graph (`Word`, `Language`, `Derived`/`Equals`/`Related` relationships, `Union`).
 3. **Three CLI tools** that read that graph: `details.py` (look up one word), `dict.py` (dictionary for one language), `dump.py` (stats or JSON export).
 

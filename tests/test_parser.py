@@ -563,3 +563,44 @@ class TestUnderscoreLanguage(TestCase):
     def test_json_language(self):
         parser.yacc.parse("_:Ugarit")
         assert word("Ugarit", "_").to_json()["lang"] == "_"
+
+
+class TestMultiline(TestCase):
+    """a line ending in `->`, `=`, `~` or `,` continues on the next one"""
+
+    def parse(self, tmp_path, text):
+        fn = tmp_path / "t.pill"
+        fn.write_text(text, encoding="utf-8")
+        parser.parse_file(str(fn))
+
+    def rels(self):
+        return [r.cls_str() + " " + r.left.key() + " " + r.right.key()
+                for cls in (model.Derived, model.Equals) for r in cls.all()]
+
+    def test_same_as_one_line(self, tmp_path):
+        self.parse(tmp_path, "sa:a ->\n  sa:b =\n  lat:c\n")
+        multi = self.rels()
+        reset_model()
+        self.parse(tmp_path, "sa:a -> sa:b = lat:c\n")
+        assert self.rels() == multi and len(multi) == 2
+
+    def test_skips_blank_and_comment_lines(self, tmp_path):
+        self.parse(tmp_path, "sa:a -> // why\n\n// note\n  sa:b\n")
+        assert len(model.Derived.all()) == 1
+
+    def test_indented_lines_stay_separate(self, tmp_path):
+        self.parse(tmp_path, "sa:a -> sa:b\n    sa:b -> sa:c\n")
+        assert len(model.Derived.all()) == 2
+
+    def test_slashes_in_comment_text_are_kept(self, tmp_path):
+        self.parse(tmp_path, "sa:a = [see // here] sa:b -> // x\n sa:c\n")
+        eq = model.Equals.all()[0]
+        assert eq.comment_strs() == ["[see // here]"] and len(model.Derived.all()) == 1
+
+    def test_error_reports_first_line(self, tmp_path):
+        with pytest.raises(SyntaxError, match=r"t.pill:2:"):
+            self.parse(tmp_path, "sa:a -> sa:b\nsa:c ->\n  sa:c\n")
+
+    def test_dangling_operator_at_eof(self, tmp_path):
+        with pytest.raises(SyntaxError, match=r"t.pill:1:"):
+            self.parse(tmp_path, "sa:a ->\n")

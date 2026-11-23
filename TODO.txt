@@ -3,7 +3,6 @@
 * grouping: group languages
 * auto translation from devanagari to latin ...
 
-* support for multiline rel?
 --
 * transitiveness: shall a = b = c also generate a = c? and for ~? -> no
 * support for a = b, c = d, e = f (expression in groups) -> no
