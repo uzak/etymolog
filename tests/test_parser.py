@@ -480,3 +480,14 @@ class TestMisc(TestCase):
         assert len(a.sources) == 1
         assert None not in a.sources
 
+    def test_rel_two_sources(self):
+        parser.yacc.parse("// SRC src1")
+        parser.yacc.parse("a -> b")
+        parser.yacc.parse("// SRC src2")
+        parser.yacc.parse("a -> b")
+        parser.yacc.parse("// SRC")
+        parser.yacc.parse("a -> b")
+        rel = model.Derived.get(lang().get_word("b"), lang().get_word("a"))
+        rel = rel or model.Derived.get(lang().get_word("a"), lang().get_word("b"))
+        assert rel.sources == {"src1", "src2"}
+

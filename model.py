@@ -182,6 +182,8 @@ class Relationship(Entity, metaclass=RelationshipMeta):
             cls.Table[key] = obj
             if cls.Bidirectional:
                 cls.Mirror[key] = obj
+        elif config.source:
+            obj.sources.add(config.source)
         if comment:
             obj.comment(comment)
         return obj
