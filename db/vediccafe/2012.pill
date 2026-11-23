@@ -9,22 +9,22 @@ sa:ishan ~ Pishon
 sa:pas = to touch
 sa:pash = bound to
 
-Pasitigris [ancient name of the river Karun] #river
-Pasitigris ~ sa:pas, sa:pash
+ur:Pasitigris [ancient name of the river Karun] #river
+ur:Pasitigris ~ sa:pas, sa:pash
 
-Kuhrang [another name for river Karun] #river
+ur:Kuhrang [another name for river Karun] #river
 sa:kurangi = deer, antelope
-sa:kurangi -> Kuhrang -> Karun # river
+sa:kurangi -> ur:Kuhrang -> ur:Karun # river
 
 sa:bhama = passion, lustre
 sa:sir = nerve, vein
 Bhamhasir {sa:bhama+sa:sir} [one vein of Arvand, delta of Karun] 
-Bhamhasir ~ Karun
+Bhamhasir ~ ur:Karun
 
 sa:sabar = nectar, milk
 sa:sabar -> Sabar
 Sabar [other vein of Arvand, delta of Karun]
-Sabar ~ Karun
+Sabar ~ ur:Karun
 
 sa:nadi -> summerian:Idigna [Summerian name for the river Tigris] # river
 sa:tivra = swift, fast, intense
@@ -52,8 +52,8 @@ Jordan # river
 sa:Yardna [earthly manifestation of heavenly flowing water] [water from these is considered baptismal water]
 sa:Yardna ~ Jordan, Euphrates
 
-Nepean [River in Austrialia formelly known as Yandhai] # river
-Nepean ~ sa:Yardna
+ur:Nepean [River in Austrialia formelly known as Yandhai] # river
+ur:Nepean ~ sa:Yardna
 
 // SRC https://vediccafe.blogspot.com/2012/07/the-sanskrit-connection-carnac.html
 
@@ -127,8 +127,8 @@ sa:naka = heaven
 Tiwanaku {sa:divya+sa:naku} 
 Tiwanaku {sa:divya+sa:naka} = heavenly heaven
 
-Ilimani # mountain
-Ilimani ~ sa:ilaVrata
+ur:Ilimani # mountain
+ur:Ilimani ~ sa:ilaVrata
 sa:ilaVrata [highest and most central part of the nine divisions of the World]
 
 // SRC https://vediccafe.blogspot.com/2012/07/the-sanskrit-connection-samaipata-rock.html

@@ -1,7 +1,7 @@
 // SRC https://vediccafe.blogspot.com/2014/09/ancient-sumerian-temples-cities-indra.html
 
 sa:iradh = worship
-sa:iradh ~ Eridu # city
+sa:iradh ~ ur:Eridu # city
 
 sa:sagara = sea
 

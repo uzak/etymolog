@@ -25,7 +25,7 @@ gR:nike = victory
 
 gr:Pherenike -> macedonian:Berenice [Queen of Egypt] [wife of Ptolemy]
 
-macedonian:Berenice -> Baranis [ancient seaport of Egypt] [named after Berenice] # geo
+macedonian:Berenice -> ur:Baranis [ancient seaport of Egypt] [named after Berenice] # geo
 
 // NOSRC
 Christopher {christ + lat:ferre} 
