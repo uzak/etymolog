@@ -339,7 +339,7 @@ Verified by experiment unless marked *(code reading)*. Ordered by impact.
 16. ~~`Relationship.__hash__`/`__eq__` inconsistent.~~ Fixed (#6): removed; identity semantics suffice as `_add` keeps one object per relationship.
 17. `details.py:81`: `not oneline and tx.rel.comments or tx.word.comments` — probably missing parentheses.
 18. `dump -v` is ~40× slower than non-verbose (list membership test in `dump.py:26-29`).
-19. Unknown language on the CLI exits 0 and creates the language as a side effect.
+19. ~~Unknown language on the CLI exited 0 and created the language.~~ Fixed (#6): `details.py` and `dict.py` exit 2 with a usage error.
 20. `Makefile`'s `db.json` rule has no `.DELETE_ON_ERROR`; a failed dump may leave an empty `db.json` that `make` considers up to date *(code reading)*.
 
 ## 10. Working on the code: practical notes

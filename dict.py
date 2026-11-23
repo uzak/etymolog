@@ -62,4 +62,6 @@ if __name__ == '__main__':
 
     load_db()
 
+    if args.lang.lower() not in model.World.Languages:
+        parser.error(f"unknown language: {args.lang}")
     dictionary(args.lang, incl_comments=not args.sc)

@@ -193,6 +193,8 @@ if __name__ == '__main__':
         lang = config.default_lang
         word = args.word
 
+    if lang.lower() not in model.World.Languages:
+        parser.error(f"unknown language: {lang}")
     lang = model.World.lang(lang)
     word = lang.translate(word)
 
