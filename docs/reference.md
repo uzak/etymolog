@@ -325,7 +325,7 @@ Verified by experiment unless marked *(code reading)*. Ordered by impact.
 6. `details.py he:adam` and `dict.py he` → `RecursionError` (no visited set in `details.parents`, `details.derived_details`, `dict.derived_chain`). Ancestors are also printed once per path (exponential in dense DAGs) *(code reading)*.
 7. ~~`version.py` needs a git cwd.~~ Fixed (#6): runs git in its own directory; `rev_no` is `None` on failure.
 8. ~~`a -> [c]` raised a bare `AssertionError`.~~ Fixed (#6): `_add` raises `ValueError` (reported with file:line).
-9. `details.py a:b:c` → `ValueError` (unpack).
+9. ~~`details.py a:b:c` raised `ValueError`.~~ Fixed (#6): malformed argument gives a usage error.
 10. Directive parsing is prefix-based: `// LANG   sa` sets language `"  sa"`; `// LANG` sets `""`; `// SRCfoo` sets source `"oo"`.
 11. `open(fn)` without `encoding=` *(code reading)*; the DB is valid UTF-8 without BOMs/CRLF today.
 

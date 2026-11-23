@@ -186,7 +186,9 @@ if __name__ == '__main__':
     load_db()
 
     if ":" in args.word:
-        lang, word = args.word.split(":")
+        lang, _, word = args.word.partition(":")
+        if not lang or not word or ":" in word:
+            parser.error("expected [lang:]word, e.g. en:waters")
     else:
         lang = config.default_lang
         word = args.word
