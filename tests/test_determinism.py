@@ -23,3 +23,10 @@ class TestDeterminism(TestCase):
         w = model.World.lang("t").get_word("w")
         assert w.to_json()["comments"] == ["a", "m", "z"]
         assert w.to_json()["tags"] == ["b", "y"]
+
+    def test_relationships_sorted(self):
+        parser.yacc.parse("c -> a")
+        parser.yacc.parse("b = a")
+        parser.yacc.parse("a -> b")
+        pairs = [(r.left.key(), r.right.key()) for r in model.Derived.all()]
+        assert pairs == [("en:a", "en:b"), ("en:c", "en:a")]

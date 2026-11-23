@@ -150,14 +150,7 @@ class Group:
     __repr__ = __str__
 
 
-class RelationshipMeta(type):
-    def __new__(mcls, name, bases, attrs, **kw):
-        attrs['Table'] = {}
-        attrs['Mirror'] = {}
-        return super().__new__(mcls, name, bases, attrs)
-
-
-class Relationship(Entity, metaclass=RelationshipMeta):
+class Relationship(Entity):
     Bidirectional = True
 
     def __init__(self, left, right):
@@ -182,12 +175,8 @@ class Relationship(Entity, metaclass=RelationshipMeta):
         if right is None:
             raise ValueError(msg)
         obj = cls.get(left, right)
-        key = (left.key(), right.key())
         if obj is None:
             obj = cls(left, right)
-            cls.Table[key] = obj
-            if cls.Bidirectional:
-                cls.Mirror[key] = obj
         elif config.source:
             obj.sources.add(config.source)
         if comment:
@@ -196,16 +185,22 @@ class Relationship(Entity, metaclass=RelationshipMeta):
 
     @classmethod
     def get(cls, left, right):
-        key = (left.key(), right.key())
-        rev_key = (right.key(), left.key())
-        if key in cls.Table:
-            return cls.Table[key]
-        elif cls.Bidirectional and rev_key in cls.Mirror:
-            return cls.Mirror[rev_key]
+        for r in getattr(left, cls.Attr):
+            if (r.left is left and r.right is right) or \
+               (cls.Bidirectional and r.left is right and r.right is left):
+                return r
+
+    @classmethod
+    def all(cls):
+        """All relationships of this type, sorted for deterministic output"""
+        rels = (r for lang in World.Languages.values()
+                for w in lang.words.values()
+                for r in getattr(w, cls.Attr) if r.left is w)
+        return sorted(rels, key=lambda r: (r.left.key(), r.right.key()))
 
     @classmethod
     def cls_str(cls):
-        return f"{cls.__name__} ({len(cls.Table)})"
+        return f"{cls.__name__} ({len(cls.all())})"
 
     def __repr__(self):
         comments = f"[{', '.join(self.comments)}]" if self.comments else ""
@@ -226,6 +221,7 @@ class Relationship(Entity, metaclass=RelationshipMeta):
 class Derived(Relationship):
     Bidirectional = False
     Symbol = "->"
+    Attr = "derives_to"
 
     def __init__(self, left: Word, right: Word):
         super().__init__(left, right)
@@ -235,6 +231,7 @@ class Derived(Relationship):
 
 class Equals(Relationship):
     Symbol = "="
+    Attr = "equals"
 
     def __init__(self, left: Word, right: Word):
         super().__init__(left, right)
@@ -244,6 +241,7 @@ class Equals(Relationship):
 
 class Related(Relationship):
     Symbol = "~"
+    Attr = "related"
 
     def __init__(self, left: Word, right: Word):
         super().__init__(left, right)

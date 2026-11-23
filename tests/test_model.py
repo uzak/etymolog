@@ -15,6 +15,25 @@ class TestModel(TestCase):
         w2 = en.add_word("w2")
         assert model.Equals._add(w1, w2) is model.Equals._add(w2, w1)
 
+    def test_rel_get(self):
+        en = lang("en")
+        w1 = en.add_word("w1")
+        w2 = en.add_word("w2")
+        eq = model.Equals._add(w1, w2)
+        assert model.Equals.get(w2, w1) is eq
+        assert model.Related.get(w1, w2) is None
+        assert model.Derived.get(w2, w1) is None
+        assert model.Equals._add(w2, w1) is eq
+        assert model.Equals.all() == [eq]
+
+    def test_derived_is_directional(self):
+        en = lang("en")
+        w1 = en.add_word("w1")
+        w2 = en.add_word("w2")
+        d = model.Derived._add(w1, w2)
+        assert model.Derived.get(w1, w2) is d
+        assert model.Derived.get(w2, w1) is None
+
     def test_case_insensitiveness(self):
         en = lang("en")
         upper = en.add_word("W1")
