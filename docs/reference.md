@@ -336,7 +336,7 @@ Verified by experiment unless marked *(code reading)*. Ordered by impact.
 
 **Smaller defects**
 15. ~~`Language.get_words(case_sensitive=True)` filter inverted.~~ Fixed (#6): unused parameter removed.
-16. `Relationship.__hash__` ignores symmetry (`Equals(a,b) == Equals(b,a)` but hashes differ) and `__eq__` raises `AttributeError` for foreign types.
+16. ~~`Relationship.__hash__`/`__eq__` inconsistent.~~ Fixed (#6): removed; identity semantics suffice as `_add` keeps one object per relationship.
 17. `details.py:81`: `not oneline and tx.rel.comments or tx.word.comments` — probably missing parentheses.
 18. `dump -v` is ~40× slower than non-verbose (list membership test in `dump.py:26-29`).
 19. Unknown language on the CLI exits 0 and creates the language as a side effect.

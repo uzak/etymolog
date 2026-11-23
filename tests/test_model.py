@@ -13,7 +13,7 @@ class TestModel(TestCase):
         en = lang("en")
         w1 = en.add_word("w1")
         w2 = en.add_word("w2")
-        assert model.Equals(w1, w2) == model.Equals(w2, w1)
+        assert model.Equals._add(w1, w2) is model.Equals._add(w2, w1)
 
     def test_case_insensitiveness(self):
         en = lang("en")

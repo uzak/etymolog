@@ -209,17 +209,6 @@ class Relationship(Entity, metaclass=RelationshipMeta):
     def __str__(self):
         return f"({self.left} {self.Symbol} {self.right})"
 
-    def __hash__(self):
-        return hash((self.Symbol, self.left, self.right))
-
-    def __eq__(self, other):
-        if (self.Symbol, self.left, self.right) == (other.Symbol, other.left, other.right):
-            return True
-        elif self.Bidirectional:
-            if (self.Symbol, self.right, self.left) == (other.Symbol, other.left, other.right):
-                return True
-        return False
-
     def to_json(self):
         return {
             "left": self.left.as_str(comments=False, unions=False),
