@@ -26,15 +26,15 @@ sa:babhrU = brown
 sa:palitA = grey
 sa:pingala = red
 
-sa:ugra -> ur:Ugarit # city
+sa:ugra -> _:Ugarit # city
 sa:ugra = fierce
 
-ur:Urkesh {sa:uru+sa:kesh} [earth-mane]
-ur:Urkesh # city
+_:Urkesh {sa:uru+sa:kesh} [earth-mane]
+_:Urkesh # city
 
 sa:magadh = baladeer [who sings praises of his ancestry]
 sa:magadh -> sa:Magadha
-sa:Magadha [powerful empire of India metnioned in the Vedas] -> ur:Megiddo # city
+sa:Magadha [powerful empire of India metnioned in the Vedas] -> _:Megiddo # city
 
 sa:alep -> Alep [ancient name for Aleppo] -> Aleppo
 sa:alep {a+lepa} = pure, clean
@@ -43,10 +43,10 @@ sa:lepa -> sk:lepidlo
 Asshur  [from "Asur", name of the tribes that stood against the Vedic "Sura"]
 
 sa:sagar = ocean
-sa:sagar -> ur:Saggaratum [confluence of Euphrates and Khabur] # city
-ur:Saggaratum ~ Euprahtes, Khabur
+sa:sagar -> _:Saggaratum [confluence of Euphrates and Khabur] # city
+_:Saggaratum ~ Euprahtes, Khabur
 
-ur:Arvad # city 
+_:Arvad # city 
 sa:arvat = low lying
 sa:parvat = high, mountain
 sa:arvat ~ sa:parvat
@@ -55,30 +55,30 @@ hurrian:Khabur [source of fertility]
 sa:urvara -> hurrian:Khabur  # river
 sa:urvara = fertility
 
-ur:Amrit # city
+_:Amrit # city
 
-sa:yama [Vedic god of Death] -> ur:Yamkhad # city
+sa:yama [Vedic god of Death] -> _:Yamkhad # city
 sa:yama ["twin-born"]
 
-sa:hari -> ur:Harran # city
-sa:karan [a well loved Kuru character in Mahabharata] -> ur:Karana # city
+sa:hari -> _:Harran # city
+sa:karan [a well loved Kuru character in Mahabharata] -> _:Karana # city
 
-sa:shikhara -> ur:Shekhana # city
+sa:shikhara -> _:Shekhana # city
 sa:shikhara = peak
 
 sa:uru = earth
-sa:uru -> ur:Uruk # city
+sa:uru -> _:Uruk # city
 
-sa:pura -> ur:Sippar {sa:sipa + sa:pura} # city
-sa:pura -> ur:Nippur {sa:nipa + sa:pura} # city
+sa:pura -> _:Sippar {sa:sipa + sa:pura} # city
+sa:pura -> _:Nippur {sa:nipa + sa:pura} # city
 sa:nipa = lower, poured out
 sa:sipa = water wessel
 
 sa:lahar = wave 
-sa:lahar -> ur:Larsa # city
+sa:lahar -> _:Larsa # city
 
-sa:jalashya ["lying in water"] -> ur:Alashya # city
-ur:Alashya [ancient name for Cypress]
+sa:jalashya ["lying in water"] -> _:Alashya # city
+_:Alashya [ancient name for Cypress]
 
 sa:Kamesh [one of the names of Lord Shiva] -> hittite:Kanush # city
 sa:purushattam = the highest being

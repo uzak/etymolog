@@ -86,7 +86,7 @@ Files are UTF-8 text (read with the locale default encoding — see §9). **One 
 
 | Token | Pattern | Meaning |
 |---|---|---|
-| `TOKEN` | `[\w'/\.]+` | A word fragment: letters, digits, `_`, `'`, `/`, `.`. **Hyphen is illegal** (conflicts with `->`; the author decided "no"). |
+| `TOKEN` | `[\w'/\.]+` | A word fragment: letters, digits, `_`, `'`, `/`, `.`. `/` separates the forms of one word (`sa:han/hanti`), `.` after it marks an ending (`lat:ango/.ere`); see §4.2. **Hyphen is illegal** (conflicts with `->`; the author decided "no"). |
 | `LANG` | `\w+\s*:` | Language prefix, e.g. `sa:` (colon stripped). Takes priority over `TOKEN`. |
 | `DERIVE` | `->` | Directional derivation. |
 | `EQUALS` | `=` | Translation / equivalence (symmetric). |
@@ -110,7 +110,8 @@ big ship (of wood)   # one composite word "big ship"; the parenthesised part is 
 sa:sveta asva        # composite Sanskrit word "sveta asva"
 ```
 
-- **`ur`** ("ancient") is the convention for names of uncertain or ancient origin (`ur:Ugarit`, `ur:Eridu`) that must not live in `en`. It is an ordinary, case-sensitive language created on first use; there is no code for it. `World.lang` lowercases names, so `UR:x` and `ur:x` are the same language. Urdu, if ever needed, would be `urdu`.
+- **`_`** (underscore) is the convention for names of uncertain or ancient origin (`_:Ugarit`, `_:Eridu`) that must not live in `en`. It is an ordinary, case-sensitive language created on first use; there is no code for it.
+- **Forms and key rules:** `Word.forms` splits the value on `/` and drops `.`-prefixed endings (`han/hanti` -> `han`, `hanti`; `ango/.ere` -> `ango`). `Language.get_words`, `lookup.similar` and `dict.py` sorting compare the whole value and every form after `Language.fold`. `fold` is case folding plus `Language.KeyRules` (today only `en`: drop a leading `to `) and is also the key of `Language.words`, so **`en:go` and `en:to go` are one `Word`** (relationships shared; the longer spelling `to go` becomes the value; same-length case variants keep the first). A genuinely different noun is kept apart with the homonym digit (`bear1`), and `get_words("bear")` lists both. Slash words are *not* merged with their bare form: `sa:as`, `sa:as/asti` and `sa:as/asyati` stay three words and a lookup of `as` lists all three. `get_word` is exact on the key. `dict.py` sorts by `Language.sort_key` (first form), ties by the stored value. `db.json` has one English word where it had two.
 - Only the **first** word of a composite may carry a language; `en:big de:Schiff` is a syntax error.
 - Language names are free-form identifiers (`sa`, `lat`, `gr`, `slavic`, `old_church_slavonic`…). **Any new name silently creates a new language** — there is no registry, so typos create phantom languages.
 - Lookup is case sensitive, except in `Language.CaseInsensitive` (`en`, `gr`), where the spelling **first seen** during the load is the stored `value`. Keys are produced by `Language.fold`.

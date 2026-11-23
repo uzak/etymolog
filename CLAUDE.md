@@ -35,6 +35,7 @@ ETYMOLOG_LOG_LEVEL=DEBUG ./details.py ...   # logging verbosity (default WARNING
 
 - All state is global and mutable (`config`, class-level tables on model classes, `World.Languages`). Loading the DB twice in one process merges or duplicates state. Tests extend `tests/util.py::TestCase`, whose autouse fixture calls `reset_model()`. **If you add a new class-level table to the model, reset it in `reset_model()` too.**
 - Words are case sensitive except in languages listed in `Language.CaseInsensitive` (`en`, `gr`), where the first-seen spelling wins.
+- `Language.fold` (case folding + `Language.KeyRules`) is the identity key of a word: in `en`, `to go` and `go` are one `Word` (longer spelling wins). `get_words` also matches every `/`-form (`han/hanti`), so one lookup can return several words; `get_word` matches the key exactly.
 - Module names `parser.py`, `dict.py`, `log.py`, `version.py`, `config.py` shadow or resemble stdlib names. Don't "fix" imports without checking.
 - `version.py` shells out to `git rev-list` in its own directory; `rev_no` is `None` outside a git checkout.
 - Known defects (cycles in data crash `details.py`/`dict.py`, non-deterministic export) are listed in `docs/reference.md` §9. `TODO.txt` has design decisions (e.g. no transitive equality, no `-` in word chars because it conflicts with `->`).

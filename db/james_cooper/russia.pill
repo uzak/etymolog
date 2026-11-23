@@ -153,23 +153,23 @@ sa:vrt -> divert, revert, convert, subvert, pervert, vortex, vertigo, universe
 slavic:desna = right hand
 slavic:desna -> hr:desni = right
 sa:daksina = right hand
-sa:daksina -> slavic:desna, ur:Daksa, dexterity
+sa:daksina -> slavic:desna, _:Daksa, dexterity
 sa:Daksha [one of sons of Lord Brahma]
-sa:Daksha -> ur:Daksa [island] # geo
+sa:Daksha -> _:Daksa [island] # geo
 
 sa:apara = not having a shore, boundless
 slavic:Danapra {sa:Danu+sa:Apara} -> ru:Dnipro -> Dnieper         # river
 
 sa:Kashyapa Muni [Great Vedic Sage]
 sa:Kashyapa Muni -> Kashmir         # geo
-sa:Kashyapa Muni -> ur:Caspian See     # geo
+sa:Kashyapa Muni -> _:Caspian See     # geo
 sa:Diti ~[wife] sa:Kashyapa Muni
 sa:Danu ~[wife] sa:Kashyapa Muni
 sa:daityas ~[children] sa:Diti
 sa:sthana = region, place
 sa:Daityastan {daityas+sthana} -> de:Deutschland
 
-sa:Danu -> ur:Don # river
+sa:Danu -> _:Don # river
 sa:Danu -> Danube # river
 sa:Danu -> Dniester {sa:Danu+Ister}
 Dniester # river
@@ -179,32 +179,32 @@ Dniester # river
 // Svaika, Hvarzenta, Arza, Pana and the river OM,
 
 sa:moksha = liberation, release
-sa:moksha -> ur:Moksha # river
+sa:moksha -> _:Moksha # river
 
 sa:kama = love, desire, beauty
-sa:kama -> ur:Kama # river
+sa:kama -> _:Kama # river
 
 sa:samara = battle
-sa:samara -> ur:Samara # river # city
+sa:samara -> _:Samara # river # city
 
 sa:kUma = pond, lake
-sa:kUma -> ur:Kuma # river
+sa:kUma -> _:Kuma # river
 
-sa:pasa -> ur:Pasha # river
+sa:pasa -> _:Pasha # river
 
 sa:uSA = aurora, dawn
-sa:uSA -> ur:usa # river
+sa:uSA -> _:usa # river
 
 sa:aGgAra = coal, charcoal
-sa:aGgAra -> ur:Angara # river
+sa:aGgAra -> _:Angara # river
 
 sa:rasa = moisture, humidity, essence, soup
 sa:rasa -> sk:rosa
-sa:rasa -> ur:Rasa -> Russia # geo
+sa:rasa -> _:Rasa -> Russia # geo
 Rishi Varsa ~[Vedic name] Russia
 
-ur:Rasa # river
-ur:Rasa [original name for Volga]
+_:Rasa # river
+_:Rasa [original name for Volga]
 
 sa:muska = testicle (testicles of deer which produces musk)
 sa:muska -> Moscow
