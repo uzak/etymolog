@@ -192,7 +192,7 @@ if __name__ == '__main__':
         word = args.word
 
     lang = model.World.lang(lang)
-    word = lang.translate(word).lower()  # XXX
+    word = lang.translate(word)
 
     words = lang.get_words(word)
     if not words:
