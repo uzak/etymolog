@@ -263,19 +263,23 @@ All tools call `load_db()` first, so each invocation re-parses the entire DB.
 
 - Splits on `:` (exactly one colon allowed; `a:b:c` crashes). Without a language uses `config.default_lang` (`en`).
 - Applies `Language.translate`, then `get_words` (exact match for case-sensitive languages) (prefix + optional digits). Prints a block per match; prints `` `lang:word` not found `` (exit code 0) if none.
-- `--sc` suppresses comments.
+- `--sc` suppresses all comments (header, translations, derivations, ancestor connectors, union components).
+- **Comments are stacked:** every comment (word or relationship) is printed on its own line, indented 4 spaces below the line it belongs to, relationship comments first, then the word's own. Comments between ancestors keep the `|` connector (one `|` line per comment).
 - `-s/--similar` also prints a `similar:` block (score, `lang:word`, first translation) of words in the language whose accent/case-stripped spelling has a `difflib` ratio ≥ 0.7 (max 10). `-S/--suggest` implies it and searches all languages except `en` (unless it is the target), scoring the mean of the spelling ratio and a ratio of coarse sound classes (`bh`/`ph`/`b`/`p`/`f` → one class, vowels one class), cutoff 0.6. Exact matches are not repeated; exit code stays 0. In an audit on 200 known cross-language derivation pairs the true relative was in the top 5 for about 28% of words, so treat results as hints.
 - Block layout (indentation is 4 spaces; cosmetic details are slightly inconsistent):
 
 ```
       * / ancestors chain printed first (recursively), each with its translations and union
-      | [relationship comments]
- => sa:tr                         # the word itself (with comments, tags)
-    = en:stars, to cross over     # translations (Equals), words with comments listed separately
+      | [relationship comment]    # one `|` line per comment
+ => sa:tr                         # the word itself (with tags)
+    [comment of the word]         # one line per comment
+    = en:stars, to cross over     # translations (Equals); a translation with comments gets its own line,
+    = en:night                    #   followed by its relationship comments and its word comments, one per line
+        [a comment]
     + sa:rAtrI {ra+tr} = en:night # unions this word is a component of
     -> sa:str = en:star, …        # descendants (Derived), recursively indented
       -> sa:tara = en:crossing
-    ~ …                           # Related
+    ~ …                           # Related (indented like the rest)
 ```
 
 ### `dict.py [--sc] lang`
