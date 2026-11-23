@@ -317,7 +317,7 @@ Verified by experiment unless marked *(code reading)*. Ordered by impact.
 **Data integrity**
 1. ~~Case-folding merges distinct words.~~ Fixed (#3): only `en` and `gr` fold case.
 2. ~~Unions lost.~~ Fixed (#4): unions are identified by word and components.
-3. **Relationship provenance dropped.** Re-asserting an existing relationship under a different `SRC` does not add the source (`Relationship._add`); words do accumulate sources.
+3. ~~Relationship provenance dropped.~~ Fixed (#5): re-asserting a relationship under a new `SRC` adds the source.
 4. **Cycles are accepted.** The DB contains `he:adam -> he:adamah -> he:adam`; `a -> a, b` creates a self-loop (the self-reference check compares against a `Group`).
 5. **Phantom languages.** Language names are never validated.
 
