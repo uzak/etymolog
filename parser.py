@@ -262,7 +262,7 @@ def finish_file():
 def parse_file(fn):
     log.debug(f"Parsing: {fn}")
     with _parse_context():
-        with open(fn) as f:
+        with open(fn, encoding="utf-8") as f:
             for lineno, line in enumerate(f.readlines(), 1):
                 try:
                     yacc.parse(line)

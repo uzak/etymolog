@@ -327,7 +327,7 @@ Verified by experiment unless marked *(code reading)*. Ordered by impact.
 8. ~~`a -> [c]` raised a bare `AssertionError`.~~ Fixed (#6): `_add` raises `ValueError` (reported with file:line).
 9. ~~`details.py a:b:c` raised `ValueError`.~~ Fixed (#6): malformed argument gives a usage error.
 10. ~~Directive parsing is prefix-based.~~ Fixed (#6): directive names match exactly; bare `// LANG` is an error.
-11. `open(fn)` without `encoding=` *(code reading)*; the DB is valid UTF-8 without BOMs/CRLF today.
+11. ~~`open(fn)` without `encoding=`.~~ Fixed (#6): files are read as UTF-8.
 
 **Reproducibility**
 12. `get_pills` is unsorted `os.walk`; reversing file order changed 412 word keys and a language name (`Toltec` vs `toltec`).
