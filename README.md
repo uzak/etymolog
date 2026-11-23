@@ -50,7 +50,7 @@ Dictionary headwords can be written with their forms separated by `/`, e.g. the 
     sa:han/hanti
     lat:ango/.ere
 
-It is still one word with its relationships together, but a lookup finds it by any form: `./details.py sa:hanti` and `sa:han` both find `sa:han/hanti`. Endings that start with `.` are not searchable on their own. Each language can also have search rules that are applied before comparing (lookup, similar words, sorting in `dict.py`). Today there is one: English ignores a leading `to `, so `go` finds `to go` and the verbs sort among the other words. Stored words are never changed.
+It is still one word with its relationships together, but a lookup finds it by any form: `./details.py sa:hanti` and `sa:han` both find `sa:han/hanti`. Endings that start with `.` are not searchable on their own. Each language can also have key rules that decide when two spellings are the same word. Today there is one: in English `go` and `to go` are one word, so their relationships are together and a lookup is offered once (the longer spelling, `to go`, is shown). If the noun means something else than the verb, number the noun like any homonym: `bear1` (animal) next to `to bear`; `./details.py bear` lists both.
 
 #### Composite words
 You can have several words following each other and they will be fused into one:

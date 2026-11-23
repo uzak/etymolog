@@ -295,9 +295,9 @@ class Language:
     # languages whose words are matched case-insensitively; all others are case sensitive
     CaseInsensitive = {'en', 'gr'}
 
-    # per-language (regex, replacement) rules applied to a query and to stored forms
-    # before comparing (lookup, similarity, sorting); stored values are never changed
-    SearchRules = {
+    # per-language (regex, replacement) rules applied to the key of every word (identity,
+    # lookup, similarity, sorting): `go` and `to go` are one English word
+    KeyRules = {
         'en': [(r'^to ', '')],
     }
 
@@ -306,18 +306,15 @@ class Language:
         self.words = {}
 
     def fold(self, value):
-        """key under which a word is stored in `words`"""
-        return value.lower() if self.name.lower() in Language.CaseInsensitive else value
-
-    def search_key(self, value):
-        """folded `value` with this language's search rules applied"""
-        value = self.fold(value)
-        for pattern, repl in Language.SearchRules.get(self.name, ()):
+        """key under which a word is stored in `words`: case folded, language rules applied"""
+        if self.name.lower() in Language.CaseInsensitive:
+            value = value.lower()
+        for pattern, repl in Language.KeyRules.get(self.name, ()):
             value = re.sub(pattern, repl, value)
         return value
 
     def sort_key(self, word):
-        return self.search_key(word.forms[0] if word.forms else word.value).lower()
+        return self.fold(word.forms[0] if word.forms else word.value).lower()
 
     def __iter__(self):
         return iter(self.words.values())
@@ -337,6 +334,8 @@ class Language:
         else:
             # XXX hackish? add source if changed since last addition
             word = self.words[key]
+            if len(value) > len(word.value):    # `to go` over `go`; same-length case variants keep the first
+                word.value = value
             if config.source and config.source not in word.sources:
                 word.sources.add(config.source)
         return self.words[key]
@@ -348,13 +347,13 @@ class Language:
         return word
 
     def get_words(self, value):
-        """words with a key (the whole value or any of its forms, after search rules)
+        """words with a key (the whole value or any of its forms, after key rules)
         starting with value and optionally continuing with a number"""
-        value = self.search_key(value)
+        value = self.fold(value)
         matches = []
         for word in self.words.values():
             for candidate in [word.value] + word.forms:
-                key = self.search_key(candidate)
+                key = self.fold(candidate)
                 if key.startswith(value):
                     postfix = key[len(value):]
                     if not postfix or postfix.isdigit():

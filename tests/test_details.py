@@ -71,4 +71,5 @@ class TestFormLookup:
 
     def test_english_to_is_ignored(self):
         r = run_script("details.py", "en:go")
-        assert "en:to go" in r.stdout
+        assert "=> en:to go" in r.stdout
+        assert "=> en:go" not in r.stdout       # one word, offered once

@@ -7,6 +7,9 @@ test the parser, obviously
 
 from . util import *
 
+import parser
+import pytest
+
 class TestModel(TestCase):
 
     def test_rel_bidirectionality(self):
@@ -94,18 +97,45 @@ class TestWordForms(TestCase):
         assert self.keys("sa", "az") == ["sa:az1", "sa:az2"]
 
 
-class TestSearchRules(TestCase):
+class TestKeyRules(TestCase):
+    """English `to go` and `go` are one word"""
 
-    def test_english_to_is_ignored_when_searching(self):
+    def test_english_to_is_one_word(self):
         en = lang("en")
-        en.add_word("go")
-        en.add_word("to go")
-        en.add_word("tomato")
+        go = en.add_word("go")
+        assert en.add_word("to go") is go
+        assert en.add_word("To Go") is go
+        assert len(en) == 1
         for query in ("go", "to go", "To Go"):
-            assert [w.key() for w in en.get_words(query)] == ["en:go", "en:to go"]
+            assert en.get_word(query) is go
+            assert en.get_words(query) == [go]
 
-    def test_stored_value_is_unchanged(self):
-        assert lang("en").add_word("to go").value == "to go"
+    def test_longer_spelling_is_kept(self):
+        en = lang("en")
+        assert en.add_word("go").value == "go"
+        assert en.add_word("to go").value == "to go"
+        assert en.add_word("go").value == "to go"
+
+    def test_case_variants_keep_the_first_spelling(self):
+        en = lang("en")
+        assert en.add_word("Ship").value == "Ship"
+        assert en.add_word("ship").value == "Ship"
+
+    def test_relationships_are_shared(self):
+        parser.yacc.parse("go = sa:ga")
+        parser.yacc.parse("to go = lat:eo")
+        go = lang("en").get_word("go")
+        assert sorted(w.key() for w in lookup_equals(go)) == ["lat:eo", "sa:ga"]
+
+    def test_self_reference_is_rejected(self):
+        with pytest.raises(ValueError):
+            parser.yacc.parse("to go -> go")
+
+    def test_homonym_digit_keeps_a_word_apart(self):
+        en = lang("en")
+        animal, carry = en.add_word("bear1"), en.add_word("to bear")
+        assert animal is not carry
+        assert {w.key() for w in en.get_words("bear")} == {"en:bear1", "en:to bear"}
 
     def test_rules_are_per_language(self):
         lang("de").add_word("to go")
@@ -117,3 +147,7 @@ class TestSearchRules(TestCase):
         assert en.sort_key(en.add_word("to go")) == "go"
         assert sa.sort_key(sa.add_word("Han/hanti")) == "han"
         assert lang("lat").sort_key(lang("lat").add_word("ango/.ere")) == "ango"
+
+
+def lookup_equals(word):
+    return [r.right if r.left is word else r.left for r in word.equals]
