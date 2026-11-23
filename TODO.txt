@@ -1,11 +1,8 @@
-* verbs - two forms!
-    `.` - add support outside of parser
 * `-` in names should be OK
 
 * grouping: group languages
 * details (sa pur): have multiple comments in rels below each other
 * auto translation from devanagari to latin ...
-    for english: remove "to" for sorting
 * add tests for cli scripts: {details|dict}.py ?
 
 * support for multiline rel?

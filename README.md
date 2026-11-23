@@ -44,6 +44,14 @@ Each word gets assigned to a language. The language is an abbreviation of the la
 
 For names of uncertain or ancient origin that should not count as English (rivers, cities like Ugarit or Eridu), use the reserved language `ur` ("ancient"): `ur:Ugarit`, or `// LANG ur` for the rest of a file. Like any language it is case sensitive, and `UR` and `ur` are the same language.
 
+#### Words with several forms
+Dictionary headwords can be written with their forms separated by `/`, e.g. the root and the present form of a verb, or a Latin verb with its principal parts (a `.` stands for the forbidden `-`):
+
+    sa:han/hanti
+    lat:ango/.ere
+
+It is still one word with its relationships together, but a lookup finds it by any form: `./details.py sa:hanti` and `sa:han` both find `sa:han/hanti`. Endings that start with `.` are not searchable on their own. Each language can also have search rules that are applied before comparing (lookup, similar words, sorting in `dict.py`). Today there is one: English ignores a leading `to `, so `go` finds `to go` and the verbs sort among the other words. Stored words are never changed.
+
 #### Composite words
 You can have several words following each other and they will be fused into one:
 

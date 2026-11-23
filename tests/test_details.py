@@ -60,3 +60,15 @@ class TestSimilarFlags:
     def test_similar_unknown_language(self):
         r = run_script("details.py", "zz:x", "--similar")
         assert r.returncode == 2
+
+
+class TestFormLookup:
+    def test_second_form_finds_the_word(self):
+        r = run_script("details.py", "sa:hanti")
+        assert r.returncode == 0
+        assert "not found" not in r.stdout
+        assert "sa:han/hanti" in r.stdout
+
+    def test_english_to_is_ignored(self):
+        r = run_script("details.py", "en:go")
+        assert "en:to go" in r.stdout

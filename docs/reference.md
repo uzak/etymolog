@@ -86,7 +86,7 @@ Files are UTF-8 text (read with the locale default encoding — see §9). **One 
 
 | Token | Pattern | Meaning |
 |---|---|---|
-| `TOKEN` | `[\w'/\.]+` | A word fragment: letters, digits, `_`, `'`, `/`, `.`. **Hyphen is illegal** (conflicts with `->`; the author decided "no"). |
+| `TOKEN` | `[\w'/\.]+` | A word fragment: letters, digits, `_`, `'`, `/`, `.`. `/` separates the forms of one word (`sa:han/hanti`), `.` after it marks an ending (`lat:ango/.ere`); see §4.2. **Hyphen is illegal** (conflicts with `->`; the author decided "no"). |
 | `LANG` | `\w+\s*:` | Language prefix, e.g. `sa:` (colon stripped). Takes priority over `TOKEN`. |
 | `DERIVE` | `->` | Directional derivation. |
 | `EQUALS` | `=` | Translation / equivalence (symmetric). |
@@ -111,6 +111,7 @@ sa:sveta asva        # composite Sanskrit word "sveta asva"
 ```
 
 - **`ur`** ("ancient") is the convention for names of uncertain or ancient origin (`ur:Ugarit`, `ur:Eridu`) that must not live in `en`. It is an ordinary, case-sensitive language created on first use; there is no code for it. `World.lang` lowercases names, so `UR:x` and `ur:x` are the same language. Urdu, if ever needed, would be `urdu`.
+- **Forms and search rules:** `Word.forms` splits the value on `/` and drops `.`-prefixed endings (`han/hanti` -> `han`, `hanti`; `ango/.ere` -> `ango`). `Language.get_words`, `lookup.similar` and `dict.py` sorting compare the whole value and every form after `Language.search_key` (fold + `Language.SearchRules`, today only `en`: drop a leading `to `). They are not merged: `sa:as`, `sa:as/asti` and `sa:as/asyati` stay three words and a lookup of `as` lists all three. `get_word` stays exact. `dict.py` sorts by `Language.sort_key` (first form), ties by the stored value. Stored values and `db.json` are unchanged.
 - Only the **first** word of a composite may carry a language; `en:big de:Schiff` is a syntax error.
 - Language names are free-form identifiers (`sa`, `lat`, `gr`, `slavic`, `old_church_slavonic`…). **Any new name silently creates a new language** — there is no registry, so typos create phantom languages.
 - Lookup is case sensitive, except in `Language.CaseInsensitive` (`en`, `gr`), where the spelling **first seen** during the load is the stored `value`. Keys are produced by `Language.fold`.
