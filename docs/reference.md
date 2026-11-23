@@ -210,7 +210,7 @@ Language(name)
 
 Entity                 # base: comments:set[str], sources:set[str]; sources seeded from config.source at construction
   Word(value, lang)
-    derived_from: set[Derived]      derives: set[Derived]
+    derived_from: set[Derived]      derives_to: set[Derived]
     equals: set[Equals]             related: set[Related]
     unions: set[Union]              in_unions: set[Union]
     tags: set[str]

@@ -28,7 +28,7 @@ class Word(Entity):
         self.value = value
         self.lang = lang
         self.derived_from = set()
-        self.derives = set()
+        self.derives_to = set()
         self.equals = set()
         self.related = set()
         self.unions = set()
@@ -224,7 +224,7 @@ class Derived(Relationship):
 
     def __init__(self, left: Word, right: Word):
         super().__init__(left, right)
-        left.derives.add(self)
+        left.derives_to.add(self)
         right.derived_from.add(self)
 
 

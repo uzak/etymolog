@@ -123,7 +123,7 @@ def parents(word, incl_comments=True, path=()):
 
 def derived_details(word, indent, seen_on_left=set(), incl_comments=True, path=()):
     path = path + (word,)
-    for lang, derivates in groupby(lambda d: d.right.lang.name, word.derives).items():
+    for lang, derivates in groupby(lambda d: d.right.lang.name, word.derives_to).items():
         for d in derivates:
             if d.right in path:  # cycle in data
                 continue
@@ -135,7 +135,7 @@ def derived_details(word, indent, seen_on_left=set(), incl_comments=True, path=(
             else:
                 comments = comments_str(d)
             print(f"{indent}{model.Derived.Symbol} {d.right}{sp(trans)}{sp(comments)}")
-            if d.right.derives:
+            if d.right.derives_to:
                 derived_details(d.right, indent + '  ', seen_on_left=seen_on_left, incl_comments=incl_comments, path=path)
 
 
@@ -144,6 +144,7 @@ def details(word, incl_comments=True):
 
     for u in word.in_unions:
         print(f"{indent}+ {u.word} {translations_str(u.word, incl_comments=incl_comments, oneline=True)}")
+        derived_details(u.word, indent + "  ", set(), incl_comments=incl_comments)
 
     derived_details(word, indent, set(), incl_comments=incl_comments)
 
