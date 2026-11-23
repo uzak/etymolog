@@ -5,6 +5,7 @@ Parse .pill files
 """
 
 import os
+from contextlib import contextmanager
 import model
 import config
 import ply.yacc
@@ -183,7 +184,8 @@ def p_plus_words1(p):
 # META is either an user defined comment that will be ignored
 # or a pragma directive for the parser
 
-orig_default_lang = None
+_initial_lang = config.default_lang
+
 
 def handle_meta(meta, p):
     meta = meta.strip()
@@ -193,9 +195,6 @@ def handle_meta(meta, p):
     elif meta.startswith("NOSRC"):
         config.source = None
     elif meta.startswith("LANG"):
-        global orig_default_lang        # XXX global ...
-        if not orig_default_lang:
-            orig_default_lang = config.default_lang
         lang = meta[5:]
         config.default_lang = lang
     elif meta.startswith("IGNORE"):
@@ -244,23 +243,30 @@ precedence = (
 yacc = ply.yacc.yacc()
 
 
-def parse_file(fn):
-    log.debug(f"Parsing: {fn}")
-    with open(fn) as f:
-        for line in f.readlines():
-            try:
-                yacc.parse(line)
-            except IgnoreFile:
-                break
+@contextmanager
+def _parse_context():
+    try:
+        yield
+    finally:
         finish_file()
 
 
 def finish_file():
-    log.debug("Setting config.source=None")
     config.source = None
-    if orig_default_lang:
-        log.debug(f"Setting config.default_lang={orig_default_lang}")
-        config.default_lang = orig_default_lang
+    config.default_lang = _initial_lang
+
+
+def parse_file(fn):
+    log.debug(f"Parsing: {fn}")
+    with _parse_context():
+        with open(fn) as f:
+            for lineno, line in enumerate(f.readlines(), 1):
+                try:
+                    yacc.parse(line)
+                except IgnoreFile:
+                    break
+                except (SyntaxError, ValueError) as e:
+                    raise SyntaxError(f"{fn}:{lineno}: {e}") from e
 
 
 def get_pills(path):

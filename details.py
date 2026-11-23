@@ -6,7 +6,7 @@ from dataclasses import dataclass
 
 import config
 import model
-from dump import load_db
+from parser import load_db
 
 
 def sp(obj):

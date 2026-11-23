@@ -6,7 +6,9 @@ Central logging infrastructure
 """
 
 import logging
+import os
 
 log = logging.getLogger(__file__)
 log_format = '%(asctime)s %(module)s.%(levelname)s: %(message)s'
-logging.basicConfig(format=log_format, level=logging.DEBUG)
+_level = getattr(logging, os.environ.get("ETYMOLOG_LOG_LEVEL", "WARNING").upper(), logging.WARNING)
+logging.basicConfig(format=log_format, level=_level)
