@@ -340,7 +340,7 @@ Verified by experiment unless marked *(code reading)*. Ordered by impact.
 17. ~~`details.py:81` precedence unclear.~~ Fixed (#6): parentheses added, behaviour unchanged (word comments always shown).
 18. ~~`dump -v` slow.~~ Fixed (#6): the O(n²) dedupe list was redundant (`Table` values are unique) and is removed.
 19. ~~Unknown language on the CLI exited 0 and created the language.~~ Fixed (#6): `details.py` and `dict.py` exit 2 with a usage error.
-20. `Makefile`'s `db.json` rule has no `.DELETE_ON_ERROR`; a failed dump may leave an empty `db.json` that `make` considers up to date *(code reading)*.
+20. ~~`Makefile` `db.json` left an empty file on a failed dump.~~ Fixed (#6): `.DELETE_ON_ERROR`.
 
 ## 10. Working on the code: practical notes
 
