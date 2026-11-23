@@ -28,7 +28,7 @@
 - No authentication, no untrusted input handling concerns beyond "the `.pill` files are trusted".
 - Output is for humans (terminal text) or for the sibling UI project (JSON).
 
-Out of scope: editing tools (data is edited by hand in `.pill` files), search/fuzzy lookup (listed in `TODO.txt`), persistence, caching.
+Out of scope: editing tools (data is edited by hand in `.pill` files), persistence, caching.
 
 ## 2. Repository layout
 
@@ -39,6 +39,7 @@ Out of scope: editing tools (data is edited by hand in `.pill` files), search/fu
 | `model.py` | Object model: `Entity`, `Word`, `Union`, `Group`, `Relationship` (+ `Derived`, `Equals`, `Related`), `World`, `Language`. |
 | `config.py` | Two mutable globals: `default_lang = "en"`, `source = None`. Mutated by the parser (directives) during a load. |
 | `details.py` | CLI: show one word's parents, translations, unions, descendants. Also exports helpers (`translations_str`, …) reused by `dict.py`. |
+| `lookup.py` | `similar()`: finds words that are spelled (`strip`) or sound (`sound_classes`) like a query; used by `details.py -s/-S`. |
 | `dict.py` | CLI: dictionary listing for one language. |
 | `dump.py` | CLI: statistics, or JSON export (`-j`). |
 | `log.py` | Logging setup. Level from env `ETYMOLOG_LOG_LEVEL` (default `WARNING`; the env-var support is an uncommitted change — previously hard-coded `DEBUG`). |
@@ -256,11 +257,12 @@ load_db(db_dir=<repo>/db)
 
 All tools call `load_db()` first, so each invocation re-parses the entire DB.
 
-### `details.py [--sc] [lang:]word`
+### `details.py [--sc] [-s|-S] [lang:]word`
 
 - Splits on `:` (exactly one colon allowed; `a:b:c` crashes). Without a language uses `config.default_lang` (`en`).
 - Applies `Language.translate`, then `get_words` (exact match for case-sensitive languages) (prefix + optional digits). Prints a block per match; prints `` `lang:word` not found `` (exit code 0) if none.
 - `--sc` suppresses comments.
+- `-s/--similar` also prints a `similar:` block (score, `lang:word`, first translation) of words in the language whose accent/case-stripped spelling has a `difflib` ratio ≥ 0.7 (max 10). `-S/--suggest` implies it and searches all languages except `en` (unless it is the target), scoring the mean of the spelling ratio and a ratio of coarse sound classes (`bh`/`ph`/`b`/`p`/`f` → one class, vowels one class), cutoff 0.6. Exact matches are not repeated; exit code stays 0. In an audit on 200 known cross-language derivation pairs the true relative was in the top 5 for about 28% of words, so treat results as hints.
 - Block layout (indentation is 4 spaces; cosmetic details are slightly inconsistent):
 
 ```

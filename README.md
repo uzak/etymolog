@@ -201,6 +201,13 @@ To produce some stats about your DB, use `dump.py`.
 ### details.py
 `details.py` shows the details of a `word` in a `language`.
 
+If you do not remember the spelling, add `--similar` (`-s`) to also list similar-looking words in that language, or `--suggest` (`-S`) to compare the *sound* of the word with words in other languages (English glosses are skipped):
+
+    ./details.py --similar en:watr         # en:water, en:war, ...
+    ./details.py --suggest sa:bhrAtR       # gr:phrátEr, sk:brat, ...
+
+Suggestions are hints, not proven cognates.
+
 ### dict.py
 `dict.py` as seen above lists all the words for a given `language` along with their derivations.
 

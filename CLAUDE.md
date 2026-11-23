@@ -16,7 +16,7 @@ Run everything **from the repo root**. Modules are imported by bare name (`impor
 pytest -v                                   # all tests (make test)
 pytest tests/test_parser.py::TestX::test_y  # single test
 make coverage                               # coverage run + report
-./details.py [--sc] [lang:]word             # look up a word (lang defaults to en)
+./details.py [--sc] [-s|-S] [lang:]word     # look up a word (lang defaults to en); -s similar spelling, -S similar sound
 ./dict.py [--sc] lang                       # dictionary of a language with derivations
 ./dump.py [-v]                              # DB stats (-v is slow, ~20 s)
 ./dump.py -j > db.json                      # JSON export (make db.json; also copies to $UI_DIR/public, default ~/repos/etymolog-ui)
