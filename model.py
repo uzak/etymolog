@@ -51,6 +51,11 @@ class Word(Entity):
         assert self.lang == other.lang
         return self.value < other.value
 
+    @property
+    def forms(self):
+        """`han/hanti` -> ['han', 'hanti']; `ango/.ere` -> ['ango'] (`.`-endings are not forms)"""
+        return [f for f in self.value.split('/') if f and not f.startswith('.')]
+
     def key(self):
         return f"{self.lang.name}:{self.value}"
 
@@ -290,6 +295,12 @@ class Language:
     # languages whose words are matched case-insensitively; all others are case sensitive
     CaseInsensitive = {'en', 'gr'}
 
+    # per-language (regex, replacement) rules applied to a query and to stored forms
+    # before comparing (lookup, similarity, sorting); stored values are never changed
+    SearchRules = {
+        'en': [(r'^to ', '')],
+    }
+
     def __init__(self, name):
         self.name = name
         self.words = {}
@@ -297,6 +308,16 @@ class Language:
     def fold(self, value):
         """key under which a word is stored in `words`"""
         return value.lower() if self.name.lower() in Language.CaseInsensitive else value
+
+    def search_key(self, value):
+        """folded `value` with this language's search rules applied"""
+        value = self.fold(value)
+        for pattern, repl in Language.SearchRules.get(self.name, ()):
+            value = re.sub(pattern, repl, value)
+        return value
+
+    def sort_key(self, word):
+        return self.search_key(word.forms[0] if word.forms else word.value).lower()
 
     def __iter__(self):
         return iter(self.words.values())
@@ -327,15 +348,18 @@ class Language:
         return word
 
     def get_words(self, value):
-        # only match words that start with value and optionally continue
-        # with a number
-        value = self.fold(value)
+        """words with a key (the whole value or any of its forms, after search rules)
+        starting with value and optionally continuing with a number"""
+        value = self.search_key(value)
         matches = []
-        for key, word in self.words.items():
-            if key.startswith(value):
-                postfix = key[len(value):]
-                if not postfix or postfix.isdigit():
-                    matches.append(word)
+        for word in self.words.values():
+            for candidate in [word.value] + word.forms:
+                key = self.search_key(candidate)
+                if key.startswith(value):
+                    postfix = key[len(value):]
+                    if not postfix or postfix.isdigit():
+                        matches.append(word)
+                        break
         return matches
 
     def __eq__(self, other):
