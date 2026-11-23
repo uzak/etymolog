@@ -42,7 +42,7 @@ Out of scope: editing tools (data is edited by hand in `.pill` files), search/fu
 | `dict.py` | CLI: dictionary listing for one language. |
 | `dump.py` | CLI: statistics, or JSON export (`-j`). |
 | `log.py` | Logging setup. Level from env `ETYMOLOG_LOG_LEVEL` (default `WARNING`; the env-var support is an uncommitted change — previously hard-coded `DEBUG`). |
-| `version.py` | `rev_no` = number of git commits (`git rev-list --count HEAD` via `os.popen`), embedded in the JSON export. **Requires git and a git cwd.** |
+| `version.py` | `rev_no` = number of git commits (`git rev-list --count HEAD`, run in the module's directory), embedded in the JSON export. `None` if git is unavailable. |
 | `Makefile` | Targets `test`, `coverage`, `db.json`, `count_slovak_words`, `clean`. |
 | `README.md` | Author's description of the grammar and tools (accurate on grammar; see §9 for places where behaviour differs). |
 | `TODO.txt` | Author's backlog and resolved design decisions. |
@@ -323,7 +323,7 @@ Verified by experiment unless marked *(code reading)*. Ordered by impact.
 
 **Crashes / robustness**
 6. `details.py he:adam` and `dict.py he` → `RecursionError` (no visited set in `details.parents`, `details.derived_details`, `dict.derived_chain`). Ancestors are also printed once per path (exponential in dense DAGs) *(code reading)*.
-7. `version.py` runs `git rev-list` in the **current directory** at import. Outside a git repo it raises `ValueError: invalid literal for int()`. `dump.py` and `dict.py` (via `from dump import load_db`) import it; `details.py` no longer does (uncommitted change).
+7. ~~`version.py` needs a git cwd.~~ Fixed (#6): runs git in its own directory; `rev_no` is `None` on failure.
 8. `a -> [c]` raises a bare `AssertionError` with no file/line; under `python -O` it becomes `AttributeError` (the `None` guard is an `assert`, and the rule at `parser.py:126-141` lacks the explicit check the other relationship rule has).
 9. `details.py a:b:c` → `ValueError` (unpack).
 10. Directive parsing is prefix-based: `// LANG   sa` sets language `"  sa"`; `// LANG` sets `""`; `// SRCfoo` sets source `"oo"`.
