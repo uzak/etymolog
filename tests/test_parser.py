@@ -458,6 +458,10 @@ class TestMisc(TestCase):
         with pytest.raises(ValueError):
             parser.yacc.parse("a = -> b")
 
+    def test_rel_to_bracketed_nothing(self):
+        with pytest.raises(ValueError):
+            parser.yacc.parse("a -> [c]")
+
     def test_two_sources(self):
         src1 = "src1"
         src2 = "src2"

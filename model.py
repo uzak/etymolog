@@ -174,7 +174,8 @@ class Relationship(Entity, metaclass=RelationshipMeta):
     def _add(cls, left, right, comment=None):
         """get Relationship if it exists, otherwise add"""
         msg = f"Two relationships without a word in between? {left} - {right}"
-        assert right is not None, msg
+        if right is None:
+            raise ValueError(msg)
         obj = cls.get(left, right)
         key = (left.key(), right.key())
         if obj is None:
