@@ -275,7 +275,7 @@ All tools call `load_db()` first, so each invocation re-parses the entire DB.
 
 ### `dict.py [--sc] lang`
 
-Prints `Dictionary for ``lang`` (N items):` then, for every word of that language sorted with `locale.strxfrm` (so the process locale affects order; `locale.setlocale(LC_ALL, '')` runs at import): `* word`, its translations/related (`=`/`~` lines), its comments in brackets, and a one-line ancestor chain `-> sa:bheda -> …`. An unknown language prints an empty dictionary (and creates the language).
+Prints `Dictionary for ``lang`` (N items):` then, for every word of that language sorted with `locale.strxfrm` (so the process locale affects order; `locale.setlocale(LC_ALL, '')` runs at import): `* word`, its translations/related (`=`/`~` lines), its comments in brackets, and its ancestors, one line per derivation path (`-> sa:bheda -> …`; a word with several parents gets several lines, sorted). An unknown language prints an empty dictionary (and creates the language).
 
 ### `dump.py [-v] [-j]`
 

@@ -17,9 +17,9 @@ class TestCycles(TestCase):
         parser.yacc.parse("t:b -> t:a")
         return model.World.lang("t").get_word("a")
 
-    def test_derived_chain(self):
+    def test_derived_paths(self):
         a = self.setup_cycle()
-        assert len(dictmod.derived_chain(a, [])) == 1
+        assert len(dictmod.derived_paths(a)) == 1
 
     def test_details(self, capsys):
         a = self.setup_cycle()
