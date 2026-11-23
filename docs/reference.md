@@ -316,7 +316,7 @@ Verified by experiment unless marked *(code reading)*. Ordered by impact.
 
 **Data integrity**
 1. ~~Case-folding merges distinct words.~~ Fixed (#3): only `en` and `gr` fold case.
-2. **Unions lost.** `Union.Table` is keyed by the component string only (`model.py:92`) and `Union.__eq__/__hash__` ignore the word. 596 distinct unions exist, 573 survive in the table → missing from `dump.py` counts and `db.json`; `in_unions` of a shared component also loses entries. Example: `sa:vid {vi+d}` + `ie:vid {vi+d}`.
+2. ~~Unions lost.~~ Fixed (#4): unions are identified by word and components.
 3. **Relationship provenance dropped.** Re-asserting an existing relationship under a different `SRC` does not add the source (`Relationship._add`); words do accumulate sources.
 4. **Cycles are accepted.** The DB contains `he:adam -> he:adamah -> he:adam`; `a -> a, b` creates a self-loop (the self-reference check compares against a `Group`).
 5. **Phantom languages.** Language names are never validated.

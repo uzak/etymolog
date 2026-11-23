@@ -89,7 +89,7 @@ class Union:
         self.components = components
         for word in self.components:
             word.in_unions.add(self)
-        self.Table[str(self)] = self
+        self.Table.setdefault((self.word.key(), str(self)), self)
 
     def __lt__(self, other):
         return self.word < other.word
@@ -98,10 +98,12 @@ class Union:
         return item in self.components
 
     def __hash__(self):
-        return hash(str(self))
+        return hash((self.word, self.components))
 
     def __eq__(self, other):
-        return str(self) == str(other)
+        return (isinstance(other, Union)
+                and self.word is other.word
+                and self.components == other.components)
 
     def __str__(self):
         result = []
