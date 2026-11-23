@@ -19,12 +19,9 @@ class TestCase:
 
 def reset_model():
     model.Derived.Table = {}
-    model.Derived.Mirror = {}
     model.Union.Table = {}
     model.Related.Table = {}
-    model.Related.Mirror = {}
     model.Equals.Table = {}
-    model.Equals.Mirror = {}
     model.World.Languages = {}
     model.World.Tags = {}
     config.default_lang = "en"
@@ -50,7 +47,7 @@ def _assert_rel_lr(rel, left, right, ll=config.default_lang, rl=config.default_l
     right = model.World.lang(rl).get_word(right)
     key = (left.key(), right.key())
     rev_key = (right.key(), left.key())
-    assert key in rel.Table or rev_key in rel.Mirror
+    assert key in rel.Table or rev_key in rel.Table
 
 
 def assert_equals_lr(left, right, ll=config.default_lang, rl=config.default_lang):

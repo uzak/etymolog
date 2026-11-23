@@ -153,7 +153,6 @@ class Group:
 class RelationshipMeta(type):
     def __new__(mcls, name, bases, attrs, **kw):
         attrs['Table'] = {}
-        attrs['Mirror'] = {}
         return super().__new__(mcls, name, bases, attrs)
 
 
@@ -186,8 +185,6 @@ class Relationship(Entity, metaclass=RelationshipMeta):
         if obj is None:
             obj = cls(left, right)
             cls.Table[key] = obj
-            if cls.Bidirectional:
-                cls.Mirror[key] = obj
         elif config.source:
             obj.sources.add(config.source)
         if comment:
@@ -200,8 +197,8 @@ class Relationship(Entity, metaclass=RelationshipMeta):
         rev_key = (right.key(), left.key())
         if key in cls.Table:
             return cls.Table[key]
-        elif cls.Bidirectional and rev_key in cls.Mirror:
-            return cls.Mirror[rev_key]
+        elif cls.Bidirectional and rev_key in cls.Table:
+            return cls.Table[rev_key]
 
     @classmethod
     def cls_str(cls):
