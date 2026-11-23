@@ -5,6 +5,7 @@ Parse .pill files
 """
 
 import os
+import re
 from contextlib import contextmanager
 import model
 import config
@@ -259,13 +260,43 @@ def finish_file():
     config.default_lang = _initial_lang
 
 
+_CONTINUES = re.compile(r"(->|=|~|,)\s*$")
+
+
+def _strip_comment(line):
+    """drop a trailing `// ...` (a `//` inside `[...]` stays)"""
+    kept = re.sub(r"\[.*?\]", lambda m: "_" * len(m.group()), line)
+    i = kept.find("//")
+    return line if i < 0 else line[:i]
+
+
+def statements(lines):
+    """(first lineno, text); a line ending in `->`, `=`, `~` or `,` continues on the next"""
+    parts, start = [], None
+    for lineno, line in enumerate(lines, 1):
+        if parts and (not line.strip() or line.lstrip().startswith("//")):
+            continue
+        code = _strip_comment(line).rstrip()
+        if parts or _CONTINUES.search(code):
+            start = start or lineno
+            if _CONTINUES.search(code):
+                parts.append(code)
+                continue
+            line = " ".join(parts + [line.strip()])
+            parts = []
+        yield start or lineno, line
+        start = None
+    if parts:
+        yield start, " ".join(parts)
+
+
 def parse_file(fn):
     log.debug(f"Parsing: {fn}")
     with _parse_context():
         with open(fn, encoding="utf-8") as f:
-            for lineno, line in enumerate(f.readlines(), 1):
+            for lineno, text in statements(f.readlines()):
                 try:
-                    yacc.parse(line)
+                    yacc.parse(text)
                 except IgnoreFile:
                     break
                 except (SyntaxError, ValueError) as e:

@@ -29,7 +29,7 @@ Or producing a dictionary for a language showing the derivations of the words th
 
 ## Pill File Grammar
 
-Etymological data is stored in `.pill` files. They are processed line by line. One line contains one statement that can consist of several expressions. It is not allowed for one statement to span across multiple lines.
+Etymological data is stored in `.pill` files. They are processed line by line. One line contains one statement that can consist of several expressions. A line ending in `->`, `=`, `~` or `,` (a trailing `// comment` is ignored) continues on the next line; blank and `//` lines in between are skipped. Indentation does not continue a statement.
 
 Whitespaces on the beginning and end of a line are stripped. Whitespaces between words are normalized to one space.
 

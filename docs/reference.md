@@ -80,7 +80,7 @@ python3 -m venv .venv && .venv/bin/pip install ply pytest coverage
 
 ## 4. The `.pill` language
 
-Files are UTF-8 text (read with the locale default encoding — see §9). **One statement per line**; each line is parsed independently by `yacc.parse(line)`. Blank lines are legal (empty expression). Spaces and tabs between tokens are ignored; multiple words are joined with a single space.
+Files are UTF-8 text (read with the locale default encoding — see §9). **One statement per line**, parsed by `yacc.parse(text)`; a line ending in `->`, `=`, `~` or `,` (after dropping a trailing `//` comment) continues on the next line (`parser.statements`), skipping blank and `//` lines. Indentation does not continue. Blank lines are legal (empty expression). Spaces and tabs between tokens are ignored; multiple words are joined with a single space.
 
 ### 4.1 Tokens (`lexer.py`)
 
@@ -358,5 +358,5 @@ Verified by experiment unless marked *(code reading)*. Ordered by impact.
 - Adding a language-specific character mapping = edit `Language.TranslationTable` in `model.py` (keyed by the exact language name).
 - Adding syntax = edit `lexer.py` (tokens) and `parser.py` (rules + `precedence`); delete stale `parser.out`/`parsetab.py` if PLY seems to use an old table.
 - Design decisions already taken (from `TODO.txt`): relationships are **not** transitive; no `a = b, c = d` expression groups; no implicit language propagation inside groups; `-` is not allowed in words.
-- Open backlog (from `TODO.txt`): verb forms, language-specific case rules, language groups, showing union derivations, lookup/fuzzy search,, multiline relationships.
+- Open backlog (from `TODO.txt`): verb forms, language-specific case rules, language groups, showing union derivations, lookup/fuzzy search.
 - Suggested fix priority from the audit: (1) visited-set + cycle/self-loop rejection, (2) sorted file order and sorted JSON lists, (3) `Union.Table` keyed by `(word.key(), str(union))`, (4) make `version.py` robust (git `-C <script dir>`, fallback), (5) per-language case sensitivity, (6) stricter directive parsing, (7) CLI tests.
