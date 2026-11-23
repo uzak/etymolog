@@ -43,10 +43,9 @@ def split(fct, seq):
            set(filter(lambda x: not fct(x), seq))
 
 
-def comments_str(entity):
-    if entity.comments:
-        return " ".join(entity.comment_strs())
-    return ""
+def comment_lines(indent, *entities):
+    """one line per comment, in the order of the entities"""
+    return [f"{indent}{c}" for e in entities for c in e.comment_strs()]
 
 
 def translations(word, rel_type=model.Equals):
@@ -94,12 +93,9 @@ def translations_str(word, rel_type=model.Equals, ignore=None, indent="",
         result.append("\n".join(firstline))
     for lang, txs in groupbylang_tx(translations_comments).items():
         for tx in txs:
-            rel_comments = ""
-            word_comments = ""
+            result.append(f"{indent}{rel_type.Symbol} {tx.word}")
             if incl_comments:
-                rel_comments = comments_str(tx.rel) or ""
-                word_comments = comments_str(tx.word)
-            result.append(f"{indent}{rel_type.Symbol}{rel_comments}{sp(tx.word)}{sp(word_comments)}")
+                result.extend(comment_lines(indent + "    ", tx.rel, tx.word))
     return "\n".join(result)
 
 
@@ -110,12 +106,12 @@ def parents(word, incl_comments=True, path=()):
             continue
         parents(p.left, incl_comments=incl_comments, path=path)
         if p.left.unions:
-            print_unions(p.left, "   ", in_header=True)
+            print_unions(p.left, "   ", in_header=True, incl_comments=incl_comments)
         else:
             print(f"    {p.left} {translations_str(p.left, oneline=True, incl_comments=incl_comments)}")
         if word.derived_from:
-            comments = comments_str(p)
-            print(f"      | {comments}")
+            lines = [f"      | {c}" for c in p.comment_strs()] if incl_comments else []
+            print("\n".join(lines) or "      | ")
     else:
         if not word.derived_from:
             print(f"      * ")
@@ -131,11 +127,10 @@ def derived_details(word, indent, seen_on_left=set(), incl_comments=True, path=(
             indent_incl_word = indent + " "*(4+len(str(d.right)))
             trans = translations_str(d.right, ignore=seen_on_left, incl_comments=incl_comments, indent=indent_incl_word).lstrip()
             seen_on_left.add(d.left)
-            if not incl_comments:
-                comments = ""
-            else:
-                comments = comments_str(d)
-            print(f"{indent}{model.Derived.Symbol} {d.right}{sp(trans)}{sp(comments)}")
+            print(f"{indent}{model.Derived.Symbol} {d.right}{sp(trans)}")
+            if incl_comments:
+                for line in comment_lines(indent + "    ", d):
+                    print(line)
             if d.right.derives_to:
                 derived_details(d.right, indent + '  ', seen_on_left=seen_on_left, incl_comments=incl_comments, path=path)
 
@@ -149,18 +144,18 @@ def details(word, incl_comments=True):
 
     derived_details(word, indent, set(), incl_comments=incl_comments)
 
-    print(f"{indent}{translations_str(word, rel_type=model.Related)}")
+    print(translations_str(word, rel_type=model.Related, indent=indent, incl_comments=incl_comments))
 
 
-def print_unions(word, indent, in_header=False):
+def print_unions(word, indent, in_header=False, incl_comments=True):
     if word.unions:
         for i, u in enumerate(word.unions):
             if in_header:
-                print(f"    {word} {translations_str(word, oneline=True)}")
+                print(f"    {word} {translations_str(word, oneline=True, incl_comments=incl_comments)}")
             else:
                 print(f"{indent}{i+1}. union: {u}")
             for component in u.components:
-                print(f"{indent}   . {component} {translations_str(component, rel_type=model.Equals, oneline=True)}")
+                print(f"{indent}   . {component} {translations_str(component, rel_type=model.Equals, oneline=True, incl_comments=incl_comments)}")
 
 
 def hint(word):
@@ -185,11 +180,14 @@ def print_similar(query, lang, exact, suggest=False):
 def pretty_print(word, incl_comments=True):
     indent = "    "
     parents(word, incl_comments=incl_comments)
-    print(f" => {word.as_str(unions=False, comments=incl_comments, tags=True)}")
+    print(f" => {word.as_str(unions=False, comments=False, tags=True)}")
+    if incl_comments:
+        for line in comment_lines(indent, word):
+            print(line)
     tx_str = translations_str(word, indent=indent, incl_comments=incl_comments)
     if tx_str:
         print(tx_str)
-    print_unions(word, indent, in_header=False)
+    print_unions(word, indent, in_header=False, incl_comments=incl_comments)
     details(word, incl_comments=incl_comments)
 
 
