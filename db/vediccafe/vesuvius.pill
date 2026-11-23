@@ -1,8 +1,8 @@
 // SRC https://vediccafe.blogspot.com/2020/08/the-vedic-hindu-antecedents-of-mt.html
 
-ur:Somma ~ ur:Soma
-ur:Somma [Next to Vesuvius in Naples]      # mount
-ur:Soma [On the Sumbawa island of Sumatra]      # mount
+_:Somma ~ _:Soma
+_:Somma [Next to Vesuvius in Naples]      # mount
+_:Soma [On the Sumbawa island of Sumatra]      # mount
 
 sa:Somanath [lord of the moon] [Shiva] ~ sa:Shiva
 
@@ -10,7 +10,7 @@ sa:Somanath [lord of the moon] [Shiva] ~ sa:Shiva
 // During the churning Vasuki emited poisonous flames from its mouth
 Vasuki [Serpent, constant companion of Shiva] ~ sa:Shiva
 Vasuki ~ Vesuvius
-Vesuvius ~ ur:Somma
+Vesuvius ~ _:Somma
 Vesuvius # mount
 
 // Romans regarded a serpent called Vesuvius as a devotee of the demigod 

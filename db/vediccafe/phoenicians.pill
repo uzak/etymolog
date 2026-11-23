@@ -14,7 +14,7 @@ sa:kalil = impenetrable
 sa:kalil -> sa:kila
 sa:kila = fort
 sa:karun = compassionate, plaintive
-sa:karun -> ur:Karun [one of the rivers of Babylon] # river
+sa:karun -> _:Karun [one of the rivers of Babylon] # river
 
 sa:arvan = fast, svift
 sa:arvan -> persian:Arvand Rud [name for Tigris] # river
@@ -32,7 +32,7 @@ sa:surya -> Syria
 
 sa:Lavana -> Lebanon
 
-sa:Krishna -> ur:Kishon (river in Isreal) # river
+sa:Krishna -> _:Kishon (river in Isreal) # river
 
 sa:asura -> Assyria
 sa:asura {a+sura} = demon        // Asuras were driven away by the devatas

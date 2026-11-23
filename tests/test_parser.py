@@ -526,40 +526,40 @@ class TestMisc(TestCase):
 
 
 
-class TestUrLanguage(TestCase):
-    """`ur` is the convention for names that must not be English; no special code"""
+class TestUnderscoreLanguage(TestCase):
+    """`_` is the convention for names that must not be English; no special code"""
 
     def test_prefixed_word_is_not_english(self):
-        parser.yacc.parse("ur:Ugarit")
-        assert lang("ur").get_word("Ugarit")
+        parser.yacc.parse("_:Ugarit")
+        assert lang("_").get_word("Ugarit")
         assert_total_word("en", 0)
 
     def test_directive_and_reset_at_end_of_file(self):
-        parser.yacc.parse("// LANG ur")
+        parser.yacc.parse("// LANG _")
         parser.yacc.parse("Eridu")
-        assert lang("ur").get_word("Eridu")
+        assert lang("_").get_word("Eridu")
         parser.finish_file()
         assert config.default_lang == "en"
 
     def test_same_string_in_other_language_is_separate(self):
-        parser.yacc.parse("ur:Don ~ en:don")
-        assert_total_word("ur", 1)
+        parser.yacc.parse("_:Don ~ en:don")
+        assert_total_word("_", 1)
         assert_total_word("en", 1)
-        assert word("Don", "ur") is not word("don", "en")
+        assert word("Don", "_") is not word("don", "en")
 
-    def test_case_sensitive_but_name_is_not(self):
-        parser.yacc.parse("ur:usa")
-        parser.yacc.parse("ur:Usa")
-        parser.yacc.parse("UR:Ugarit")
-        parser.yacc.parse("ur:Ugarit")
-        assert_total_word("ur", 3)
+    def test_case_sensitive(self):
+        parser.yacc.parse("_:usa")
+        parser.yacc.parse("_:Usa")
+        parser.yacc.parse("_:Ugarit")
+        parser.yacc.parse("_:Ugarit")
+        assert_total_word("_", 3)
 
-    def test_union_components_inherit_ur(self):
-        parser.yacc.parse("ur:Dniester {sa:Danu+Ister}")
-        union = get_union(word("Dniester", "ur"))
+    def test_union_components_inherit_underscore(self):
+        parser.yacc.parse("_:Dniester {sa:Danu+Ister}")
+        union = get_union(word("Dniester", "_"))
         assert str(union) == "sa:Danu+Ister"
-        assert word("Ister", "ur")
+        assert word("Ister", "_")
 
     def test_json_language(self):
-        parser.yacc.parse("ur:Ugarit")
-        assert word("Ugarit", "ur").to_json()["lang"] == "ur"
+        parser.yacc.parse("_:Ugarit")
+        assert word("Ugarit", "_").to_json()["lang"] == "_"

@@ -60,10 +60,10 @@ class TestSimilar(TestCase):
             parser.yacc.parse(w)
         assert len(lookup.similar("a", langs("en"), cutoff=0.1, limit=2)) == 2
 
-    def test_finds_ur_names(self):
-        parser.yacc.parse("ur:Ugarit")
-        hits = lookup.similar("Ugarat", langs("ur"))
-        assert [h[1].key() for h in hits] == ["ur:Ugarit"]
+    def test_finds_underscore_names(self):
+        parser.yacc.parse("_:Ugarit")
+        hits = lookup.similar("Ugarat", langs("_"))
+        assert [h[1].key() for h in hits] == ["_:Ugarit"]
 
     def test_best_form_counts(self):
         parser.yacc.parse("sa:han/hanti")

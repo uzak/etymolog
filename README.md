@@ -42,7 +42,7 @@ Each word gets assigned to a language. The language is an abbreviation of the la
 
     en:ship
 
-For names of uncertain or ancient origin that should not count as English (rivers, cities like Ugarit or Eridu), use the reserved language `ur` ("ancient"): `ur:Ugarit`, or `// LANG ur` for the rest of a file. Like any language it is case sensitive, and `UR` and `ur` are the same language.
+For names of uncertain or ancient origin that should not count as English (rivers, cities like Ugarit or Eridu), use the reserved language `_` (underscore): `_:Ugarit`, or `// LANG _` for the rest of a file. Like any language it is case sensitive.
 
 #### Words with several forms
 Dictionary headwords can be written with their forms separated by `/`, e.g. the root and the present form of a verb, or a Latin verb with its principal parts (a `.` stands for the forbidden `-`):
