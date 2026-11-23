@@ -49,7 +49,7 @@ sa:kunan = snake, rat, mouse
 sa:kuhan -> sa:kuhana = envious, hypocritical
 
 sa:kacAku = snake
-sa:kacAku ~ Kecili (pastoral farm in turkey) # geo
+sa:kacAku ~ ur:Kecili (pastoral farm in turkey) # geo
 
 sa:stupa -> tr:tepe 
 sa:stupa = mound
@@ -62,8 +62,8 @@ sa:kesha = hair
 sa:keshat = goat
 sa:kulva = bald
 
-tr:kec -> Kecili
-kurdisch:ketch -> Kecili
+tr:kec -> ur:Kecili
+kurdisch:ketch -> ur:Kecili
 
 sa:keshat -> tr:kec
 sa:kulva -> kurdisch:Ketch
@@ -71,7 +71,7 @@ sa:kulva -> kurdisch:Ketch
 sa:kenchuli = snakeskin
 sa:kenchukin = snake
 sa:kenchulika = snake
-sa:kenchulika -> Kecili
+sa:kenchulika -> ur:Kecili
 
 // NOSRC
 // actually this is from Saddarshanam #23
@@ -155,7 +155,7 @@ sa:itara = other, the rest
 sa:itara -> other
 
 sa:spandanau = flowing out
-sa:spandanau -> Spandau #geo #city
+sa:spandanau -> ur:Spandau #geo #city
 
 sa:atma -> pt:alma
 

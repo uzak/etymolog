@@ -17,8 +17,8 @@ proto_germanic:aust -> east, de:Ost
 sa:usas -> easter
 sa:usas -> Austria {de:Oester + de:Reich} [the kingdom (rajya) of the east (usas)]
 
-sa:usas -> Usha # river
+sa:usas -> ur:Usha # river
 sa:usas -> jp:Ame No Uzume =[Uzume = Usas] goddess of the dawn
 
-sa:usas -> Arusha [place in Africa] {sa:aruh + sa:usas} # geo
+sa:usas -> ur:Arusha [place in Africa] {sa:aruh + sa:usas} # geo
 sa:aruh = the rising

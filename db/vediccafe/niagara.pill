@@ -7,5 +7,5 @@ sa:nira = water
 sa:gagara = pitcher, vessel
 sa:jarah = waterbody, waterfall
 sa:jarah -> Jordan # river
-sa:jarah -> Jarra # river
+sa:jarah -> ur:Jarra # river
 sa:jarah -> Nigeria # river
