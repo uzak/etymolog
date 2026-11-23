@@ -211,6 +211,21 @@ class TestComments(TestCase):
         assert_total_word("sa", 1)
         assert_total_word(config.default_lang, 1)
 
+    def test_comment_language(self):
+        parser.yacc.parse("a [@de Etwas nicht wahres] [plain]")
+        a = word("a")
+        assert a.comments == {"Etwas nicht wahres": "de", "plain": None}
+        assert a.comment_strs() == ["[@de Etwas nicht wahres]", "[plain]"]
+
+    def test_relationship_comment_language(self):
+        parser.yacc.parse("a = [@sk bohyna] b")
+        rel = model.Equals.get(word("a"), word("b"))
+        assert rel.comments == {"bohyna": "sk"}
+
+    def test_comment_at_sign_is_not_always_language(self):
+        parser.yacc.parse("a [@de] [x@y z]")
+        assert word("a").comments == {"@de": None, "x@y z": None}
+
     def test_quotes_in_comment(self):
         comment = 'b "c" d'
         parser.yacc.parse(f'a [{comment}]')
