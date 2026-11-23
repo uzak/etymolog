@@ -11,26 +11,27 @@ from dump import load_db
 locale.setlocale(locale.LC_ALL, '')
 
 
-def derived_chain(word, result, path=()):
+def derived_paths(word, path=()):
+    """ancestor chains of word: one list of relationships per branch, sorted"""
     path = path + (word,)
-    for w in word.derived_from:
-        if w.left in path:  # cycle in data
-            continue
-        result.append(w)
-        derived_chain(w.left, result=result, path=path)
+    parents = sorted((r for r in word.derived_from if r.left not in path),  # skip cycles
+                     key=lambda r: str(r.left))
+    result = []
+    for rel in parents:
+        for sub in derived_paths(rel.left, path) or [[]]:
+            result.append([rel] + sub)
     return result
 
 
 def derived(word, indent, incl_comments=True):
-    parents = derived_chain(word, [])
-    result = []
-    for rel in parents:
-        if rel.comments and incl_comments:
-            comments_str = " ".join([f"[{c}]" for c in rel.comments])
-            result.append(f"-> {comments_str} {rel.left}")
-        else:
-            result.append(f"-> {rel.left}")
-    if result:
+    for chain in derived_paths(word):
+        result = []
+        for rel in chain:
+            if rel.comments and incl_comments:
+                comments_str = " ".join([f"[{c}]" for c in sorted(rel.comments)])
+                result.append(f"-> {comments_str} {rel.left}")
+            else:
+                result.append(f"-> {rel.left}")
         print(f'{indent}{" ".join(result)}')
 
 

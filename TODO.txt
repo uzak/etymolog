@@ -6,7 +6,6 @@
 * grouping: group languages
 * if word part of a union (sa:bhas) - show derivations of unions too?
 * details (sa pur): have multiple comments in rels below each other
-* BUG: in ./dict.py if multiple derivations for a word
 * auto translation from devanagari to latin ...
     for english: remove "to" for sorting
 * add tests for cli scripts: {details|dict}.py ?
