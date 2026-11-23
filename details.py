@@ -5,6 +5,7 @@
 from dataclasses import dataclass
 
 import config
+import lookup
 import model
 from parser import load_db
 
@@ -162,6 +163,25 @@ def print_unions(word, indent, in_header=False):
                 print(f"{indent}   . {component} {translations_str(component, rel_type=model.Equals, oneline=True)}")
 
 
+def hint(word):
+    """first translation of a word, English preferred, as ' = lang:word'"""
+    txs = sorted(translations(word), key=lambda w: (w.lang.name != "en", w.lang.name, w.value))
+    return f" = {txs[0].key()}" if txs else ""
+
+
+def print_similar(query, lang, exact, suggest=False):
+    """list words that look (or, with suggest, sound) like query; exact matches are skipped"""
+    if suggest:      # other languages too, but not English glosses
+        langs = [l for l in model.World.Languages.values() if l is lang or l.name != "en"]
+        hits = lookup.similar(query, langs, phonetic=True, cutoff=0.6, exclude=exact)
+    else:
+        hits = lookup.similar(query, [lang], exclude=exact)
+    if hits:
+        print("similar:")
+    for score, w in hits:
+        print(f"  {score:.2f} {w.key()}{hint(w)}")
+
+
 def pretty_print(word, incl_comments=True):
     indent = "    "
     parents(word, incl_comments=incl_comments)
@@ -177,12 +197,15 @@ if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("--sc", action="store_true", default=False)
+    parser.add_argument("-s", "--similar", action="store_true",
+                        help="also list similar-looking words in the language")
+    parser.add_argument("-S", "--suggest", action="store_true",
+                        help="like --similar, but compare sound across other languages too")
     parser.add_argument("word",
                         help="word prefixed by language, e.g.: en:waters")
     args = parser.parse_args()
 
     # XXX arg: translation_only_in?
-    # XXX find similarly sounding (difflib.get_close_matches) sounds?
 
     load_db()
 
@@ -204,3 +227,5 @@ if __name__ == '__main__':
         print(f"`{lang.name}:{word}` not found")
     for w in words:
         pretty_print(w, incl_comments=not args.sc)
+    if args.similar or args.suggest:
+        print_similar(word, lang, words, suggest=args.suggest)

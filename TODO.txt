@@ -9,7 +9,6 @@
     for english: remove "to" for sorting
 * add tests for cli scripts: {details|dict}.py ?
 
-* lookup.py - try to find a word or similar
 * support for multiline rel?
 --
 * transitiveness: shall a = b = c also generate a = c? and for ~? -> no

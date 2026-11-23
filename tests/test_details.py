@@ -11,8 +11,8 @@ from . util import TestCase, lang
 ROOT = Path(__file__).resolve().parent.parent
 
 
-def run_script(script, arg):
-    return subprocess.run([sys.executable, script, arg],
+def run_script(script, arg, *flags):
+    return subprocess.run([sys.executable, script, *flags, arg],
                           cwd=ROOT, capture_output=True, text=True)
 
 
@@ -43,3 +43,20 @@ class TestUnionDerivations(TestCase):
         out = capsys.readouterr().out
         assert "+ t:ab" in out
         assert "-> t:c" in out
+
+
+class TestSimilarFlags:
+    def test_similar(self):
+        r = run_script("details.py", "en:watr", "--similar")
+        assert r.returncode == 0
+        assert "Traceback" not in r.stderr
+        assert "similar:" in r.stdout and "en:water" in r.stdout
+
+    def test_suggest_includes_other_languages(self):
+        r = run_script("details.py", "sa:bhrAtR", "--suggest")
+        assert r.returncode == 0
+        assert "gr:phrátEr" in r.stdout
+
+    def test_similar_unknown_language(self):
+        r = run_script("details.py", "zz:x", "--similar")
+        assert r.returncode == 2
