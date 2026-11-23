@@ -78,7 +78,7 @@ def translations_str(word, rel_type=model.Equals, ignore=None, indent="",
         w = rel.right if rel.left == word else rel.left
         tx = Translation(rel = rel, word=w)
         if tx.word not in ignore:
-            if not oneline and tx.rel.comments or tx.word.comments:
+            if (not oneline and tx.rel.comments) or tx.word.comments:
                 translations_comments.append(tx)
             else:
                 translations_no_comments.append(tx)
