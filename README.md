@@ -55,7 +55,7 @@ To have two or more different language definitions for a composed word is invali
 
     en:big de:Schiff     // invalid
 
-The words are stored case-sensitive just as you define them, but they are always looked up case-insensitive. So looking up `Ship` and `ship` will yield the same result.
+Words are case sensitive: `varNa` and `varna` are different words. Only languages listed in `Language.CaseInsensitive` (`en`, `gr`) look words up case-insensitively, so `Ship` and `ship` yield the same result there. A lookup in a case-sensitive language that does not match exactly finds nothing.
 
 ### Groups
 You can have several logically different words in the same statements comprising a group separated by ``,``:

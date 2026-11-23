@@ -290,9 +290,16 @@ class Language:
         }
     }
 
+    # languages whose words are matched case-insensitively; all others are case sensitive
+    CaseInsensitive = {'en', 'gr'}
+
     def __init__(self, name):
         self.name = name
         self.words = {}
+
+    def fold(self, value):
+        """key under which a word is stored in `words`"""
+        return value.lower() if self.name.lower() in Language.CaseInsensitive else value
 
     def __iter__(self):
         return iter(self.words.values())
@@ -304,19 +311,20 @@ class Language:
 
     def add_word(self, value):
         value = self.translate(value)
-        if value.lower() not in self.words:
+        key = self.fold(value)
+        if key not in self.words:
             word = Word(value, self)
-            self.words[value.lower()] = word
+            self.words[key] = word
             word.lang = self
         else:
             # XXX hackish? add source if changed since last addition
-            word = self.words[value.lower()]
+            word = self.words[key]
             if config.source and config.source not in word.sources:
                 word.sources.add(config.source)
-        return self.words[value.lower()]
+        return self.words[key]
 
     def get_word(self, value, case_sensitive=False):
-        word = self.words.get(value.lower())
+        word = self.words.get(self.fold(value))
         if word and case_sensitive and value != word.value:
             return
         return word
@@ -324,6 +332,7 @@ class Language:
     def get_words(self, value, case_sensitive=False):
         # only match words that start with value and optionally continue
         # with a number
+        value = self.fold(value)
         matches = []
         for key, word in self.words.items():
             if key.startswith(value):

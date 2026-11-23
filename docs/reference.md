@@ -111,10 +111,10 @@ sa:sveta asva        # composite Sanskrit word "sveta asva"
 
 - Only the **first** word of a composite may carry a language; `en:big de:Schiff` is a syntax error.
 - Language names are free-form identifiers (`sa`, `lat`, `gr`, `slavic`, `old_church_slavonic`…). **Any new name silently creates a new language** — there is no registry, so typos create phantom languages.
-- Lookup is case-insensitive; the spelling **first seen** during the load is the stored `value`.
+- Lookup is case sensitive, except in `Language.CaseInsensitive` (`en`, `gr`), where the spelling **first seen** during the load is the stored `value`. Keys are produced by `Language.fold`.
 - **Homonym numbering:** a trailing number distinguishes homonyms (`ie:az1`, `ie:az2`). `Word.label()` strips trailing digits for display; `Language.get_words("az")` returns `az`, `az1`, `az2`… (prefix + optional digits only).
 - **Character translation** (`Language.TranslationTable`, applied when a word is added and when the CLI looks one up): for `sk`, capital `T L S C Z Y I E A` become `ť ľ š č ž ý í é á`; for `gr`, `A O Y` become `á ó ý`; `sa` has an (empty) table. This is how accented letters are typed in ASCII. The lookup key is the language name **exactly as first created** (`sk`, not `SK`).
-- Sanskrit data uses a Harvard-Kyoto-like ASCII transliteration where case is meaningful (`A`=ā, `T`=ṭ, `R`=ṛ …), but storage is case-insensitive (§9).
+- Sanskrit data uses a Harvard-Kyoto-like ASCII transliteration where case is meaningful (`A`=ā, `T`=ṭ, `R`=ṛ …), and `sa` is case sensitive.
 
 ### 4.3 Groups
 
@@ -258,7 +258,7 @@ All tools call `load_db()` first, so each invocation re-parses the entire DB.
 ### `details.py [--sc] [lang:]word`
 
 - Splits on `:` (exactly one colon allowed; `a:b:c` crashes). Without a language uses `config.default_lang` (`en`).
-- Applies `Language.translate`, lowercases, then `get_words` (prefix + optional digits). Prints a block per match; prints `` `lang:word` not found `` (exit code 0) if none.
+- Applies `Language.translate`, then `get_words` (exact match for case-sensitive languages) (prefix + optional digits). Prints a block per match; prints `` `lang:word` not found `` (exit code 0) if none.
 - `--sc` suppresses comments.
 - Block layout (indentation is 4 spaces; cosmetic details are slightly inconsistent):
 
@@ -315,7 +315,7 @@ Prints `Dictionary for ``lang`` (N items):` then, for every word of that languag
 Verified by experiment unless marked *(code reading)*. Ordered by impact.
 
 **Data integrity**
-1. **Case-folding merges distinct words.** `Language.add_word` keys on `value.lower()` (`model.py:307`). 399 collisions in the shipped DB (266 `sa`, 53 `ie`, 33 `en`, 30 `gr`, …), e.g. `varNa`/`varna`, `rUpa`/`rupa`. The displayed spelling depends on load order. Acknowledged in `TODO.txt`.
+1. ~~Case-folding merges distinct words.~~ Fixed (#3): only `en` and `gr` fold case.
 2. **Unions lost.** `Union.Table` is keyed by the component string only (`model.py:92`) and `Union.__eq__/__hash__` ignore the word. 596 distinct unions exist, 573 survive in the table → missing from `dump.py` counts and `db.json`; `in_unions` of a shared component also loses entries. Example: `sa:vid {vi+d}` + `ie:vid {vi+d}`.
 3. **Relationship provenance dropped.** Re-asserting an existing relationship under a different `SRC` does not add the source (`Relationship._add`); words do accumulate sources.
 4. **Cycles are accepted.** The DB contains `he:adam -> he:adamah -> he:adam`; `a -> a, b` creates a self-loop (the self-reference check compares against a `Group`).
